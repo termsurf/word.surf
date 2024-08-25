@@ -1,0 +1,396 @@
+
+## Page Templates
+
+- /privacy (Legal docs)
+- /usage (Terms of Service)
+- /language/sanskrit/term/dhatu/form
+- /list/swadesh/language/english
+  - TermList
+- /list/swadesh/language/mandarin:english
+  - TermListChatList
+- /list/noun
+  - TermListView
+- /term/notebook:pen:paper/language/english
+  - TermTermList
+- /term/notebook:pen:paper/language/african
+  - TermTermListChatList
+  - /term/random:1/language/african
+- /topic/mountain/language/random:4
+  - TermVibeChatList
+- /topic/mountain/language/english:hebrew?view=list
+  - TermVibe
+- /language/mandarin/term/proverb/mind/frog/card
+  - TermProverbCard
+- /language/hebrew/phrase/topic/travel
+  - TermFormVibe
+- /language/sanskrit/term/skandha/unscramble
+  - TermCard
+- /language/sanskrit/term/skandha/card
+  - TermCard
+- /language/sanskrit/term/skandha/test
+  - TermTestView
+- /language/sanskrit/term/skandha/test/card
+  - TermTestCard
+- /language/sanskrit/list/noun:large/test/memory
+  - FlowListTestMemory
+- /language/sanskrit/list/noun:large/test/matching
+  - FlowListTestMatching
+- /language/sanskrit/list/noun:large/test/spelling
+  - FlowListTestSpelling
+    - Given a pronunciation or audio, spell the word.
+- /language/sanskrit/list/noun:large/test/type
+  - FlowListTestType
+    - Speed to get through words.
+- /language/sanskrit/list/noun:large/test/build
+  - FlowListTestBuild
+    - Provide players with a set of letters and challenge them to create as many words as possible using those letters within a time limit.
+- /language/sanskrit/list/noun:large/test/translate/language/english
+  - FlowListTestTranslate
+    - Translate words into English.
+- /language/sanskrit/list/noun:large/test/flashcard
+  - FlowListTestFlashCard
+- /language/sanskrit/list/noun:large/test/unscramble
+  - FlowListTestUnscramble
+    - Given a scrambled word, unscramble it.
+- /language/sanskrit/list/noun:large/test/wordsearch
+  - FlowListTestWordSearch
+- /language/sanskrit/list/noun:large/test/audio
+  - FlowListTestAudio (listen to words and write word)
+- /language/sanskrit/test/association
+  - FlowTestAssociation
+    - Players take turns saying words related to a given theme. Each word must start with the last letter of the previous word.
+- /language/sanskrit/test/chain
+  - FlowTestChain
+    - Players take turns adding a word to a chain, with each word starting with the last letter of the previous word.
+- /language/sanskrit/list/noun:large
+  - FlowList
+- /read/rabbit/language/hebrew
+  - ReadText
+- /read/rabbit/language/hebrew:english
+  - ReadTextChatList
+- /note/gloss/label
+  - NoteText
+- /note/mood/test
+  - NoteListTest
+- /note/mood/form/optative (slide on optative)
+  - NoteText
+- /sound/m
+  - ToneLanguageList
+- /sound/list/consonant
+  - ToneList
+- /language/hebrew/sound
+  - ChatToneList
+- /script/hebrew
+  - TextView
+- /script/hebrew/test
+  - TextTest
+- /script/hebrew/form/vowel/test
+  - TextTest
+- /script/hebrew/form/consonant
+  - TextList
+- /script/hebrew/mark/u+1234
+  - TextMark
+- /script/hebrew/mark/x:y:z
+  - TextMarkList
+- /symbol/a
+  - MarkChatList
+- /symbol/a:b:c
+  - MarkListChatList
+- /symbol/a:b:c/test
+  - MarkListChatListTest
+- /symbol/form/punctuation/language/hebrew:arabic
+- /cite/dictionary
+
+## Todo
+
+- list languages by groups
+  - african languages
+
+## Ideas
+
+- word lists
+- pronunciations
+- normalization
+- converters
+- flashcards
+- word of the day
+- a game where we show the glyph in a bunch of languages, and you have to guess which is the tibetan one and what letter they all represent. a page displaying "A" in a bunch of language.
+- chanting guides
+- page showing a word in a bunch of languages, and you try and pronounce them all (with tone text)
+- a page showing what each alphabet symbol means in large calligraphy.
+- show the 3 phrases in a random language (with tone text so you can pronounce it).
+  - hello
+  - good afternoon
+  - goodbye
+- pages for prepositions
+  - contrast the words "in" and "out"
+  - contrasting other words
+- language picture quiz
+- romanization quiz
+- show similar glyphs in indian languages
+- show the derived alphabet glyphs
+- large page showing composition of chinese characters. zoom in focus.
+- the 100 words you should learn to say to pronounce anything.
+- representation of notions like "anger" in different languages.
+  - one word said in many different languages.
+    - page for different categories of languages
+      - indian languages
+      - asian languages
+      - slavic languages
+      - european languages
+      - african languages
+      - semitic languages
+- linkable pages
+- image galleries of simple word lists
+  - 5 simple words 2 languages side by side.
+    - computer
+    - phone
+    - keyboard
+    - internet
+    - tv
+  - t-shirts like "Code is Art" but in multiple languages
+  - how to say the gods in sanskrit
+    - shows 3 gods at a time, with colors
+    - randomizes them
+      - themes of gods (trinity)
+      - linkable pages to each variation
+  - how to say a prayer in arabic
+  - how to say a prayer in hebrew
+  - 100 sanskrit words
+- the names of the religions in different languages
+- latin and the catholic church? That is too involved.
+- names of fruits in different languages
+  - /fruit/pronunciation/european
+  - /fruit/writing/european
+- a phone in multiple languages
+  - a phone in chinese, korean, and japanese
+  - a notebook, pen, and paper in multiple african languages
+    - /flow/term/notebook:pen:paper/chat/african
+- rotating around a center words (like a ring)
+- spinning and flipping words
+- scary words
+- winter words
+  - /flow/topic/winter
+  - /flow/topic/scary
+- complete list of syllables / words
+
+- in a specific language, learn the 7 colors.
+- in a specific language, learn the alphabet.
+- in a specific language, learn the terms for traveling.
+- see breakfast, lunch, dinner meme translated into multiple languages
+  /flow/term/breakfast:lunch:dinner/chat/hebrew:arabic
+- special words in a language
+- nature vibe word and image
+- sun vibe word and image
+- mountain vibe word and image
+  - /flow/vibe/mountain/chat/random:4
+    - show an image
+    - show a few words, translated into a few languages
+- language proverbs
+  - /flow/form/proverb/chat/mandarin/mind/frog
+  - /flow/form/proverb/chat/english/mind/cat:bag
+  - /flow/form/proverb/chat/english/mind/hair:chest
+- connect the vowel of one language with consonant of another, to decode english meaning.
+  - show 5 letters in 5 scripts, and have them guess the english word represented by its pronunciation.
+- show a clock numbering
+- show writing numbers with many example numbers large
+- meditation audio clips pronouncing soft words in a soothing voice.
+  - play it at random
+  - fiverr audio recordings of individual words
+  - you can click and select multiple words you want pronounced soothingly.
+    - or you can type in them on the advanced page, enter from all possible words.
+  - ai pronciation of words
+  - human meditative pronunciation of words
+- saying simple words
+  - tree
+  - ball
+  - book
+  - face
+  - team
+- the 4 letter words
+  - teach read base ball
+  - play them back to you in a specific order.
+
+- find a good female and male voice. italian woman, indian woman, african woman
+
+- page pronouncing similar stuff
+- page pronouncing words that demonstrate a linguistic feature
+  - chinese words with specific tones
+  - spoken by native speaker in that region.
+  - separate each word by silence, so they can be split.
+  - name the files english romanization of word.
+- demonstrating infixes
+  - table demonstrating infixes
+  - demonstrating circumfixes
+- the snake walkthrough of the 6 consonants, by the 2 first good and bad sounds. by the 3 key vowels, to the 5 key vowels.
+- to the alphabet numbering systems
+- name that image
+  (select from 4 possible terms in a single language)
+- do gematria in hebrew and english
+- short writings (human rights bill)
+- sentences
+- grammar rules with individual pages for each rule.
+- people names
+  - /name/vibe/african
+- place names
+  - /name/site/africa
+- mt. meru
+- skandha (flash card urls)
+  - /chat/sanskrit/flow/skandha/card
+  - /chat/sanskrit/flow/skandha/test
+- /note/research/
+- /cite/grammar/sanskrit
+- keyboard writing practice
+- challenges
+  - /rock/vowel
+    - Say all of the vowels using real words from real languages.
+  - /rock/consonant
+    - Say all of the consonants using real words from real languages.
+  - write in the writing system.
+- timed write on keyboard the full alphabet.
+
+- language storytelling platform
+- language career center
+- location of further dictionary resources
+- Language Travel Planner
+  - so you can read texts.
+- Language research hub.
+- language teaching marketplace.
+
+- say words slowly and soothingly, peacefully.
+  - /flow/vibe/mountain/language/calm
+  - /flow/vibe/mountain/language/normal
+
+- Language Quizzes
+- memory game
+- scrabble
+- typing matching exercise.
+  - show word, and have them type it, and see how fast they can do it.
+- rabbit story translated and read in different languages.
+  - /read/rabbit/chat/hebrew
+  - /read/rights
+- example sentences in each word
+- phrase books
+  - travel phrases
+    - 40 travel phrases
+  - greetings
+    - 40 greetings
+  - dining phrases
+    - 40 dining phrases
+  - shopping phrases
+    - 40
+  - accommodation phrases (hotels and such)
+  - /flow/form/phrase/vibe/travel/chat/hebrew
+- /flow/list/swadesh/chat/mandarin:english
+- linguistic gloss label cheat sheet
+  - /note/gloss:label
+- linguistic mood categories
+  - /note/mood/test
+  - /note/mood/form/optative (slide on optative)
+- ?show=pronunciation,sense,example,transcription
+- ?hide=pronunciation,sense,example,transcription
+- /flow/list/noun:large/chat/english
+- /flow/list/noun:large/chat/english:hebrew
+- /flow/list/noun:large/chat/hebrew/test
+- /flow/list/noun
+- /tone/m
+  - List of languages with that tone.
+- /tone/list/consonant
+  - List of consonants.
+- /chat/hebrew/tone
+  - Phonology
+- /code/hebrew/test
+- /code/hebrew/form/vowel/test
+- /code/hebrew/form/consonant
+- /code/hebrew/form/punctuation
+- /code/hebrew/mark/x
+  - Display that one glyph.
+  - Swipe to go to next glyph.
+- /code/hebrew/mark/u+1234
+- /code/hebrew/mark/x:y:z
+  - Multiple glyphs compared next to each other.
+- /site/chat/english
+  - Places that speak English
+- /chat/hebrew/rule
+  - Grammar
+- /mark/a:b:c
+  - Compare glyphs in different systems.
+- /mark/a:b:c/test
+- /mark/form/punctuation/chat/hebrew:arabic
+  - Compare punctuation in systems.
+- /flow/list/noun:large/view
+  - Ones with images in them.
+- /flow/term/dog/chat/hebrew:arabic
+  - show/hide pronunciation/transcription/translation
+- /flow/vibe/mountain/chat/arabic:hebrew/language?play=true&random=true (autoplay random words)
+- vibes
+  - mountain
+  - forest
+  - animal
+  - flow (river/ocean)
+  - camping
+  - hiking
+  - nature
+  - people
+  - conversation
+  - walk
+  - emotion
+  - spirituality
+  - technology
+  - meditation
+  - love
+  - valley
+  - internet
+- /flow/list/number
+- /flow/list/weekday
+- /flow/list/month
+- /flow/list/symbol (list of symbols in that language)
+- /flow/list/place
+- /flow/list/preposition
+- /flow/list/profession/test
+- /rule/number (grammar rules for forming numbers)
+- /rule/noun:case
+- /rule/noun:gender
+- /rule/verb:tense
+- derivation rules
+  - /flow/*-ment
+  - /flow/*-ness
+  - /flow/encourage
+    - Lists forms of the word too.
+  - /flow/list/base
+    - Base words.
+  - /flow/list/anchor
+    - Anchor words, which extends base words.
+  - /flow/list/syllable
+  - /list (lists of flow lists)
+- etymology
+- /chat/form/agglutinative
+- /code/hebrew (writing system)
+- /code/hebrew/mark/a
+- /code/hebrew/mark/form/niqqud/view
+  - Simple view of each niqqud as a whole.
+- /code/hebrew/mark/form/niqqud/test
+  - Flashcards of them.
+- /code/ipa
+- /code/form/alphabet
+- /note/infix
+- /note/suffix/case?form=grid,list
+  - Simple view of cases of infixes.
+- /chat/hebrew/flow/x/gematria
+- /chat/hebrew/code (Gematria)
+- /chat/hebrew/code/:system
+
+- /cite/grammar
+- /cite/code (Parsers and tools)
+
+# Voices
+
+- telugu: https://www.fiverr.com/sirishaananthul/sing-devotional-mantras-and-songs
+- sanskrit: https://www.fiverr.com/sirishaananthul/sing-devotional-mantras-and-songs
+  - https://www.fiverr.com/kanchangupta721/be-you-your-female-voice-over-artist-for-hindi-and-urdu
+
+## License
+
+Private
+
+- https://www.livelingua.com/vocabulary

@@ -1,0 +1,42 @@
+import Post from '~/components/Post'
+import meta from '~/configurations/pages/text/index.yaml'
+import { Title } from '@termsurf/tree'
+import Type from '~/components/Type'
+import T from '~/components/T'
+import { List } from '@termsurf/tree'
+import meta_rabbit from '~/configurations/pages/text/rabbit.yaml'
+import meta_word from '~/configurations/pages/text/word.yaml'
+import meta_life from '~/configurations/pages/text/life.yaml'
+import meta_path from '~/configurations/pages/text/path.yaml'
+
+<Title {...meta} />
+
+Ideally Tune will ultimately have translations of each of the following.
+
+- bible
+- tao te ching
+- rig veda
+- bhagavad gita
+- tripitaka
+- quran
+- kangyur
+- tengyur
+- granth
+- tirikural
+- biological taxonomy
+- medical terminology
+- chemical terminology
+- geology terminology
+- anthropology terminology
+- linguistic terminology
+- math terminology
+- computer science terminology
+
+<List>
+  <List.Item {...meta_rabbit} />
+  <List.Item {...meta_word} />
+  <List.Item {...meta_life} />
+  <List.Item {...meta_path} />
+</List>
+
+export default ({ children }) => <Post {...meta}>{children}</Post>

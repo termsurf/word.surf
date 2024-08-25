@@ -1,0 +1,47 @@
+import Post from '~/components/Post'
+import meta from '~/configurations/pages/text/path.yaml'
+import { Title } from '@termsurf/tree'
+import Type from '~/components/Type'
+import T from '~/components/T'
+import { BlockQuote, P, Pre, List } from '@termsurf/tree'
+
+<Title {...meta} />
+
+export default ({ children }) => <Post {...meta}>{children}</Post>
+
+<BlockQuote>
+  <P>
+    <T.Prose text="dan weka Cak kin vuti pot toldo, vuti nun dan yogeq weka" />
+    <br />
+    <T.Prose text="dan nema Cak kin vuti pot nemo, vuti nun dan yogeq nema" />
+    <br />
+    <T.Prose text="dan pot nun nema vuti dan rija xal xayma konu maxa" />
+    <br />
+    <T.Prose text="dan pot nema vuti dan mama xal dan yas midyar ciqa" />
+    <br />
+    <T.Prose text="swolu" />
+    <br />
+    <T.Prose text="budwan reC hazi nop zayda palu vyuni bak val laga" />
+    <br />
+    <T.Prose text="budwan reC hazi zayda palu vyun bak val gola" />
+    <br />
+    <T.Prose text="yas lig doba hazi dan sem rija, hidu pami rasu nema" />
+    <br />
+    <T.Prose text="dan doba vut pot kuzi mista" />
+    <br />
+    <T.Prose text="mista retu mista, vuti dan gleta palu kol yas wanda" />
+  </P>
+</BlockQuote>
+
+> The Dao that can be stated, is not the eternal Dao;<br/> The name that
+> can be named is not the eternal name.<br/> The unnamed is the origin
+> of heaven and earth;<br/> The named is the mother of the myriad
+> things.<br/> Therefore,<br/> Constantly having no desire in order to
+> view its commencement;<br/> Constantly having desire in order to view
+> its termination.<br/> These two have the same origin, but they differ
+> in name;<br/> Both are called Mystery.<br/> Mystery after Mystery, is
+> the gate to all wonders<br/>
+
+## Resources
+
+- [Tao Te Ching](https://en.wikisource.org/wiki/Translation:Tao_Te_Ching)

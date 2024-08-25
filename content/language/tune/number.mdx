@@ -1,0 +1,110 @@
+---
+title: Tune Numbers
+media:
+  title: Tune Numbers
+  description: ''
+pagination:
+  back: /language/tune/guide/adjective
+  next: /language/tune/guide/number
+---
+
+Numbers (`dis`) are written using the consonant symbols prefixed by a
+"a" for decimal and "i" for hexadecimal. Instead of infix notation for
+addition and the rest, you use function notation like with programming
+languages.
+
+| number | tone             | read | tone symbol    | read symbol |
+| -----: | :--------------- | :--- | :------------- | :---------- |
+|      0 | <T text="han" /> | han  | <T text="h" /> | h           |
+|      1 | <T text="zen" /> | zen  | <T text="z" /> | z           |
+|      2 | <T text="dob" /> | dob  | <T text="d" /> | d           |
+|      3 | <T text="suC" /> | suC  | <T text="s" /> | s           |
+|      4 | <T text="laf" /> | laf  | <T text="l" /> | l           |
+|      5 | <T text="kam" /> | kam  | <T text="k" /> | k           |
+|      6 | <T text="viv" /> | viv  | <T text="v" /> | v           |
+|      7 | <T text="xab" /> | xab  | <T text="x" /> | x           |
+|      8 | <T text="fet" /> | fet  | <T text="f" /> | f           |
+|      9 | <T text="nas" /> | nas  | <T text="n" /> | n           |
+|     10 | <T text="bun" /> | bun  | <T text="b" /> | b           |
+|     11 | <T text="cuk" /> | cuk  | <T text="c" /> | c           |
+|     12 | <T text="mod" /> | mod  | <T text="m" /> | m           |
+|     13 | <T text="ruz" /> | ruz  | <T text="r" /> | r           |
+|     14 | <T text="tic" /> | tic  | <T text="t" /> | t           |
+|     15 | <T text="wez" /> | wez  | <T text="w" /> | w           |
+
+So the number 102 in decimal is `azhd`, and 24 in hexademical is `izf`
+(0x18). Some other examples:
+
+| value | type        | number      | tone                    | read       |
+| :---- | :---------- | :---------- | :---------------------- | :--------- |
+| 256   | decimal     | 256         | <T text="adkv" />       | adkv       |
+| 256   | hexadecimal | 0x100       | <T text="izhh" />       | izhh       |
+| 256   | binary      | 0b100000000 | <T text="uzhhhhhhhh" /> | uzhhhhhhhh |
+
+### Count Numbers
+
+| tone             | read | meaning             |
+| :--------------- | :--- | :------------------ |
+| <T text="hoz" /> | hoz  | position (cardinal) |
+| <T text="pum" /> | pum  | time (iteration)    |
+| <T text="jak" /> | jak  | count               |
+| <T text="mab" /> | mab  | bind                |
+| <T text="wis" /> | wis  | inverse             |
+
+Numbers like "once", "twice", etc. is basically like "three times".
+
+Words like "single", "double", and "triple", are counts.
+
+| phrase      | meaning  |
+| :---------- | :------- |
+| hoz zen     | first    |
+| hoz xab     | 7th      |
+| pum zen     | once     |
+| pum xab     | 7 times  |
+| jak suC     | triple   |
+| jak dub fet | 28-tuple |
+| mab dob     | pair     |
+| mab xab     | 7-let    |
+
+### Orders of Magnitude
+
+There are many orders of magnitude, starting with 100, then 1000, then
+going up by powers of 3 up to $10^{45}$. Likewise, it goes down by
+powers of 3 down to $10^{-45}$.
+
+Here are the positive values.
+
+| tone              | read |     power |
+| :---------------- | :--- | --------: |
+| <T text="york" /> | york |  $10^{2}$ |
+| <T text="zotx" /> | zotx |  $10^{3}$ |
+| <T text="glez" /> | glez |  $10^{4}$ |
+| <T text="pogz" /> | pogz |  $10^{5}$ |
+| <T text="drib" /> | drib |  $10^{6}$ |
+| <T text="swat" /> | swat |  $10^{9}$ |
+| <T text="larx" /> | larx | $10^{12}$ |
+| <T text="kiqk" /> | kiqk | $10^{15}$ |
+| <T text="vrug" /> | vrug | $10^{18}$ |
+| <T text="xarm" /> | xarm | $10^{21}$ |
+| <T text="farv" /> | farv | $10^{24}$ |
+| <T text="neks" /> | neks | $10^{27}$ |
+| <T text="bold" /> | bold | $10^{30}$ |
+| <T text="crak" /> | crak | $10^{33}$ |
+| <T text="morp" /> | morp | $10^{36}$ |
+| <T text="rups" /> | rups | $10^{39}$ |
+| <T text="trag" /> | trag | $10^{42}$ |
+| <T text="widj" /> | widj | $10^{45}$ |
+
+_This depends on the [defined numerical terms](/term/number)._
+
+To say out loud "3 million 686 thousand two hundred and 21", you would
+say:
+
+```
+san driba viv fet viv larxa dob dob zena
+```
+
+You put the `-a` on the triple power multipliers, to give some context
+and help with fluidity.
+
+You can specify the inverse with `wis x`. So $10^{-12}$ is `wis kiqk`.
