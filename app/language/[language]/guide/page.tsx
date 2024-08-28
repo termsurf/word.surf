@@ -10,6 +10,7 @@ import katex from 'rehype-katex'
 
 import { buildMetadata } from '@termsurf/leaf/utility/metadata'
 import YAML from 'js-yaml'
+import path from 'path'
 
 type Input = {
   params: { language: string }
@@ -17,7 +18,7 @@ type Input = {
 
 export const generateMetadata = async ({ params }: Input) => {
   const content = await fsp.readFile(
-    `./content/language/${params.language}/index.mdx`,
+    path.resolve(`./content/language/${params.language}/index.mdx`),
     'utf-8',
   )
   const { frontmatter } = await compileMDX<{
@@ -36,7 +37,7 @@ export const generateMetadata = async ({ params }: Input) => {
 
 export default async function View({ params }: Input) {
   const content = await fsp.readFile(
-    `./content/language/${params.language}/index.mdx`,
+    path.resolve(`./content/language/${params.language}/index.mdx`),
     'utf-8',
   )
   const { frontmatter } = await compileMDX<{
@@ -56,7 +57,7 @@ export default async function View({ params }: Input) {
   })
   const pages = YAML.load(
     await fsp.readFile(
-      `./content/language/${params.language}/pages.yaml`,
+      path.resolve(`./content/language/${params.language}/pages.yaml`),
       `utf-8`,
     ),
   )
