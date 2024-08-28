@@ -78,7 +78,7 @@
     "@seznam/compose-react-refs": "^1.0.6",
     "@termsurf/form": "^0.9.24",
     "@termsurf/kink": "^0.1.2",
-    "@termsurf/leaf": "^0.1.10",
+    "@termsurf/leaf": "^0.1.32",
     "@termsurf/task": "^0.4.2",
     "@termsurf/tone": "^3.0.10",
     "@termsurf/tone-code": "^0.4.0",

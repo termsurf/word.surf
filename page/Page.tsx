@@ -14,7 +14,7 @@ export default function Page() {
         type="secondary"
       >
         A Collection of Language Tools for Everyday Use
-        <span className="text-center block">
+        <span className="text-center block pt-8">
           <Tag
             color="blue"
             className="text-white"

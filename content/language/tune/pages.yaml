@@ -1,0 +1,25 @@
+- title: Background
+  path: /language/tune/guide/background
+  description: Learn some of the background of how Tune started.
+- title: Guide
+  path: /language/tune/guide
+- title: Evolution
+  path: /language/tune/guide/evolution
+- title: Sounds
+  path: /language/tune/guide/sound
+- title: Terms
+  path: /language/tune/guide/term
+- title: Objects
+  path: /language/tune/guide/object
+- title: Actions
+  path: /language/tune/guide/action
+  description: Explore verbs and their structure in Tune.
+- title: Designs
+  path: /language/tune/guide/design
+- title: Adverbs
+  path: /language/tune/guide/adverb
+  description: Explore adverbs and their structure in Tune.
+- title: Numbers
+  path: /language/tune/guide/number
+- title: Texts
+  path: /language/tune/guide/text

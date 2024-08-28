@@ -1,4 +1,4 @@
-import Page from '~/page/language/type/guide/Page'
+import Page, { GridLink } from '~/page/language/type/guide/Page'
 
 import React from 'react'
 import fsp from 'fs/promises'
@@ -9,6 +9,7 @@ import math from 'remark-math'
 import katex from 'rehype-katex'
 
 import { buildMetadata } from '@termsurf/leaf/utility/metadata'
+import YAML from 'js-yaml'
 
 type Input = {
   params: { language: string }
@@ -41,10 +42,24 @@ export default async function View({ params }: Input) {
   const { frontmatter } = await compileMDX<{
     title: string
     description?: string
+    language: {
+      title: string
+      path: string
+    }
+    scripts?: Array<string>
+    back?: string
+    next?: string
+    related?: Array<string>
   }>({
     source: content,
     options: { parseFrontmatter: true },
   })
+  const pages = YAML.load(
+    await fsp.readFile(
+      `./content/language/${params.language}/pages.yaml`,
+      `utf-8`,
+    ),
+  )
 
   const source = await serialize(
     content.replace(/^---\s*([\s\S]*?)\s*---/, ''),
@@ -61,6 +76,7 @@ export default async function View({ params }: Input) {
       source={source}
       {...params}
       {...frontmatter}
+      pages={pages as Array<GridLink>}
     />
   )
 }

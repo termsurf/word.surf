@@ -1,18 +1,22 @@
-import Post from '~/components/Post'
-import meta from '~/configurations/pages/term/gender.yaml'
-import { Title } from '@termsurf/tree'
-import Type from '~/components/Type'
-import T from '~/components/T'
-import { List } from '@termsurf/tree'
+---
+scripts:
+  - latin
+  - tone
+title: Genders
+media:
+  title: Tune Genders
+  description: ''
+language:
+  title: Tune
+  path: /language/tune
+back: /language/tune/guide/adjective
+next: /language/tune/guide/number
+---
 
-<Title {...meta} />
-
-export default ({ children }) => <Post {...meta}>{children}</Post>
-
-| tone             | read | english              | conversion |
-| :--------------- | :--- | :------------------- | :--------- |
-| <T text="rac" /> | rac  | straight             | straight   |
-| <T text="wos" /> | wos  | queer                |            |
-| <T text="baf" /> | baf  | lack (like a-sexual) |            |
-| <T text="cid" /> | cid  | cisgender            |            |
-| <T text="hib" /> | hib  | binary               |            |
+| Tone                                             | Tune | English              |
+| :----------------------------------------------- | :--- | :------------------- |
+| <T value="rac" processor="tone" script="tone" /> | rac  | straight             |
+| <T value="wos" processor="tone" script="tone" /> | wos  | queer                |
+| <T value="baf" processor="tone" script="tone" /> | baf  | lack (like a-sexual) |
+| <T value="cid" processor="tone" script="tone" /> | cid  | cisgender            |
+| <T value="hib" processor="tone" script="tone" /> | hib  | binary               |
