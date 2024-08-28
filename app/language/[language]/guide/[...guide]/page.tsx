@@ -40,7 +40,7 @@ export const generateMetadata = async ({ params }: Input) => {
       frontmatter.media?.description || frontmatter.description,
   })
 }
-//
+
 export default async function View({ params }: Input) {
   const content = await fsp.readFile(
     `./content/language/${params.language}/${params.guide.join(
