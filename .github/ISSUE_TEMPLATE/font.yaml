@@ -1,0 +1,27 @@
+name: Font Upload
+description: Add a Font.
+title: '[Font]: '
+labels: ['font', 'triage']
+assignees:
+  - termhare
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to add a new font to our community database! Please attach your font file (or zip containing many variants of the font).
+  - type: input
+    id: name
+    attributes:
+      label: Font Name
+      description: What is the name of this font?
+      placeholder: eg. NotoSansMono
+    validations:
+      required: true
+  # - type: checkboxes
+  #   id: terms
+  #   attributes:
+  #     label: Code of Conduct
+  #     description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+  #     options:
+  #       - label: I agree to follow this project's Code of Conduct
+  #         required: true

@@ -15,6 +15,33 @@
 <br/>
 <br/>
 
+## Welcome
+
+ChatSurf is an open source language website where you can:
+
+- Publish your conlang or natural language
+- Publish a language's vocabulary
+- Publish a language's grammar
+- Publish word lists
+- Publish your conscript or other writing system
+
+It's basically like Wiktionary but with a different bar for quality, a more integrated and helpful UI (with various tools and such), an API for developers to use, and easier for others to contribute to (assuming you are familiar with Git/GitHub). And of course we would welcome all conlangs which Wiktionary probably won't support.
+
+You'll also be able to:
+
+- Download a PDF of your grammar.
+- Download a spreadsheet of your dictionary entries and word lists.
+
+## Development
+
+```bash
+# Start the local server
+pnpm host
+
+# Build the production build
+pnpm make
+```
+
 ## License
 
 [aGPLv3](https://en.wikipedia.org/wiki/GNU_Affero_General_Public_License)

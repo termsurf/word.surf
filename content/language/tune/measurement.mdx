@@ -1,0 +1,48 @@
+import Post from '~/components/Post'
+import meta from '~/configurations/pages/term/measurement.yaml'
+import { Title } from '@termsurf/tree'
+import Type from '~/components/Type'
+import T from '~/components/T'
+import { List } from '@termsurf/tree'
+
+<Title {...meta} />
+
+export default ({ children }) => <Post {...meta}>{children}</Post>
+
+Tune supports both the American metric system and the British /
+scientific metric system.
+
+## American metric system
+
+| tone               | read  | meaning   |
+| :----------------- | :---- | :-------- |
+| <T text="hintx" /> | hintx | inch      |
+| <T text="fretx" /> | fretx | foot      |
+| <T text="kyard" /> | kyard | yard      |
+| <T text="smilt" /> | smilt | mile      |
+| <T text="nardj" /> | nardj | farenheit |
+| <T text="plond" /> | plond | pound     |
+| <T text="honts" /> | honts | ounce     |
+
+## Scientific metric system
+
+| tone                | read   | meaning |
+| :------------------ | :----- | :------ |
+| <T text="sitx" />   | sitx   | second  |
+| <T text="gram" />   | gram   | gram    |
+| <T text="mirt" />   | mirt   | meter   |
+| <T text="cets" />   | cets   | mole    |
+| <T text="drav" />   | drav   | candela |
+| <T text="hamp" />   | hamp   | ampere  |
+| <T text="kalv" />   | kalv   | kelvin  |
+| <T text="sals" />   | sals   | celsius |
+| <T text="teslan" /> | teslan | tesla   |
+| <T text="webar" />  | webar  | weber   |
+| <T text="farad" />  | farad  | farad   |
+| <T text="henrik" /> | henrik | henry   |
+| <T text="homan" />  | homan  | ohm     |
+| <T text="luman" />  | luman  | lumen   |
+| <T text="nilaks" /> | nilaks | lux     |
+| <T text="paskal" /> | paskal | pascal  |
+| <T text="redyan" /> | redyan | radian  |
+| <T text="litar" />  | litar  | liter   |

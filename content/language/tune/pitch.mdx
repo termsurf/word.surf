@@ -1,0 +1,28 @@
+import Post from '~/components/Post'
+import meta from '~/configurations/pages/term/pitch.yaml'
+import { Title } from '@termsurf/tree'
+import Type from '~/components/Type'
+import T from '~/components/T'
+import { List } from '@termsurf/tree'
+
+<Title {...meta} />
+
+export default ({ children }) => <Post {...meta}>{children}</Post>
+
+The musical notes start at 1 and go to 12. They are called `pitx`
+(pitches).
+
+| number | note | tone           | read |
+| :----- | :--- | :------------- | :--- |
+| 1      | A    | <T text="z" /> | z    |
+| 2      | A#   | <T text="d" /> | d    |
+| 3      | B    | <T text="s" /> | s    |
+| 4      | C    | <T text="l" /> | l    |
+| 5      | C#   | <T text="k" /> | k    |
+| 6      | D    | <T text="v" /> | v    |
+| 7      | D#   | <T text="x" /> | x    |
+| 8      | E    | <T text="f" /> | f    |
+| 9      | F    | <T text="n" /> | n    |
+| 10     | F#   | <T text="b" /> | b    |
+| 11     | G    | <T text="c" /> | c    |
+| 12     | G#   | <T text="m" /> | m    |

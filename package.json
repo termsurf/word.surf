@@ -4,22 +4,14 @@
   "private": true,
   "license": "aGPLv3",
   "scripts": {
-    "dev:code": "NEXT_PUBLIC_SITE=code next dev",
-    "dev:blob": "NEXT_PUBLIC_SITE=blob next dev",
-    "dev:beat": "NEXT_PUBLIC_SITE=beat next dev",
-    "dev:view": "NEXT_PUBLIC_SITE=view next dev",
-    "dev:chat": "NEXT_PUBLIC_SITE=chat next dev",
-    "dev:text": "NEXT_PUBLIC_SITE=text next dev",
-    "dev:task": "NEXT_PUBLIC_SITE=task next dev",
-    "dev": "next dev",
+    "work": "next dev",
     "build": "next build",
+    "make": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "vine:load": "pnpm remove @termsurf/hawk && pnpm add @termsurf/hawk@latest",
-    "task:load": "pnpm remove @termsurf/task && pnpm add @termsurf/task@latest",
-    "make:page": "tsx script/makePage",
-    "make:page:form": "tsx script/makePageForm",
-    "copy:chat": "tsx script/copyChatSurf"
+    "host": "next start",
+    "font:save": "tsx script/font/save",
+    "font:read": "tsx script/font/read",
+    "dictionary:save": "tsx script/dictionary/save"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.511.0",

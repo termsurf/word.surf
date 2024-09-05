@@ -1,0 +1,36 @@
+import Post from '~/components/Post'
+import meta from '~/configurations/pages/term/phrase.yaml'
+import { Title } from '@termsurf/tree'
+import Type from '~/components/Type'
+import T from '~/components/T'
+import { List } from '@termsurf/tree'
+
+<Title {...meta} />
+
+export default ({ children }) => <Post {...meta}>{children}</Post>
+
+In Tune, there are 5 main types of _realized_ [words](/word).
+
+But when you are speaking, any "modifiers" to one of the 5 realized word
+forms don't get a prefix either, so they serve as the nebulous base,
+which gains meaning through context.
+
+In addition, there is a strict word order for phrases. Action phrases,
+object phrases, and manner phrases are such that all modifiers precede
+the main "head", as a "tail". The tail words get no suffixes, but the
+head gets its appropriate suffix.
+
+In a sense, the head words divide up the sentence like points in a
+string, and the hanging part of the string are the modifiers. You can
+sequence together things like the following:
+
+| sequence             | example               |
+| :------------------- | :-------------------- |
+| object-action        | I love                |
+| object-action-object | I love stuff          |
+| object-action-design | I turn red            |
+| action-object        | Create something      |
+| action-object-design | Create something fast |
+
+You separate each of these things by adding the suffix to the head of
+the phrase.

@@ -1,0 +1,48 @@
+---
+scripts:
+  - latin
+  - tone
+language:
+  title: Tune
+  path: /language/tune
+title: Relgion Words
+media:
+  title: Tune Relgion Words
+  description: ''
+back: /language/tune/guide/background
+next: /language/tune/guide/action
+related:
+  - /language/tune/guide/action
+  - /language/tune/guide/adverb
+---
+
+Here are some religions and the people.
+
+| tone                                                        | read           | term         | derivation         |
+| :---------------------------------------------------------- | :------------- | :----------- | :----------------- |
+| <T processor="tone" script="tone" value="djud zek" />       | djud zek       | jew          | praised agent      |
+| <T processor="tone" script="tone" value="djud lij" />       | djud lij       | jewish       | praised oriented   |
+| <T processor="tone" script="tone" value="djud yog" />       | djud yog       | judaism      | praised practice   |
+| <T processor="tone" script="tone" value="narv zek" />       | narv zek       | hindu        | rivered agent      |
+| <T processor="tone" script="tone" value="narv yog" />       | narv yog       | hinduism     | rivered practice   |
+| <T processor="tone" script="tone" value="slim zek" />       | slim zek       | muslim       | submitted person   |
+| <T processor="tone" script="tone" value="slim lij" />       | slim lij       | islamic      | submitted oriented |
+| <T processor="tone" script="tone" value="slim yog" />       | slim yog       | islam        | submitted practice |
+| <T processor="tone" script="tone" value="djud yaxas sol" /> | djud yaxas sol | muhammad     | praise worthy soul |
+| <T processor="tone" script="tone" value="krist zek" />      | krist zek      | christian    | anointed person    |
+| <T processor="tone" script="tone" value="krist yog" />      | krist yog      | christianity | anointed practice  |
+| <T processor="tone" script="tone" value="krist vol" />      | krist vol      | jesus christ | anointed one       |
+| <T processor="tone" script="tone" value="bud zek" />        | bud zek        | buddhist     | awakened person    |
+| <T processor="tone" script="tone" value="bud yog" />        | bud yog        | buddhism     | awakened practice  |
+| <T processor="tone" script="tone" value="bud vol" />        | bud vol        | buddha       | awakened one       |
+
+So you could use them in sentences.
+
+| english                          | tune                      |
+| :------------------------------- | :------------------------ |
+| They are Jewish.                 | pema vuti djud lija.      |
+| They follow Islam.               | pema darbi slim yoga.     |
+| He/she is a Hindu.               | vala vuti nic narv zeka.  |
+| He/she believes in Christianity. | vala ras fini krist yoga. |
+
+export default ({ children }) => <Post {...meta}>{children}</Post>

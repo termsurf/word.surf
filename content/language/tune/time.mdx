@@ -1,0 +1,58 @@
+---
+scripts:
+  - latin
+  - tone
+language:
+  title: Tune
+  path: /language/tune
+title: Time Words
+media:
+  title: Tune Time Words
+  description: ''
+back: /language/tune/guide/background
+next: /language/tune/guide/action
+related:
+  - /language/tune/guide/action
+  - /language/tune/guide/adverb
+---
+
+Telling time uses a 12 hour clock with "rise" and "fall". It uses the
+Gregorian calendar (standard western calendar).
+
+| tone              | read | meaning |
+| :---------------- | :--- | :------ |
+| <T text="sitx" /> | sitx | second  |
+| <T text="dak" />  | dak  | minute  |
+| <T text="hek" />  | hek  | hour    |
+| <T text="yam" />  | yam  | day     |
+| <T text="wik" />  | wik  | week    |
+| <T text="mes" />  | mes  | month   |
+| <T text="xan" />  | xan  | year    |
+| <T text="riz" />  | riz  | rise    |
+| <T text="zar" />  | zar  | fall    |
+
+To say it is 6:37am, you would say:
+
+```
+viva san xaba riza
+```
+
+Or 11:16pm:
+
+```
+cuka zen viva zara
+```
+
+The date format is like this:
+
+```
+year/month/day hours:minutes:seconds
+```
+
+So January 11, 2011 would be at 11:16pm:
+
+```
+dhzz/zz/z zz:zv z
+```
+
+export default ({ children }) => <Post {...meta}>{children}</Post>
