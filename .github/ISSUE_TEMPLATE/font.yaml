@@ -20,7 +20,7 @@ body:
   - type: textarea
     id: details
     attributes:
-      label: Details
+      label: Upload and Details
       description:
         Please attach your font file (or zip containing many variants of
         the font). And add any extra notes about the font you would like
