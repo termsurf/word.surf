@@ -14,7 +14,7 @@ body:
     attributes:
       label: Font Name
       description: What is the name of this font?
-      placeholder: eg. NotoSansMono
+      placeholder: eg. Noto Sans Mono
     validations:
       required: true
   # - type: checkboxes
