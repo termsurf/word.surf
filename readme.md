@@ -32,6 +32,12 @@ You'll also be able to:
 - Download a PDF of your grammar.
 - Download a spreadsheet of your dictionary entries and word lists.
 
+## Contributing
+
+- Add a script
+- Add a language
+- [Add a font](https://github.com/termsurf/chat.surf/issues/new?assignees=termhare&labels=font%2Ctriage&projects=&template=font.yaml&title=%5BFont%5D%3A+)
+
 ## Development
 
 ```bash
