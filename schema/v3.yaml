@@ -1,0 +1,630 @@
+swagger: '2.0'
+info:
+  title: ChatSurf API
+  description: The ChatSurf REST API.
+  version: 3
+host: base.chat.surf
+basePath: /v3
+schemes:
+  - https
+paths:
+  /languages:
+    get:
+      summary: Returns a list of languages.
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: page
+          required: true
+          type: integer
+          minimum: 1
+          maximum: 1000
+        - in: query
+          name: size
+          required: true
+          type: integer
+          minimum: 10
+          maximum: 1000
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              size:
+                type: integer
+                minimum: 0
+              list:
+                type: array
+                items:
+                  properties:
+                    languages:
+                      type: array
+                      items:
+                        type: object
+                        properties:
+                          category:
+                            type: string
+                            nullable: true
+                            example: 'agglutinative'
+                          family:
+                            type: object
+                            nullable: true
+                            properties:
+                              id:
+                                type: string
+                                example: 'abcd1234'
+                          glottolog_code:
+                            type: string
+                            nullable: true
+                            example: 'stan1293'
+                          id:
+                            type: string
+                            example: 'rtknbxxfkdlltwcfvzshdmrccstmfsxv'
+                          is_constructed:
+                            type: boolean
+                            nullable: true
+                            example: false
+                          is_natural:
+                            type: boolean
+                            nullable: true
+                            example: true
+                          iso639_1:
+                            type: string
+                            nullable: true
+                            example: 'en'
+                          iso639_2:
+                            type: string
+                            nullable: true
+                            example: 'eng'
+                          iso639_3:
+                            type: string
+                            nullable: true
+                            example: 'eng'
+                          level:
+                            type: string
+                            nullable: true
+                          name:
+                            type: string
+                            example: 'English'
+                          parent:
+                            type: object
+                            nullable: true
+                            properties:
+                              id:
+                                type: string
+                                example: 'xyz123'
+                          slug:
+                            type: string
+                            example: 'english'
+  /languages/{language}:
+    get:
+      summary: Returns a language by ID or slug.
+      produces:
+        - application/json
+      parameters:
+        - in: path
+          name: language
+          required: true
+          type: string
+          minimum: 1
+      responses:
+        200:
+          description: A Language object.
+          schema:
+            type: object
+            properties:
+              languages:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    category:
+                      type: string
+                      nullable: true
+                      example: 'Natural'
+                    entry_count:
+                      type: integer
+                      example: 2543
+                    family:
+                      type: object
+                      nullable: true
+                      properties:
+                        id:
+                          type: string
+                          example: 'abcd1234'
+                    glottolog_code:
+                      type: string
+                      nullable: true
+                      example: 'stan1293'
+                    id:
+                      type: string
+                      example: 'rtknbxxfkdlltwcfvzshdmrccstmfsxv'
+                    is_constructed:
+                      type: boolean
+                      nullable: true
+                      example: false
+                    is_natural:
+                      type: boolean
+                      nullable: true
+                      example: true
+                    iso639_1:
+                      type: string
+                      nullable: true
+                      example: 'en'
+                    iso639_2:
+                      type: string
+                      nullable: true
+                      example: 'eng'
+                    iso639_3:
+                      type: string
+                      nullable: true
+                      example: 'eng'
+                    level:
+                      type: string
+                      nullable: true
+                      example: 'Living'
+                    name:
+                      type: string
+                      example: 'English'
+                    parent:
+                      type: object
+                      nullable: true
+                      properties:
+                        id:
+                          type: string
+                          example: 'xyz123'
+                    slug:
+                      type: string
+                      example: 'english'
+        400:
+          description:
+            The specified language is invalid (e.g. not an ID or slug).
+        404:
+          description:
+            A language with the specified ID or slug was not found.
+        default:
+          description: Unexpected error
+/languages/{language}/components:
+  get:
+    summary:
+      Returns a list of language components for a language ID or slug.
+    produces:
+      - application/json
+    parameters:
+      - in: path
+        name: language
+        required: true
+        type: string
+        minimum: 1
+      - in: query
+        name: role
+        required: false
+        type: string
+    responses:
+      200:
+        description: A LanguageComponent object.
+        schema:
+          type: object
+          properties:
+            size:
+              type: integer
+              minimum: 0
+            list:
+              type: array
+              items:
+                properties:
+                  id:
+                    type: tuid
+                    example: rtknbxxfkdlltwcfvzshdmrccstmfsxv
+                  slug:
+                    type: string
+                    example: hello
+      400:
+        description:
+          The specified language is invalid (e.g. not an ID or slug).
+      404:
+        description:
+          A language with the specified ID or slug was not found.
+      default:
+        description: Unexpected error
+/languages/{language}/components/{component}:
+  get:
+    summary:
+      Returns a language component for a language ID or slug and
+      component slug or ID.
+    produces:
+      - application/json
+    parameters:
+      - in: path
+        name: language
+        required: true
+        type: string
+        minimum: 1
+    responses:
+      200:
+        description: A LanguageComponent object.
+        schema:
+          $ref: '#/definitions/language_component'
+      400:
+        description:
+          The specified language component is invalid (e.g. not an ID or
+          slug).
+      404:
+        description:
+          A language with the specified ID or slug was not found.
+      default:
+        description: Unexpected error
+definitions:
+  transcription_item:
+    type: object
+    properties:
+      id:
+        type: string
+        format: tuid
+      text:
+        type: string
+        format: tuid
+  pronunciation_item:
+    type: object
+    properties:
+      id:
+        type: string
+        format: tuid
+      text:
+        type: string
+        format: tuid
+  recording_item:
+    type: object
+    properties:
+      id:
+        type: string
+        format: tuid
+  language_component:
+    type: object
+    properties:
+      expressions:
+        type: array
+        items:
+          properties:
+            id:
+              type: string
+              format: tuid
+            transcriptions:
+              items:
+                $ref: '#/definitions/transcription_item'
+            pronunciations:
+              items:
+                $ref: '#/definitions/pronunciation_item'
+            recordings:
+              items:
+                $ref: '#/definitions/recording_item'
+      senses:
+        type: array
+        items:
+          properties:
+            id:
+              type: string
+              format: tuid
+            text:
+              type: string
+              format: markdown
+            is_archaic:
+              type: boolean
+              required: false
+      examples:
+        type: array
+        items:
+          properties:
+            id:
+              type: string
+              format: tuid
+            text:
+              type: string
+              format: markdown
+      inflections:
+        type: array
+        items: properties
+      affix:
+        type: string
+        nullable: true
+        example: 'prefix'
+      animacy:
+        type: string
+        nullable: true
+        example: 'animate'
+      arity:
+        type: integer
+        nullable: true
+        example: 2
+      aspect:
+        type: string
+        nullable: true
+        example: 'perfective'
+      beneficiary:
+        type: string
+        nullable: true
+        example: 'recipient'
+      case:
+        type: string
+        nullable: true
+        example: 'nominative'
+      category:
+        type: string
+        nullable: true
+        example: 'noun'
+      class:
+        type: string
+        nullable: true
+        example: 'class I'
+      concreteness:
+        type: string
+        nullable: true
+        example: 'concrete'
+      context:
+        type: object
+        nullable: true
+        properties:
+          id:
+            type: string
+            example: 'context123'
+      continuity:
+        type: string
+        nullable: true
+        example: 'continuous'
+      countability:
+        type: string
+        nullable: true
+        example: 'countable'
+      declension:
+        type: integer
+        nullable: true
+        example: 3
+      definiteness:
+        type: string
+        nullable: true
+        example: 'definite'
+      directionality:
+        type: string
+        nullable: true
+        example: 'bidirectional'
+      etymology:
+        type: string
+        nullable: true
+        example: 'from Latin'
+      finiteness:
+        type: string
+        nullable: true
+        example: 'finite'
+      focus:
+        type: string
+        nullable: true
+        example: 'subject'
+      formality:
+        type: string
+        nullable: true
+        example: 'formal'
+      frequency:
+        type: number
+        nullable: true
+        format: float
+        example: 0.8
+      gender:
+        type: string
+        nullable: true
+        example: 'masculine'
+      group:
+        type: string
+        nullable: true
+        example: 'group A'
+      has_predictable_meaning:
+        type: boolean
+        nullable: true
+        example: true
+      head:
+        type: object
+        nullable: true
+        properties:
+          id:
+            type: string
+            example: 'head123'
+      id:
+        type: string
+        example: 'component123'
+      inclusivity:
+        type: string
+        nullable: true
+        example: 'inclusive'
+      is_affix:
+        type: boolean
+        nullable: true
+        example: false
+      is_alternative:
+        type: boolean
+        nullable: true
+        example: false
+      is_auxiliary:
+        type: boolean
+        nullable: true
+        example: false
+      is_base:
+        type: boolean
+        nullable: true
+        example: true
+      is_borrowed:
+        type: boolean
+        nullable: true
+        example: false
+      is_compound:
+        type: boolean
+        nullable: true
+        example: false
+      is_derived:
+        type: boolean
+        nullable: true
+        example: true
+      is_descendent:
+        type: boolean
+        nullable: true
+        example: false
+      is_form:
+        type: boolean
+        nullable: true
+        example: true
+      is_head:
+        type: boolean
+        nullable: true
+        example: true
+      is_inflection:
+        type: boolean
+        nullable: true
+        example: true
+      is_lead:
+        type: boolean
+        nullable: true
+        example: false
+      is_modal:
+        type: boolean
+        nullable: true
+        example: false
+      is_multi_word:
+        type: boolean
+        nullable: true
+        example: false
+      is_norm:
+        type: boolean
+        nullable: true
+        example: false
+      is_phrase:
+        type: boolean
+        nullable: true
+        example: false
+      is_prefix:
+        type: boolean
+        nullable: true
+        example: true
+      is_proper:
+        type: boolean
+        nullable: true
+        example: false
+      is_root:
+        type: boolean
+        nullable: true
+        example: true
+      is_suffix:
+        type: boolean
+        nullable: true
+        example: false
+      is_syllable:
+        type: boolean
+        nullable: true
+        example: false
+      is_term:
+        type: boolean
+        nullable: true
+        example: false
+      is_terminating:
+        type: boolean
+        nullable: true
+        example: false
+      is_variant:
+        type: boolean
+        nullable: true
+        example: false
+      is_word:
+        type: boolean
+        nullable: true
+        example: true
+      language:
+        type: object
+        properties:
+          id:
+            type: string
+            example: 'language123'
+      likelihood:
+        type: string
+        nullable: true
+        example: 'likely'
+      mood:
+        type: string
+        nullable: true
+        example: 'indicative'
+      mutation:
+        type: boolean
+        nullable: true
+        example: false
+      origin:
+        type: object
+        nullable: true
+        properties:
+          id:
+            type: string
+            example: 'origin123'
+      person:
+        type: integer
+        nullable: true
+        example: 3
+      plurality:
+        type: string
+        nullable: true
+        example: 'singular'
+      polarity:
+        type: string
+        nullable: true
+        example: 'positive'
+      possessivity:
+        type: string
+        nullable: true
+        example: 'possessive'
+      rationality:
+        type: string
+        nullable: true
+        example: 'rational'
+      regularity:
+        type: string
+        nullable: true
+        example: 'regular'
+      relativity:
+        type: string
+        nullable: true
+        example: 'relative'
+      respect:
+        type: string
+        nullable: true
+        example: 'respectful'
+      role:
+        type: string
+        nullable: true
+        example: 'subject'
+      slug:
+        type: string
+        example: 'component-slug'
+      specificity:
+        type: string
+        nullable: true
+        example: 'specific'
+      structure:
+        type: string
+        nullable: true
+        example: 'simple'
+      syllable__max:
+        type: integer
+        nullable: true
+        example: 3
+      syllable__min:
+        type: integer
+        nullable: true
+        example: 1
+      tense:
+        type: string
+        nullable: true
+        example: 'past'
+      transitivity:
+        type: string
+        nullable: true
+        example: 'transitive'
+      voice:
+        type: string
+        nullable: true
+        example: 'active'

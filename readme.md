@@ -6,7 +6,9 @@
 <br/>
 <br/>
 
-<h3 align='center'>@termsurf/chat.surf</h3>
+<h3 align='center'>
+  <a href="https://chat.surf">chat.surf</a>
+</h3>
 <p align='center'>
   Open Source Language Website
 </p>
@@ -31,6 +33,11 @@ You'll also be able to:
 
 - Download a PDF of your grammar.
 - Download a spreadsheet of your dictionary entries and word lists.
+
+## Site Notes
+
+- REST API documentation at https://chat.surf/base/*
+- Actual REST API at https://base.chat.surf/v3
 
 ## Contributing
 
