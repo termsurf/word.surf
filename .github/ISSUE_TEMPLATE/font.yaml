@@ -1,5 +1,5 @@
-name: Font Upload
-description: Add a Font.
+name: Add a Font
+description: Add a font to our community font database.
 title: '[Font]: '
 labels: ['font', 'triage']
 assignees:
@@ -17,6 +17,14 @@ body:
       placeholder: eg. Noto Sans Mono
     validations:
       required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description:
+        Any extra notes about the font you would like us to know.
+    validations:
+      required: false
   # - type: checkboxes
   #   id: terms
   #   attributes:
