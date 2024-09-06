@@ -69,7 +69,7 @@ function Body({ language, components }: ContentInput) {
     <>
       <div className="relative w-full pb-64">
         <Grid
-          minWidth={144}
+          minWidth={400}
           gap={16}
           maxColumns={2}
           className="p-16"

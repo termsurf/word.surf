@@ -4,7 +4,7 @@ export type Language = {
   name: string
 }
 
-export type LanguageComponent = {
+export type LanguageComponentItem = {
   id: string
   slug: string
 }
