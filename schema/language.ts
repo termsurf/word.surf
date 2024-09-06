@@ -3,3 +3,8 @@ export type Language = {
   slug: string
   name: string
 }
+
+export type LanguageComponent = {
+  id: string
+  slug: string
+}
