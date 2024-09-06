@@ -7,7 +7,9 @@
 <br/>
 
 <p align='center'>
-  <img src='https://github.com/termsurf/chat.surf/blob/make/view/moon.svg?raw=true' height='192'/>
+  <a href="https://chat.surf">
+    <img src='https://github.com/termsurf/chat.surf/blob/make/view/moon.svg?raw=true' height='192'/>
+  </a>
 </p>
 
 <h3 align='center'>
