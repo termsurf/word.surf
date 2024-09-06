@@ -1,6 +1,4 @@
-import React from 'react'
-
-import Page from '~/page/language/type/Page'
+import Page from '~/component/page/language/type/Page'
 import { readBase } from '~/utility/base'
 
 type Input = {

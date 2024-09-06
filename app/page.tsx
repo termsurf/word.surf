@@ -1,6 +1,6 @@
 import { buildMetadata } from '@termsurf/leaf/utility/metadata'
 
-import Page from '~/page/Page'
+import Page from '~/component/page/Page'
 
 export { viewport } from '@termsurf/leaf/constant/viewport'
 

@@ -89,8 +89,6 @@
       "error",
       { "after": true }
     ],
-    "import/first": "error",
-    "import/newline-after-import": "error",
     "import/no-duplicates": "error",
     "sort-exports/sort-exports": "off",
     "typescript-sort-keys/interface": "off",
@@ -109,10 +107,7 @@
           ["^react$", "^next", "^[a-z]"],
           ["^@"],
           ["^~"],
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-          ["^.+\\.s?css$"],
-          ["^\\u0000"]
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"]
         ]
       }
     ]

@@ -9,8 +9,8 @@ import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
 import Link from '~/component/Link'
-import { Language, LanguageComponentItem } from '~/schema/language'
-import { List } from '~/schema/list'
+import { Language, LanguageComponentItem } from '~/data/schema/language'
+import { List } from '~/data/schema/list'
 
 import { Cached } from './config'
 

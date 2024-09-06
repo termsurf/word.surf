@@ -1,13 +1,11 @@
-import React from 'react'
-
-import Page from '~/page/language/type/components/Page'
+import Page from '~/component/page/language/type/components/Page'
 import { readBase } from '~/utility/base'
 
-type Input = {
+type Properties = {
   params: { language: string }
 }
 
-export default async function View({ params }: Input) {
+export default async function View({ params }: Properties) {
   const language = await readBase(`/languages/${params.language}`)
   const components = await readBase(
     `/languages/${params.language}/components`,
