@@ -2,13 +2,12 @@
 
 import { H1 } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
-import Grid from '@termsurf/leaf/component/Grid'
 import Toast from '@termsurf/leaf/component/Toast'
 import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
-import Link from '~/component/Link'
+import Entry from '~/component/Entry'
 import { Language, LanguageComponentItem } from '~/data/schema/language'
 import { List } from '~/data/schema/list'
 
@@ -69,20 +68,16 @@ function Body({ language, components }: ContentInput) {
   return (
     <>
       <div className="relative w-full pb-64">
-        <Grid
-          minWidth={400}
-          gap={16}
-          maxColumns={2}
-          className="p-16"
-        >
+        <Entry.List>
           {components.list.map(x => (
-            <Link
+            <Entry
               key={x.id}
               path={`/language/${language.slug}/components/${x.slug}`}
-              title={x.slug}
+              native={x.slug}
+              nativeClassName="text-2xl"
             />
           ))}
-        </Grid>
+        </Entry.List>
       </div>
     </>
   )
