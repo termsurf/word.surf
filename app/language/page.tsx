@@ -1,11 +1,9 @@
 import React from 'react'
 import Page from '~/page/language/Page'
+import { readBase } from '~/utility/base'
 
 export default async function View() {
-  const languagesRes = await fetch(
-    `https://base.chat.surf/languages?size=1000`,
-  )
-  const languages = await languagesRes.json()
+  const languages = await readBase(`/languages?size=1000`)
 
   return <Page languages={languages} />
 }
