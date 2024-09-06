@@ -55,6 +55,8 @@ This repo is currently a **Next.js v14** "app router" style app. It used [`@term
 - [MDX](https://mdxjs.com/) (markdown for writing language guides)
 - [Supabase](https://supabase.com/) (for real-time collaboration)
 - [yjs](https://docs.yjs.dev/) (for real-time collaboration)
+- [TypeScript](https://www.typescriptlang.org/)
+- [zod](https://zod.dev/) (data validation)
 
 #### Start the server
 
