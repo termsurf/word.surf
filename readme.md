@@ -47,16 +47,21 @@ You'll also be able to:
 
 ## Development
 
-This repo is currently a **Next.js v14** "app router" style app. It used [`@termsurf/leaf`](https://github.com/termsurf/leaf) for most of the UI. Leaf is a simple UI kit for TermSurf projects, just the general theme basically, didn't reinvent the wheel too much here.
+This repo is currently a frontend **Next.js v14** "app router" style app. It used [`@termsurf/leaf`](https://github.com/termsurf/leaf) for most of the UI. Leaf is a simple UI kit for TermSurf projects, just the general theme basically, didn't reinvent the wheel too much here. Built on top of some of these things:
 
+- [React](https://react.dev/)
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Radix UI](https://www.radix-ui.com/) (some helpful UI components)
+- [Radix UI](https://www.radix-ui.com/) (some helpful headless UI components)
 - [MDX](https://mdxjs.com/) (markdown for writing language guides)
 - [Supabase](https://supabase.com/) (for real-time collaboration)
 - [yjs](https://docs.yjs.dev/) (for real-time collaboration)
 - [TypeScript](https://www.typescriptlang.org/)
 - [zod](https://zod.dev/) (data validation)
+- [XLSX.js](https://github.com/SheetJS/sheetjs) (for spreadsheets)
+- [CodeMirror](https://github.com/codemirror/codemirror5) (text editing and code highlighting)
+- [Immutable.js](https://immutable-js.com/)
+- [ESLint](https://eslint.org/)
 
 #### Start the server
 
