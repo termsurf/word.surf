@@ -47,11 +47,26 @@ You'll also be able to:
 
 ## Development
 
-```bash
-# Start the local server
-pnpm host
+This repo is currently a **Next.js v14** "app router" style app. It used [`@termsurf/leaf`](https://github.com/termsurf/leaf) for most of the UI. Leaf is a simple UI kit for TermSurf projects, just the general theme basically, didn't reinvent the wheel too much here.
 
-# Build the production build
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Radix UI](https://www.radix-ui.com/) (some helpful UI components)
+- [MDX](https://mdxjs.com/) (markdown for writing language guides)
+- [Supabase](https://supabase.com/) (for real-time collaboration)
+- [yjs](https://docs.yjs.dev/) (for real-time collaboration)
+
+#### Start the server
+
+```bash
+pnpm work
+```
+
+Then visit http://localhost:3000 or whatever port it takes you to.
+
+#### Test production build
+
+```bash
 pnpm make
 ```
 
