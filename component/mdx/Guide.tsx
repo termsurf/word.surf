@@ -1,31 +1,33 @@
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+
 import {
-  HR,
+  A,
+  Code,
+  Column,
   H1,
   H2,
   H3,
   H4,
   H5,
   H6,
+  HR,
   Li,
   Ol,
   P,
-  Ul,
-  TableScroller,
-  Table,
-  TBody,
-  TR,
-  TH,
-  TD,
-  A,
   Pre,
-  Code,
-  Column,
+  Table,
+  TableScroller,
+  TBody,
+  TD,
+  TH,
+  TR,
+  Ul,
   Whole,
 } from '@termsurf/leaf/component/Content'
-import Gloss from '../Gloss'
 import Text from '@termsurf/leaf/component/Text'
+
 import Entry from '../Entry'
+import Gloss from '../Gloss'
 
 const components = {
   Gloss,

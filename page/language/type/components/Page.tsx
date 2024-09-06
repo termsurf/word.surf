@@ -1,17 +1,18 @@
 'use client'
 
-import Grid from '@termsurf/leaf/component/Grid'
-import React, { useMemo } from 'react'
+import { H1 } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
-import { H1, H2, P } from '@termsurf/leaf/component/Content'
-import Toast, { useToast } from '@termsurf/leaf/component/Toast'
-import { CACHED, Cached } from './config'
-import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
+import Grid from '@termsurf/leaf/component/Grid'
+import Toast from '@termsurf/leaf/component/Toast'
 import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
+import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
+
 import Link from '~/component/Link'
 import { Language, LanguageComponentItem } from '~/schema/language'
 import { List } from '~/schema/list'
+
+import { Cached } from './config'
 
 const KEY = '/language/type/components'
 

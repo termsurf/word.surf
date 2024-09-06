@@ -1,7 +1,8 @@
 'use client'
 
-import '@termsurf/leaf/style/head.css'
 import Client from '@termsurf/leaf/component/Client'
+
+import '@termsurf/leaf/style/head.css'
 
 export { viewport } from '@termsurf/leaf/constant/viewport'
 

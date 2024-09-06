@@ -1,22 +1,25 @@
 'use client'
 
-import NextLink from 'next/link'
-import Grid from '@termsurf/leaf/component/Grid'
-import { type MDXRemoteSerializeResult } from 'next-mdx-remote'
 import React, { useMemo } from 'react'
+import NextLink from 'next/link'
+import { type MDXRemoteSerializeResult } from 'next-mdx-remote'
+
 import { LinkButton } from '@termsurf/leaf/component/Button'
+import { H1, H2, P } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
+import Grid from '@termsurf/leaf/component/Grid'
 import TriangleLeftIcon from '@termsurf/leaf/component/icon/TriangleLeft'
 import TriangleRightIcon from '@termsurf/leaf/component/icon/TriangleRight'
 import Text from '@termsurf/leaf/component/Text'
-import { H1, H2, P } from '@termsurf/leaf/component/Content'
-import Toast, { useToast } from '@termsurf/leaf/component/Toast'
-import { CACHED, Cached } from './config'
-import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
-import Guide from '~/component/mdx/Guide'
+import Toast from '@termsurf/leaf/component/Toast'
 import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
+import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
+
 import Link from '~/component/Link'
+import Guide from '~/component/mdx/Guide'
+
+import { Cached } from './config'
 
 const KEY = '/language/type/guide'
 

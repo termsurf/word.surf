@@ -1,16 +1,16 @@
-import Page, { GridLink } from '~/page/language/type/guide/Page'
-
 import React from 'react'
-import fsp from 'fs/promises'
-import { serialize } from 'next-mdx-remote/serialize'
 import { compileMDX } from 'next-mdx-remote/rsc'
-import gfm from 'remark-gfm'
-import math from 'remark-math'
-import katex from 'rehype-katex'
-
-import { buildMetadata } from '@termsurf/leaf/utility/metadata'
+import { serialize } from 'next-mdx-remote/serialize'
+import fsp from 'fs/promises'
 import YAML from 'js-yaml'
 import path from 'path'
+import katex from 'rehype-katex'
+import gfm from 'remark-gfm'
+import math from 'remark-math'
+
+import { buildMetadata } from '@termsurf/leaf/utility/metadata'
+
+import Page, { GridLink } from '~/page/language/type/guide/Page'
 
 type Input = {
   params: { language: string }

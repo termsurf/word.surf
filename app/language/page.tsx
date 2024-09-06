@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Page from '~/page/language/Page'
 import { readBase } from '~/utility/base'
 

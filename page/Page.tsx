@@ -1,9 +1,10 @@
 'use client'
 
 import React from 'react'
-import Tag from '@termsurf/leaf/component/Tag'
-import Environment from '@termsurf/leaf/component/Environment'
+
 import { H1, P } from '@termsurf/leaf/component/Content'
+import Environment from '@termsurf/leaf/component/Environment'
+import Tag from '@termsurf/leaf/component/Tag'
 
 export default function Page() {
   return (

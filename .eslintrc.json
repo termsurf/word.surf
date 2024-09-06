@@ -22,9 +22,15 @@
     "sort-exports",
     "typescript-sort-keys",
     "sort-keys",
-    "prettier"
+    "prettier",
+    "unused-imports"
   ],
-  "extends": ["prettier", "next"],
+  "extends": [
+    "prettier",
+    "next",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
   "rules": {
     "curly": 2,
     "@typescript-eslint/quotes": [
@@ -42,6 +48,7 @@
         "default": "generic"
       }
     ],
+    "react/display-name": "off",
     "@typescript-eslint/await-thenable": "error",
     "@typescript-eslint/consistent-type-definitions": 0,
     "@typescript-eslint/consistent-type-exports": "error",
@@ -93,6 +100,21 @@
     "prettier/prettier": 2,
     "@typescript-eslint/no-unused-vars": "off",
     "default-case": "off",
-    "default-case-last": "off"
+    "default-case-last": "off",
+    "unused-imports/no-unused-imports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^react$", "^next", "^[a-z]"],
+          ["^@"],
+          ["^~"],
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ["^.+\\.s?css$"],
+          ["^\\u0000"]
+        ]
+      }
+    ]
   }
 }

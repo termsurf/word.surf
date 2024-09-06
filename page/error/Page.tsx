@@ -1,7 +1,7 @@
+import Environment from '@termsurf/leaf/component/Environment'
 import BaseErrorPage, {
   ErrorPageInput,
 } from '@termsurf/leaf/component/page/ErrorPage'
-import Environment from '@termsurf/leaf/component/Environment'
 
 export default function ErrorPage({ error, reset }: ErrorPageInput) {
   return (
