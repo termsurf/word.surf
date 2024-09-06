@@ -34,6 +34,22 @@ You'll also be able to:
 - Download a PDF of your grammar.
 - Download a spreadsheet of your dictionary entries and word lists.
 
+## Motivation
+
+We are working on a conlang, [Tune](https://github.com/termsurf/tune), and a conscript, [Tone](https://github.com/termsurf/tone), and there's nothing really that nice out there for working on it in public and sharing your creations.
+
+In addition, I personally would like to learn how to communicate in these 7 ancient languages:
+
+1. Hebrew
+2. Sanskrit
+3. Tibetan
+4. Chinese
+5. Arabic
+6. Greek
+7. Latin
+
+So needed a system to normalize and unify the lexicons and rules for the different languages, so you can see more at once, in as nice and easy a way as possible.
+
 ## Site Notes
 
 - REST API documentation at https://chat.surf/base/*
