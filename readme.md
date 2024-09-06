@@ -36,7 +36,7 @@ You'll also be able to:
 
 ## Motivation
 
-We are working on a conlang, [Tune](https://github.com/termsurf/tune), and a conscript, [Tone](https://github.com/termsurf/tone), and there's nothing really that nice out there for working on it in public and sharing your creations.
+We are working on a conlang, [Tune](https://github.com/termsurf/tune), and a conscript, [Tone](https://github.com/termsurf/tone), and there's nothing really that nice out there for working on it in public and sharing your creations. There are some Facebook groups, and some language websites, but nothing that really aggregates and centralizes all of the language stuff.
 
 In addition, I personally would like to learn how to communicate in these 7 ancient languages:
 
