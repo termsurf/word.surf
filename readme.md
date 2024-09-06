@@ -6,6 +6,10 @@
 <br/>
 <br/>
 
+<p align='center'>
+  <img src='https://github.com/termsurf/chat.surf/blob/make/view/moon.svg?raw=true' height='192'/>
+</p>
+
 <h3 align='center'>
   <a href="https://chat.surf">chat.surf</a>
 </h3>
