@@ -50,6 +50,8 @@ In addition, I personally would like to learn how to communicate in these 7 anci
 
 So needed a system to normalize and unify the lexicons and rules for the different languages, so you can see more at once, in as nice and easy a way as possible.
 
+That plus it would be amazing to turn this into a small revenue stream somehow, to fund further open developments in the future.
+
 ## Site Notes
 
 - REST API documentation at https://chat.surf/base/*
