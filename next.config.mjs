@@ -2,11 +2,11 @@
 import createMDXPlugin from '@next/mdx'
 import withYaml from 'next-plugin-yaml'
 import path from 'path'
-import { fileURLToPath } from 'url'
-import remarkGfm from 'remark-gfm'
-import rehypeSlug from 'rehype-slug'
-import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import rehypeSlug from 'rehype-slug'
+import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
+import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -52,6 +52,16 @@ const nextConfig = withYaml(
       mdxRs: true,
       serverComponentsExternalPackages: ['sharp', 'onnxruntime-node'],
       // missingSuspenseWithCSRBailout: false,
+    },
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'file.chat.surf',
+          port: '',
+          pathname: '/**',
+        },
+      ],
     },
     pageExtensions: ['mdx', 'md', 'tsx', 'ts'],
     poweredByHeader: false,

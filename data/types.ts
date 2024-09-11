@@ -9,6 +9,31 @@ export type Language = {
   name: string
 }
 
+export type LanguageItem = {
+  id: string
+  slug: string
+  name: string
+}
+
+export type LanguageListItem = {
+  id: string
+  position: number
+  translations: Array<{
+    language: {
+      id: string
+    }
+    components: Array<{
+      id: string
+      role?: string
+      text: string
+      context?: {
+        id: string
+        text: string
+      }
+    }>
+  }>
+}
+
 export type LanguageComponentItem = {
   id: string
   text: string
@@ -48,6 +73,10 @@ export type ImageAsset = {
     files: Array<{
       id: string
       url: string
+      format?: string
+      width: number
+      height: number
+      size?: string
     }>
   }
 }

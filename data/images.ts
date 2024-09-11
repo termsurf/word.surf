@@ -1,12 +1,23 @@
 export const SMALL = {
-  cloud: '/cloud.svg',
-  fire: '/fire.gif',
-  flower: '/flower.svg',
-  fruit: '/fruit.svg',
-  leaf: '/leaf.svg',
   moon: '/moon.svg',
-  rock: '/rock.gif',
-  seed: '/seed.svg',
   sun: '/sun.svg',
+  rock: '/rock.gif',
   tree: '/tree.gif',
+  fruit: '/fruit.svg',
+  flower: '/flower.svg',
+  fish: '/fish.svg',
+  bird: '/bird.svg',
+  fire: '/fire.gif',
+  water: '/water.svg',
 }
+
+// moon
+// sun
+// rock
+// tree
+// fruit
+// flower
+// fish
+// bird
+// fire
+// water
