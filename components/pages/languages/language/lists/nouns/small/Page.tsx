@@ -108,7 +108,7 @@ function Body({ language, languages, items, images }: ContentInput) {
                     'block',
                     translation ? undefined : 'invisible',
                   )}
-                  script="tibetan"
+                  // script="tibetan"
                   size={32}
                 >
                   {translation ?? 'placeholder'}
