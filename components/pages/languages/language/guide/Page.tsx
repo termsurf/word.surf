@@ -6,7 +6,6 @@ import { type MDXRemoteSerializeResult } from 'next-mdx-remote'
 import NextLink from 'next/link'
 import { useMemo } from 'react'
 
-import { LinkButton } from '@termsurf/leaf/component/Button'
 import { H1, H2, P } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Grid from '@termsurf/leaf/component/Grid'
@@ -21,9 +20,11 @@ import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 import Link from '~/components/Link'
 import Guide from '~/components/mdx/Guide'
 
+import HeaderContextButton from '~/components/HeaderContextButton'
+import { languagePath } from '~/tools/paths'
 import { Cached } from './config'
 
-const KEY = '/language/type/guide'
+const KEY = '/languages/language/guide'
 
 export type GridLink = {
   title: string
@@ -35,6 +36,7 @@ type PageInput = {
   language: {
     title: string
     path: string
+    slug: string
   }
   related?: Array<string>
   pages: Array<GridLink>
@@ -114,6 +116,7 @@ type HeaderInput = {
   language: {
     title: string
     path: string
+    slug: string
   }
 }
 
@@ -122,16 +125,11 @@ function Header({ language, title, description }: HeaderInput) {
 
   return (
     <header>
-      <div className="flex justify-center p-16 pt-0">
-        <LinkButton
-          href={language.path}
-          size="small"
-          color="contrast"
-          className="rounded-large-circle"
-        >
-          {language.title}
-        </LinkButton>
-      </div>
+      <HeaderContextButton
+        href={languagePath({ language: language.slug })}
+      >
+        {language.title}
+      </HeaderContextButton>
       <H1>{title}</H1>
       {description && (
         <P

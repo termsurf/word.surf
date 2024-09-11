@@ -8,8 +8,9 @@ import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
 import Entry from '~/components/Entry'
+import HeaderContextButton from '~/components/HeaderContextButton'
 import { Language, LanguageComponentItem, List } from '~/data/types'
-import { languageComponentPath } from '~/tools/paths'
+import { languageComponentPath, languagePath } from '~/tools/paths'
 
 import { Cached } from './config'
 
@@ -57,12 +58,15 @@ function Header({ language }: HeaderInput) {
 
   return (
     <header>
+      <HeaderContextButton
+        href={languagePath({ language: language.slug })}
+      >
+        {language.name}
+      </HeaderContextButton>
       <H1>{language.name} Components</H1>
     </header>
   )
 }
-
-const TERMS = [{}]
 
 function Body({ language, components }: ContentInput) {
   return (
@@ -77,7 +81,10 @@ function Body({ language, components }: ContentInput) {
                 component: x.text,
               })}
               native={x.text}
-              nativeClassName="text-2xl"
+              role={x.role}
+              ipa={x.expressions[0]?.pronunciations[0]?.text}
+              definition={x.definitions[0]?.text}
+              nativeClassName="!text-3xl"
             />
           ))}
         </Entry.List>

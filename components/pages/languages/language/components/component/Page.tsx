@@ -1,13 +1,15 @@
 'use client'
 
-import { H1 } from '@termsurf/leaf/component/Content'
+import { H1, P } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Toast from '@termsurf/leaf/component/Toast'
 import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
+import HeaderContextButton from '~/components/HeaderContextButton'
 import { Language, LanguageComponentItem } from '~/data/types'
+import { languagePath } from '~/tools/paths'
 
 import { Cached } from './config'
 
@@ -36,7 +38,10 @@ function Content({ language, component }: ContentInput) {
 
   return (
     <>
-      <Header language={language} />
+      <Header
+        language={language}
+        component={component}
+      />
       <Body
         language={language}
         component={component}
@@ -48,25 +53,37 @@ function Content({ language, component }: ContentInput) {
 
 type HeaderInput = {
   language: Language
+  component: LanguageComponentItem
 }
 
-function Header({ language }: HeaderInput) {
+function Header({ language, component }: HeaderInput) {
   const { cached } = usePageSettings<any, Cached>()
 
   return (
     <header>
-      <H1>{language.name} component</H1>
+      <HeaderContextButton
+        href={languagePath({ language: language.slug })}
+      >
+        {language.name}
+      </HeaderContextButton>
+      <H1>{component.text}</H1>
+      <P align="center">{component.definitions[0]?.text}</P>
     </header>
   )
 }
-
-const TERMS = [{}]
 
 function Body({ language, component }: ContentInput) {
   return (
     <>
       <div className="relative w-full pb-64 whitespace-pre font-NotoSansMono">
-        {JSON.stringify(component, null, 2)}
+        {component.definitions.map(def => (
+          <P
+            className="mb-8"
+            key={def.id}
+          >
+            {def.text}
+          </P>
+        ))}
       </div>
     </>
   )

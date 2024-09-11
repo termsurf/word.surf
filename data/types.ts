@@ -12,6 +12,8 @@ export type Language = {
 export type LanguageComponentItem = {
   id: string
   text: string
+  role?: string
+  is_syllable?: boolean
   expressions: Array<{
     id: string
     text: string
@@ -28,6 +30,11 @@ export type LanguageComponentItem = {
       id: string
       text: string
     }>
+  }>
+  definitions: Array<{
+    id: string
+    text: string
+    position: string
   }>
 }
 

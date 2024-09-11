@@ -51,7 +51,7 @@ function EntryTableItem({
   items.push(
     <Text
       key="native"
-      className="block leading-base text-4xl text-violet-700 cursor-pointer"
+      className="block leading-base text-4xl text-gray-700 cursor-pointer"
     >
       {native}
     </Text>,
@@ -60,7 +60,7 @@ function EntryTableItem({
     items.push(
       <Text
         key="roman"
-        className="block leading-base text-violet-700 font-bold text-xl"
+        className="block leading-base text-gray-700 font-bold text-xl"
       >
         {roman}
       </Text>,
@@ -133,19 +133,19 @@ function EntryListItem({
     <li className="block [&>a]:last:border-b-0">
       <Link
         href={path}
-        className="hover:bg-gray-50 transition-colors flex justify-between gap-16 border-0 border-b-4 border-solid border-gray-100"
+        className="hover:bg-gray-50 transition-colors flex justify-between gap-16 border-0 border-b-4 border-solid border-gray-50"
       >
         <span className="flex flex-col gap-16 px-16 py-24">
           <Text
             className={cx(
               nativeClassName,
-              'block leading-base text-lg text-violet-700 cursor-pointer',
+              'block leading-base text-lg text-gray-700 cursor-pointer',
             )}
           >
             {native}
           </Text>
           {roman && (
-            <Text className="block leading-base text-violet-700 font-bold text-xl">
+            <Text className="block leading-base text-gray-700 font-bold text-xl">
               {roman}
             </Text>
           )}

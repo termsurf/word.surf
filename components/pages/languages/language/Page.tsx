@@ -7,7 +7,9 @@ import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
+import Link from '~/components/Link'
 import { Language } from '~/data/types'
+import { languageComponentsPath } from '~/tools/paths'
 
 import { Cached } from './config'
 
@@ -54,7 +56,12 @@ const TERMS = [{}]
 function Body({ language }: ContentInput) {
   return (
     <>
-      <div className="relative w-full pb-64"></div>
+      <div className="relative w-full pb-64 p-16">
+        <Link
+          title="Components"
+          path={languageComponentsPath({ language: 'tibetan' })}
+        />
+      </div>
     </>
   )
 }

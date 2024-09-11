@@ -1,3 +1,15 @@
+export const languagePath = ({ language }: { language: string }) => {
+  return `/languages/${language}`
+}
+
+export const languageComponentsPath = ({
+  language,
+}: {
+  language: string
+}) => {
+  return `/languages/${language}/components`
+}
+
 export const languageComponentPath = ({
   language,
   component,
