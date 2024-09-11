@@ -1565,7 +1565,7 @@ List of texts.
       - Term
       - Romanization
       - Pronunciation
-      - Gloss
+      - Source
     - 3
       - Nouns (tree)
         - S M L
@@ -1764,3 +1764,36 @@ List of texts.
     - IPA
     - X-Sampa
     - Recording
+
+```
+
+/lists
+/lists/swadesh
+/lists/swadesh/207
+/lists/nouns
+/lists/nouns/small
+/lists/nouns/medium
+/lists/nouns/large
+```
+
+## Social
+
+- https://conlang.stackexchange.com/questions/1099/are-there-any-sites-you-can-use-to-develop-an-online-course-for-your-own-conlang
+
+```
+/languages/tune/grammar
+/languages/tune/grammar/actions
+/languages/tune/dictionary
+/languages/tune/components
+/languages/tune/lists
+/languages/tune/syllables
+/languages/tune/nouns
+/languages/tune/tests
+/languages/tune/texts
+/languages/tune/guides
+/languages/tune/editor
+/symbols/a
+/scripts/tone
+/scripts/tone/editor
+/fonts/noto-sans-mono
+```
