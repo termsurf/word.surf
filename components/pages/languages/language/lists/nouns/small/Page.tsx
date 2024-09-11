@@ -1,3 +1,5 @@
+/* eslint-disable simple-import-sort/imports */
+
 'use client'
 
 import { H1 } from '@termsurf/leaf/component/Content'
@@ -100,7 +102,7 @@ function Body({ language, languages, items, images }: ContentInput) {
                 key={name}
                 className="flex justify-center items-center flex-col gap-24"
               >
-                <ImageAsset {...images[name]} />
+                <ImageAssetLoader {...images[name]} />
                 <Text
                   className={cx(
                     'block',
@@ -138,7 +140,7 @@ function Body({ language, languages, items, images }: ContentInput) {
   )
 }
 
-function ImageAsset(props: ImageAsset) {
+function ImageAssetLoader(props: ImageAsset) {
   const medium = props.source.files.find(
     file => file.size === 'medium' || !file.size,
   )!
