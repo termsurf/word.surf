@@ -37,6 +37,10 @@ export default function Page() {
           title="Tibetan"
           path={languagePath({ language: 'tibetan' })}
         />
+        <Link
+          title="English"
+          path={languagePath({ language: 'english' })}
+        />
       </Grid>
     </Environment>
   )

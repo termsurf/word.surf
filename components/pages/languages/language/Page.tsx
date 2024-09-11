@@ -51,15 +51,13 @@ function Header({ language }: ContentInput) {
   )
 }
 
-const TERMS = [{}]
-
 function Body({ language }: ContentInput) {
   return (
     <>
       <div className="relative w-full pb-64 p-16">
         <Link
           title="Components"
-          path={languageComponentsPath({ language: 'tibetan' })}
+          path={languageComponentsPath({ language: language.slug })}
         />
       </div>
     </>
