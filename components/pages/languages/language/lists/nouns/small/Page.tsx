@@ -21,6 +21,7 @@ import {
 import Grid from '@termsurf/leaf/component/Grid'
 import Text from '@termsurf/leaf/component/Text'
 import Image from 'next/image'
+import { useState } from 'react'
 import HeaderContextButton from '~/components/HeaderContextButton'
 import { languagePath } from '~/tools/paths'
 import { Cached } from './config'
@@ -45,7 +46,7 @@ export default function Page(props: PageInput) {
 type ContentInput = PageInput
 
 function Content(props: ContentInput) {
-  useFonts(['Tone Etch'])
+  useFonts(['Tone Etch', 'Noto Serif Tibetan'])
 
   return (
     <>
@@ -108,7 +109,7 @@ function Body({ language, languages, items, images }: ContentInput) {
                     'block',
                     translation ? undefined : 'invisible',
                   )}
-                  // script="tibetan"
+                  script="tibetan"
                   size={32}
                 >
                   {translation ?? 'placeholder'}
@@ -144,6 +145,7 @@ function ImageAssetLoader(props: ImageAsset) {
   const medium = props.source.files.find(
     file => file.size === 'medium' || !file.size,
   )!
+  const [isLoaded, setIsLoaded] = useState(false)
   return (
     <Image
       blurDataURL={props.source.preview}
@@ -155,10 +157,13 @@ function ImageAssetLoader(props: ImageAsset) {
         height: 'auto',
         width: '100%',
         fontFamily: 'Noto Sans Mono',
+        transition: 'opacity 0.3s',
+        opacity: isLoaded ? 1 : 0,
       }}
       width={128}
       height={128}
       src={medium.url}
+      onLoadingComplete={() => setIsLoaded(true)}
     />
   )
 }
