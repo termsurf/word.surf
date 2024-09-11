@@ -66,8 +66,8 @@ export default async function View({ params }: Input) {
     title: string
     description?: string
     language: {
-      title: string
-      path: string
+      name: string
+      slug: string
     }
     scripts?: Array<string>
     back?: string

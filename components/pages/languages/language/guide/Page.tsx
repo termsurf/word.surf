@@ -34,8 +34,7 @@ export type GridLink = {
 
 type PageInput = {
   language: {
-    title: string
-    path: string
+    name: string
     slug: string
   }
   related?: Array<string>
@@ -114,8 +113,7 @@ type HeaderInput = {
   title: string
   description?: string
   language: {
-    title: string
-    path: string
+    name: string
     slug: string
   }
 }
@@ -128,7 +126,7 @@ function Header({ language, title, description }: HeaderInput) {
       <HeaderContextButton
         href={languagePath({ language: language.slug })}
       >
-        {language.title}
+        {language.name}
       </HeaderContextButton>
       <H1>{title}</H1>
       {description && (

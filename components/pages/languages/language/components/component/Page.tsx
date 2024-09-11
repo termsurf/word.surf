@@ -66,7 +66,7 @@ function Header({ language, component }: HeaderInput) {
       >
         {language.name}
       </HeaderContextButton>
-      <H1>{component.text}</H1>
+      <H1 className="!text-6xl">{component.text}</H1>
       <P align="center">{component.definitions[0]?.text}</P>
     </header>
   )
