@@ -2,7 +2,6 @@
 
 'use client'
 
-import { H1 } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Toast from '@termsurf/leaf/component/Toast'
 import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
@@ -26,11 +25,13 @@ import { useState } from 'react'
 import HeaderContextButton from '~/components/HeaderContextButton'
 import {
   languageComponentPath,
-  languageListPath,
   languagePath,
   slugify,
 } from '~/tools/paths'
 import { Cached } from './config'
+import NVA from './NVA'
+import SML from './SML'
+import Title from './Title'
 
 const KEY = '/languages/language/lists/nouns/small'
 
@@ -73,46 +74,12 @@ function Header({ language }: ContentInput) {
       >
         {language.name}
       </HeaderContextButton>
-      <H1 className="flex justify-center items-start gap-8 !mb-24">
-        <span className="inline-block">Noun List</span>{' '}
-        <span className="text-sm relative top-0 text-gray-500 inline-block">
-          small
-        </span>
-      </H1>
-      <ul className="flex gap-8 justify-center mb-32">
-        <li>
-          <Link
-            href={languageListPath({
-              language: language.slug,
-              path: 'noun/small',
-            })}
-          >
-            <Text className="font-bold">S</Text>
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="[&>span]:hover:text-violet-600 [&>span]:transition-colors"
-            href={languageListPath({
-              language: language.slug,
-              path: 'noun/medium',
-            })}
-          >
-            <Text className="font-bold text-gray-400">M</Text>
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="[&>span]:hover:text-violet-600 [&>span]:transition-colors"
-            href={languageListPath({
-              language: language.slug,
-              path: 'noun/large',
-            })}
-          >
-            <Text className="font-bold text-gray-400">L</Text>
-          </Link>
-        </li>
-      </ul>
+      <Title>Noun List</Title>
+      <SML
+        type="nouns"
+        active="small"
+        language={language}
+      />
     </header>
   )
 }
@@ -120,7 +87,7 @@ function Header({ language }: ContentInput) {
 function Body({ language, languages, items, images }: ContentInput) {
   return (
     <>
-      <div className="relative w-full pb-128">
+      <div className="relative w-full pb-128 flex flex-col gap-16">
         <Grid
           gap={16}
           minWidth={128}
@@ -192,6 +159,12 @@ function Body({ language, languages, items, images }: ContentInput) {
             term={terms.tree}
           />
         </Grid> */}
+        <NVA
+          className="mt-64"
+          language={language}
+          size="small"
+          active="noun/small"
+        />
       </div>
     </>
   )

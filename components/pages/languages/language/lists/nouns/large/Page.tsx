@@ -17,7 +17,12 @@ import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
-import { Language, LanguageItem, LanguageListItem } from '~/data/types'
+import {
+  ImageAssetMap,
+  Language,
+  LanguageItem,
+  LanguageListItem,
+} from '~/data/types'
 
 import Text from '@termsurf/leaf/component/Text'
 import HeaderContextButton from '~/components/HeaderContextButton'
@@ -32,6 +37,7 @@ type PageInput = {
   language: Language
   languages: Array<LanguageItem>
   items: Array<LanguageListItem>
+  images: ImageAssetMap
 }
 
 export default function Page(props: PageInput) {
@@ -66,10 +72,10 @@ function Header({ language }: ContentInput) {
       >
         {language.name}
       </HeaderContextButton>
-      <Title size="medium">Noun List</Title>
+      <Title size="large">Noun List</Title>
       <SML
         type="nouns"
-        active="medium"
+        active="large"
         language={language}
       />
     </header>
