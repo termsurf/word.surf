@@ -21,9 +21,15 @@ import {
 import Grid from '@termsurf/leaf/component/Grid'
 import Text from '@termsurf/leaf/component/Text'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 import HeaderContextButton from '~/components/HeaderContextButton'
-import { languagePath } from '~/tools/paths'
+import {
+  languageComponentPath,
+  languageListPath,
+  languagePath,
+  slugify,
+} from '~/tools/paths'
 import { Cached } from './config'
 
 const KEY = '/languages/language/lists/nouns/small'
@@ -67,12 +73,46 @@ function Header({ language }: ContentInput) {
       >
         {language.name}
       </HeaderContextButton>
-      <H1 className="flex justify-center items-start gap-8">
+      <H1 className="flex justify-center items-start gap-8 !mb-24">
         <span className="inline-block">Noun List</span>{' '}
         <span className="text-sm relative top-0 text-gray-500 inline-block">
           small
         </span>
       </H1>
+      <ul className="flex gap-8 justify-center mb-32">
+        <li>
+          <Link
+            href={languageListPath({
+              language: language.slug,
+              path: 'noun/small',
+            })}
+          >
+            <Text className="font-bold">S</Text>
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="[&>span]:hover:text-violet-600 [&>span]:transition-colors"
+            href={languageListPath({
+              language: language.slug,
+              path: 'noun/medium',
+            })}
+          >
+            <Text className="font-bold text-gray-400">M</Text>
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="[&>span]:hover:text-violet-600 [&>span]:transition-colors"
+            href={languageListPath({
+              language: language.slug,
+              path: 'noun/large',
+            })}
+          >
+            <Text className="font-bold text-gray-400">L</Text>
+          </Link>
+        </li>
+      </ul>
     </header>
   )
 }
@@ -97,16 +137,32 @@ function Body({ language, languages, items, images }: ContentInput) {
               ),
             )
             const translation =
-              mapping?.translations[1].components[0]?.text
+              mapping?.translations[1]?.components[0]?.text
+
+            const Component = translation ? Link : 'div'
+            const props = translation
+              ? {
+                  href: languageComponentPath({
+                    language: language.slug,
+                    component: slugify(translation),
+                  }),
+                }
+              : { href: '' }
             return (
-              <div
+              <Component
                 key={name}
-                className="flex justify-center items-center flex-col gap-24"
+                className={cx(
+                  'flex justify-center items-center flex-col gap-24',
+                  translation
+                    ? '[&>span]:hover:text-violet-600 [&>span]:transition-colors'
+                    : undefined,
+                )}
+                {...props}
               >
                 <ImageAssetLoader {...images[name]} />
                 <Text
                   className={cx(
-                    'block',
+                    'block transition-colors',
                     translation ? undefined : 'invisible',
                   )}
                   script="tibetan"
@@ -114,10 +170,10 @@ function Body({ language, languages, items, images }: ContentInput) {
                 >
                   {translation ?? 'placeholder'}
                 </Text>
-                <Text className="block font-bold text-gray-600">
+                <Text className="transition-colors block font-bold text-gray-600">
                   {name}
                 </Text>
-              </div>
+              </Component>
             )
           })}
         </Grid>

@@ -2,6 +2,16 @@ export const languagePath = ({ language }: { language: string }) => {
   return `/languages/${language}`
 }
 
+export const languageListPath = ({
+  language,
+  path,
+}: {
+  language: string
+  path: string
+}) => {
+  return `/languages/${language}/lists/${path}`
+}
+
 export const languageComponentsPath = ({
   language,
 }: {
@@ -20,6 +30,6 @@ export const languageComponentPath = ({
   return `/languages/${language}/components/${slugify(component)}`
 }
 
-function slugify(text: string) {
+export function slugify(text: string) {
   return text.replace(/\s/g, '+')
 }
