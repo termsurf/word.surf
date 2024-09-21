@@ -63,11 +63,13 @@ function Header({ language }: ContentInput) {
         {language.name}
       </HeaderContextButton>
       <Title size="large">Nouns</Title>
-      <SML
-        type="nouns"
-        active="large"
-        language={language}
-      />
+      <div className="mt-32">
+        <SML
+          type="nouns"
+          active="large"
+          language={language}
+        />
+      </div>
     </header>
   )
 }

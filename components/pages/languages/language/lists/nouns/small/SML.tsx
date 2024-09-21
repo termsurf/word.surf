@@ -17,10 +17,7 @@ export default function SML({
 }) {
   return (
     <ul
-      className={clsx(
-        'text-base flex gap-8 justify-center mt-32',
-        className,
-      )}
+      className={clsx('text-base flex gap-8 justify-center', className)}
     >
       <li>
         {active === 'small' ? (
