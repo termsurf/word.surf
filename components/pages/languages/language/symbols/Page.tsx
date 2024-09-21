@@ -7,7 +7,7 @@ import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 import NextLink from 'next/link'
-import { Language, LanguageListItem } from '~/data/types'
+import { Language } from '~/data/types'
 
 import Grid from '@termsurf/leaf/component/Grid'
 import Link from '~/components/Link'
@@ -18,35 +18,25 @@ const KEY = '/languages/language'
 
 type PageInput = {
   language: Language
-  items: Array<LanguageListItem>
 }
 
-export default function Page({ language, items }: PageInput) {
+export default function Page({ language }: PageInput) {
   return (
     <Environment settings={{ fonts: FONT, scripts: SCRIPT }}>
-      <Content
-        language={language}
-        items={items}
-      />
+      <Content language={language} />
     </Environment>
   )
 }
 
 type ContentInput = PageInput
 
-function Content({ language, items }: ContentInput) {
+function Content({ language }: ContentInput) {
   useFonts(['Tone Etch'])
 
   return (
     <>
-      <Header
-        language={language}
-        items={items}
-      />
-      <Body
-        language={language}
-        items={items}
-      />
+      <Header language={language} />
+      <Body language={language} />
       <Toast />
     </>
   )
@@ -135,7 +125,7 @@ function isEven(n) {
   return n % 2 === 0
 }
 
-function Body({ language, items }: ContentInput) {
+function Body({ language }: ContentInput) {
   const columns = calculateColumns({
     totalCount: Object.keys(basicConsonants).length,
     itemWidth: 96,

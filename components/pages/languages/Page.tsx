@@ -5,7 +5,7 @@ import NextLink from 'next/link'
 
 import T from '@termsurf/leaf/component/Text'
 
-import { H1 } from '@termsurf/leaf/component/Content'
+import { H1, P } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Grid from '@termsurf/leaf/component/Grid'
 import TextInput from '@termsurf/leaf/component/TextInput'
@@ -62,9 +62,15 @@ function Header() {
 
   return (
     <header>
-      <H1 className="block uppercase scale-y-80 tracking-wide-015">
+      <H1 className="block uppercase scale-y-80 tracking-wide-015 !mb-0">
         Languages
       </H1>
+      <P
+        align="center"
+        type="secondary"
+      >
+        Learn about the world's languages
+      </P>
     </header>
   )
 }
@@ -75,7 +81,10 @@ function Body({ languages }: ContentInput) {
   return (
     <>
       <div className="relative w-full pb-64 flex flex-col gap-16 p-16">
-        <TextInput size="large" />
+        <TextInput
+          size="large"
+          placeholder="Search by name..."
+        />
 
         {/* <H2 className="!text-2xl !mb-0 !text-gray-600 !border-0 text-center uppercase scale-y-80 tracking-wide-015">
           Ancient
