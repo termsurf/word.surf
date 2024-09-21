@@ -47,11 +47,15 @@ export default function Page() {
         />
         <Link
           disabled
+          title="Guides"
+          path="/guides"
+        />
+        <Link
+          disabled
           title="Keyboards"
           path="/keyboards"
         />
         <Link
-          disabled
           title="Fonts"
           path="/fonts"
         />
@@ -65,11 +69,26 @@ export default function Page() {
           title="Games"
           path="/games"
         />
+        {/* <Link
+          disabled
+          title="Resources"
+          path="/resources"
+        />
         <Link
           disabled
-          title="Guides"
-          path="/guides"
+          title="Tools"
+          path="/tools"
         />
+        <Link
+          disabled
+          title="Studies"
+          path="/studies"
+        />
+        <Link
+          disabled
+          title="Stories"
+          path="/stories"
+        /> */}
       </Grid>
     </Environment>
   )

@@ -5,7 +5,7 @@ import NextLink from 'next/link'
 
 import T from '@termsurf/leaf/component/Text'
 
-import { H1 } from '@termsurf/leaf/component/Content'
+import { H1, P } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Grid from '@termsurf/leaf/component/Grid'
 import TextInput from '@termsurf/leaf/component/TextInput'
@@ -14,8 +14,6 @@ import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
-import { LinkButton } from '@termsurf/leaf/component/Button'
-import { languagePath } from '~/tools/paths'
 import { Cached } from './config'
 
 const KEY = '/languages'
@@ -55,9 +53,15 @@ function Header() {
 
   return (
     <header>
-      <H1 className="block uppercase scale-y-80 tracking-wide-015">
+      <H1 className="block uppercase scale-y-80 tracking-wide-015 !mb-0">
         Scripts
       </H1>
+      <P
+        align="center"
+        type="secondary"
+      >
+        Examine the world&apos;s writing systems
+      </P>
     </header>
   )
 }
@@ -79,76 +83,247 @@ function Body() {
           maxColumns={4}
         >
           <ScriptLink
-            disabled
-            slug="chinese"
-            name="Chinese"
-          />
-          <ScriptLink
-            disabled
-            slug="arabic"
-            name="Arabic"
-          />
-          <ScriptLink
-            disabled
-            slug="devanagari"
-            name="Devanagari"
-          />
-          <ScriptLink
-            disabled
-            slug="hebrew"
-            name="Hebrew"
-          />
-          <ScriptLink
-            disabled
-            slug="tibetan"
-            name="Tibetan"
-          />
-          <ScriptLink
-            disabled
-            slug="tamil"
-            name="Tamil"
-          />
-          <ScriptLink
-            disabled
-            slug="greek"
-            name="Greek"
-          />
-          <ScriptLink
-            disabled
             slug="latin"
             name="Latin"
+            symbol="A"
           />
           <ScriptLink
-            disabled
+            slug="chinese"
+            name="Chinese"
+            symbol="大"
+          />
+          <ScriptLink
+            slug="arabic"
+            name="Arabic"
+            symbol="ب"
+          />
+          <ScriptLink
+            slug="devanagari"
+            name="Devanagari"
+            symbol="क"
+          />
+          <ScriptLink
+            slug="hebrew"
+            name="Hebrew"
+            symbol="ש"
+          />
+          <ScriptLink
+            slug="tibetan"
+            name="Tibetan"
+            symbol="ཀ"
+          />
+          <ScriptLink
+            slug="tamil"
+            name="Tamil"
+            symbol="க"
+          />
+          <ScriptLink
+            slug="greek"
+            name="Greek"
+            symbol="Π"
+          />
+          <ScriptLink
+            slug="cyrillic"
+            name="Cyrillic"
+            symbol="Б"
+          />
+          <ScriptLink
+            slug="geez"
+            name="Geez"
+            symbol="ሀ"
+          />
+          <ScriptLink
             slug="gurmukhi"
             name="Gurmukhi"
+            symbol="ਕ"
           />
           <ScriptLink
-            disabled
             slug="thai"
             name="Thai"
+            symbol="ก"
           />
           <ScriptLink
-            disabled
             slug="telugu"
             name="Telugu"
+            symbol="జ"
           />
           <ScriptLink
-            disabled
             slug="burmese"
             name="Burmese"
+            symbol="က"
+          />
+          <ScriptLink
+            slug="hangul"
+            name="Hangul"
+            symbol="라"
+          />
+          <ScriptLink
+            slug="kana"
+            name="Kana"
+            symbol="カ"
+          />
+          <ScriptLink
+            slug="cherokee"
+            name="Cherokee"
+            symbol="Ꭿ"
+          />
+          <ScriptLink
+            slug="inuktitut"
+            name="Inuktitut"
+            symbol="ᐃ"
+          />
+          <ScriptLink
+            slug="tifinagh"
+            name="Tifinagh"
+            symbol="ⵀ"
+          />
+          <ScriptLink
+            slug="syriac"
+            name="Syriac"
+            symbol="ܐ"
+          />
+          <ScriptLink
+            slug="georgian"
+            name="Georgian"
+            symbol="გ"
+          />
+          <ScriptLink
+            slug="bengali"
+            name="Bengali"
+            symbol="ক"
+          />
+          <ScriptLink
+            slug="kannada"
+            name="Kannada"
+            symbol="ಕ"
+          />
+          <ScriptLink
+            slug="malayalam"
+            name="Malayalam"
+            symbol="ക"
+          />
+          <ScriptLink
+            slug="odia"
+            name="Odia"
+            symbol="କ"
+          />
+          <ScriptLink
+            slug="sinhala"
+            name="Sinhala"
+            symbol="ක"
+          />
+          <ScriptLink
+            slug="khmer"
+            name="Khmer"
+            symbol="ក"
+          />
+          <ScriptLink
+            slug="armenian"
+            name="Armenian"
+            symbol="Ա"
+          />
+          <ScriptLink
+            slug="mongolian"
+            name="Mongolian"
+            symbol="ᠠ"
+          />
+          <ScriptLink
+            slug="lao"
+            name="Lao"
+            symbol="ກ"
+          />
+          <ScriptLink
+            slug="vai"
+            name="Vai"
+            symbol="ꔀ"
+          />
+          <ScriptLink
+            slug="thaana"
+            name="Thaana"
+            symbol="ހ"
+          />
+          <ScriptLink
+            slug="mandaic"
+            name="Mandaic"
+            symbol="ࡀ"
+          />
+          <ScriptLink
+            slug="batak"
+            name="Batak"
+            symbol="ᯀ"
+          />
+          <ScriptLink
+            slug="lontara"
+            name="Lontara"
+            symbol="ᨀ"
+          />
+          <ScriptLink
+            slug="balinese"
+            name="Balinese"
+            symbol="ᬓ"
+          />
+          <ScriptLink
+            slug="cuneiform"
+            name="Cuneiform"
+            symbol="𒀭"
+          />
+          <ScriptLink
+            slug="phoenician"
+            name="Phoenician"
+            symbol="𐤀"
+          />
+          <ScriptLink
+            slug="runic"
+            name="Runic"
+            symbol="ᚠ"
+          />
+          <ScriptLink
+            slug="gothic"
+            name="Gothic"
+            symbol="𐌰"
+          />
+          <ScriptLink
+            slug="avestan"
+            name="Avestan"
+            symbol="𐬂"
+          />
+          <ScriptLink
+            slug="ogham"
+            name="Ogham"
+            symbol="ᚃ"
+          />
+          <ScriptLink
+            slug="coptic"
+            name="Coptic"
+            symbol="Ⲯ"
+          />
+          <ScriptLink
+            slug="brahmi"
+            name="Brahmi"
+            symbol="𑀠"
+          />
+          <ScriptLink
+            slug="javanese"
+            name="Javanese"
+            symbol="ꦏ"
+          />
+          <ScriptLink
+            slug="pahlavi"
+            name="Pahlavi"
+            symbol="𐭮"
+          />
+          <ScriptLink
+            slug="hieroglyphs"
+            name="Hieroglyphs"
+            symbol="𓂀"
+            weight="bold"
+          />
+          <ScriptLink
+            slug="linear-b"
+            name="Linear B"
+            symbol="𐀀"
           />
         </Grid>
-
-        <div className="flex justify-center p-16 pt-32 pb-64">
-          <LinkButton
-            href="/scripts/ancient"
-            size="large"
-            className="lowercase"
-          >
-            More Ancient Scripts
-          </LinkButton>
-        </div>
       </div>
     </>
   )
@@ -158,61 +333,69 @@ function ScriptLink({
   className,
   slug,
   name,
-  native,
   script,
+  symbol,
   disabled = false,
+  weight,
 }: {
   className?: string
   slug: string
   name: string
-  native?: string
   script?: string
   disabled?: boolean
+  symbol?: string
+  weight?: string
 }) {
   if (disabled) {
     return (
       <div
         className={clsx(
           className,
-          'shadow-small1 flex flex-col gap-8 bg-gray-100 text-left p-16 h-full leading-content rounded-sm w-full',
+          'shadow-small1 flex flex-col bg-gray-100 text-left p-16 h-full leading-content rounded-sm w-full',
         )}
       >
-        <T className="block font-semibold lowercase text-h4 leading-content text-gray-300">
-          {name}
-        </T>
-        {native && (
+        {symbol && (
           <T
             // script={script}
             tag="i"
-            className="block lowercase text-h4 leading-content text-gray-300"
+            className={clsx(
+              weight && `font-${weight}`,
+              'block text-mega leading-content text-gray-800',
+            )}
           >
-            {native}
+            {symbol}
           </T>
         )}
+        <T className="block font-semibold lowercase text-h4 leading-content text-gray-500">
+          {name}
+        </T>
       </div>
     )
   }
 
   return (
     <NextLink
-      href={languagePath({ language: slug })}
+      href={`/scripts/${slug}`}
       className={clsx(
         className,
-        'shadow-small1 hover:shadow-small2 flex flex-col gap-8 bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 text-left p-16 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-400',
+        ' text-center shadow-small1 hover:shadow-small2 flex flex-col bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 p-16 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-400',
       )}
     >
-      <T className="block font-semibold lowercase text-h4 leading-content transition-colors">
-        {name}
-      </T>
-      {native && (
+      {symbol && (
         <T
           // script={script}
           tag="i"
-          className="block lowercase text-h4 leading-content text-gray-400 transition-colors"
+          className={clsx(
+            weight && `font-${weight}`,
+            'block text-mega leading-content text-gray-800',
+          )}
         >
-          {native}
+          {symbol}
         </T>
       )}
+      <T className="block font-semibold lowercase text-h4 leading-content text-gray-500">
+        {name}
+      </T>
     </NextLink>
   )
 }
