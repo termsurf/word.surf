@@ -344,6 +344,9 @@ importers:
       cssbeautify:
         specifier: ^0.3.1
         version: 0.3.1
+      csv-stringify:
+        specifier: ^6.5.1
+        version: 6.5.1
       csv2md:
         specifier: ^1.1.0
         version: 1.1.0
@@ -4856,6 +4859,9 @@ packages:
 
   csv-parse@5.5.3:
     resolution: {integrity: sha512-v0KW6C0qlZzoGjk6u5tLmVfyZxNgPGXZsWTXshpAgKVGmGXzaVWGdlCFxNx5iuzcXT/oJN1HHM9DZKwtAtYa+A==}
+
+  csv-stringify@6.5.1:
+    resolution: {integrity: sha512-+9lpZfwpLntpTIEpFbwQyWuW/hmI/eHuJZD1XzeZpfZTqkf1fyvBbBLXTJJMsBuuS11uTShMqPwzx4A6ffXgRQ==}
 
   csv2md@1.1.0:
     resolution: {integrity: sha512-Q66rZDu+2tQZPhkuQyjwMmAnhM64L+k2ax4nNs7FQzbJVJDVOE7gD31pdUzTmtCaIuLbLW1AK1ikj3F4n/GITg==}
@@ -15661,6 +15667,8 @@ snapshots:
   csv-parse@4.16.3: {}
 
   csv-parse@5.5.3: {}
+
+  csv-stringify@6.5.1: {}
 
   csv2md@1.1.0:
     dependencies:

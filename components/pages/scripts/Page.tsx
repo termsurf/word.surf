@@ -378,7 +378,7 @@ function ScriptLink({
       href={`/scripts/${slug}`}
       className={clsx(
         className,
-        ' text-center shadow-small1 hover:shadow-small2 flex flex-col bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 p-16 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-400',
+        ' text-center shadow-small1 hover:shadow-small2 flex flex-col bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 p-16 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600',
       )}
     >
       {symbol && (
@@ -387,13 +387,13 @@ function ScriptLink({
           tag="i"
           className={clsx(
             weight && `font-${weight}`,
-            'block text-mega leading-content text-gray-800',
+            'block text-mega leading-content text-gray-800 transition-colors',
           )}
         >
           {symbol}
         </T>
       )}
-      <T className="block font-semibold lowercase text-h4 leading-content text-gray-500">
+      <T className="block font-semibold lowercase text-h4 leading-content text-gray-500 transition-colors">
         {name}
       </T>
     </NextLink>

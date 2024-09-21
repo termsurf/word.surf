@@ -393,7 +393,7 @@ function FontLink({
 
   return (
     <NextLink
-      href={`/fonts/${slug}`}
+      href={`/scripts/${slug}/fonts`}
       className={clsx(
         className,
         'shadow-small1 hover:shadow-small2 flex flex-col gap-8 bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 text-left p-16 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-400',
