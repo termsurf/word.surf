@@ -59,7 +59,8 @@
   },
   {
     "script": { "slug": "hangul" },
-    "symbols": "개 새 쥐 게 벌 양 쥐 집 길 방 땅 강 산 비 눈 달 숲 흙 꽃 별 풀 잎 불 섬"
+    "symbols": "개 새 쥐 게 벌 양 쥐 집 길 방 땅 강 산 비 눈 달 숲 흙 꽃 별 풀 잎 불 섬",
+    "size": 48
   },
   {
     "script": { "slug": "kana" },

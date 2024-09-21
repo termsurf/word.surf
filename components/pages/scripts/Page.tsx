@@ -95,17 +95,17 @@ function Body() {
           <ScriptLink
             slug="arabic"
             name="Arabic"
-            symbol="ب"
+            symbol="ج"
           />
           <ScriptLink
             slug="devanagari"
             name="Devanagari"
-            symbol="क"
+            symbol="ॐ"
           />
           <ScriptLink
             slug="hebrew"
             name="Hebrew"
-            symbol="ש"
+            symbol="א"
           />
           <ScriptLink
             slug="tibetan"
@@ -135,7 +135,7 @@ function Body() {
           <ScriptLink
             slug="gurmukhi"
             name="Gurmukhi"
-            symbol="ਕ"
+            symbol="ੴ"
           />
           <ScriptLink
             slug="thai"
@@ -240,12 +240,12 @@ function Body() {
           <ScriptLink
             slug="thaana"
             name="Thaana"
-            symbol="ހ"
+            symbol="ޓ"
           />
           <ScriptLink
             slug="mandaic"
             name="Mandaic"
-            symbol="ࡀ"
+            symbol="ࡗ"
           />
           <ScriptLink
             slug="batak"
@@ -255,7 +255,7 @@ function Body() {
           <ScriptLink
             slug="lontara"
             name="Lontara"
-            symbol="ᨀ"
+            symbol="ᨏ"
           />
           <ScriptLink
             slug="balinese"
@@ -280,7 +280,7 @@ function Body() {
           <ScriptLink
             slug="gothic"
             name="Gothic"
-            symbol="𐌰"
+            symbol="𐌸"
           />
           <ScriptLink
             slug="avestan"
@@ -290,12 +290,12 @@ function Body() {
           <ScriptLink
             slug="ogham"
             name="Ogham"
-            symbol="ᚃ"
+            symbol="ᚎ"
           />
           <ScriptLink
             slug="coptic"
             name="Coptic"
-            symbol="Ⲯ"
+            symbol="Ⲁ"
           />
           <ScriptLink
             slug="brahmi"

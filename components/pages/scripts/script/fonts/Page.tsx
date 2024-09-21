@@ -64,7 +64,7 @@ function Header({ scriptSlug }: HeaderInput) {
         </span>
         <NextLink
           href="/fonts"
-          className="block lowercase text-sm text-gray-400"
+          className="block lowercase text-sm text-gray-400 hover:text-violet-400 transition-colors"
         >
           Fonts
         </NextLink>
@@ -141,7 +141,7 @@ function FontLink({
       <div
         className={clsx(
           className,
-          'shadow-small1 flex flex-col gap-16 bg-gray-100 text-left p-16 h-full leading-content rounded-sm w-full',
+          'shadow-small1 flex flex-col gap-16 bg-gray-100 text-left p-16 pb-32 h-full leading-content rounded-sm w-full',
         )}
       >
         <T className="lowercase block font-semibold text-h4 leading-content text-gray-300">
@@ -182,7 +182,7 @@ function FontLink({
       href={`/fonts/${slug}`}
       className={clsx(
         className,
-        'shadow-small1 hover:shadow-small2 flex flex-col gap-16 bg-gray-50 [&_span]:hover:text-violet-600 [&_span]:transition-colors transition-all duration-200 text-left p-16 h-full leading-content rounded-sm w-full [&_i]:hover:text-violet-400',
+        'shadow-small1 hover:shadow-small2 flex flex-col gap-16 bg-gray-50 [&_span]:hover:text-violet-600 [&_span]:transition-colors transition-all duration-200 text-left p-16 pb-32 h-full leading-content rounded-sm w-full [&_i]:hover:text-violet-400',
       )}
     >
       <T className="lowercase block font-semibold text-h4 leading-content transition-colors">
