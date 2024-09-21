@@ -17,21 +17,16 @@ import {
   LanguageListItem,
 } from '~/data/types'
 
+import { H1 } from '@termsurf/leaf/component/Content'
 import Grid from '@termsurf/leaf/component/Grid'
 import Text from '@termsurf/leaf/component/Text'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import HeaderContextButton from '~/components/HeaderContextButton'
-import {
-  languageComponentPath,
-  languagePath,
-  slugify,
-} from '~/tools/paths'
+import { languageComponentPath, slugify } from '~/tools/paths'
 import { Cached } from './config'
 import NVA from './NVA'
 import SML from './SML'
-import Title from './Title'
 
 const KEY = '/languages/language/lists/nouns/small'
 
@@ -69,17 +64,19 @@ function Header({ language }: ContentInput) {
 
   return (
     <header>
-      <HeaderContextButton
-        href={languagePath({ language: language.slug })}
-      >
-        {language.name}
-      </HeaderContextButton>
-      <Title>Noun List</Title>
-      <SML
-        type="nouns"
-        active="small"
-        language={language}
-      />
+      <H1 className="flex flex-col !mb-16">
+        <span className="block uppercase scale-y-[0.8] tracking-wide-015">
+          {language.name}
+        </span>
+        <span className="block lowercase text-sm text-gray-400">
+          Nouns
+        </span>
+        <SML
+          type="nouns"
+          active="small"
+          language={language}
+        />
+      </H1>
     </header>
   )
 }

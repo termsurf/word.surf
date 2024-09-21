@@ -5,14 +5,12 @@ import Environment from '@termsurf/leaf/component/Environment'
 import Grid from '@termsurf/leaf/component/Grid'
 import Tag from '@termsurf/leaf/component/Tag'
 
-import { languagePath } from '~/tools/paths'
-
 import Link from '../Link'
 
 export default function Page() {
   return (
     <Environment>
-      <H1>ChatSurf</H1>
+      <H1 className="uppercase scale-y-80 !mb-0">ChatSurf</H1>
       <P
         align="center"
         type="secondary"
@@ -28,18 +26,49 @@ export default function Page() {
         </span>
       </P>
       <Grid
-        maxColumns={3}
+        maxColumns={4}
         gap={16}
-        minWidth={256}
+        minWidth={192}
         className="p-16"
+        breakpoints={[4, 2, 1]}
       >
         <Link
-          title="Tibetan"
-          path={languagePath({ language: 'tibetan' })}
+          title="Languages"
+          path="/languages"
         />
         <Link
-          title="English"
-          path={languagePath({ language: 'english' })}
+          title="Scripts"
+          path="/scripts"
+        />
+        <Link
+          disabled
+          title="Symbols"
+          path="/symbols"
+        />
+        <Link
+          disabled
+          title="Keyboards"
+          path="/keyboards"
+        />
+        <Link
+          disabled
+          title="Fonts"
+          path="/fonts"
+        />
+        <Link
+          disabled
+          title="Sounds"
+          path="/sounds"
+        />
+        <Link
+          disabled
+          title="Games"
+          path="/games"
+        />
+        <Link
+          disabled
+          title="Guides"
+          path="/guides"
         />
       </Grid>
     </Environment>

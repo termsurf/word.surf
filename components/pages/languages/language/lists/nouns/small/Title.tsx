@@ -9,12 +9,14 @@ export default function Title({
 }) {
   return (
     <H1 className="flex justify-center items-start gap-8 !mb-24">
-      <span className="inline-block">{children}</span>{' '}
-      {size && (
+      <span className="uppercase scale-y-80 tracking-wide inline-block">
+        {children}
+      </span>{' '}
+      {/* {size && (
         <span className="text-sm relative top-0 text-gray-500 inline-block">
           {size}
         </span>
-      )}
+      )} */}
     </H1>
   )
 }

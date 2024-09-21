@@ -113,3 +113,5 @@ computation. Find us on [X](https://x.com/termsurf),
 [LinkedIn](https://www.linkedin.com/company/termsurf), and
 [Facebook](https://www.facebook.com/termsurf). Check out our other
 [GitHub projects](https://github.com/termsurf) as well!
+
+- https://www.ashleydanyew.com/posts/latin-pronunciation-guide

@@ -6,9 +6,26 @@ const config = {
   ],
   theme: {
     extend: {
+      scale: {
+        80: '0.8',
+      },
+      letterSpacing: {
+        'wide-015': '.015rem',
+      },
+      fontFamily: {
+        poppins: 'Poppins',
+      },
       screens: {
         print: { raw: 'print' },
         screen: { raw: 'screen' },
+      },
+      gridTemplateColumns: {
+        center: '1fr auto 1fr',
+      },
+      gridColumn: {
+        1: '1',
+        2: '2',
+        3: '3',
       },
       animation: {
         'fade-in-out': 'fade-in-out 0.8s linear',
@@ -291,6 +308,8 @@ const config = {
         'transform-opacity': 'transform, opacity',
       },
       boxShadow: {
+        small1: `rgba(0, 0, 0, 0.05) 0px 0px 0px 1px`,
+        small2: `rgba(0, 0, 0, 0.05) 0px 0px 0px 2px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px`,
         normal: `rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px`,
         thead: `inset 0px -4px 0px rgba(209, 213, 219, 1)`,
         xl: 'rgba(0, 0, 0, 0.16) 0px 1px 4px',

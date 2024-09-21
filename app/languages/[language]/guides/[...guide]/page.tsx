@@ -13,35 +13,54 @@ import { buildMetadata } from '@termsurf/leaf/utility/metadata'
 
 import Page, {
   GridLink,
-} from '~/components/pages/languages/language/guide/Page'
+} from '~/components/pages/languages/language/guides/Page'
 
 type Input = {
-  params: { language: string }
+  params: { language: string; guide: Array<string> }
 }
 
 export const generateMetadata = async ({ params }: Input) => {
   const content = await fsp.readFile(
-    path.resolve(`./content/language/${params.language}/index.mdx`),
+    path.resolve(
+      `./content/language/${params.language}/${params.guide.join(
+        '/',
+      )}.mdx`,
+    ),
     'utf-8',
   )
   const { frontmatter } = await compileMDX<{
     title: string
     description?: string
+    media?: {
+      title?: string
+      description?: string
+    }
   }>({
     source: content,
     options: { parseFrontmatter: true },
   })
 
   return buildMetadata('ChatSurf', {
-    title: frontmatter.title,
-    description: frontmatter.description,
+    title: frontmatter.media?.title || frontmatter.title,
+    description:
+      frontmatter.media?.description || frontmatter.description,
   })
 }
 
 export default async function View({ params }: Input) {
   const content = await fsp.readFile(
-    path.resolve(`./content/language/${params.language}/index.mdx`),
+    path.resolve(
+      `./content/language/${params.language}/${params.guide.join(
+        '/',
+      )}.mdx`,
+    ),
     'utf-8',
+  )
+  const pages = YAML.load(
+    await fsp.readFile(
+      path.resolve(`./content/language/${params.language}/pages.yaml`),
+      `utf-8`,
+    ),
   )
   const { frontmatter } = await compileMDX<{
     title: string
@@ -58,12 +77,6 @@ export default async function View({ params }: Input) {
     source: content,
     options: { parseFrontmatter: true },
   })
-  const pages = YAML.load(
-    await fsp.readFile(
-      path.resolve(`./content/language/${params.language}/pages.yaml`),
-      `utf-8`,
-    ),
-  )
 
   const source = await serialize(
     content.replace(/^---\s*([\s\S]*?)\s*---/, ''),

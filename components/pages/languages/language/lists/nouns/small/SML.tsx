@@ -16,7 +16,12 @@ export default function SML({
   type: string
 }) {
   return (
-    <ul className={clsx('flex gap-8 justify-center mb-32', className)}>
+    <ul
+      className={clsx(
+        'text-base flex gap-8 justify-center mt-32',
+        className,
+      )}
+    >
       <li>
         {active === 'small' ? (
           <Text className="font-bold">S</Text>
@@ -25,7 +30,7 @@ export default function SML({
             className="[&>span]:hover:text-violet-600 [&>span]:transition-colors"
             href={languageListPath({
               language: language.slug,
-              path: `${type}/small`,
+              path: `${type}`,
             })}
           >
             <Text className="font-bold text-gray-400">S</Text>

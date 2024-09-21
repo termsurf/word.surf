@@ -2,31 +2,22 @@
 
 'use client'
 
-import {
-  Table,
-  TableScroller,
-  TBody,
-  TD,
-  TH,
-  THead,
-  TR,
-} from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Toast from '@termsurf/leaf/component/Toast'
 import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
-import {
-  ImageAssetMap,
-  Language,
-  LanguageItem,
-  LanguageListItem,
-} from '~/data/types'
+import { Language, LanguageItem, LanguageListItem } from '~/data/types'
 
 import Text from '@termsurf/leaf/component/Text'
+import Link from 'next/link'
 import HeaderContextButton from '~/components/HeaderContextButton'
-import { languagePath } from '~/tools/paths'
+import {
+  languageComponentPath,
+  languagePath,
+  slugify,
+} from '~/tools/paths'
 import SML from '../small/SML'
 import Title from '../small/Title'
 import { Cached } from './config'
@@ -37,7 +28,6 @@ type PageInput = {
   language: Language
   languages: Array<LanguageItem>
   items: Array<LanguageListItem>
-  images: ImageAssetMap
 }
 
 export default function Page(props: PageInput) {
@@ -51,7 +41,7 @@ export default function Page(props: PageInput) {
 type ContentInput = PageInput
 
 function Content(props: ContentInput) {
-  useFonts(['Tone Etch'])
+  useFonts(['Tone Etch', 'Noto Serif Tibetan'])
 
   return (
     <>
@@ -72,7 +62,7 @@ function Header({ language }: ContentInput) {
       >
         {language.name}
       </HeaderContextButton>
-      <Title size="large">Noun List</Title>
+      <Title size="large">Nouns</Title>
       <SML
         type="nouns"
         active="large"
@@ -86,46 +76,48 @@ function Body({ language, languages, items }: ContentInput) {
   return (
     <>
       <div className="relative w-full pb-64">
-        <TableScroller>
-          <Table>
-            <THead>
-              <TR>
-                <TH>English</TH>
-                <TH>{languages[1].name}</TH>
-              </TR>
-            </THead>
-            <TBody>
-              {items.map(item => {
-                const [english, translation] = item.translations
-                return (
-                  <TR key={item.id}>
-                    <TD>
-                      <Text>{english.components[0]?.text}</Text>
-                    </TD>
-                    <TD>
-                      <Text>{translation.components[0]?.text}</Text>
-                    </TD>
-                  </TR>
-                )
-              })}
-            </TBody>
-          </Table>
-        </TableScroller>
-        {/* <Grid
-          minWidth={256}
-          maxColumns={4}
-          breakpoints={[4, 2, 1]}
-          gap={16}
-        >
-          <ImageTerm
-            image={images.rock}
-            term={terms.rock}
-          />
-          <ImageTerm
-            image={images.tree}
-            term={terms.tree}
-          />
-        </Grid> */}
+        {items.map(item => {
+          const [english, translation] = item.translations
+          return (
+            <div
+              key={item.id}
+              className="p-16 flex justify-between even:bg-gray-50 gap-16"
+            >
+              <div className="flex flex-col gap-24">
+                <Text className="block text-lg text-gray-600 font-bold">
+                  {english.components[0]?.text}
+                </Text>
+                {translation.components.length ? (
+                  translation.components.map((component, i) => (
+                    <Link
+                      key={i}
+                      href={languageComponentPath({
+                        language: language.slug,
+                        component: slugify(component.text),
+                      })}
+                    >
+                      <Text
+                        className="block hover:text-violet-600 transition-colors text-wrap"
+                        key={component.id}
+                        script="tibetan"
+                        size={24}
+                      >
+                        {component.text}
+                      </Text>
+                    </Link>
+                  ))
+                ) : (
+                  <Text className="block text-gray-400">
+                    [--------]
+                  </Text>
+                )}
+              </div>
+              <Text className="text-gray-400 select-none">
+                {item.position}
+              </Text>
+            </div>
+          )
+        })}
       </div>
     </>
   )

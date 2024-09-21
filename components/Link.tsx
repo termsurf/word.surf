@@ -1,25 +1,55 @@
-import React from 'react'
+import clsx from 'clsx'
 import NextLink from 'next/link'
 
 import T from '@termsurf/leaf/component/Text'
 
 function Link({
+  className,
   path,
   title,
   description,
+  disabled = false,
 }: {
+  className?: string
   path: string
   title: string
   description?: string
+  disabled?: boolean
 }) {
+  if (disabled) {
+    return (
+      <div
+        className={clsx(
+          className,
+          'shadow-small1 flex flex-col gap-8 bg-gray-100 text-left p-16 h-full leading-content rounded-sm w-full',
+        )}
+      >
+        <T className="block font-semibold lowercase text-h4 leading-content text-gray-300">
+          {title}
+        </T>
+        {description && (
+          <T className="block leading-content text-gray-300">
+            {description}
+          </T>
+        )}
+      </div>
+    )
+  }
   return (
     <NextLink
       href={path}
-      className="shadow-xl flex flex-col gap-8 bg-gray-100 hover:bg-gray-50 hover:shadow-medium transition-all duration-200 text-left p-16 h-full leading-content rounded-sm w-full"
+      className={clsx(
+        className,
+        'shadow-small1 hover:shadow-small2 flex flex-col gap-8 bg-gray-50 [&_span]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 text-left p-16 h-full leading-content rounded-sm w-full',
+      )}
     >
-      <T className="block font-bold text-h4 leading-content">{title}</T>
+      <T className="block font-semibold lowercase text-h4 leading-content transition-colors">
+        {title}
+      </T>
       {description && (
-        <T className="block leading-content">{description}</T>
+        <T className="block text-gray-600 leading-content transition-colors">
+          {description}
+        </T>
       )}
     </NextLink>
   )

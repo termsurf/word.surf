@@ -1,4 +1,4 @@
-import Page from '~/components/pages/languages/language/Page'
+import Page from '~/components/pages/languages/language/lists/Page'
 import { findLanguage } from '~/data/base/languages'
 
 type Input = {

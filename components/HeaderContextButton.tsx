@@ -13,7 +13,7 @@ export default function HeaderContextButton({
         href={href}
         size="small"
         color="contrast"
-        className="rounded-large-circle"
+        className="rounded-large-circle lowercase font-semibold"
       >
         {children}
       </LinkButton>

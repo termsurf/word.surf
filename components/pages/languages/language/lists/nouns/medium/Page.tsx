@@ -66,7 +66,7 @@ function Header({ language }: ContentInput) {
       >
         {language.name}
       </HeaderContextButton>
-      <Title size="medium">Noun List</Title>
+      <Title size="medium">Nouns</Title>
       <SML
         type="nouns"
         active="medium"

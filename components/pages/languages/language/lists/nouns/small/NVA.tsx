@@ -16,8 +16,8 @@ export default function NVA({
   active?: string
 }) {
   return (
-    <ul className={clsx('flex gap-8 justify-center mb-32', className)}>
-      <li className="w-64 text-center">
+    <ul className={clsx('flex gap-32 justify-center mb-32', className)}>
+      <li className="text-center">
         {active === `noun/${size}` ? (
           <Text className="font-bold lowercase">Noun</Text>
         ) : (
@@ -34,7 +34,7 @@ export default function NVA({
           </Link>
         )}
       </li>
-      <li className="w-64 text-center">
+      <li className="text-center">
         {active === `verb/${size}` ? (
           <Text className="font-bold lowercase">Verb</Text>
         ) : (
@@ -51,7 +51,7 @@ export default function NVA({
           </Link>
         )}
       </li>
-      <li className="w-64 text-center">
+      <li className="text-center">
         {active === `adjective/${size}` ? (
           <Text className="font-bold lowercase">Adjective</Text>
         ) : (

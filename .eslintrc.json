@@ -101,7 +101,7 @@
     "default-case-last": "off",
     "unused-imports/no-unused-imports": "error",
     "simple-import-sort/imports": [
-      "error",
+      "off",
       {
         "groups": [
           ["^react$", "^next", "^[a-z]"],

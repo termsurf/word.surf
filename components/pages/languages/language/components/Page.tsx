@@ -63,7 +63,9 @@ function Header({ language }: HeaderInput) {
       >
         {language.name}
       </HeaderContextButton>
-      <H1>{language.name} Components</H1>
+      <H1 className="uppercase scale-y-80 tracking-wide-015">
+        Components
+      </H1>
     </header>
   )
 }

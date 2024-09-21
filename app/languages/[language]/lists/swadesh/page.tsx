@@ -1,4 +1,3 @@
-import Page from '~/components/pages/languages/language/Page'
 import { findLanguage } from '~/data/base/languages'
 
 type Input = {
@@ -11,5 +10,5 @@ export default async function View({ params }: Input) {
   //   paths: ['/swadesh/207', '/swadesh/100'],
   // })
 
-  return <Page language={language} />
+  return null
 }
