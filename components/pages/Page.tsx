@@ -10,7 +10,9 @@ import Link from '../Link'
 export default function Page() {
   return (
     <Environment>
-      <H1 className="uppercase scale-y-80 !mb-0">ChatSurf</H1>
+      <H1 className="uppercase scale-y-80 !mb-0 tracking-wide-015">
+        ChatSurf
+      </H1>
       <P
         align="center"
         type="secondary"
