@@ -11,6 +11,7 @@ import { Language } from '~/data/types'
 
 import Grid from '@termsurf/leaf/component/Grid'
 import Link from '~/components/Link'
+import { calculateGlyphColumns } from '~/tools/grid'
 import { languagePath } from '~/tools/paths'
 import { Cached } from './config'
 
@@ -97,36 +98,8 @@ export const basicConsonants: Record<string, string> = {
   ཧ: 'ha',
 }
 
-function calculateColumns({ totalCount, itemWidth, containerWidth }) {
-  let max = Math.min(Math.floor(containerWidth / itemWidth), 7)
-  while (max > 3) {
-    const maxIsEven = isEven(max)
-    const remainder = totalCount % max
-    const remainderIsEven = isEven(remainder)
-    if (maxIsEven && remainderIsEven) {
-      const diff = max - remainder
-      if (diff <= 2) {
-        return max
-      }
-    } else if (!maxIsEven && (!remainderIsEven || !remainder)) {
-      const diff = max - remainder
-      if (diff <= 2) {
-        return max
-      }
-    } else {
-      // one is even, one is odd
-    }
-    max--
-  }
-  return max
-}
-
-function isEven(n) {
-  return n % 2 === 0
-}
-
 function Body({ language }: ContentInput) {
-  const columns = calculateColumns({
+  const columns = calculateGlyphColumns({
     totalCount: Object.keys(basicConsonants).length,
     itemWidth: 96,
     containerWidth: 700,

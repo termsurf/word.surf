@@ -13,6 +13,8 @@ import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
+import TextInput from '@termsurf/leaf/component/TextInput'
+import { BREAKPOINTS_3_1 } from '~/data/breakpoints'
 import { Cached } from './config'
 
 const KEY = '/languages'
@@ -40,7 +42,9 @@ export default function Page(props: PageInput) {
 type ContentInput = PageInput
 
 function Content(props: ContentInput) {
-  useFonts(['Tone Etch', 'Noto Serif SC', 'Noto Sans SC', 'TW Kai'])
+  useFonts([
+    'Tone Etch' /*, 'Noto Serif SC', 'Noto Sans SC', 'TW Kai'*/,
+  ])
 
   return (
     <>
@@ -79,13 +83,13 @@ function Body({ symbols, fontSize }: ContentInput) {
   return (
     <>
       <div className="relative w-full pb-64 flex flex-col gap-16 p-16">
-        {/* <TextInput size="large" /> */}
+        <TextInput size="large" />
 
         <Grid
           minWidth={256}
           gap={16}
-          maxColumns={4}
-          breakpoints={[3, 1]}
+          maxColumns={3}
+          breakpoints={BREAKPOINTS_3_1}
         >
           <FontLink
             className="text-center"
@@ -158,9 +162,9 @@ function FontLink({
             breakpoints={[6, 4]}
             align="center"
           >
-            {sample.slice(0, 24).map(glyph => (
+            {sample.slice(0, 24).map((glyph, i) => (
               <T
-                key={glyph}
+                key={`${glyph}-${i}`}
                 font={font}
                 size={fontSize}
                 className={clsx(
@@ -196,12 +200,12 @@ function FontLink({
           gap={8}
           rowGap={24}
           maxColumns={6}
-          breakpoints={[6, 4]}
+          // breakpoints={[6, 4]}
           align="center"
         >
-          {sample.slice(0, 24).map(glyph => (
+          {sample.slice(0, 24).map((glyph, i) => (
             <T
-              key={glyph}
+              key={`${glyph}-${i}`}
               font={font}
               tag="i"
               size={fontSize}
