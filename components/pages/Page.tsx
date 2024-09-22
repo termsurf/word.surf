@@ -4,12 +4,16 @@ import { H1, P } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Grid from '@termsurf/leaf/component/Grid'
 import Tag from '@termsurf/leaf/component/Tag'
+import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 
+import useFonts from '@termsurf/leaf/hook/useFonts'
 import Link from '../Link'
 
 export default function Page() {
+  useFonts(['Noto Sans Mono'])
+
   return (
-    <Environment>
+    <Environment settings={{ fonts: FONT, scripts: SCRIPT }}>
       <H1 className="uppercase scale-y-80 !mb-0 tracking-wide-015">
         ChatSurf
       </H1>
