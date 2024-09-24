@@ -23,5 +23,9 @@ export async function matchPath(router: Routington, path: string) {
 
   const node = match.node
 
+  if (!node?.handle) {
+    return
+  }
+
   return await node.handle()
 }

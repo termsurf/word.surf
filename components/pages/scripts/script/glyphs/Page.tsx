@@ -13,7 +13,6 @@ import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
-import Link from 'next/link'
 import GlyphsLink from '../GlyphsLink'
 import { Cached } from './config'
 
@@ -69,12 +68,12 @@ function Header({ scriptSlug, glyphType }: HeaderInput) {
   return (
     <header>
       <H1 className="flex flex-col !mb-16">
-        <Link
+        <NextLink
           href={`/scripts/${scriptSlug}`}
           className="block uppercase scale-y-80 tracking-wide-015 hover:text-violet-600 transition-colors"
         >
           {scriptSlug.replace(/-/g, ' ')}
-        </Link>
+        </NextLink>
         <span className="block lowercase text-sm text-gray-400">
           {glyphType}
         </span>

@@ -58,7 +58,7 @@ router.get(`/latin/numbers`, async () => {
       glyphType="numbers"
       symbols={symbols.latin.numbers.symbols()}
       links={
-        Object.values(symbols.latin.numbers.links).map(x => ({
+        Object.values(symbols.latin.numbers.links).map((x: any) => ({
           ...omit(x, ['links']),
           symbols: x.symbols(),
         })) as Array<PageLink>
