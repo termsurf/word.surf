@@ -47,7 +47,6 @@ export default function Page() {
           path="/scripts"
         />
         <Link
-          disabled
           title="Symbols"
           path="/symbols"
         />

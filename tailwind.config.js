@@ -279,12 +279,14 @@ const config = {
         'large-circle': '128px',
       },
       maxHeight: {
+        384: '384px',
         256: '256px',
         224: '224px',
         248: '248px',
         192: '192px',
         '2-3-screen-minus-nav': 'calc(66vh - 32px)',
         'screen-minus-nav': 'calc(100vh - 64px)',
+        'screen-half': 'calc(100vh - calc(50%))',
         'select-content':
           'var(--radix-select-content-available-height)',
       },
@@ -325,6 +327,7 @@ const config = {
         '3xl-dark':
           'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px, rgba(50, 50, 93, 0.25) 0px -13px 27px -5px, rgba(0, 0, 0, 0.3) 0px -8px 16px -8px',
         '4xl': `0 20px 68px rgba(0, 0, 0, 0.55)`,
+        box: 'rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px',
       },
       minHeight: {
         128: '128px',
@@ -338,6 +341,8 @@ const config = {
         768: '768px',
       },
       height: {
+        46: '46px',
+        384: '384px',
         18: '18px',
         72: '72px',
         36: '36px',
