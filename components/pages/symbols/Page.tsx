@@ -8,7 +8,7 @@ import chunk from 'lodash/chunk'
 import { useResizeObserver } from 'usehooks-ts'
 import ranges from './ranges.json'
 
-import { H1, P } from '@termsurf/leaf/component/Content'
+import { H1 } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import TextInput from '@termsurf/leaf/component/TextInput'
 import Toast from '@termsurf/leaf/component/Toast'
@@ -353,7 +353,6 @@ function VirtualizedGrid({
   const containerRef = useRef<HTMLDivElement>(null)
   const [itemWidth, setItemWidth] = useState(0)
   const [rows, setRows] = useState<Array<Array<ReactNode>>>([])
-  const [len, setLen] = useState<number>()
   const { width: containerWidth = 16, height: containerHeight = 16 } =
     useResizeObserver({
       ref: containerRef,
@@ -384,12 +383,13 @@ function VirtualizedGrid({
       }
     }
 
+    numColumns = Math.max(1, numColumns)
+
     const totalGap = gap * (numColumns - 1)
     const itemGap = totalGap / numColumns
 
     setItemWidth(width / numColumns - itemGap)
     setRows(chunk(records, numColumns))
-    setLen(numColumns)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     containerRef,
@@ -403,7 +403,7 @@ function VirtualizedGrid({
     breakpoints.join(':'),
   ])
 
-  const ListItem = ({ index, isScrolling, key, style }) => {
+  const ListItem = ({ index, key, style }) => {
     let iWidth = itemWidth
     const row = rows[index]
 
@@ -474,9 +474,6 @@ function VirtualizedGrid({
 
   return (
     <>
-      <P>
-        {rows.length}: {ranges.length}, numColumns: {len}
-      </P>
       <div
         className="w-full shadow-box h-384 border-4 border-b-4 border-solid border-gray-100"
         ref={containerRef}
