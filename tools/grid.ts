@@ -1,6 +1,7 @@
 export function distributeGridLayout(
   length: number,
   maxColumns: number,
+  minColumns = 1,
 ) {
   function recur(
     dp: Array<Set<number>>,
@@ -48,6 +49,9 @@ export function distributeGridLayout(
   for (let width = maxColumns; width > 0; width -= dec) {
     const result = recur(dp, length - width, width)
     if (result) {
+      if (width < minColumns) {
+        return
+      }
       return [width, ...result]
     }
   }

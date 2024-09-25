@@ -96,7 +96,7 @@ function Body({ symbols, links, fontSize, scriptSlug }: ContentInput) {
           gap={16}
           rowGap={24}
           align="center"
-          layout={distributeGridLayout}
+          layout={(length, max) => distributeGridLayout(length, max, 2)}
         >
           {symbols.map(symbol => (
             <GlyphLink
