@@ -219,8 +219,6 @@ function Body() {
     return { glyphs, fonts }
   }, [rangesSubset])
 
-  console.log(glyphs.length)
-
   useFonts(Object.keys(fonts))
 
   useEffect(() => {
@@ -472,7 +470,9 @@ function VirtualizedGrid({
 
   return (
     <>
-      <P>{rows.length}</P>
+      <P>
+        {rows.length}: {ranges.length}
+      </P>
       <div
         className="w-full shadow-box h-384 border-4 border-b-4 border-solid border-gray-100"
         ref={containerRef}
