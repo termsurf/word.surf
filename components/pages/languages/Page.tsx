@@ -86,9 +86,6 @@ function Body({ languages }: ContentInput) {
           placeholder="Search by name..."
         />
 
-        {/* <H2 className="!text-2xl !mb-0 !text-gray-600 !border-0 text-center uppercase scale-y-80 tracking-wide-015">
-          Ancient
-        </H2> */}
         <Grid
           minWidth={264}
           gap={16}

@@ -7,6 +7,7 @@ import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 
+import Link from 'next/link'
 import { Cached } from './config'
 import { PageLink } from './glyphs/Page'
 import GlyphsLink from './GlyphsLink'
@@ -51,13 +52,16 @@ function Header({ scriptSlug }: ContentInput) {
 
   return (
     <header>
-      <H1 className="flex flex-col !mb-0">
+      <H1 className="flex flex-col">
         <span className="block uppercase scale-y-80 tracking-wide-015 hover:text-violet-600 transition-colors">
           {scriptSlug.replace(/-/g, ' ')}
         </span>
-        <span className="block lowercase text-sm text-gray-400">
+        <Link
+          href="/scripts"
+          className="block lowercase text-sm text-gray-400 hover:text-violet-400 transition-colors"
+        >
           Script
-        </span>
+        </Link>
       </H1>
     </header>
   )
@@ -73,6 +77,7 @@ function Body({ links, scriptSlug }: ContentInput) {
             name={link.name}
             slug={`${scriptSlug}/${link.slug}`}
             symbols={link.symbols}
+            script={scriptSlug}
           />
         ))}
       </div>

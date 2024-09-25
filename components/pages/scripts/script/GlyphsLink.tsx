@@ -9,7 +9,6 @@ export default function GlyphsLink({
   name,
   script,
   symbols,
-  disabled = false,
   weight,
   font,
   fontSize,
@@ -18,42 +17,11 @@ export default function GlyphsLink({
   slug: string
   name: string
   script?: string
-  disabled?: boolean
-  symbols: Array<string>
+  symbols: Array<{ text: string }>
   weight?: string
   font?: string
   fontSize?: number
 }) {
-  if (disabled) {
-    return (
-      <div
-        className={clsx(
-          className,
-          'shadow-small1 flex flex-col bg-gray-100 text-left p-16 h-full leading-content rounded-sm w-full',
-        )}
-      >
-        <Text className="block font-semibold lowercase text-h4 leading-content transition-colors mb-16">
-          {name}
-        </Text>
-        <div className="flex flex-wrap gap-16 text-h3 text-gray-400 transition-colors font-bold">
-          {symbols.map((glyph, i) => (
-            <Text
-              key={`${glyph}-${i}`}
-              font={font}
-              size={fontSize}
-              className={clsx(
-                'block !leading-1-2',
-                weight && `font-${weight}`,
-              )}
-            >
-              {glyph}
-            </Text>
-          ))}
-        </div>
-      </div>
-    )
-  }
-
   return (
     <Link
       href={`/scripts/${slug}`}
@@ -69,22 +37,23 @@ export default function GlyphsLink({
       <Grid
         maxColumns={24}
         maxRows={1}
-        minWidth={36}
-        maxWidth={36}
-        gap={0}
+        minWidth={56}
+        maxWidth={56}
+        gap={16}
         className="text-h3 text-gray-500 transition-colors font-bold"
       >
         {symbols.map((glyph, i) => (
           <Text
-            key={`${glyph}-${i}`}
+            key={`${glyph.text}-${i}`}
             font={font}
             size={fontSize}
+            script={script}
             className={clsx(
               'block !leading-1-2',
               weight && `font-${weight}`,
             )}
           >
-            {glyph}
+            {glyph.text}
           </Text>
         ))}
       </Grid>

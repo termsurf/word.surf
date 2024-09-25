@@ -5,14 +5,16 @@ import NextLink from 'next/link'
 
 import T from '@termsurf/leaf/component/Text'
 
-import { H1, HR } from '@termsurf/leaf/component/Content'
+import { H1 } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Grid from '@termsurf/leaf/component/Grid'
 import Toast from '@termsurf/leaf/component/Toast'
 import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
-import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
+import useScripts from '@termsurf/leaf/hook/useScripts'
 
+import useFonts from '@termsurf/leaf/hook/useFonts'
+import { distributeGridLayout } from '~/tools/grid'
 import GlyphsLink from '../GlyphsLink'
 import { Cached } from './config'
 
@@ -27,12 +29,12 @@ export type GridLink = {
 export type PageLink = {
   name: string
   slug: string
-  symbols: Array<string>
+  symbols: Array<{ text: string; hint?: string; slug?: string }>
 }
 
 type PageInput = {
   scriptSlug: string
-  symbols: Array<string>
+  symbols: Array<{ text: string; hint?: string; slug?: string }>
   links?: Array<PageLink>
   fontSize?: number
   glyphType: string
@@ -49,7 +51,8 @@ export default function GlyphsPage(props: PageInput) {
 type ContentInput = PageInput
 
 function Content(props: ContentInput) {
-  useFonts(['Tone Etch', 'Noto Serif SC', 'Noto Sans SC', 'TW Kai'])
+  useScripts([props.scriptSlug])
+  useFonts(['Noto Sans Mono'])
 
   return (
     <>
@@ -67,7 +70,7 @@ function Header({ scriptSlug, glyphType }: HeaderInput) {
 
   return (
     <header>
-      <H1 className="flex flex-col !mb-16">
+      <H1 className="flex flex-col !mb-32">
         <NextLink
           href={`/scripts/${scriptSlug}`}
           className="block uppercase scale-y-80 tracking-wide-015 hover:text-violet-600 transition-colors"
@@ -87,23 +90,30 @@ function Body({ symbols, links, fontSize, scriptSlug }: ContentInput) {
     <>
       <div className="relative w-full pb-64 flex flex-col gap-16 p-16">
         <Grid
-          maxColumns={8}
-          minWidth={96}
+          maxColumns={6}
+          minWidth={116}
           maxWidth={160}
           gap={16}
+          rowGap={24}
           align="center"
-          breakpoints={[4, 3, 2]}
+          layout={distributeGridLayout}
         >
           {symbols.map(symbol => (
             <GlyphLink
-              key={symbol}
-              text={symbol}
-              slug=""
+              key={symbol.text}
+              text={symbol.text}
+              hint={symbol.hint}
+              script={scriptSlug}
+              slug={
+                symbol.slug
+                  ? `/scripts/${scriptSlug}/${symbol.slug}`
+                  : undefined
+              }
             />
           ))}
         </Grid>
       </div>
-      <HR className="!my-0" />
+      {/* <HR className="!my-0" /> */}
       <div className="relative w-full pb-64 flex flex-col gap-16 p-16">
         {/* <H2 className="!text-2xl !mb-0 !text-gray-600 !border-0 text-center uppercase scale-y-80 tracking-wide-015">
           Breakdowns
@@ -114,6 +124,7 @@ function Body({ symbols, links, fontSize, scriptSlug }: ContentInput) {
             name={link.name}
             symbols={link.symbols}
             slug={`${scriptSlug}/${link.slug}`}
+            script={scriptSlug}
           />
         ))}
       </div>
@@ -125,30 +136,43 @@ function GlyphLink({
   className,
   slug,
   font,
+  hint,
   text,
-  disabled = false,
   weight,
+  script,
   fontSize,
 }: {
   className?: string
-  slug: string
+  slug?: string | undefined
   font?: string
-  disabled?: boolean
   text: string
+  hint?: string
   weight?: string
   fontSize?: number
+  script?: string
 }) {
-  if (disabled) {
+  if (!slug) {
     return (
       <div
         className={clsx(
           className,
-          'shadow-small1 flex flex-col gap-16 bg-gray-100 text-left pb-16 h-full leading-content rounded-sm w-full',
+          'flex flex-col gap-8 text-center pb-16 h-full leading-content rounded-sm w-full',
         )}
       >
-        <T className="block font-semibold text-hlarge leading-content transition-colors">
+        <T
+          script={script}
+          className="block font-semibold text-hlarge leading-content transition-colors"
+        >
           {text}
         </T>
+        {hint && (
+          <T
+            script="latin"
+            className="block text-xl leading-content transition-colors text-gray-400"
+          >
+            {hint}
+          </T>
+        )}
       </div>
     )
   }
@@ -158,12 +182,23 @@ function GlyphLink({
       href={slug}
       className={clsx(
         className,
-        'flex flex-col gap-16 [&_span]:hover:text-violet-600 [&_span]:transition-colors transition-all duration-200 text-center pb-16 h-full leading-content rounded-sm w-full [&_i]:hover:text-violet-400',
+        'flex flex-col gap-8 [&_span]:hover:text-violet-600 [&_span]:transition-colors transition-all duration-200 text-center pb-16 h-full leading-content rounded-sm w-full [&_i]:hover:text-violet-400',
       )}
     >
-      <T className="block font-semibold text-hlarge leading-content transition-colors">
+      <T
+        script={script}
+        className="block font-semibold text-hlarge leading-content transition-colors"
+      >
         {text}
       </T>
+      {hint && (
+        <T
+          script="latin"
+          className="block text-xl leading-content transition-colors text-gray-400"
+        >
+          {hint}
+        </T>
+      )}
     </NextLink>
   )
 }

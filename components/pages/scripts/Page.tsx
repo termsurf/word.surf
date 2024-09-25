@@ -280,13 +280,13 @@ const SCRIPTS = [
     slug: 'cyrillic',
     script: 'cyrillic',
     name: 'Cyrillic',
-    symbol: 'Б',
+    symbol: 'ж',
   },
   {
     slug: 'geez',
     script: 'ethiopic',
     name: 'Geez',
-    symbol: 'ሀ',
+    symbol: 'ቀ',
   },
   {
     slug: 'gurmukhi',
@@ -326,7 +326,7 @@ const SCRIPTS = [
   },
   {
     slug: 'inuktitut',
-    script: 'canadian-aboriginal',
+    script: 'canadian',
     name: 'Inuktitut',
     symbol: 'ᐃ',
   },
@@ -549,9 +549,9 @@ const SCRIPTS = [
   },
   {
     slug: 'n-ko',
-    name: 'N Ko',
+    name: "N'Ko",
     script: 'n-ko',
-    symbol: 'ߌ߫',
+    symbol: 'ߐ',
   },
   {
     slug: 'adlam',
@@ -816,7 +816,7 @@ const SCRIPTS = [
     slug: 'old-uyghur',
     name: 'Old Uyghur',
     script: 'old-uyghur',
-    symbol: '𐺀',
+    symbol: '𐽹',
   },
   {
     slug: 'tangsa',
@@ -834,13 +834,13 @@ const SCRIPTS = [
     slug: 'miao',
     name: 'Miao',
     script: 'miao',
-    symbol: '𖼀',
+    symbol: '𖼷𖽷',
   },
   {
     slug: 'lisu',
     name: 'Lisu',
     script: 'lisu',
-    symbol: 'ꓐ',
+    symbol: 'ꓯ',
   },
   {
     slug: 'bamum',
@@ -882,7 +882,7 @@ const SCRIPTS = [
     slug: 'vithkuqi',
     name: 'Vithkuqi',
     script: 'vithkuqi',
-    symbol: '𐺀',
+    symbol: '𐖩',
   },
   {
     slug: 'elbasan',
@@ -942,7 +942,7 @@ const SCRIPTS = [
     slug: 'buhid',
     name: 'Buhid',
     script: 'buhid',
-    symbol: 'ᝀ',
+    symbol: 'ᝐ',
   },
   {
     slug: 'hanunoo',
@@ -1020,7 +1020,7 @@ const SCRIPTS = [
     slug: 'tai-viet',
     name: 'Tai Viet',
     script: 'tai-viet',
-    symbol: 'ꪀ',
+    symbol: 'ꫛ',
   },
   {
     slug: 'new-tai-lue',
@@ -1044,7 +1044,7 @@ const SCRIPTS = [
     slug: 'kayah-li',
     name: 'Kayah Li',
     script: 'kayah-li',
-    symbol: '꤀',
+    symbol: 'ꤢ꤭',
   },
   {
     slug: 'pau-cin-hau',
@@ -1062,7 +1062,7 @@ const SCRIPTS = [
     slug: 'chorasmian',
     name: 'Chorasmian',
     script: 'chorasmian',
-    symbol: '𐾰',
+    symbol: '𐿄',
   },
   {
     slug: 'elymaic',
@@ -1122,7 +1122,7 @@ const SCRIPTS = [
     slug: 'yezidi',
     name: 'Yezidi',
     script: 'yezidi',
-    symbol: '𐺀',
+    symbol: '𐺐',
   },
   {
     slug: 'zanabazar-square',
@@ -1134,19 +1134,19 @@ const SCRIPTS = [
     slug: 'cypro-minoan',
     name: 'Cypro Minoan',
     script: 'cypro-minoan',
-    symbol: '𐘀',
+    symbol: '𒾤',
   },
   {
     slug: 'duployan',
     name: 'Duployan',
     script: 'duployan',
-    symbol: '𛰶',
+    symbol: '𛰤',
   },
   {
     slug: 'shavian',
     name: 'Shavian',
     script: 'shavian',
-    symbol: '𐑐',
+    symbol: '𐑺',
   },
 ].map(script => ({
   ...script,

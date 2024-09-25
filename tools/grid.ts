@@ -1,4 +1,7 @@
-function distribute(length: number, maxColumns: number) {
+export function distributeGridLayout(
+  length: number,
+  maxColumns: number,
+) {
   function recur(
     dp: Array<Set<number>>,
     length: number,
@@ -50,4 +53,38 @@ function distribute(length: number, maxColumns: number) {
   }
 
   return
+}
+
+export function distributeGridLayout2(
+  length: number,
+  maxColumns: number,
+) {
+  const rows: Array<number> = []
+
+  maxColumns = Math.max(maxColumns, 2)
+
+  if (isEven(length)) {
+    if (!isEven(maxColumns)) {
+      maxColumns--
+    }
+  } else {
+    if (isEven(maxColumns)) {
+      maxColumns--
+    }
+  }
+
+  while (length) {
+    if (length >= maxColumns) {
+      rows.push(maxColumns)
+    } else {
+      rows.push(length)
+    }
+    length = Math.max(0, length - maxColumns)
+  }
+
+  return rows
+}
+
+function isEven(n: number) {
+  return n % 2 === 0
 }
