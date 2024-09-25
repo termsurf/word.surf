@@ -340,7 +340,7 @@ function VirtualizedGrid({
   className,
   rowClassName,
   rowHeight,
-  maxColumns,
+  maxColumns = 2,
   minWidth,
   gap,
   records,
@@ -353,6 +353,7 @@ function VirtualizedGrid({
   const containerRef = useRef<HTMLDivElement>(null)
   const [itemWidth, setItemWidth] = useState(0)
   const [rows, setRows] = useState<Array<Array<ReactNode>>>([])
+  const [len, setLen] = useState<number>()
   const { width: containerWidth = 16, height: containerHeight = 16 } =
     useResizeObserver({
       ref: containerRef,
@@ -388,6 +389,7 @@ function VirtualizedGrid({
 
     setItemWidth(width / numColumns - itemGap)
     setRows(chunk(records, numColumns))
+    setLen(numColumns)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     containerRef,
@@ -457,6 +459,7 @@ function VirtualizedGrid({
 
       // key += 1
     })
+
     return (
       <Row
         gap={gap}
@@ -472,8 +475,7 @@ function VirtualizedGrid({
   return (
     <>
       <P>
-        {rows.length}: {ranges.length}, containerHeight:{' '}
-        {containerHeight}, containerWidth: {containerWidth}
+        {rows.length}: {ranges.length}, numColumns: {len}
       </P>
       <div
         className="w-full shadow-box h-384 border-4 border-b-4 border-solid border-gray-100"
