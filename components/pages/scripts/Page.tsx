@@ -382,7 +382,7 @@ const SCRIPTS = [
     slug: 'khmer',
     script: 'khmer',
     name: 'Khmer',
-    symbol: 'ក',
+    symbol: 'ឃ',
   },
   {
     slug: 'armenian',
