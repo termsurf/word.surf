@@ -41,6 +41,8 @@ function addSymbol(script: string, data: any) {
   })
 
   router.get(`/${script}/:code/bindings`, async (params: any) => {
+    console.log('data', data)
+    console.log('params.code', params.code)
     const state = data[params.code].links.bindings
     const links = state.links
       ? (Object.values(state.links as ArrayLike<any>).map(x => ({
