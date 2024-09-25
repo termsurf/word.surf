@@ -244,8 +244,6 @@ function Body() {
   return (
     <>
       <div className="relative w-full pb-64 flex flex-col gap-16 p-16">
-        rangeSubset: {rangesSubset.length}, glyphs: {glyphs.length},
-        filteredGlyphs: {filteredGlyphs.length}
         <TextInput
           value={search}
           size="large"
@@ -260,7 +258,7 @@ function Body() {
           gap={2}
           rowHeight={96}
           maxColumns={8}
-          breakpoints={[8, 4]}
+          breakpoints={[8, 4, 2]}
           records={filteredGlyphs}
           render={Glyph}
         />
