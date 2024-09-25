@@ -11,7 +11,7 @@ import { Language } from '~/data/types'
 
 import Grid from '@termsurf/leaf/component/Grid'
 import Link from '~/components/Link'
-import { calculateGlyphColumns } from '~/tools/grid'
+// import { calculateGlyphColumns } from '~/tools/grid'
 import { languagePath } from '~/tools/paths'
 import { Cached } from './config'
 
@@ -99,11 +99,11 @@ export const basicConsonants: Record<string, string> = {
 }
 
 function Body({ language }: ContentInput) {
-  const columns = calculateGlyphColumns({
-    totalCount: Object.keys(basicConsonants).length,
-    itemWidth: 96,
-    containerWidth: 700,
-  })
+  // const columns = calculateGlyphColumns({
+  //   totalCount: Object.keys(basicConsonants).length,
+  //   itemWidth: 96,
+  //   containerWidth: 700,
+  // })
   return (
     <>
       <div className="relative w-full pb-64 p-16 flex flex-col gap-16">
