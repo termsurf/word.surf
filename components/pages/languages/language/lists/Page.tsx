@@ -78,6 +78,7 @@ function Body({ language }: ContentInput) {
           minWidth={128}
           gap={16}
           className="p-16"
+          breakpoints={[3, 1]}
         >
           <NextLink
             href={languageListPath({

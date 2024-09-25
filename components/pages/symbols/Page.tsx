@@ -8,7 +8,7 @@ import chunk from 'lodash/chunk'
 import { useResizeObserver } from 'usehooks-ts'
 import ranges from './ranges.json'
 
-import { H1 } from '@termsurf/leaf/component/Content'
+import { H1, P } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import TextInput from '@termsurf/leaf/component/TextInput'
 import Toast from '@termsurf/leaf/component/Toast'
@@ -471,23 +471,26 @@ function VirtualizedGrid({
   }
 
   return (
-    <div
-      className="w-full shadow-box h-384 border-4 border-b-4 border-solid border-gray-100"
-      ref={containerRef}
-    >
-      <List
-        className="w-full"
-        height={containerHeight}
-        // style={{ height: actualListHeight }}
-        overscanRowCount={4}
-        // noRowsRenderer={this._noRowsRenderer}
-        rowCount={rows.length}
-        rowHeight={rowHeight}
-        rowRenderer={ListItem}
-        // scrollToIndex={scrollToIndex}
-        width={containerWidth}
-      />
-    </div>
+    <>
+      <P>{rows.length}</P>
+      <div
+        className="w-full shadow-box h-384 border-4 border-b-4 border-solid border-gray-100"
+        ref={containerRef}
+      >
+        <List
+          className="w-full"
+          height={containerHeight}
+          // style={{ height: actualListHeight }}
+          overscanRowCount={4}
+          // noRowsRenderer={this._noRowsRenderer}
+          rowCount={rows.length}
+          rowHeight={rowHeight}
+          rowRenderer={ListItem}
+          // scrollToIndex={scrollToIndex}
+          width={containerWidth}
+        />
+      </div>
+    </>
   )
 }
 
