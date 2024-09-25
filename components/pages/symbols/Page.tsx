@@ -472,7 +472,8 @@ function VirtualizedGrid({
   return (
     <>
       <P>
-        {rows.length}: {ranges.length}
+        {rows.length}: {ranges.length}, containerHeight:{' '}
+        {containerHeight}, containerWidth: {containerWidth}
       </P>
       <div
         className="w-full shadow-box h-384 border-4 border-b-4 border-solid border-gray-100"
