@@ -2,7 +2,6 @@
 
 // import { Document, Index, Worker } from 'flexsearch'
 
-import AutoSizer from '@lancejpollard/react-virtualized/dist/commonjs/AutoSizer'
 import List from '@lancejpollard/react-virtualized/dist/commonjs/List'
 import clsx from 'clsx'
 import chunk from 'lodash/chunk'
@@ -355,9 +354,10 @@ function VirtualizedGrid({
   const containerRef = useRef<HTMLDivElement>(null)
   const [itemWidth, setItemWidth] = useState(0)
   const [rows, setRows] = useState<Array<Array<ReactNode>>>([])
-  const { width: containerWidth = 1 } = useResizeObserver({
-    ref: containerRef,
-  })
+  const { width: containerWidth = 1, height: containerHeight = 1 } =
+    useResizeObserver({
+      ref: containerRef,
+    })
 
   useLayoutEffect(() => {
     const width = containerWidth ?? 1
@@ -475,22 +475,18 @@ function VirtualizedGrid({
       className="w-full shadow-box h-384 border-4 border-b-4 border-solid border-gray-100"
       ref={containerRef}
     >
-      <AutoSizer>
-        {({ width, height }) => (
-          <List
-            className="w-full"
-            height={height}
-            // style={{ height: actualListHeight }}
-            overscanRowCount={4}
-            // noRowsRenderer={this._noRowsRenderer}
-            rowCount={rows.length}
-            rowHeight={rowHeight}
-            rowRenderer={ListItem}
-            // scrollToIndex={scrollToIndex}
-            width={width}
-          />
-        )}
-      </AutoSizer>
+      <List
+        className="w-full"
+        height={containerHeight}
+        // style={{ height: actualListHeight }}
+        overscanRowCount={4}
+        // noRowsRenderer={this._noRowsRenderer}
+        rowCount={rows.length}
+        rowHeight={rowHeight}
+        rowRenderer={ListItem}
+        // scrollToIndex={scrollToIndex}
+        width={containerWidth}
+      />
     </div>
   )
 }
