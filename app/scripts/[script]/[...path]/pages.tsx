@@ -46,6 +46,7 @@ function addSymbol(script: string, data: any) {
 
   router.get(`/${script}/:code`, async (params: any) => {
     console.log('params.code', params.code)
+    console.log(data)
     const state = data[decodeURIComponent(params.code as string)]
     return (
       <ScriptPage
