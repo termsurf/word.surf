@@ -144,17 +144,14 @@ function Glyph({
     )
   }
 
-  const fontStyle = font
-    ? font
-        .split(/\s*,\s*/)
-        .map(x => `"${x}"`)
-        .join(', ')
-    : font
+  const fontStyle = font ? font.split(/\s*,\s*/) : font
+
+  console.log(font, fontStyle)
 
   return (
     <Link
       href={`/symbols/${slug}`}
-      className="mb-2 rounded-sm bg-gray-50 h-46 flex text-xl justify-center items-center p-4 hover:text-violet-600 transition-colors hover:bg-gray-100"
+      className="overflow-hidden mb-2 rounded-sm bg-gray-50 h-46 flex text-xl justify-center items-center p-4 hover:text-violet-600 transition-colors hover:bg-gray-100"
     >
       <Text font={fontStyle}>{glyph}</Text>
     </Link>
@@ -260,7 +257,7 @@ function VirtualizedGrid({
         const marginRight = gapSegment
         itemEls.push(
           <Item
-            key={key}
+            key={`${key}-${i}`}
             marginRight={marginRight}
             width={iWidth}
           >
@@ -271,7 +268,7 @@ function VirtualizedGrid({
         const marginLeft = gapSegment
         itemEls.push(
           <Item
-            key={key}
+            key={`${key}-${i}`}
             marginLeft={marginLeft}
             width={iWidth}
           >
@@ -283,7 +280,7 @@ function VirtualizedGrid({
         const marginLeft = gapSegment
         itemEls.push(
           <Item
-            key={key}
+            key={`${key}-${i}`}
             marginLeft={marginLeft}
             marginRight={marginRight}
             width={iWidth}

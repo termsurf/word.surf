@@ -38,115 +38,120 @@
   {
     "start": 768,
     "status": "combining",
-    "font": "Noto Sans",
     "end": 879
   },
   {
     "start": 880,
     "status": "standalone",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 887
   },
   {
     "start": 888,
     "status": "missing",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 889
   },
   {
     "start": 890,
     "status": "standalone",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 895
   },
   {
     "start": 896,
     "status": "missing",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 899
   },
   {
     "start": 900,
     "status": "standalone",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 906
   },
   {
     "start": 907,
     "status": "missing",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 907
   },
   {
     "start": 908,
     "status": "standalone",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 908
   },
   {
     "start": 909,
     "status": "missing",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 909
   },
   {
     "start": 910,
     "status": "standalone",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 929
   },
   {
     "start": 930,
     "status": "missing",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 930
   },
   {
     "start": 931,
     "status": "standalone",
-    "font": "Noto Sans",
+    "font": "Noto Sans Greek, Noto Sans Coptic",
     "end": 1154
   },
   {
     "start": 1155,
     "status": "combining",
-    "font": "Noto Sans",
+    "font": "Noto Sans Cyrillic",
     "end": 1159
   },
   {
     "start": 1160,
     "status": "standalone",
-    "font": "Noto Sans",
+    "font": "Noto Sans Cyrillic",
     "end": 1327
   },
   {
     "start": 1328,
     "status": "missing",
+    "font": "Noto Sans Armenian",
     "end": 1328
   },
   {
     "start": 1329,
     "status": "standalone",
+    "font": "Noto Sans Armenian",
     "end": 1366
   },
   {
     "start": 1367,
     "status": "missing",
+    "font": "Noto Sans Armenian",
     "end": 1368
   },
   {
     "start": 1369,
     "status": "standalone",
+    "font": "Noto Sans Armenian",
     "end": 1418
   },
   {
     "start": 1419,
     "status": "missing",
+    "font": "Noto Sans Armenian",
     "end": 1420
   },
   {
     "start": 1421,
     "status": "standalone",
+    "font": "Noto Sans Armenian",
     "end": 1423
   },
   {
@@ -356,171 +361,205 @@
   {
     "start": 1806,
     "status": "missing",
+    "font": "Noto Sans Syriac",
     "end": 1806
   },
   {
     "start": 1807,
     "status": "invisible",
+    "font": "Noto Sans Syriac",
     "end": 1807
   },
   {
     "start": 1808,
     "status": "standalone",
+    "font": "Noto Sans Syriac",
     "end": 1808
   },
   {
     "start": 1809,
     "status": "combining",
+    "font": "Noto Sans Syriac",
     "end": 1809
   },
   {
     "start": 1810,
     "status": "standalone",
+    "font": "Noto Sans Syriac",
     "end": 1839
   },
   {
     "start": 1840,
     "status": "combining",
+    "font": "Noto Sans Syriac",
     "end": 1866
   },
   {
     "start": 1867,
     "status": "missing",
+    "font": "Noto Sans Syriac",
     "end": 1868
   },
   {
     "start": 1869,
     "status": "standalone",
+    "font": "Noto Sans Syriac",
     "end": 1957
   },
   {
     "start": 1958,
     "status": "combining",
+    "font": "Noto Sans Thaana",
     "end": 1968
   },
   {
     "start": 1969,
     "status": "standalone",
+    "font": "Noto Sans Thaana",
     "end": 1969
   },
   {
     "start": 1970,
     "status": "missing",
+    "font": "Noto Sans Thaana",
     "end": 1983
   },
   {
     "start": 1984,
     "status": "standalone",
+    "font": "Noto Sans NKo",
     "end": 2026
   },
   {
     "start": 2027,
     "status": "combining",
+    "font": "Noto Sans NKo",
     "end": 2035
   },
   {
     "start": 2036,
     "status": "standalone",
+    "font": "Noto Sans NKo",
     "end": 2042
   },
   {
     "start": 2043,
     "status": "missing",
+    "font": "Noto Sans NKo",
     "end": 2044
   },
   {
     "start": 2045,
     "status": "combining",
+    "font": "Noto Sans NKo",
     "end": 2045
   },
   {
     "start": 2046,
     "status": "standalone",
+    "font": "Noto Sans NKo",
     "end": 2069
   },
   {
     "start": 2070,
     "status": "combining",
+    "font": "Noto Sans Samaritan",
     "end": 2073
   },
   {
     "start": 2074,
     "status": "standalone",
+    "font": "Noto Sans Samaritan",
     "end": 2074
   },
   {
     "start": 2075,
     "status": "combining",
+    "font": "Noto Sans Samaritan",
     "end": 2083
   },
   {
     "start": 2084,
     "status": "standalone",
+    "font": "Noto Sans Samaritan",
     "end": 2084
   },
   {
     "start": 2085,
     "status": "combining",
+    "font": "Noto Sans Samaritan",
     "end": 2087
   },
   {
     "start": 2088,
     "status": "standalone",
+    "font": "Noto Sans Samaritan",
     "end": 2088
   },
   {
     "start": 2089,
     "status": "combining",
+    "font": "Noto Sans Samaritan",
     "end": 2093
   },
   {
     "start": 2094,
     "status": "missing",
+    "font": "Noto Sans Samaritan",
     "end": 2095
   },
   {
     "start": 2096,
     "status": "standalone",
+    "font": "Noto Sans Samaritan",
     "end": 2110
   },
   {
     "start": 2111,
     "status": "missing",
+    "font": "Noto Sans Samaritan",
     "end": 2111
   },
   {
     "start": 2112,
     "status": "standalone",
+    "font": "Noto Sans Mandaic",
     "end": 2136
   },
   {
     "start": 2137,
     "status": "combining",
+    "font": "Noto Sans Mandaic",
     "end": 2139
   },
   {
     "start": 2140,
     "status": "missing",
+    "font": "Noto Sans Mandaic",
     "end": 2141
   },
   {
     "start": 2142,
     "status": "standalone",
+    "font": "Noto Sans Mandaic",
     "end": 2142
   },
   {
     "start": 2143,
     "status": "missing",
+    "font": "Noto Sans Mandaic",
     "end": 2143
   },
   {
     "start": 2144,
     "status": "standalone",
+    "font": "Noto Sans Syriac",
     "end": 2154
   },
   {
     "start": 2155,
     "status": "missing",
+    "font": "Noto Sans Syriac",
     "end": 2159
   },
   {
@@ -1291,402 +1330,439 @@
   {
     "start": 2816,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2816
   },
   {
     "start": 2817,
     "status": "combining",
+    "font": "Noto Sans Oriya",
     "end": 2817
   },
   {
     "start": 2818,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2819
   },
   {
     "start": 2820,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2820
   },
   {
     "start": 2821,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2828
   },
   {
     "start": 2829,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2830
   },
   {
     "start": 2831,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2832
   },
   {
     "start": 2833,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2834
   },
   {
     "start": 2835,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2856
   },
   {
     "start": 2857,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2857
   },
   {
     "start": 2858,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2864
   },
   {
     "start": 2865,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2865
   },
   {
     "start": 2866,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2867
   },
   {
     "start": 2868,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2868
   },
   {
     "start": 2869,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2873
   },
   {
     "start": 2874,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2875
   },
   {
     "start": 2876,
     "status": "combining",
+    "font": "Noto Sans Oriya",
     "end": 2876
   },
   {
     "start": 2877,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2878
   },
   {
     "start": 2879,
     "status": "combining",
+    "font": "Noto Sans Oriya",
     "end": 2879
   },
   {
     "start": 2880,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2880
   },
   {
     "start": 2881,
     "status": "combining",
+    "font": "Noto Sans Oriya",
     "end": 2884
   },
   {
     "start": 2885,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2886
   },
   {
     "start": 2887,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2888
   },
   {
     "start": 2889,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2890
   },
   {
     "start": 2891,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2892
   },
   {
     "start": 2893,
     "status": "combining",
+    "font": "Noto Sans Oriya",
     "end": 2893
   },
   {
     "start": 2894,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2900
   },
   {
     "start": 2901,
     "status": "combining",
+    "font": "Noto Sans Oriya",
     "end": 2902
   },
   {
     "start": 2903,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2903
   },
   {
     "start": 2904,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2907
   },
   {
     "start": 2908,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2909
   },
   {
     "start": 2910,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2910
   },
   {
     "start": 2911,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2913
   },
   {
     "start": 2914,
     "status": "combining",
+    "font": "Noto Sans Oriya",
     "end": 2915
   },
   {
     "start": 2916,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2917
   },
   {
     "start": 2918,
     "status": "standalone",
+    "font": "Noto Sans Oriya",
     "end": 2935
   },
   {
     "start": 2936,
     "status": "missing",
+    "font": "Noto Sans Oriya",
     "end": 2945
   },
   {
     "start": 2946,
     "status": "combining",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2946
   },
   {
     "start": 2947,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2947
   },
   {
     "start": 2948,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2948
   },
   {
     "start": 2949,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2954
   },
   {
     "start": 2955,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2957
   },
   {
     "start": 2958,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2960
   },
   {
     "start": 2961,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2961
   },
   {
     "start": 2962,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2965
   },
   {
     "start": 2966,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2968
   },
   {
     "start": 2969,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2970
   },
   {
     "start": 2971,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2971
   },
   {
     "start": 2972,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2972
   },
   {
     "start": 2973,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2973
   },
   {
     "start": 2974,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2975
   },
   {
     "start": 2976,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2978
   },
   {
     "start": 2979,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2980
   },
   {
     "start": 2981,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2983
   },
   {
     "start": 2984,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2986
   },
   {
     "start": 2987,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 2989
   },
   {
     "start": 2990,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3001
   },
   {
     "start": 3002,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3005
   },
   {
     "start": 3006,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3007
   },
   {
     "start": 3008,
     "status": "combining",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3008
   },
   {
     "start": 3009,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3010
   },
   {
     "start": 3011,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3013
   },
   {
     "start": 3014,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3016
   },
   {
     "start": 3017,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3017
   },
   {
     "start": 3018,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3020
   },
   {
     "start": 3021,
     "status": "combining",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3021
   },
   {
     "start": 3022,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3023
   },
   {
     "start": 3024,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3024
   },
   {
     "start": 3025,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3030
   },
   {
     "start": 3031,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3031
   },
   {
     "start": 3032,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3045
   },
   {
     "start": 3046,
     "status": "standalone",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3066
   },
   {
     "start": 3067,
     "status": "missing",
-    "font": "Noto Sans Tamil",
+    "font": "Noto Sans Tamil, Noto Sans Tamil Supplement",
     "end": 3071
   },
   {
@@ -3154,7 +3230,6 @@
   {
     "start": 5120,
     "status": "standalone",
-    "font": "Noto Sans Canadian Aboriginal",
     "end": 5759
   },
   {
@@ -3190,86 +3265,103 @@
   {
     "start": 5888,
     "status": "standalone",
+    "font": "Noto Sans Tagalog",
     "end": 5905
   },
   {
     "start": 5906,
     "status": "combining",
+    "font": "Noto Sans Tagalog",
     "end": 5908
   },
   {
     "start": 5909,
     "status": "standalone",
+    "font": "Noto Sans Tagalog",
     "end": 5909
   },
   {
     "start": 5910,
     "status": "missing",
+    "font": "Noto Sans Tagalog",
     "end": 5918
   },
   {
     "start": 5919,
     "status": "standalone",
+    "font": "Noto Sans Tagalog",
     "end": 5937
   },
   {
     "start": 5938,
     "status": "combining",
+    "font": "Noto Sans Hanunoo",
     "end": 5939
   },
   {
     "start": 5940,
     "status": "standalone",
+    "font": "Noto Sans Hanunoo",
     "end": 5942
   },
   {
     "start": 5943,
     "status": "missing",
+    "font": "Noto Sans Hanunoo",
     "end": 5951
   },
   {
     "start": 5952,
     "status": "standalone",
+    "font": "Noto Sans Buhid",
     "end": 5969
   },
   {
     "start": 5970,
     "status": "combining",
+    "font": "Noto Sans Buhid",
     "end": 5971
   },
   {
     "start": 5972,
     "status": "missing",
+    "font": "Noto Sans Buhid",
     "end": 5983
   },
   {
     "start": 5984,
     "status": "standalone",
+    "font": "Noto Sans Tagbanwa",
     "end": 5996
   },
   {
     "start": 5997,
     "status": "missing",
+    "font": "Noto Sans Tagbanwa",
     "end": 5997
   },
   {
     "start": 5998,
     "status": "standalone",
+    "font": "Noto Sans Tagbanwa",
     "end": 6000
   },
   {
     "start": 6001,
     "status": "missing",
+    "font": "Noto Sans Tagbanwa",
     "end": 6001
   },
   {
     "start": 6002,
     "status": "combining",
+    "font": "Noto Sans Tagbanwa",
     "end": 6003
   },
   {
     "start": 6004,
     "status": "missing",
+    "font": "Noto Sans Tagbanwa",
     "end": 6015
   },
   {
@@ -3459,246 +3551,295 @@
   {
     "start": 6400,
     "status": "standalone",
+    "font": "Noto Sans Limbu",
     "end": 6430
   },
   {
     "start": 6431,
     "status": "missing",
+    "font": "Noto Sans Limbu",
     "end": 6431
   },
   {
     "start": 6432,
     "status": "combining",
+    "font": "Noto Sans Limbu",
     "end": 6434
   },
   {
     "start": 6435,
     "status": "standalone",
+    "font": "Noto Sans Limbu",
     "end": 6438
   },
   {
     "start": 6439,
     "status": "combining",
+    "font": "Noto Sans Limbu",
     "end": 6440
   },
   {
     "start": 6441,
     "status": "standalone",
+    "font": "Noto Sans Limbu",
     "end": 6443
   },
   {
     "start": 6444,
     "status": "missing",
+    "font": "Noto Sans Limbu",
     "end": 6447
   },
   {
     "start": 6448,
     "status": "standalone",
+    "font": "Noto Sans Limbu",
     "end": 6449
   },
   {
     "start": 6450,
     "status": "combining",
+    "font": "Noto Sans Limbu",
     "end": 6450
   },
   {
     "start": 6451,
     "status": "standalone",
+    "font": "Noto Sans Limbu",
     "end": 6456
   },
   {
     "start": 6457,
     "status": "combining",
+    "font": "Noto Sans Limbu",
     "end": 6459
   },
   {
     "start": 6460,
     "status": "missing",
+    "font": "Noto Sans Limbu",
     "end": 6463
   },
   {
     "start": 6464,
     "status": "standalone",
+    "font": "Noto Sans Limbu",
     "end": 6464
   },
   {
     "start": 6465,
     "status": "missing",
+    "font": "Noto Sans Limbu",
     "end": 6467
   },
   {
     "start": 6468,
     "status": "standalone",
+    "font": "Noto Sans Limbu",
     "end": 6509
   },
   {
     "start": 6510,
     "status": "missing",
+    "font": "Noto Sans Tai Le",
     "end": 6511
   },
   {
     "start": 6512,
     "status": "standalone",
+    "font": "Noto Sans Tai Le",
     "end": 6516
   },
   {
     "start": 6517,
     "status": "missing",
+    "font": "Noto Sans Tai Le",
     "end": 6527
   },
   {
     "start": 6528,
     "status": "standalone",
+    "font": "Noto Sans New Tai Lue",
     "end": 6571
   },
   {
     "start": 6572,
     "status": "missing",
+    "font": "Noto Sans New Tai Lue",
     "end": 6575
   },
   {
     "start": 6576,
     "status": "standalone",
+    "font": "Noto Sans New Tai Lue",
     "end": 6601
   },
   {
     "start": 6602,
     "status": "missing",
+    "font": "Noto Sans New Tai Lue",
     "end": 6607
   },
   {
     "start": 6608,
     "status": "standalone",
+    "font": "Noto Sans New Tai Lue",
     "end": 6618
   },
   {
     "start": 6619,
     "status": "missing",
+    "font": "Noto Sans New Tai Lue",
     "end": 6621
   },
   {
     "start": 6622,
     "status": "standalone",
+    "font": "Noto Sans New Tai Lue",
     "end": 6678
   },
   {
     "start": 6679,
     "status": "combining",
+    "font": "Noto Sans Buginese",
     "end": 6680
   },
   {
     "start": 6681,
     "status": "standalone",
+    "font": "Noto Sans Buginese",
     "end": 6682
   },
   {
     "start": 6683,
     "status": "combining",
+    "font": "Noto Sans Buginese",
     "end": 6683
   },
   {
     "start": 6684,
     "status": "missing",
+    "font": "Noto Sans Buginese",
     "end": 6685
   },
   {
     "start": 6686,
     "status": "standalone",
+    "font": "Noto Sans Buginese",
     "end": 6741
   },
   {
     "start": 6742,
     "status": "combining",
+    "font": "Noto Sans Tai Tham",
     "end": 6742
   },
   {
     "start": 6743,
     "status": "standalone",
+    "font": "Noto Sans Tai Tham",
     "end": 6743
   },
   {
     "start": 6744,
     "status": "combining",
+    "font": "Noto Sans Tai Tham",
     "end": 6750
   },
   {
     "start": 6751,
     "status": "missing",
+    "font": "Noto Sans Tai Tham",
     "end": 6751
   },
   {
     "start": 6752,
     "status": "combining",
+    "font": "Noto Sans Tai Tham",
     "end": 6752
   },
   {
     "start": 6753,
     "status": "standalone",
+    "font": "Noto Sans Tai Tham",
     "end": 6753
   },
   {
     "start": 6754,
     "status": "combining",
+    "font": "Noto Sans Tai Tham",
     "end": 6754
   },
   {
     "start": 6755,
     "status": "standalone",
+    "font": "Noto Sans Tai Tham",
     "end": 6756
   },
   {
     "start": 6757,
     "status": "combining",
+    "font": "Noto Sans Tai Tham",
     "end": 6764
   },
   {
     "start": 6765,
     "status": "standalone",
+    "font": "Noto Sans Tai Tham",
     "end": 6770
   },
   {
     "start": 6771,
     "status": "combining",
+    "font": "Noto Sans Tai Tham",
     "end": 6780
   },
   {
     "start": 6781,
     "status": "missing",
+    "font": "Noto Sans Tai Tham",
     "end": 6782
   },
   {
     "start": 6783,
     "status": "combining",
+    "font": "Noto Sans Tai Tham",
     "end": 6783
   },
   {
     "start": 6784,
     "status": "standalone",
+    "font": "Noto Sans Tai Tham",
     "end": 6793
   },
   {
     "start": 6794,
     "status": "missing",
+    "font": "Noto Sans Tai Tham",
     "end": 6799
   },
   {
     "start": 6800,
     "status": "standalone",
+    "font": "Noto Sans Tai Tham",
     "end": 6809
   },
   {
     "start": 6810,
     "status": "missing",
+    "font": "Noto Sans Tai Tham",
     "end": 6815
   },
   {
     "start": 6816,
     "status": "standalone",
+    "font": "Noto Sans Tai Tham",
     "end": 6829
   },
   {
     "start": 6830,
     "status": "missing",
+    "font": "Noto Sans Tai Tham",
     "end": 6831
   },
   {
@@ -3724,201 +3865,241 @@
   {
     "start": 6912,
     "status": "combining",
+    "font": "Noto Sans Balinese",
     "end": 6915
   },
   {
     "start": 6916,
     "status": "standalone",
+    "font": "Noto Sans Balinese",
     "end": 6963
   },
   {
     "start": 6964,
     "status": "combining",
+    "font": "Noto Sans Balinese",
     "end": 6964
   },
   {
     "start": 6965,
     "status": "standalone",
+    "font": "Noto Sans Balinese",
     "end": 6965
   },
   {
     "start": 6966,
     "status": "combining",
+    "font": "Noto Sans Balinese",
     "end": 6970
   },
   {
     "start": 6971,
     "status": "standalone",
+    "font": "Noto Sans Balinese",
     "end": 6971
   },
   {
     "start": 6972,
     "status": "combining",
+    "font": "Noto Sans Balinese",
     "end": 6972
   },
   {
     "start": 6973,
     "status": "standalone",
+    "font": "Noto Sans Balinese",
     "end": 6977
   },
   {
     "start": 6978,
     "status": "combining",
+    "font": "Noto Sans Balinese",
     "end": 6978
   },
   {
     "start": 6979,
     "status": "standalone",
+    "font": "Noto Sans Balinese",
     "end": 6988
   },
   {
     "start": 6989,
     "status": "missing",
+    "font": "Noto Sans Balinese",
     "end": 6991
   },
   {
     "start": 6992,
     "status": "standalone",
+    "font": "Noto Sans Balinese",
     "end": 7018
   },
   {
     "start": 7019,
     "status": "combining",
+    "font": "Noto Sans Balinese",
     "end": 7027
   },
   {
     "start": 7028,
     "status": "standalone",
+    "font": "Noto Sans Balinese",
     "end": 7038
   },
   {
     "start": 7039,
     "status": "missing",
+    "font": "Noto Sans Balinese",
     "end": 7039
   },
   {
     "start": 7040,
     "status": "combining",
+    "font": "Noto Sans Sundanese",
     "end": 7041
   },
   {
     "start": 7042,
     "status": "standalone",
+    "font": "Noto Sans Sundanese",
     "end": 7073
   },
   {
     "start": 7074,
     "status": "combining",
+    "font": "Noto Sans Sundanese",
     "end": 7077
   },
   {
     "start": 7078,
     "status": "standalone",
+    "font": "Noto Sans Sundanese",
     "end": 7079
   },
   {
     "start": 7080,
     "status": "combining",
+    "font": "Noto Sans Sundanese",
     "end": 7081
   },
   {
     "start": 7082,
     "status": "standalone",
+    "font": "Noto Sans Sundanese",
     "end": 7082
   },
   {
     "start": 7083,
     "status": "combining",
+    "font": "Noto Sans Sundanese",
     "end": 7085
   },
   {
     "start": 7086,
     "status": "standalone",
+    "font": "Noto Sans Sundanese",
     "end": 7141
   },
   {
     "start": 7142,
     "status": "combining",
+    "font": "Noto Sans Batak",
     "end": 7142
   },
   {
     "start": 7143,
     "status": "standalone",
+    "font": "Noto Sans Batak",
     "end": 7143
   },
   {
     "start": 7144,
     "status": "combining",
+    "font": "Noto Sans Batak",
     "end": 7145
   },
   {
     "start": 7146,
     "status": "standalone",
+    "font": "Noto Sans Batak",
     "end": 7148
   },
   {
     "start": 7149,
     "status": "combining",
+    "font": "Noto Sans Batak",
     "end": 7149
   },
   {
     "start": 7150,
     "status": "standalone",
+    "font": "Noto Sans Batak",
     "end": 7150
   },
   {
     "start": 7151,
     "status": "combining",
+    "font": "Noto Sans Batak",
     "end": 7153
   },
   {
     "start": 7154,
     "status": "standalone",
+    "font": "Noto Sans Batak",
     "end": 7155
   },
   {
     "start": 7156,
     "status": "missing",
+    "font": "Noto Sans Batak",
     "end": 7163
   },
   {
     "start": 7164,
     "status": "standalone",
+    "font": "Noto Sans Batak",
     "end": 7211
   },
   {
     "start": 7212,
     "status": "combining",
+    "font": "Noto Sans Lepcha",
     "end": 7219
   },
   {
     "start": 7220,
     "status": "standalone",
+    "font": "Noto Sans Lepcha",
     "end": 7221
   },
   {
     "start": 7222,
     "status": "combining",
+    "font": "Noto Sans Lepcha",
     "end": 7223
   },
   {
     "start": 7224,
     "status": "missing",
+    "font": "Noto Sans Lepcha",
     "end": 7226
   },
   {
     "start": 7227,
     "status": "standalone",
+    "font": "Noto Sans Lepcha",
     "end": 7241
   },
   {
     "start": 7242,
     "status": "missing",
+    "font": "Noto Sans Lepcha",
     "end": 7244
   },
   {
     "start": 7245,
     "status": "standalone",
+    "font": "Noto Sans Lepcha",
     "end": 7304
   },
   {
@@ -4024,161 +4205,193 @@
   {
     "start": 7680,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 7957
   },
   {
     "start": 7958,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 7959
   },
   {
     "start": 7960,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 7965
   },
   {
     "start": 7966,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 7967
   },
   {
     "start": 7968,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8005
   },
   {
     "start": 8006,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8007
   },
   {
     "start": 8008,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8013
   },
   {
     "start": 8014,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8015
   },
   {
     "start": 8016,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8023
   },
   {
     "start": 8024,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8024
   },
   {
     "start": 8025,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8025
   },
   {
     "start": 8026,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8026
   },
   {
     "start": 8027,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8027
   },
   {
     "start": 8028,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8028
   },
   {
     "start": 8029,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8029
   },
   {
     "start": 8030,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8030
   },
   {
     "start": 8031,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8061
   },
   {
     "start": 8062,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8063
   },
   {
     "start": 8064,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8116
   },
   {
     "start": 8117,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8117
   },
   {
     "start": 8118,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8132
   },
   {
     "start": 8133,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8133
   },
   {
     "start": 8134,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8147
   },
   {
     "start": 8148,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8149
   },
   {
     "start": 8150,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8155
   },
   {
     "start": 8156,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8156
   },
   {
     "start": 8157,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8175
   },
   {
     "start": 8176,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8177
   },
   {
     "start": 8178,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8180
   },
   {
     "start": 8181,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8181
   },
   {
     "start": 8182,
     "status": "standalone",
+    "font": "Noto Sans Greek",
     "end": 8190
   },
   {
     "start": 8191,
     "status": "missing",
+    "font": "Noto Sans Greek",
     "end": 8191
   },
   {
@@ -4304,21 +4517,25 @@
   {
     "start": 11503,
     "status": "combining",
+    "font": "Noto Sans Coptic",
     "end": 11505
   },
   {
     "start": 11506,
     "status": "standalone",
+    "font": "Noto Sans Coptic",
     "end": 11507
   },
   {
     "start": 11508,
     "status": "missing",
+    "font": "Noto Sans Coptic",
     "end": 11512
   },
   {
     "start": 11513,
     "status": "standalone",
+    "font": "Noto Sans Coptic",
     "end": 11557
   },
   {
@@ -4479,29 +4696,31 @@
   {
     "start": 11930,
     "status": "missing",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 11930
   },
   {
     "start": 11931,
     "status": "standalone",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12019
   },
   {
     "start": 12020,
     "status": "missing",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12031
   },
   {
     "start": 12032,
     "status": "standalone",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12245
   },
   {
     "start": 12246,
     "status": "missing",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12271
   },
   {
@@ -4512,50 +4731,55 @@
   {
     "start": 12288,
     "status": "invisible",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12288
   },
   {
     "start": 12289,
     "status": "standalone",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12329
   },
   {
     "start": 12330,
     "status": "combining",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12333
   },
   {
     "start": 12334,
     "status": "standalone",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12351
   },
   {
     "start": 12352,
     "status": "missing",
+    "font": "Noto Sans JP",
     "end": 12352
   },
   {
     "start": 12353,
     "status": "standalone",
+    "font": "Noto Sans JP",
     "end": 12438
   },
   {
     "start": 12439,
     "status": "missing",
+    "font": "Noto Sans JP",
     "end": 12440
   },
   {
     "start": 12441,
     "status": "combining",
+    "font": "Noto Sans JP",
     "end": 12442
   },
   {
     "start": 12443,
     "status": "standalone",
+    "font": "Noto Sans JP",
     "end": 12543
   },
   {
@@ -4571,16 +4795,19 @@
   {
     "start": 12592,
     "status": "missing",
+    "font": "Noto Sans Korean",
     "end": 12592
   },
   {
     "start": 12593,
     "status": "standalone",
+    "font": "Noto Sans Korean",
     "end": 12686
   },
   {
     "start": 12687,
     "status": "missing",
+    "font": "Noto Sans Korean",
     "end": 12687
   },
   {
@@ -4591,50 +4818,55 @@
   {
     "start": 12772,
     "status": "missing",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12782
   },
   {
     "start": 12783,
     "status": "standalone",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12830
   },
   {
     "start": 12831,
     "status": "missing",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 12831
   },
   {
     "start": 12832,
     "status": "standalone",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 42124
   },
   {
     "start": 42125,
     "status": "missing",
+    "font": "Noto Sans Yi",
     "end": 42127
   },
   {
     "start": 42128,
     "status": "standalone",
+    "font": "Noto Sans Yi",
     "end": 42182
   },
   {
     "start": 42183,
     "status": "missing",
+    "font": "Noto Sans Yi",
     "end": 42191
   },
   {
     "start": 42192,
     "status": "standalone",
+    "font": "Noto Sans Lisu",
     "end": 42539
   },
   {
     "start": 42540,
     "status": "missing",
+    "font": "Noto Sans Vai",
     "end": 42559
   },
   {
@@ -4670,21 +4902,25 @@
   {
     "start": 42656,
     "status": "standalone",
+    "font": "Noto Sans Bamum",
     "end": 42735
   },
   {
     "start": 42736,
     "status": "combining",
+    "font": "Noto Sans Bamum",
     "end": 42737
   },
   {
     "start": 42738,
     "status": "standalone",
+    "font": "Noto Sans Bamum",
     "end": 42743
   },
   {
     "start": 42744,
     "status": "missing",
+    "font": "Noto Sans Bamum",
     "end": 42751
   },
   {
@@ -4695,91 +4931,109 @@
   {
     "start": 42955,
     "status": "missing",
+    "font": "Noto Sans",
     "end": 42959
   },
   {
     "start": 42960,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 42961
   },
   {
     "start": 42962,
     "status": "missing",
+    "font": "Noto Sans",
     "end": 42962
   },
   {
     "start": 42963,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 42963
   },
   {
     "start": 42964,
     "status": "missing",
+    "font": "Noto Sans",
     "end": 42964
   },
   {
     "start": 42965,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 42969
   },
   {
     "start": 42970,
     "status": "missing",
+    "font": "Noto Sans",
     "end": 42993
   },
   {
     "start": 42994,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 43009
   },
   {
     "start": 43010,
     "status": "combining",
+    "font": "Noto Sans Syloti Nagri",
     "end": 43010
   },
   {
     "start": 43011,
     "status": "standalone",
+    "font": "Noto Sans Syloti Nagri",
     "end": 43013
   },
   {
     "start": 43014,
     "status": "combining",
+    "font": "Noto Sans Syloti Nagri",
     "end": 43014
   },
   {
     "start": 43015,
     "status": "standalone",
+    "font": "Noto Sans Syloti Nagri",
     "end": 43018
   },
   {
     "start": 43019,
     "status": "combining",
+    "font": "Noto Sans Syloti Nagri",
     "end": 43019
   },
   {
     "start": 43020,
     "status": "standalone",
+    "font": "Noto Sans Syloti Nagri",
     "end": 43044
   },
   {
     "start": 43045,
     "status": "combining",
+    "font": "Noto Sans Syloti Nagri",
     "end": 43046
   },
   {
     "start": 43047,
     "status": "standalone",
+    "font": "Noto Sans Syloti Nagri",
     "end": 43051
   },
   {
     "start": 43052,
     "status": "combining",
+    "font": "Noto Sans Syloti Nagri",
     "end": 43052
   },
   {
     "start": 43053,
     "status": "missing",
+    "font": "Noto Sans Syloti Nagri",
     "end": 43055
   },
   {
@@ -4795,36 +5049,43 @@
   {
     "start": 43072,
     "status": "standalone",
+    "font": "Noto Sans Phags Pa",
     "end": 43127
   },
   {
     "start": 43128,
     "status": "missing",
+    "font": "Noto Sans Phags Pa",
     "end": 43135
   },
   {
     "start": 43136,
     "status": "standalone",
+    "font": "Noto Sans Saurashtra",
     "end": 43203
   },
   {
     "start": 43204,
     "status": "combining",
+    "font": "Noto Sans Saurashtra",
     "end": 43205
   },
   {
     "start": 43206,
     "status": "missing",
+    "font": "Noto Sans Saurashtra",
     "end": 43213
   },
   {
     "start": 43214,
     "status": "standalone",
+    "font": "Noto Sans Saurashtra",
     "end": 43225
   },
   {
     "start": 43226,
     "status": "missing",
+    "font": "Noto Sans Saurashtra",
     "end": 43231
   },
   {
@@ -4845,36 +5106,43 @@
   {
     "start": 43264,
     "status": "standalone",
+    "font": "Noto Sans Kayah Li",
     "end": 43301
   },
   {
     "start": 43302,
     "status": "combining",
+    "font": "Noto Sans Kayah Li",
     "end": 43309
   },
   {
     "start": 43310,
     "status": "standalone",
+    "font": "Noto Sans Kayah Li",
     "end": 43334
   },
   {
     "start": 43335,
     "status": "combining",
+    "font": "Noto Sans Rejang",
     "end": 43345
   },
   {
     "start": 43346,
     "status": "standalone",
+    "font": "Noto Sans Rejang",
     "end": 43347
   },
   {
     "start": 43348,
     "status": "missing",
+    "font": "Noto Sans Rejang",
     "end": 43358
   },
   {
     "start": 43359,
     "status": "standalone",
+    "font": "Noto Sans Rejang",
     "end": 43388
   },
   {
@@ -4885,61 +5153,73 @@
   {
     "start": 43392,
     "status": "combining",
+    "font": "Noto Sans Javanese",
     "end": 43394
   },
   {
     "start": 43395,
     "status": "standalone",
+    "font": "Noto Sans Javanese",
     "end": 43442
   },
   {
     "start": 43443,
     "status": "combining",
+    "font": "Noto Sans Javanese",
     "end": 43443
   },
   {
     "start": 43444,
     "status": "standalone",
+    "font": "Noto Sans Javanese",
     "end": 43445
   },
   {
     "start": 43446,
     "status": "combining",
+    "font": "Noto Sans Javanese",
     "end": 43449
   },
   {
     "start": 43450,
     "status": "standalone",
+    "font": "Noto Sans Javanese",
     "end": 43451
   },
   {
     "start": 43452,
     "status": "combining",
+    "font": "Noto Sans Javanese",
     "end": 43453
   },
   {
     "start": 43454,
     "status": "standalone",
+    "font": "Noto Sans Javanese",
     "end": 43469
   },
   {
     "start": 43470,
     "status": "missing",
+    "font": "Noto Sans Javanese",
     "end": 43470
   },
   {
     "start": 43471,
     "status": "standalone",
+    "font": "Noto Sans Javanese",
     "end": 43481
   },
   {
     "start": 43482,
     "status": "missing",
+    "font": "Noto Sans Javanese",
     "end": 43485
   },
   {
     "start": 43486,
     "status": "standalone",
+    "font": "Noto Sans Javanese",
     "end": 43492
   },
   {
@@ -4960,81 +5240,97 @@
   {
     "start": 43520,
     "status": "standalone",
+    "font": "Noto Sans Cham",
     "end": 43560
   },
   {
     "start": 43561,
     "status": "combining",
+    "font": "Noto Sans Cham",
     "end": 43566
   },
   {
     "start": 43567,
     "status": "standalone",
+    "font": "Noto Sans Cham",
     "end": 43568
   },
   {
     "start": 43569,
     "status": "combining",
+    "font": "Noto Sans Cham",
     "end": 43570
   },
   {
     "start": 43571,
     "status": "standalone",
+    "font": "Noto Sans Cham",
     "end": 43572
   },
   {
     "start": 43573,
     "status": "combining",
+    "font": "Noto Sans Cham",
     "end": 43574
   },
   {
     "start": 43575,
     "status": "missing",
+    "font": "Noto Sans Cham",
     "end": 43583
   },
   {
     "start": 43584,
     "status": "standalone",
+    "font": "Noto Sans Cham",
     "end": 43586
   },
   {
     "start": 43587,
     "status": "combining",
+    "font": "Noto Sans Cham",
     "end": 43587
   },
   {
     "start": 43588,
     "status": "standalone",
+    "font": "Noto Sans Cham",
     "end": 43595
   },
   {
     "start": 43596,
     "status": "combining",
+    "font": "Noto Sans Cham",
     "end": 43596
   },
   {
     "start": 43597,
     "status": "standalone",
+    "font": "Noto Sans Cham",
     "end": 43597
   },
   {
     "start": 43598,
     "status": "missing",
+    "font": "Noto Sans Cham",
     "end": 43599
   },
   {
     "start": 43600,
     "status": "standalone",
+    "font": "Noto Sans Cham",
     "end": 43609
   },
   {
     "start": 43610,
     "status": "missing",
+    "font": "Noto Sans Cham",
     "end": 43611
   },
   {
     "start": 43612,
     "status": "standalone",
+    "font": "Noto Sans Cham",
     "end": 43643
   },
   {
@@ -5050,61 +5346,73 @@
   {
     "start": 43696,
     "status": "combining",
+    "font": "Noto Sans Tai Viet",
     "end": 43696
   },
   {
     "start": 43697,
     "status": "standalone",
+    "font": "Noto Sans Tai Viet",
     "end": 43697
   },
   {
     "start": 43698,
     "status": "combining",
+    "font": "Noto Sans Tai Viet",
     "end": 43700
   },
   {
     "start": 43701,
     "status": "standalone",
+    "font": "Noto Sans Tai Viet",
     "end": 43702
   },
   {
     "start": 43703,
     "status": "combining",
+    "font": "Noto Sans Tai Viet",
     "end": 43704
   },
   {
     "start": 43705,
     "status": "standalone",
+    "font": "Noto Sans Tai Viet",
     "end": 43709
   },
   {
     "start": 43710,
     "status": "combining",
+    "font": "Noto Sans Tai Viet",
     "end": 43711
   },
   {
     "start": 43712,
     "status": "standalone",
+    "font": "Noto Sans Tai Viet",
     "end": 43712
   },
   {
     "start": 43713,
     "status": "combining",
+    "font": "Noto Sans Tai Viet",
     "end": 43713
   },
   {
     "start": 43714,
     "status": "standalone",
+    "font": "Noto Sans Tai Viet",
     "end": 43714
   },
   {
     "start": 43715,
     "status": "missing",
+    "font": "Noto Sans Tai Viet",
     "end": 43738
   },
   {
     "start": 43739,
     "status": "standalone",
+    "font": "Noto Sans Tai Viet",
     "end": 43755
   },
   {
@@ -5180,11 +5488,13 @@
   {
     "start": 43824,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 43883
   },
   {
     "start": 43884,
     "status": "missing",
+    "font": "Noto Sans",
     "end": 43887
   },
   {
@@ -5195,53 +5505,59 @@
   {
     "start": 44005,
     "status": "combining",
+    "font": "Noto Sans Meetei Mayek",
     "end": 44005
   },
   {
     "start": 44006,
     "status": "standalone",
+    "font": "Noto Sans Meetei Mayek",
     "end": 44007
   },
   {
     "start": 44008,
     "status": "combining",
+    "font": "Noto Sans Meetei Mayek",
     "end": 44008
   },
   {
     "start": 44009,
     "status": "standalone",
+    "font": "Noto Sans Meetei Mayek",
     "end": 44012
   },
   {
     "start": 44013,
     "status": "combining",
+    "font": "Noto Sans Meetei Mayek",
     "end": 44013
   },
   {
     "start": 44014,
     "status": "missing",
+    "font": "Noto Sans Meetei Mayek",
     "end": 44015
   },
   {
     "start": 44016,
     "status": "standalone",
+    "font": "Noto Sans Meetei Mayek",
     "end": 44025
   },
   {
     "start": 44026,
     "status": "missing",
+    "font": "Noto Sans Meetei Mayek",
     "end": 44031
   },
   {
     "start": 44032,
     "status": "standalone",
-    "font": "Noto Sans CJK KR",
     "end": 55203
   },
   {
     "start": 55204,
     "status": "missing",
-    "font": "Noto Sans CJK KR",
     "end": 55215
   },
   {
@@ -5312,7 +5628,7 @@
   {
     "start": 63744,
     "status": "standalone",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 64262
   },
   {
@@ -5398,31 +5714,37 @@
   {
     "start": 64451,
     "status": "missing",
+    "font": "Noto Sans Arabic",
     "end": 64466
   },
   {
     "start": 64467,
     "status": "standalone",
+    "font": "Noto Sans Arabic",
     "end": 64911
   },
   {
     "start": 64912,
     "status": "missing",
+    "font": "Noto Sans Arabic",
     "end": 64913
   },
   {
     "start": 64914,
     "status": "standalone",
+    "font": "Noto Sans Arabic",
     "end": 64967
   },
   {
     "start": 64968,
     "status": "missing",
+    "font": "Noto Sans Arabic",
     "end": 64974
   },
   {
     "start": 64975,
     "status": "standalone",
+    "font": "Noto Sans Arabic",
     "end": 65023
   },
   {
@@ -5448,7 +5770,7 @@
   {
     "start": 65072,
     "status": "standalone",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 65106
   },
   {
@@ -5479,26 +5801,31 @@
   {
     "start": 65136,
     "status": "standalone",
+    "font": "Noto Sans Arabic",
     "end": 65140
   },
   {
     "start": 65141,
     "status": "missing",
+    "font": "Noto Sans Arabic",
     "end": 65141
   },
   {
     "start": 65142,
     "status": "standalone",
+    "font": "Noto Sans Arabic",
     "end": 65276
   },
   {
     "start": 65277,
     "status": "missing",
+    "font": "Noto Sans Arabic",
     "end": 65278
   },
   {
     "start": 65279,
     "status": "invisible",
+    "font": "Noto Sans Arabic",
     "end": 65279
   },
   {
@@ -5724,21 +6051,25 @@
   {
     "start": 66176,
     "status": "standalone",
+    "font": "Noto Sans Lycian",
     "end": 66204
   },
   {
     "start": 66205,
     "status": "missing",
+    "font": "Noto Sans Lycian",
     "end": 66207
   },
   {
     "start": 66208,
     "status": "standalone",
+    "font": "Noto Sans Carian",
     "end": 66256
   },
   {
     "start": 66257,
     "status": "missing",
+    "font": "Noto Sans Carian",
     "end": 66271
   },
   {
@@ -5759,266 +6090,319 @@
   {
     "start": 66304,
     "status": "standalone",
+    "font": "Noto Sans Old Italic",
     "end": 66339
   },
   {
     "start": 66340,
     "status": "missing",
+    "font": "Noto Sans Old Italic",
     "end": 66348
   },
   {
     "start": 66349,
     "status": "standalone",
+    "font": "Noto Sans Old Italic",
     "end": 66378
   },
   {
     "start": 66379,
     "status": "missing",
+    "font": "Noto Sans Gothic",
     "end": 66383
   },
   {
     "start": 66384,
     "status": "standalone",
+    "font": "Noto Sans Old Permic",
     "end": 66421
   },
   {
     "start": 66422,
     "status": "combining",
+    "font": "Noto Sans Old Permic",
     "end": 66426
   },
   {
     "start": 66427,
     "status": "missing",
+    "font": "Noto Sans Old Permic",
     "end": 66431
   },
   {
     "start": 66432,
     "status": "standalone",
+    "font": "Noto Sans Ugaritic",
     "end": 66461
   },
   {
     "start": 66462,
     "status": "missing",
+    "font": "Noto Sans Ugaritic",
     "end": 66462
   },
   {
     "start": 66463,
     "status": "standalone",
+    "font": "Noto Sans Ugaritic",
     "end": 66499
   },
   {
     "start": 66500,
     "status": "missing",
+    "font": "Noto Sans Old Persian",
     "end": 66503
   },
   {
     "start": 66504,
     "status": "standalone",
+    "font": "Noto Sans Old Persian",
     "end": 66517
   },
   {
     "start": 66518,
     "status": "missing",
+    "font": "Noto Sans Old Persian",
     "end": 66559
   },
   {
     "start": 66560,
     "status": "standalone",
+    "font": "Noto Sans Deseret",
     "end": 66717
   },
   {
     "start": 66718,
     "status": "missing",
+    "font": "Noto Sans Osmanya",
     "end": 66719
   },
   {
     "start": 66720,
     "status": "standalone",
+    "font": "Noto Sans Osmanya",
     "end": 66729
   },
   {
     "start": 66730,
     "status": "missing",
+    "font": "Noto Sans Osmanya",
     "end": 66735
   },
   {
     "start": 66736,
     "status": "standalone",
+    "font": "Noto Sans Osage",
     "end": 66771
   },
   {
     "start": 66772,
     "status": "missing",
+    "font": "Noto Sans Osage",
     "end": 66775
   },
   {
     "start": 66776,
     "status": "standalone",
+    "font": "Noto Sans Osage",
     "end": 66811
   },
   {
     "start": 66812,
     "status": "missing",
+    "font": "Noto Sans Osage",
     "end": 66815
   },
   {
     "start": 66816,
     "status": "standalone",
+    "font": "Noto Sans Elbasan",
     "end": 66855
   },
   {
     "start": 66856,
     "status": "missing",
+    "font": "Noto Sans Elbasan",
     "end": 66863
   },
   {
     "start": 66864,
     "status": "standalone",
+    "font": "Noto Sans Caucasian Albanian",
     "end": 66915
   },
   {
     "start": 66916,
     "status": "missing",
+    "font": "Noto Sans Caucasian Albanian",
     "end": 66926
   },
   {
     "start": 66927,
     "status": "standalone",
+    "font": "Noto Sans Caucasian Albanian",
     "end": 66938
   },
   {
     "start": 66939,
     "status": "missing",
+    "font": "Noto Sans Vithkuqi",
     "end": 66939
   },
   {
     "start": 66940,
     "status": "standalone",
+    "font": "Noto Sans Vithkuqi",
     "end": 66954
   },
   {
     "start": 66955,
     "status": "missing",
+    "font": "Noto Sans Vithkuqi",
     "end": 66955
   },
   {
     "start": 66956,
     "status": "standalone",
+    "font": "Noto Sans Vithkuqi",
     "end": 66962
   },
   {
     "start": 66963,
     "status": "missing",
+    "font": "Noto Sans Vithkuqi",
     "end": 66963
   },
   {
     "start": 66964,
     "status": "standalone",
+    "font": "Noto Sans Vithkuqi",
     "end": 66965
   },
   {
     "start": 66966,
     "status": "missing",
+    "font": "Noto Sans Vithkuqi",
     "end": 66966
   },
   {
     "start": 66967,
     "status": "standalone",
+    "font": "Noto Sans Vithkuqi",
     "end": 66977
   },
   {
     "start": 66978,
     "status": "missing",
+    "font": "Noto Sans Vithkuqi",
     "end": 66978
   },
   {
     "start": 66979,
     "status": "standalone",
+    "font": "Noto Sans Vithkuqi",
     "end": 66993
   },
   {
     "start": 66994,
     "status": "missing",
+    "font": "Noto Sans Vithkuqi",
     "end": 66994
   },
   {
     "start": 66995,
     "status": "standalone",
+    "font": "Noto Sans Vithkuqi",
     "end": 67001
   },
   {
     "start": 67002,
     "status": "missing",
+    "font": "Noto Sans Vithkuqi",
     "end": 67002
   },
   {
     "start": 67003,
     "status": "standalone",
+    "font": "Noto Sans Vithkuqi",
     "end": 67004
   },
   {
     "start": 67005,
     "status": "missing",
+    "font": "Noto Sans Vithkuqi",
     "end": 67071
   },
   {
     "start": 67072,
     "status": "standalone",
+    "font": "Noto Sans Linear A",
     "end": 67382
   },
   {
     "start": 67383,
     "status": "missing",
+    "font": "Noto Sans Linear A",
     "end": 67391
   },
   {
     "start": 67392,
     "status": "standalone",
+    "font": "Noto Sans Linear A",
     "end": 67413
   },
   {
     "start": 67414,
     "status": "missing",
+    "font": "Noto Sans Linear A",
     "end": 67423
   },
   {
     "start": 67424,
     "status": "standalone",
+    "font": "Noto Sans Linear A",
     "end": 67431
   },
   {
     "start": 67432,
     "status": "missing",
+    "font": "Noto Sans Linear A",
     "end": 67455
   },
   {
     "start": 67456,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 67461
   },
   {
     "start": 67462,
     "status": "missing",
+    "font": "Noto Sans",
     "end": 67462
   },
   {
     "start": 67463,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 67504
   },
   {
     "start": 67505,
     "status": "missing",
+    "font": "Noto Sans",
     "end": 67505
   },
   {
     "start": 67506,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 67514
   },
   {
     "start": 67515,
     "status": "missing",
+    "font": "Noto Sans",
     "end": 67583
   },
   {
@@ -6079,61 +6463,73 @@
   {
     "start": 67670,
     "status": "missing",
+    "font": "Noto Sans Imperial Aramaic",
     "end": 67670
   },
   {
     "start": 67671,
     "status": "standalone",
+    "font": "Noto Sans Imperial Aramaic",
     "end": 67742
   },
   {
     "start": 67743,
     "status": "missing",
+    "font": "Noto Sans Nabataean",
     "end": 67750
   },
   {
     "start": 67751,
     "status": "standalone",
+    "font": "Noto Sans Nabataean",
     "end": 67826
   },
   {
     "start": 67827,
     "status": "missing",
+    "font": "Noto Sans Hatran",
     "end": 67827
   },
   {
     "start": 67828,
     "status": "standalone",
+    "font": "Noto Sans Hatran",
     "end": 67829
   },
   {
     "start": 67830,
     "status": "missing",
+    "font": "Noto Sans Hatran",
     "end": 67834
   },
   {
     "start": 67835,
     "status": "standalone",
+    "font": "Noto Sans Hatran",
     "end": 67867
   },
   {
     "start": 67868,
     "status": "missing",
+    "font": "Noto Sans Phoenician",
     "end": 67870
   },
   {
     "start": 67871,
     "status": "standalone",
+    "font": "Noto Sans Phoenician",
     "end": 67897
   },
   {
     "start": 67898,
     "status": "missing",
+    "font": "Noto Sans Lydian",
     "end": 67902
   },
   {
     "start": 67903,
     "status": "standalone",
+    "font": "Noto Sans Lydian",
     "end": 68023
   },
   {
@@ -6159,221 +6555,265 @@
   {
     "start": 68097,
     "status": "combining",
+    "font": "Noto Sans Kharoshthi",
     "end": 68099
   },
   {
     "start": 68100,
     "status": "missing",
+    "font": "Noto Sans Kharoshthi",
     "end": 68100
   },
   {
     "start": 68101,
     "status": "combining",
+    "font": "Noto Sans Kharoshthi",
     "end": 68102
   },
   {
     "start": 68103,
     "status": "missing",
+    "font": "Noto Sans Kharoshthi",
     "end": 68107
   },
   {
     "start": 68108,
     "status": "combining",
+    "font": "Noto Sans Kharoshthi",
     "end": 68111
   },
   {
     "start": 68112,
     "status": "standalone",
+    "font": "Noto Sans Kharoshthi",
     "end": 68115
   },
   {
     "start": 68116,
     "status": "missing",
+    "font": "Noto Sans Kharoshthi",
     "end": 68116
   },
   {
     "start": 68117,
     "status": "standalone",
+    "font": "Noto Sans Kharoshthi",
     "end": 68119
   },
   {
     "start": 68120,
     "status": "missing",
+    "font": "Noto Sans Kharoshthi",
     "end": 68120
   },
   {
     "start": 68121,
     "status": "standalone",
+    "font": "Noto Sans Kharoshthi",
     "end": 68149
   },
   {
     "start": 68150,
     "status": "missing",
+    "font": "Noto Sans Kharoshthi",
     "end": 68151
   },
   {
     "start": 68152,
     "status": "combining",
+    "font": "Noto Sans Kharoshthi",
     "end": 68154
   },
   {
     "start": 68155,
     "status": "missing",
+    "font": "Noto Sans Kharoshthi",
     "end": 68158
   },
   {
     "start": 68159,
     "status": "combining",
+    "font": "Noto Sans Kharoshthi",
     "end": 68159
   },
   {
     "start": 68160,
     "status": "standalone",
+    "font": "Noto Sans Kharoshthi",
     "end": 68168
   },
   {
     "start": 68169,
     "status": "missing",
+    "font": "Noto Sans Kharoshthi",
     "end": 68175
   },
   {
     "start": 68176,
     "status": "standalone",
+    "font": "Noto Sans Kharoshthi",
     "end": 68184
   },
   {
     "start": 68185,
     "status": "missing",
+    "font": "Noto Sans Kharoshthi",
     "end": 68191
   },
   {
     "start": 68192,
     "status": "standalone",
+    "font": "Noto Sans Old South Arabian",
     "end": 68324
   },
   {
     "start": 68325,
     "status": "combining",
+    "font": "Noto Sans Manichaean",
     "end": 68326
   },
   {
     "start": 68327,
     "status": "missing",
+    "font": "Noto Sans Manichaean",
     "end": 68330
   },
   {
     "start": 68331,
     "status": "standalone",
+    "font": "Noto Sans Manichaean",
     "end": 68342
   },
   {
     "start": 68343,
     "status": "missing",
+    "font": "Noto Sans Manichaean",
     "end": 68351
   },
   {
     "start": 68352,
     "status": "standalone",
+    "font": "Noto Sans Avestan",
     "end": 68405
   },
   {
     "start": 68406,
     "status": "missing",
+    "font": "Noto Sans Avestan",
     "end": 68408
   },
   {
     "start": 68409,
     "status": "standalone",
+    "font": "Noto Sans Avestan",
     "end": 68437
   },
   {
     "start": 68438,
     "status": "missing",
+    "font": "Noto Sans Inscriptional Parthian",
     "end": 68439
   },
   {
     "start": 68440,
     "status": "standalone",
+    "font": "Noto Sans Inscriptional Parthian",
     "end": 68466
   },
   {
     "start": 68467,
     "status": "missing",
+    "font": "Noto Sans Inscriptional Pahlavi",
     "end": 68471
   },
   {
     "start": 68472,
     "status": "standalone",
+    "font": "Noto Sans Inscriptional Pahlavi",
     "end": 68497
   },
   {
     "start": 68498,
     "status": "missing",
+    "font": "Noto Sans Psalter Pahlavi",
     "end": 68504
   },
   {
     "start": 68505,
     "status": "standalone",
+    "font": "Noto Sans Psalter Pahlavi",
     "end": 68508
   },
   {
     "start": 68509,
     "status": "missing",
+    "font": "Noto Sans Psalter Pahlavi",
     "end": 68520
   },
   {
     "start": 68521,
     "status": "standalone",
+    "font": "Noto Sans Psalter Pahlavi",
     "end": 68680
   },
   {
     "start": 68681,
     "status": "missing",
+    "font": "Noto Sans Old Turkic",
     "end": 68735
   },
   {
     "start": 68736,
     "status": "standalone",
+    "font": "Noto Sans Old Hungarian",
     "end": 68786
   },
   {
     "start": 68787,
     "status": "missing",
+    "font": "Noto Sans Old Hungarian",
     "end": 68799
   },
   {
     "start": 68800,
     "status": "standalone",
+    "font": "Noto Sans Old Hungarian",
     "end": 68850
   },
   {
     "start": 68851,
     "status": "missing",
+    "font": "Noto Sans Old Hungarian",
     "end": 68857
   },
   {
     "start": 68858,
     "status": "standalone",
+    "font": "Noto Sans Old Hungarian",
     "end": 68899
   },
   {
     "start": 68900,
     "status": "combining",
+    "font": "Noto Sans Hanifi Rohingya",
     "end": 68903
   },
   {
     "start": 68904,
     "status": "missing",
+    "font": "Noto Sans Hanifi Rohingya",
     "end": 68911
   },
   {
     "start": 68912,
     "status": "standalone",
+    "font": "Noto Sans Hanifi Rohingya",
     "end": 68921
   },
   {
     "start": 68922,
     "status": "missing",
+    "font": "Noto Sans Hanifi Rohingya",
     "end": 69215
   },
   {
@@ -6389,346 +6829,415 @@
   {
     "start": 69248,
     "status": "standalone",
+    "font": "Noto Serif Yezidi",
     "end": 69289
   },
   {
     "start": 69290,
     "status": "missing",
+    "font": "Noto Serif Yezidi",
     "end": 69290
   },
   {
     "start": 69291,
     "status": "combining",
+    "font": "Noto Serif Yezidi",
     "end": 69292
   },
   {
     "start": 69293,
     "status": "standalone",
+    "font": "Noto Serif Yezidi",
     "end": 69293
   },
   {
     "start": 69294,
     "status": "missing",
+    "font": "Noto Serif Yezidi",
     "end": 69295
   },
   {
     "start": 69296,
     "status": "standalone",
+    "font": "Noto Serif Yezidi",
     "end": 69297
   },
   {
     "start": 69298,
     "status": "missing",
+    "font": "Noto Serif Yezidi",
     "end": 69375
   },
   {
     "start": 69376,
     "status": "standalone",
+    "font": "Noto Sans Old Sogdian",
     "end": 69415
   },
   {
     "start": 69416,
     "status": "missing",
+    "font": "Noto Sans Old Sogdian",
     "end": 69423
   },
   {
     "start": 69424,
     "status": "standalone",
+    "font": "Noto Sans Sogdian",
     "end": 69445
   },
   {
     "start": 69446,
     "status": "combining",
+    "font": "Noto Sans Sogdian",
     "end": 69456
   },
   {
     "start": 69457,
     "status": "standalone",
+    "font": "Noto Sans Sogdian",
     "end": 69465
   },
   {
     "start": 69466,
     "status": "missing",
+    "font": "Noto Sans Sogdian",
     "end": 69487
   },
   {
     "start": 69488,
     "status": "standalone",
+    "font": "Noto Serif Old Uyghur",
     "end": 69505
   },
   {
     "start": 69506,
     "status": "combining",
+    "font": "Noto Serif Old Uyghur",
     "end": 69509
   },
   {
     "start": 69510,
     "status": "standalone",
+    "font": "Noto Serif Old Uyghur",
     "end": 69513
   },
   {
     "start": 69514,
     "status": "missing",
+    "font": "Noto Serif Old Uyghur",
     "end": 69551
   },
   {
     "start": 69552,
     "status": "standalone",
+    "font": "Noto Sans Chorasmian",
     "end": 69579
   },
   {
     "start": 69580,
     "status": "missing",
+    "font": "Noto Sans Chorasmian",
     "end": 69599
   },
   {
     "start": 69600,
     "status": "standalone",
+    "font": "Noto Sans Elymaic",
     "end": 69622
   },
   {
     "start": 69623,
     "status": "missing",
+    "font": "Noto Sans Elymaic",
     "end": 69631
   },
   {
     "start": 69632,
     "status": "standalone",
+    "font": "Noto Sans Brahmi",
     "end": 69632
   },
   {
     "start": 69633,
     "status": "combining",
+    "font": "Noto Sans Brahmi",
     "end": 69633
   },
   {
     "start": 69634,
     "status": "standalone",
+    "font": "Noto Sans Brahmi",
     "end": 69687
   },
   {
     "start": 69688,
     "status": "combining",
+    "font": "Noto Sans Brahmi",
     "end": 69702
   },
   {
     "start": 69703,
     "status": "standalone",
+    "font": "Noto Sans Brahmi",
     "end": 69709
   },
   {
     "start": 69710,
     "status": "missing",
+    "font": "Noto Sans Brahmi",
     "end": 69713
   },
   {
     "start": 69714,
     "status": "standalone",
+    "font": "Noto Sans Brahmi",
     "end": 69743
   },
   {
     "start": 69744,
     "status": "combining",
+    "font": "Noto Sans Brahmi",
     "end": 69744
   },
   {
     "start": 69745,
     "status": "standalone",
+    "font": "Noto Sans Brahmi",
     "end": 69746
   },
   {
     "start": 69747,
     "status": "combining",
+    "font": "Noto Sans Brahmi",
     "end": 69748
   },
   {
     "start": 69749,
     "status": "standalone",
+    "font": "Noto Sans Brahmi",
     "end": 69749
   },
   {
     "start": 69750,
     "status": "missing",
+    "font": "Noto Sans Brahmi",
     "end": 69758
   },
   {
     "start": 69759,
     "status": "combining",
+    "font": "Noto Sans Brahmi",
     "end": 69761
   },
   {
     "start": 69762,
     "status": "standalone",
+    "font": "Noto Sans Kaithi",
     "end": 69810
   },
   {
     "start": 69811,
     "status": "combining",
+    "font": "Noto Sans Kaithi",
     "end": 69814
   },
   {
     "start": 69815,
     "status": "standalone",
+    "font": "Noto Sans Kaithi",
     "end": 69816
   },
   {
     "start": 69817,
     "status": "combining",
+    "font": "Noto Sans Kaithi",
     "end": 69818
   },
   {
     "start": 69819,
     "status": "standalone",
+    "font": "Noto Sans Kaithi",
     "end": 69820
   },
   {
     "start": 69821,
     "status": "invisible",
+    "font": "Noto Sans Kaithi",
     "end": 69821
   },
   {
     "start": 69822,
     "status": "standalone",
+    "font": "Noto Sans Kaithi",
     "end": 69825
   },
   {
     "start": 69826,
     "status": "combining",
+    "font": "Noto Sans Kaithi",
     "end": 69826
   },
   {
     "start": 69827,
     "status": "missing",
+    "font": "Noto Sans Kaithi",
     "end": 69836
   },
   {
     "start": 69837,
     "status": "invisible",
+    "font": "Noto Sans Kaithi",
     "end": 69837
   },
   {
     "start": 69838,
     "status": "missing",
+    "font": "Noto Sans Kaithi",
     "end": 69839
   },
   {
     "start": 69840,
     "status": "standalone",
+    "font": "Noto Sans Sora Sompeng",
     "end": 69864
   },
   {
     "start": 69865,
     "status": "missing",
+    "font": "Noto Sans Sora Sompeng",
     "end": 69871
   },
   {
     "start": 69872,
     "status": "standalone",
+    "font": "Noto Sans Sora Sompeng",
     "end": 69881
   },
   {
     "start": 69882,
     "status": "missing",
+    "font": "Noto Sans Sora Sompeng",
     "end": 69887
   },
   {
     "start": 69888,
     "status": "combining",
+    "font": "Noto Sans Chakma",
     "end": 69890
   },
   {
     "start": 69891,
     "status": "standalone",
+    "font": "Noto Sans Chakma",
     "end": 69926
   },
   {
     "start": 69927,
     "status": "combining",
+    "font": "Noto Sans Chakma",
     "end": 69931
   },
   {
     "start": 69932,
     "status": "standalone",
+    "font": "Noto Sans Chakma",
     "end": 69932
   },
   {
     "start": 69933,
     "status": "combining",
+    "font": "Noto Sans Chakma",
     "end": 69940
   },
   {
     "start": 69941,
     "status": "missing",
+    "font": "Noto Sans Chakma",
     "end": 69941
   },
   {
     "start": 69942,
     "status": "standalone",
+    "font": "Noto Sans Chakma",
     "end": 69959
   },
   {
     "start": 69960,
     "status": "missing",
+    "font": "Noto Sans Chakma",
     "end": 69967
   },
   {
     "start": 69968,
     "status": "standalone",
+    "font": "Noto Sans Mahajani",
     "end": 70002
   },
   {
     "start": 70003,
     "status": "combining",
+    "font": "Noto Sans Mahajani",
     "end": 70003
   },
   {
     "start": 70004,
     "status": "standalone",
+    "font": "Noto Sans Mahajani",
     "end": 70006
   },
   {
     "start": 70007,
     "status": "missing",
+    "font": "Noto Sans Mahajani",
     "end": 70015
   },
   {
     "start": 70016,
     "status": "combining",
+    "font": "Noto Sans Sharada",
     "end": 70017
   },
   {
     "start": 70018,
     "status": "standalone",
+    "font": "Noto Sans Sharada",
     "end": 70069
   },
   {
     "start": 70070,
     "status": "combining",
+    "font": "Noto Sans Sharada",
     "end": 70078
   },
   {
     "start": 70079,
     "status": "standalone",
+    "font": "Noto Sans Sharada",
     "end": 70088
   },
   {
     "start": 70089,
     "status": "combining",
+    "font": "Noto Sans Sharada",
     "end": 70092
   },
   {
     "start": 70093,
     "status": "standalone",
+    "font": "Noto Sans Sharada",
     "end": 70094
   },
   {
     "start": 70095,
     "status": "combining",
+    "font": "Noto Sans Sharada",
     "end": 70095
   },
   {
     "start": 70096,
     "status": "standalone",
+    "font": "Noto Sans Sharada",
     "end": 70111
   },
   {
@@ -6749,541 +7258,649 @@
   {
     "start": 70144,
     "status": "standalone",
+    "font": "Noto Sans Khojki",
     "end": 70161
   },
   {
     "start": 70162,
     "status": "missing",
+    "font": "Noto Sans Khojki",
     "end": 70162
   },
   {
     "start": 70163,
     "status": "standalone",
+    "font": "Noto Sans Khojki",
     "end": 70190
   },
   {
     "start": 70191,
     "status": "combining",
+    "font": "Noto Sans Khojki",
     "end": 70193
   },
   {
     "start": 70194,
     "status": "standalone",
+    "font": "Noto Sans Khojki",
     "end": 70195
   },
   {
     "start": 70196,
     "status": "combining",
+    "font": "Noto Sans Khojki",
     "end": 70196
   },
   {
     "start": 70197,
     "status": "standalone",
+    "font": "Noto Sans Khojki",
     "end": 70197
   },
   {
     "start": 70198,
     "status": "combining",
+    "font": "Noto Sans Khojki",
     "end": 70199
   },
   {
     "start": 70200,
     "status": "standalone",
+    "font": "Noto Sans Khojki",
     "end": 70205
   },
   {
     "start": 70206,
     "status": "combining",
+    "font": "Noto Sans Khojki",
     "end": 70206
   },
   {
     "start": 70207,
     "status": "standalone",
+    "font": "Noto Sans Khojki",
     "end": 70208
   },
   {
     "start": 70209,
     "status": "combining",
+    "font": "Noto Sans Khojki",
     "end": 70209
   },
   {
     "start": 70210,
     "status": "missing",
+    "font": "Noto Sans Khojki",
     "end": 70271
   },
   {
     "start": 70272,
     "status": "standalone",
+    "font": "Noto Sans Multani",
     "end": 70278
   },
   {
     "start": 70279,
     "status": "missing",
+    "font": "Noto Sans Multani",
     "end": 70279
   },
   {
     "start": 70280,
     "status": "standalone",
+    "font": "Noto Sans Multani",
     "end": 70280
   },
   {
     "start": 70281,
     "status": "missing",
+    "font": "Noto Sans Multani",
     "end": 70281
   },
   {
     "start": 70282,
     "status": "standalone",
+    "font": "Noto Sans Multani",
     "end": 70285
   },
   {
     "start": 70286,
     "status": "missing",
+    "font": "Noto Sans Multani",
     "end": 70286
   },
   {
     "start": 70287,
     "status": "standalone",
+    "font": "Noto Sans Multani",
     "end": 70301
   },
   {
     "start": 70302,
     "status": "missing",
+    "font": "Noto Sans Multani",
     "end": 70302
   },
   {
     "start": 70303,
     "status": "standalone",
+    "font": "Noto Sans Multani",
     "end": 70313
   },
   {
     "start": 70314,
     "status": "missing",
+    "font": "Noto Sans Multani",
     "end": 70319
   },
   {
     "start": 70320,
     "status": "standalone",
+    "font": "Noto Sans Khudawadi",
     "end": 70366
   },
   {
     "start": 70367,
     "status": "combining",
+    "font": "Noto Sans Khudawadi",
     "end": 70367
   },
   {
     "start": 70368,
     "status": "standalone",
+    "font": "Noto Sans Khudawadi",
     "end": 70370
   },
   {
     "start": 70371,
     "status": "combining",
+    "font": "Noto Sans Khudawadi",
     "end": 70378
   },
   {
     "start": 70379,
     "status": "missing",
+    "font": "Noto Sans Khudawadi",
     "end": 70383
   },
   {
     "start": 70384,
     "status": "standalone",
+    "font": "Noto Sans Khudawadi",
     "end": 70393
   },
   {
     "start": 70394,
     "status": "missing",
+    "font": "Noto Sans Khudawadi",
     "end": 70399
   },
   {
     "start": 70400,
     "status": "combining",
+    "font": "Noto Sans Grantha",
     "end": 70401
   },
   {
     "start": 70402,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70403
   },
   {
     "start": 70404,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70404
   },
   {
     "start": 70405,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70412
   },
   {
     "start": 70413,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70414
   },
   {
     "start": 70415,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70416
   },
   {
     "start": 70417,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70418
   },
   {
     "start": 70419,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70440
   },
   {
     "start": 70441,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70441
   },
   {
     "start": 70442,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70448
   },
   {
     "start": 70449,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70449
   },
   {
     "start": 70450,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70451
   },
   {
     "start": 70452,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70452
   },
   {
     "start": 70453,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70457
   },
   {
     "start": 70458,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70458
   },
   {
     "start": 70459,
     "status": "combining",
+    "font": "Noto Sans Grantha",
     "end": 70460
   },
   {
     "start": 70461,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70463
   },
   {
     "start": 70464,
     "status": "combining",
+    "font": "Noto Sans Grantha",
     "end": 70464
   },
   {
     "start": 70465,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70468
   },
   {
     "start": 70469,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70470
   },
   {
     "start": 70471,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70472
   },
   {
     "start": 70473,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70474
   },
   {
     "start": 70475,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70477
   },
   {
     "start": 70478,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70479
   },
   {
     "start": 70480,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70480
   },
   {
     "start": 70481,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70486
   },
   {
     "start": 70487,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70487
   },
   {
     "start": 70488,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70492
   },
   {
     "start": 70493,
     "status": "standalone",
+    "font": "Noto Sans Grantha",
     "end": 70499
   },
   {
     "start": 70500,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70501
   },
   {
     "start": 70502,
     "status": "combining",
+    "font": "Noto Sans Grantha",
     "end": 70508
   },
   {
     "start": 70509,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70511
   },
   {
     "start": 70512,
     "status": "combining",
+    "font": "Noto Sans Grantha",
     "end": 70516
   },
   {
     "start": 70517,
     "status": "missing",
+    "font": "Noto Sans Grantha",
     "end": 70655
   },
   {
     "start": 70656,
     "status": "standalone",
+    "font": "Noto Sans Newa",
     "end": 70711
   },
   {
     "start": 70712,
     "status": "combining",
+    "font": "Noto Sans Newa",
     "end": 70719
   },
   {
     "start": 70720,
     "status": "standalone",
+    "font": "Noto Sans Newa",
     "end": 70721
   },
   {
     "start": 70722,
     "status": "combining",
+    "font": "Noto Sans Newa",
     "end": 70724
   },
   {
     "start": 70725,
     "status": "standalone",
+    "font": "Noto Sans Newa",
     "end": 70725
   },
   {
     "start": 70726,
     "status": "combining",
+    "font": "Noto Sans Newa",
     "end": 70726
   },
   {
     "start": 70727,
     "status": "standalone",
+    "font": "Noto Sans Newa",
     "end": 70747
   },
   {
     "start": 70748,
     "status": "missing",
+    "font": "Noto Sans Newa",
     "end": 70748
   },
   {
     "start": 70749,
     "status": "standalone",
+    "font": "Noto Sans Newa",
     "end": 70749
   },
   {
     "start": 70750,
     "status": "combining",
+    "font": "Noto Sans Newa",
     "end": 70750
   },
   {
     "start": 70751,
     "status": "standalone",
+    "font": "Noto Sans Newa",
     "end": 70753
   },
   {
     "start": 70754,
     "status": "missing",
+    "font": "Noto Sans Newa",
     "end": 70783
   },
   {
     "start": 70784,
     "status": "standalone",
+    "font": "Noto Sans Tirhuta",
     "end": 70834
   },
   {
     "start": 70835,
     "status": "combining",
+    "font": "Noto Sans Tirhuta",
     "end": 70840
   },
   {
     "start": 70841,
     "status": "standalone",
+    "font": "Noto Sans Tirhuta",
     "end": 70841
   },
   {
     "start": 70842,
     "status": "combining",
+    "font": "Noto Sans Tirhuta",
     "end": 70842
   },
   {
     "start": 70843,
     "status": "standalone",
+    "font": "Noto Sans Tirhuta",
     "end": 70846
   },
   {
     "start": 70847,
     "status": "combining",
+    "font": "Noto Sans Tirhuta",
     "end": 70848
   },
   {
     "start": 70849,
     "status": "standalone",
+    "font": "Noto Sans Tirhuta",
     "end": 70849
   },
   {
     "start": 70850,
     "status": "combining",
+    "font": "Noto Sans Tirhuta",
     "end": 70851
   },
   {
     "start": 70852,
     "status": "standalone",
+    "font": "Noto Sans Tirhuta",
     "end": 70855
   },
   {
     "start": 70856,
     "status": "missing",
+    "font": "Noto Sans Tirhuta",
     "end": 70863
   },
   {
     "start": 70864,
     "status": "standalone",
+    "font": "Noto Sans Tirhuta",
     "end": 70873
   },
   {
     "start": 70874,
     "status": "missing",
+    "font": "Noto Sans Tirhuta",
     "end": 71039
   },
   {
     "start": 71040,
     "status": "standalone",
+    "font": "Noto Sans Siddham",
     "end": 71089
   },
   {
     "start": 71090,
     "status": "combining",
+    "font": "Noto Sans Siddham",
     "end": 71093
   },
   {
     "start": 71094,
     "status": "missing",
+    "font": "Noto Sans Siddham",
     "end": 71095
   },
   {
     "start": 71096,
     "status": "standalone",
+    "font": "Noto Sans Siddham",
     "end": 71099
   },
   {
     "start": 71100,
     "status": "combining",
+    "font": "Noto Sans Siddham",
     "end": 71101
   },
   {
     "start": 71102,
     "status": "standalone",
+    "font": "Noto Sans Siddham",
     "end": 71102
   },
   {
     "start": 71103,
     "status": "combining",
+    "font": "Noto Sans Siddham",
     "end": 71104
   },
   {
     "start": 71105,
     "status": "standalone",
+    "font": "Noto Sans Siddham",
     "end": 71131
   },
   {
     "start": 71132,
     "status": "combining",
+    "font": "Noto Sans Siddham",
     "end": 71133
   },
   {
     "start": 71134,
     "status": "missing",
+    "font": "Noto Sans Siddham",
     "end": 71167
   },
   {
     "start": 71168,
     "status": "standalone",
+    "font": "Noto Sans Modi",
     "end": 71218
   },
   {
     "start": 71219,
     "status": "combining",
+    "font": "Noto Sans Modi",
     "end": 71226
   },
   {
     "start": 71227,
     "status": "standalone",
+    "font": "Noto Sans Modi",
     "end": 71228
   },
   {
     "start": 71229,
     "status": "combining",
+    "font": "Noto Sans Modi",
     "end": 71229
   },
   {
     "start": 71230,
     "status": "standalone",
+    "font": "Noto Sans Modi",
     "end": 71230
   },
   {
     "start": 71231,
     "status": "combining",
+    "font": "Noto Sans Modi",
     "end": 71232
   },
   {
     "start": 71233,
     "status": "standalone",
+    "font": "Noto Sans Modi",
     "end": 71236
   },
   {
     "start": 71237,
     "status": "missing",
+    "font": "Noto Sans Modi",
     "end": 71247
   },
   {
     "start": 71248,
     "status": "standalone",
+    "font": "Noto Sans Modi",
     "end": 71257
   },
   {
     "start": 71258,
     "status": "missing",
+    "font": "Noto Sans Modi",
     "end": 71263
   },
   {
@@ -7299,156 +7916,187 @@
   {
     "start": 71296,
     "status": "standalone",
+    "font": "Noto Sans Takri",
     "end": 71338
   },
   {
     "start": 71339,
     "status": "combining",
+    "font": "Noto Sans Takri",
     "end": 71339
   },
   {
     "start": 71340,
     "status": "standalone",
+    "font": "Noto Sans Takri",
     "end": 71340
   },
   {
     "start": 71341,
     "status": "combining",
+    "font": "Noto Sans Takri",
     "end": 71341
   },
   {
     "start": 71342,
     "status": "standalone",
+    "font": "Noto Sans Takri",
     "end": 71343
   },
   {
     "start": 71344,
     "status": "combining",
+    "font": "Noto Sans Takri",
     "end": 71349
   },
   {
     "start": 71350,
     "status": "standalone",
+    "font": "Noto Sans Takri",
     "end": 71350
   },
   {
     "start": 71351,
     "status": "combining",
+    "font": "Noto Sans Takri",
     "end": 71351
   },
   {
     "start": 71352,
     "status": "standalone",
+    "font": "Noto Sans Takri",
     "end": 71353
   },
   {
     "start": 71354,
     "status": "missing",
+    "font": "Noto Sans Takri",
     "end": 71359
   },
   {
     "start": 71360,
     "status": "standalone",
+    "font": "Noto Sans Takri",
     "end": 71369
   },
   {
     "start": 71370,
     "status": "missing",
+    "font": "Noto Sans Takri",
     "end": 71423
   },
   {
     "start": 71424,
     "status": "standalone",
+    "font": "Noto Serif Ahom",
     "end": 71450
   },
   {
     "start": 71451,
     "status": "missing",
+    "font": "Noto Serif Ahom",
     "end": 71452
   },
   {
     "start": 71453,
     "status": "combining",
+    "font": "Noto Serif Ahom",
     "end": 71455
   },
   {
     "start": 71456,
     "status": "standalone",
+    "font": "Noto Serif Ahom",
     "end": 71457
   },
   {
     "start": 71458,
     "status": "combining",
+    "font": "Noto Serif Ahom",
     "end": 71461
   },
   {
     "start": 71462,
     "status": "standalone",
+    "font": "Noto Serif Ahom",
     "end": 71462
   },
   {
     "start": 71463,
     "status": "combining",
+    "font": "Noto Serif Ahom",
     "end": 71467
   },
   {
     "start": 71468,
     "status": "missing",
+    "font": "Noto Serif Ahom",
     "end": 71471
   },
   {
     "start": 71472,
     "status": "standalone",
+    "font": "Noto Serif Ahom",
     "end": 71494
   },
   {
     "start": 71495,
     "status": "missing",
+    "font": "Noto Serif Ahom",
     "end": 71679
   },
   {
     "start": 71680,
     "status": "standalone",
+    "font": "Noto Serif Dogra",
     "end": 71726
   },
   {
     "start": 71727,
     "status": "combining",
+    "font": "Noto Serif Dogra",
     "end": 71735
   },
   {
     "start": 71736,
     "status": "standalone",
+    "font": "Noto Serif Dogra",
     "end": 71736
   },
   {
     "start": 71737,
     "status": "combining",
+    "font": "Noto Serif Dogra",
     "end": 71738
   },
   {
     "start": 71739,
     "status": "standalone",
+    "font": "Noto Serif Dogra",
     "end": 71739
   },
   {
     "start": 71740,
     "status": "missing",
+    "font": "Noto Serif Dogra",
     "end": 71839
   },
   {
     "start": 71840,
     "status": "standalone",
+    "font": "Noto Sans Warang Citi",
     "end": 71922
   },
   {
     "start": 71923,
     "status": "missing",
+    "font": "Noto Sans Warang Citi",
     "end": 71934
   },
   {
     "start": 71935,
     "status": "standalone",
+    "font": "Noto Sans Warang Citi",
     "end": 71942
   },
   {
@@ -7554,146 +8202,175 @@
   {
     "start": 72096,
     "status": "standalone",
+    "font": "Noto Sans Nandinagari",
     "end": 72103
   },
   {
     "start": 72104,
     "status": "missing",
+    "font": "Noto Sans Nandinagari",
     "end": 72105
   },
   {
     "start": 72106,
     "status": "standalone",
+    "font": "Noto Sans Nandinagari",
     "end": 72147
   },
   {
     "start": 72148,
     "status": "combining",
+    "font": "Noto Sans Nandinagari",
     "end": 72151
   },
   {
     "start": 72152,
     "status": "missing",
+    "font": "Noto Sans Nandinagari",
     "end": 72153
   },
   {
     "start": 72154,
     "status": "combining",
+    "font": "Noto Sans Nandinagari",
     "end": 72155
   },
   {
     "start": 72156,
     "status": "standalone",
+    "font": "Noto Sans Nandinagari",
     "end": 72159
   },
   {
     "start": 72160,
     "status": "combining",
+    "font": "Noto Sans Nandinagari",
     "end": 72160
   },
   {
     "start": 72161,
     "status": "standalone",
+    "font": "Noto Sans Nandinagari",
     "end": 72164
   },
   {
     "start": 72165,
     "status": "missing",
+    "font": "Noto Sans Nandinagari",
     "end": 72191
   },
   {
     "start": 72192,
     "status": "standalone",
+    "font": "Noto Sans Zanabazar Square",
     "end": 72192
   },
   {
     "start": 72193,
     "status": "combining",
+    "font": "Noto Sans Zanabazar Square",
     "end": 72202
   },
   {
     "start": 72203,
     "status": "standalone",
+    "font": "Noto Sans Zanabazar Square",
     "end": 72242
   },
   {
     "start": 72243,
     "status": "combining",
+    "font": "Noto Sans Zanabazar Square",
     "end": 72248
   },
   {
     "start": 72249,
     "status": "standalone",
+    "font": "Noto Sans Zanabazar Square",
     "end": 72250
   },
   {
     "start": 72251,
     "status": "combining",
+    "font": "Noto Sans Zanabazar Square",
     "end": 72254
   },
   {
     "start": 72255,
     "status": "standalone",
+    "font": "Noto Sans Zanabazar Square",
     "end": 72262
   },
   {
     "start": 72263,
     "status": "combining",
+    "font": "Noto Sans Zanabazar Square",
     "end": 72263
   },
   {
     "start": 72264,
     "status": "missing",
+    "font": "Noto Sans Zanabazar Square",
     "end": 72271
   },
   {
     "start": 72272,
     "status": "standalone",
+    "font": "Noto Sans Soyombo",
     "end": 72272
   },
   {
     "start": 72273,
     "status": "combining",
+    "font": "Noto Sans Soyombo",
     "end": 72278
   },
   {
     "start": 72279,
     "status": "standalone",
+    "font": "Noto Sans Soyombo",
     "end": 72280
   },
   {
     "start": 72281,
     "status": "combining",
+    "font": "Noto Sans Soyombo",
     "end": 72283
   },
   {
     "start": 72284,
     "status": "standalone",
+    "font": "Noto Sans Soyombo",
     "end": 72329
   },
   {
     "start": 72330,
     "status": "combining",
+    "font": "Noto Sans Soyombo",
     "end": 72342
   },
   {
     "start": 72343,
     "status": "standalone",
+    "font": "Noto Sans Soyombo",
     "end": 72343
   },
   {
     "start": 72344,
     "status": "combining",
+    "font": "Noto Sans Soyombo",
     "end": 72345
   },
   {
     "start": 72346,
     "status": "standalone",
+    "font": "Noto Sans Soyombo",
     "end": 72354
   },
   {
     "start": 72355,
     "status": "missing",
+    "font": "Noto Sans Soyombo",
     "end": 72367
   },
   {
@@ -7704,306 +8381,367 @@
   {
     "start": 72441,
     "status": "missing",
+    "font": "Noto Sans Pau Cin Hau",
     "end": 72703
   },
   {
     "start": 72704,
     "status": "standalone",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72712
   },
   {
     "start": 72713,
     "status": "missing",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72713
   },
   {
     "start": 72714,
     "status": "standalone",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72751
   },
   {
     "start": 72752,
     "status": "combining",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72758
   },
   {
     "start": 72759,
     "status": "missing",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72759
   },
   {
     "start": 72760,
     "status": "combining",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72765
   },
   {
     "start": 72766,
     "status": "standalone",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72766
   },
   {
     "start": 72767,
     "status": "combining",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72767
   },
   {
     "start": 72768,
     "status": "standalone",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72773
   },
   {
     "start": 72774,
     "status": "missing",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72783
   },
   {
     "start": 72784,
     "status": "standalone",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72812
   },
   {
     "start": 72813,
     "status": "missing",
+    "font": "Noto Sans Bhaiksuki",
     "end": 72815
   },
   {
     "start": 72816,
     "status": "standalone",
+    "font": "Noto Sans Marchen",
     "end": 72847
   },
   {
     "start": 72848,
     "status": "missing",
+    "font": "Noto Sans Marchen",
     "end": 72849
   },
   {
     "start": 72850,
     "status": "combining",
+    "font": "Noto Sans Marchen",
     "end": 72871
   },
   {
     "start": 72872,
     "status": "missing",
+    "font": "Noto Sans Marchen",
     "end": 72872
   },
   {
     "start": 72873,
     "status": "standalone",
+    "font": "Noto Sans Marchen",
     "end": 72873
   },
   {
     "start": 72874,
     "status": "combining",
+    "font": "Noto Sans Marchen",
     "end": 72880
   },
   {
     "start": 72881,
     "status": "standalone",
+    "font": "Noto Sans Marchen",
     "end": 72881
   },
   {
     "start": 72882,
     "status": "combining",
+    "font": "Noto Sans Marchen",
     "end": 72883
   },
   {
     "start": 72884,
     "status": "standalone",
+    "font": "Noto Sans Marchen",
     "end": 72884
   },
   {
     "start": 72885,
     "status": "combining",
+    "font": "Noto Sans Marchen",
     "end": 72886
   },
   {
     "start": 72887,
     "status": "missing",
+    "font": "Noto Sans Marchen",
     "end": 72959
   },
   {
     "start": 72960,
     "status": "standalone",
+    "font": "Noto Sans Masaram Gondi",
     "end": 72966
   },
   {
     "start": 72967,
     "status": "missing",
+    "font": "Noto Sans Masaram Gondi",
     "end": 72967
   },
   {
     "start": 72968,
     "status": "standalone",
+    "font": "Noto Sans Masaram Gondi",
     "end": 72969
   },
   {
     "start": 72970,
     "status": "missing",
+    "font": "Noto Sans Masaram Gondi",
     "end": 72970
   },
   {
     "start": 72971,
     "status": "standalone",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73008
   },
   {
     "start": 73009,
     "status": "combining",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73014
   },
   {
     "start": 73015,
     "status": "missing",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73017
   },
   {
     "start": 73018,
     "status": "combining",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73018
   },
   {
     "start": 73019,
     "status": "missing",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73019
   },
   {
     "start": 73020,
     "status": "combining",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73021
   },
   {
     "start": 73022,
     "status": "missing",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73022
   },
   {
     "start": 73023,
     "status": "combining",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73029
   },
   {
     "start": 73030,
     "status": "standalone",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73030
   },
   {
     "start": 73031,
     "status": "combining",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73031
   },
   {
     "start": 73032,
     "status": "missing",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73039
   },
   {
     "start": 73040,
     "status": "standalone",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73049
   },
   {
     "start": 73050,
     "status": "missing",
+    "font": "Noto Sans Masaram Gondi",
     "end": 73055
   },
   {
     "start": 73056,
     "status": "standalone",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73061
   },
   {
     "start": 73062,
     "status": "missing",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73062
   },
   {
     "start": 73063,
     "status": "standalone",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73064
   },
   {
     "start": 73065,
     "status": "missing",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73065
   },
   {
     "start": 73066,
     "status": "standalone",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73102
   },
   {
     "start": 73103,
     "status": "missing",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73103
   },
   {
     "start": 73104,
     "status": "combining",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73105
   },
   {
     "start": 73106,
     "status": "missing",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73106
   },
   {
     "start": 73107,
     "status": "standalone",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73108
   },
   {
     "start": 73109,
     "status": "combining",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73109
   },
   {
     "start": 73110,
     "status": "standalone",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73110
   },
   {
     "start": 73111,
     "status": "combining",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73111
   },
   {
     "start": 73112,
     "status": "standalone",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73112
   },
   {
     "start": 73113,
     "status": "missing",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73119
   },
   {
     "start": 73120,
     "status": "standalone",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73129
   },
   {
     "start": 73130,
     "status": "missing",
+    "font": "Noto Sans Gunjala Gondi",
     "end": 73439
   },
   {
     "start": 73440,
     "status": "standalone",
+    "font": "Noto Serif Makasar",
     "end": 73458
   },
   {
     "start": 73459,
     "status": "combining",
+    "font": "Noto Serif Makasar",
     "end": 73460
   },
   {
     "start": 73461,
     "status": "standalone",
+    "font": "Noto Serif Makasar",
     "end": 73464
   },
   {
     "start": 73465,
     "status": "missing",
+    "font": "Noto Serif Makasar",
     "end": 73647
   },
   {
@@ -8034,6 +8772,7 @@
   {
     "start": 74650,
     "status": "missing",
+    "font": "Noto Sans Cuneiform",
     "end": 74751
   },
   {
@@ -8069,16 +8808,19 @@
   {
     "start": 77712,
     "status": "standalone",
+    "font": "Noto Sans Cypro Minoan",
     "end": 77810
   },
   {
     "start": 77811,
     "status": "missing",
+    "font": "Noto Sans Cypro Minoan",
     "end": 77823
   },
   {
     "start": 77824,
     "status": "standalone",
+    "font": "Noto Sans Egyptian Hieroglyphs",
     "end": 78895
   },
   {
@@ -8089,11 +8831,13 @@
   {
     "start": 82944,
     "status": "standalone",
+    "font": "Noto Sans Anatolian Hieroglyphs",
     "end": 83526
   },
   {
     "start": 83527,
     "status": "missing",
+    "font": "Noto Sans Anatolian Hieroglyphs",
     "end": 92159
   },
   {
@@ -8109,161 +8853,193 @@
   {
     "start": 92736,
     "status": "standalone",
+    "font": "Noto Sans Mro",
     "end": 92766
   },
   {
     "start": 92767,
     "status": "missing",
+    "font": "Noto Sans Mro",
     "end": 92767
   },
   {
     "start": 92768,
     "status": "standalone",
+    "font": "Noto Sans Mro",
     "end": 92777
   },
   {
     "start": 92778,
     "status": "missing",
+    "font": "Noto Sans Mro",
     "end": 92781
   },
   {
     "start": 92782,
     "status": "standalone",
+    "font": "Noto Sans Mro",
     "end": 92862
   },
   {
     "start": 92863,
     "status": "missing",
+    "font": "Noto Sans Tangsa",
     "end": 92863
   },
   {
     "start": 92864,
     "status": "standalone",
+    "font": "Noto Sans Tangsa",
     "end": 92873
   },
   {
     "start": 92874,
     "status": "missing",
+    "font": "Noto Sans Tangsa",
     "end": 92879
   },
   {
     "start": 92880,
     "status": "standalone",
+    "font": "Noto Sans Bassa Vah",
     "end": 92909
   },
   {
     "start": 92910,
     "status": "missing",
+    "font": "Noto Sans Bassa Vah",
     "end": 92911
   },
   {
     "start": 92912,
     "status": "combining",
+    "font": "Noto Sans Bassa Vah",
     "end": 92916
   },
   {
     "start": 92917,
     "status": "standalone",
+    "font": "Noto Sans Bassa Vah",
     "end": 92917
   },
   {
     "start": 92918,
     "status": "missing",
+    "font": "Noto Sans Bassa Vah",
     "end": 92927
   },
   {
     "start": 92928,
     "status": "standalone",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 92975
   },
   {
     "start": 92976,
     "status": "combining",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 92982
   },
   {
     "start": 92983,
     "status": "standalone",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 92997
   },
   {
     "start": 92998,
     "status": "missing",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 93007
   },
   {
     "start": 93008,
     "status": "standalone",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 93017
   },
   {
     "start": 93018,
     "status": "missing",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 93018
   },
   {
     "start": 93019,
     "status": "standalone",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 93025
   },
   {
     "start": 93026,
     "status": "missing",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 93026
   },
   {
     "start": 93027,
     "status": "standalone",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 93047
   },
   {
     "start": 93048,
     "status": "missing",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 93052
   },
   {
     "start": 93053,
     "status": "standalone",
+    "font": "Noto Sans Pahawh Hmong",
     "end": 93850
   },
   {
     "start": 93851,
     "status": "missing",
+    "font": "Noto Sans Medefaidrin",
     "end": 93951
   },
   {
     "start": 93952,
     "status": "standalone",
+    "font": "Noto Sans Miao",
     "end": 94026
   },
   {
     "start": 94027,
     "status": "missing",
+    "font": "Noto Sans Miao",
     "end": 94030
   },
   {
     "start": 94031,
     "status": "combining",
+    "font": "Noto Sans Miao",
     "end": 94031
   },
   {
     "start": 94032,
     "status": "standalone",
+    "font": "Noto Sans Miao",
     "end": 94087
   },
   {
     "start": 94088,
     "status": "missing",
+    "font": "Noto Sans Miao",
     "end": 94094
   },
   {
     "start": 94095,
     "status": "combining",
+    "font": "Noto Sans Miao",
     "end": 94098
   },
   {
     "start": 94099,
     "status": "standalone",
+    "font": "Noto Sans Miao",
     "end": 94179
   },
   {
@@ -8289,11 +9065,13 @@
   {
     "start": 94208,
     "status": "standalone",
+    "font": "Noto Serif Tangut",
     "end": 100343
   },
   {
     "start": 100344,
     "status": "missing",
+    "font": "Noto Serif Tangut",
     "end": 100351
   },
   {
@@ -8304,6 +9082,7 @@
   {
     "start": 101590,
     "status": "missing",
+    "font": "Noto Serif Khitan Small Script",
     "end": 101631
   },
   {
@@ -8399,66 +9178,79 @@
   {
     "start": 110960,
     "status": "standalone",
+    "font": "Noto Sans Nushu",
     "end": 111355
   },
   {
     "start": 111356,
     "status": "missing",
+    "font": "Noto Sans Nushu",
     "end": 113663
   },
   {
     "start": 113664,
     "status": "standalone",
+    "font": "Noto Sans Duployan",
     "end": 113770
   },
   {
     "start": 113771,
     "status": "missing",
+    "font": "Noto Sans Duployan",
     "end": 113775
   },
   {
     "start": 113776,
     "status": "standalone",
+    "font": "Noto Sans Duployan",
     "end": 113788
   },
   {
     "start": 113789,
     "status": "missing",
+    "font": "Noto Sans Duployan",
     "end": 113791
   },
   {
     "start": 113792,
     "status": "standalone",
+    "font": "Noto Sans Duployan",
     "end": 113800
   },
   {
     "start": 113801,
     "status": "missing",
+    "font": "Noto Sans Duployan",
     "end": 113807
   },
   {
     "start": 113808,
     "status": "standalone",
+    "font": "Noto Sans Duployan",
     "end": 113817
   },
   {
     "start": 113818,
     "status": "missing",
+    "font": "Noto Sans Duployan",
     "end": 113819
   },
   {
     "start": 113820,
     "status": "standalone",
+    "font": "Noto Sans Duployan",
     "end": 113820
   },
   {
     "start": 113821,
     "status": "combining",
+    "font": "Noto Sans Duployan",
     "end": 113822
   },
   {
     "start": 113823,
     "status": "standalone",
+    "font": "Noto Sans Duployan",
     "end": 113823
   },
   {
@@ -8599,11 +9391,13 @@
   {
     "start": 119520,
     "status": "standalone",
+    "font": "Noto Sans Mayan Numerals",
     "end": 119539
   },
   {
     "start": 119540,
     "status": "missing",
+    "font": "Noto Sans Mayan Numerals",
     "end": 119551
   },
   {
@@ -8629,206 +9423,247 @@
   {
     "start": 119808,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 119892
   },
   {
     "start": 119893,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 119893
   },
   {
     "start": 119894,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 119964
   },
   {
     "start": 119965,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 119965
   },
   {
     "start": 119966,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 119967
   },
   {
     "start": 119968,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 119969
   },
   {
     "start": 119970,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 119970
   },
   {
     "start": 119971,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 119972
   },
   {
     "start": 119973,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 119974
   },
   {
     "start": 119975,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 119976
   },
   {
     "start": 119977,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 119980
   },
   {
     "start": 119981,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 119981
   },
   {
     "start": 119982,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 119993
   },
   {
     "start": 119994,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 119994
   },
   {
     "start": 119995,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 119995
   },
   {
     "start": 119996,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 119996
   },
   {
     "start": 119997,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120003
   },
   {
     "start": 120004,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120004
   },
   {
     "start": 120005,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120069
   },
   {
     "start": 120070,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120070
   },
   {
     "start": 120071,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120074
   },
   {
     "start": 120075,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120076
   },
   {
     "start": 120077,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120084
   },
   {
     "start": 120085,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120085
   },
   {
     "start": 120086,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120092
   },
   {
     "start": 120093,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120093
   },
   {
     "start": 120094,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120121
   },
   {
     "start": 120122,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120122
   },
   {
     "start": 120123,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120126
   },
   {
     "start": 120127,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120127
   },
   {
     "start": 120128,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120132
   },
   {
     "start": 120133,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120133
   },
   {
     "start": 120134,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120134
   },
   {
     "start": 120135,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120137
   },
   {
     "start": 120138,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120144
   },
   {
     "start": 120145,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120145
   },
   {
     "start": 120146,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120485
   },
   {
     "start": 120486,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120487
   },
   {
     "start": 120488,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 120779
   },
   {
     "start": 120780,
     "status": "missing",
+    "font": "Noto Sans Math",
     "end": 120781
   },
   {
     "start": 120782,
     "status": "standalone",
+    "font": "Noto Sans Math",
     "end": 121343
   },
   {
@@ -8894,21 +9729,25 @@
   {
     "start": 122624,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 122654
   },
   {
     "start": 122655,
     "status": "missing",
+    "font": "Noto Sans",
     "end": 122660
   },
   {
     "start": 122661,
     "status": "standalone",
+    "font": "Noto Sans",
     "end": 122666
   },
   {
     "start": 122667,
     "status": "missing",
+    "font": "Noto Sans",
     "end": 122879
   },
   {
@@ -9004,36 +9843,43 @@
   {
     "start": 123566,
     "status": "combining",
+    "font": "Noto Serif Toto",
     "end": 123566
   },
   {
     "start": 123567,
     "status": "missing",
+    "font": "Noto Serif Toto",
     "end": 123583
   },
   {
     "start": 123584,
     "status": "standalone",
+    "font": "Noto Sans Wancho",
     "end": 123627
   },
   {
     "start": 123628,
     "status": "combining",
+    "font": "Noto Sans Wancho",
     "end": 123631
   },
   {
     "start": 123632,
     "status": "standalone",
+    "font": "Noto Sans Wancho",
     "end": 123641
   },
   {
     "start": 123642,
     "status": "missing",
+    "font": "Noto Sans Wancho",
     "end": 123646
   },
   {
     "start": 123647,
     "status": "standalone",
+    "font": "Noto Sans Wancho",
     "end": 124902
   },
   {
@@ -9074,76 +9920,91 @@
   {
     "start": 124928,
     "status": "standalone",
+    "font": "Noto Sans Mende Kikakui",
     "end": 125124
   },
   {
     "start": 125125,
     "status": "missing",
+    "font": "Noto Sans Mende Kikakui",
     "end": 125126
   },
   {
     "start": 125127,
     "status": "standalone",
+    "font": "Noto Sans Mende Kikakui",
     "end": 125135
   },
   {
     "start": 125136,
     "status": "combining",
+    "font": "Noto Sans Mende Kikakui",
     "end": 125142
   },
   {
     "start": 125143,
     "status": "missing",
+    "font": "Noto Sans Mende Kikakui",
     "end": 125183
   },
   {
     "start": 125184,
     "status": "standalone",
+    "font": "Noto Sans Adlam",
     "end": 125251
   },
   {
     "start": 125252,
     "status": "combining",
+    "font": "Noto Sans Adlam",
     "end": 125258
   },
   {
     "start": 125259,
     "status": "standalone",
+    "font": "Noto Sans Adlam",
     "end": 125259
   },
   {
     "start": 125260,
     "status": "missing",
+    "font": "Noto Sans Adlam",
     "end": 125263
   },
   {
     "start": 125264,
     "status": "standalone",
+    "font": "Noto Sans Adlam",
     "end": 125273
   },
   {
     "start": 125274,
     "status": "missing",
+    "font": "Noto Sans Adlam",
     "end": 125277
   },
   {
     "start": 125278,
     "status": "standalone",
+    "font": "Noto Sans Adlam",
     "end": 126063
   },
   {
     "start": 126064,
     "status": "missing",
+    "font": "Noto Sans Indic Siyaq Numbers",
     "end": 126064
   },
   {
     "start": 126065,
     "status": "standalone",
+    "font": "Noto Sans Indic Siyaq Numbers",
     "end": 126132
   },
   {
     "start": 126133,
     "status": "missing",
+    "font": "Noto Sans Indic Siyaq Numbers",
     "end": 126208
   },
   {
@@ -9574,91 +10435,76 @@
   {
     "start": 127491,
     "status": "missing",
-    "font": "Noto Sans Symbols",
     "end": 127503
   },
   {
     "start": 127504,
     "status": "standalone",
-    "font": "Noto Sans Symbols",
     "end": 127547
   },
   {
     "start": 127548,
     "status": "missing",
-    "font": "Noto Sans Symbols",
     "end": 127551
   },
   {
     "start": 127552,
     "status": "standalone",
-    "font": "Noto Sans Symbols",
     "end": 127560
   },
   {
     "start": 127561,
     "status": "missing",
-    "font": "Noto Sans Symbols",
     "end": 127567
   },
   {
     "start": 127568,
     "status": "standalone",
-    "font": "Noto Sans Symbols",
     "end": 127569
   },
   {
     "start": 127570,
     "status": "missing",
-    "font": "Noto Sans Symbols",
     "end": 127583
   },
   {
     "start": 127584,
     "status": "standalone",
-    "font": "Noto Sans Symbols",
     "end": 127589
   },
   {
     "start": 127590,
     "status": "missing",
-    "font": "Noto Sans Symbols",
     "end": 127743
   },
   {
     "start": 127744,
     "status": "standalone",
-    "font": "Noto Sans Symbols",
     "end": 128727
   },
   {
     "start": 128728,
     "status": "missing",
-    "font": "Noto Sans Symbols",
     "end": 128731
   },
   {
     "start": 128732,
     "status": "standalone",
-    "font": "Noto Sans Symbols",
     "end": 128748
   },
   {
     "start": 128749,
     "status": "missing",
-    "font": "Noto Sans Symbols",
     "end": 128751
   },
   {
     "start": 128752,
     "status": "standalone",
-    "font": "Noto Sans Symbols",
     "end": 128764
   },
   {
     "start": 128765,
     "status": "missing",
-    "font": "Noto Sans Symbols",
     "end": 128767
   },
   {
@@ -9764,7 +10610,6 @@
   {
     "start": 129280,
     "status": "standalone",
-    "font": "Noto Sans Symbols",
     "end": 129619
   },
   {
@@ -9885,7 +10730,7 @@
   {
     "start": 131072,
     "status": "standalone",
-    "font": "Noto Sans CJK JP, Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans CJK TC",
+    "font": "Noto Sans JP, Noto Sans KR, Noto Sans SC, Noto Sans TC",
     "end": 917504
   },
   {
