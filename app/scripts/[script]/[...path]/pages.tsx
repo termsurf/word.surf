@@ -25,26 +25,9 @@ for (const script in symbols) {
 }
 
 function addSymbol(script: string, data: any) {
-  router.get(`/${script}/:code`, async (params: any) => {
-    const state = data[params.code]
-    return (
-      <ScriptPage
-        scriptSlug={script}
-        links={
-          Object.values(state.links as ArrayLike<any>).map(x => ({
-            ...omit(x, ['links', 'overview']),
-            symbols: x.overview ? x.overview() : x.symbols(),
-          })) as Array<PageLink>
-        }
-      />
-    )
-  })
-
   router.get(`/${script}/:code/bindings`, async (params: any) => {
-    console.log('data', data)
-    console.log('params.code', params.code)
     const state = data[params.code].links.bindings
-    const links = state.links
+    const links = state?.links
       ? (Object.values(state.links as ArrayLike<any>).map(x => ({
           ...omit(x, ['links', 'overview']),
           symbols: x.overview ? x.overview() : x.symbols(),
@@ -56,6 +39,21 @@ function addSymbol(script: string, data: any) {
         glyphType={state.name}
         symbols={state.symbols()}
         links={links}
+      />
+    )
+  })
+
+  router.get(`/${script}/:code`, async (params: any) => {
+    const state = data[params.code]
+    return (
+      <ScriptPage
+        scriptSlug={script}
+        links={
+          Object.values(state.links as ArrayLike<any>).map(x => ({
+            ...omit(x, ['links', 'overview']),
+            symbols: x.overview ? x.overview() : x.symbols(),
+          })) as Array<PageLink>
+        }
       />
     )
   })
