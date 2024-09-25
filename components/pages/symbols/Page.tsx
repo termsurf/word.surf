@@ -477,7 +477,7 @@ function VirtualizedGrid({
     >
       <List
         className="w-full"
-        height={1000}
+        height={containerHeight}
         // style={{ height: actualListHeight }}
         overscanRowCount={4}
         // noRowsRenderer={this._noRowsRenderer}
@@ -485,7 +485,7 @@ function VirtualizedGrid({
         rowHeight={rowHeight}
         rowRenderer={ListItem}
         // scrollToIndex={scrollToIndex}
-        width={300}
+        width={containerWidth}
       />
     </div>
   )
