@@ -131,3 +131,15 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'SyrCOMQenNeshrin';
+  src: url('/font/SyrCOMQenNeshrin.otf') format('opentype');
+}
+
+.font-SyrCOMQenNeshrin {
+  font-family: 'SyrCOMQenNeshrin', serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}

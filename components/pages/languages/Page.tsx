@@ -69,7 +69,7 @@ function Header() {
         align="center"
         type="secondary"
       >
-        Learn about the world&apos;s languages
+        Explore the world&apos;s languages
       </P>
     </header>
   )

@@ -115,3 +115,13 @@ computation. Find us on [X](https://x.com/termsurf),
 [GitHub projects](https://github.com/termsurf) as well!
 
 - https://www.ashleydanyew.com/posts/latin-pronunciation-guide
+
+```
+/symbols/icons
+/symbols/unicode
+/symbols/U+1234
+/scripts/latin/fonts
+/scripts/latin/symbols/d/fonts
+/fonts/noto-sans/symbols/d
+/fonts/noto-sans/blocks/:block
+```

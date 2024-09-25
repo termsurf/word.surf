@@ -180,8 +180,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@termsurf/leaf':
-        specifier: ^0.1.54
-        version: 0.1.54(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)
+        specifier: ^0.1.58
+        version: 0.1.58(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)
       '@termsurf/talk':
         specifier: ^3.1.0
         version: 3.1.0
@@ -377,9 +377,15 @@ importers:
       flat:
         specifier: ^6.0.1
         version: 6.0.1
+      flexsearch:
+        specifier: ^0.7.43
+        version: 0.7.43
       fontfaceobserver:
         specifier: ^2.3.0
         version: 2.3.0
+      fuse.js:
+        specifier: ^7.0.0
+        version: 7.0.0
       hast-util-to-jsx-runtime:
         specifier: ^2.3.0
         version: 2.3.0
@@ -491,6 +497,9 @@ importers:
       mime-types:
         specifier: ^2.1.35
         version: 2.1.35
+      minisearch:
+        specifier: ^7.1.0
+        version: 7.1.0
       mkdirp:
         specifier: ^2.1.6
         version: 2.1.6
@@ -3233,8 +3242,8 @@ packages:
   '@termsurf/kink@0.1.6':
     resolution: {integrity: sha512-E2GwKz+HL7A9klsPyzWtobO24ZUB0jOJQHnRl2tjs8OElF2NSM2+qq7N1NlJ2Ry0we0qU/i7N4NuzF4eaAQ8uA==}
 
-  '@termsurf/leaf@0.1.54':
-    resolution: {integrity: sha512-xoOVEHmExZFV/i5t2A0lMrZ+KR8cDOQYfgQUl70U8aWiQmaY+vHPi+9b8iGMQJGuVcwE84C0eeUsG97iHPSuYw==}
+  '@termsurf/leaf@0.1.58':
+    resolution: {integrity: sha512-VyVWT7Byj0U2DHf5wITsKQxx0tPxUUgFJujy+gIAm7QieidBCz/eK/z2Z6pQOxuwn2zsJKf7O31EZfrTkVRJTw==}
 
   '@termsurf/love-code@0.1.10':
     resolution: {integrity: sha512-nwfUNiteKm33GceRUHre3wcOrn1roYFYpiJZ4tpt01fjFJsjbx6q54z5i2CA2RYB8OHzQcetWyopziVeojKxFQ==}
@@ -5760,6 +5769,9 @@ packages:
     resolution: {integrity: sha512-pzNZh42/A2HmcRIpddSP0T+zBofd119o5rNB2u1YHv36CM2C/ietI2ZsjWZ2LSL7J0BNVkFn1a9Ad+cmO2lDQg==}
     deprecated: flatten is deprecated in favor of utility frameworks such as lodash.
 
+  flexsearch@0.7.43:
+    resolution: {integrity: sha512-c5o/+Um8aqCSOXGcZoqZOm+NqtVwNsvVpWv6lfmSclU954O3wvQKxxK8zj74fPaSJbXpSLTs4PRhh+wnoCXnKg==}
+
   fluent-ffmpeg@2.1.2:
     resolution: {integrity: sha512-IZTB4kq5GK0DPp7sGQ0q/BWurGHffRtQQwVkiqDgeO6wYJLLV5ZhgNOQ65loZxxuPMKZKZcICCUnaGtlxBiR0Q==}
     engines: {node: '>=0.8.0'}
@@ -5855,6 +5867,10 @@ packages:
 
   functions-have-names@1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
+
+  fuse.js@7.0.0:
+    resolution: {integrity: sha512-14F4hBIxqKvD4Zz/XjDc3y94mNZN6pRv3U13Udo0lNLCWRBUsrMv2xwcF/y/Z5sV6+FQW+/ow68cHpm4sunt8Q==}
+    engines: {node: '>=10'}
 
   gauge@3.0.2:
     resolution: {integrity: sha512-+5J6MS/5XksCuXq++uFRsnUd7Ovu1XenbeuIuNRJxYWjgQbPuFhT14lAvsWfqfAmnwluf1OwMjz39HjfLPci0Q==}
@@ -7564,6 +7580,9 @@ packages:
   minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
+
+  minisearch@7.1.0:
+    resolution: {integrity: sha512-tv7c/uefWdEhcu6hvrfTihflgeEi2tN6VV7HJnCjK6VxM75QQJh4t9FwJCsA2EsRS8LCnu3W87CuGPWMocOLCA==}
 
   minizlib@2.1.2:
     resolution: {integrity: sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==}
@@ -13739,7 +13758,7 @@ snapshots:
     dependencies:
       ts-custom-error: 3.3.1
 
-  '@termsurf/leaf@0.1.54(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)':
+  '@termsurf/leaf@0.1.58(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)':
     dependencies:
       '@codemirror/lang-cpp': 6.0.2
       '@codemirror/lang-css': 6.2.1(@codemirror/view@6.33.0)
@@ -16829,6 +16848,8 @@ snapshots:
 
   flatten@0.0.1: {}
 
+  flexsearch@0.7.43: {}
+
   fluent-ffmpeg@2.1.2:
     dependencies:
       async: 3.2.5
@@ -16923,6 +16944,8 @@ snapshots:
       functions-have-names: 1.2.3
 
   functions-have-names@1.2.3: {}
+
+  fuse.js@7.0.0: {}
 
   gauge@3.0.2:
     dependencies:
@@ -19292,6 +19315,8 @@ snapshots:
   minipass@7.0.4: {}
 
   minipass@7.1.2: {}
+
+  minisearch@7.1.0: {}
 
   minizlib@2.1.2:
     dependencies:
