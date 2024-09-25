@@ -262,6 +262,14 @@ export const sets = {
         },
       },
     },
+    numbers: {
+      name: 'Numbers',
+      slug: 'numbers',
+      symbols: () =>
+        `० १ २ ३ ४ ५ ६ ७ ८ ९`
+          .split(/\s+/)
+          .map((text, i) => ({ text, hint: String(i) })),
+    },
   },
 }
 
