@@ -187,7 +187,7 @@ function Body() {
           <FontLink
             slug="inuktitut"
             name="Inuktitut"
-            script="canadian-aboriginal"
+            script="aboriginal"
             sample="ᐃ ᔦ ᕕ ᓰ ᓂ ᐳ ᕉ ᑎ"
           />
           <FontLink
