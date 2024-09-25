@@ -354,7 +354,7 @@ function VirtualizedGrid({
   const containerRef = useRef<HTMLDivElement>(null)
   const [itemWidth, setItemWidth] = useState(0)
   const [rows, setRows] = useState<Array<Array<ReactNode>>>([])
-  const { width: containerWidth = 1, height: containerHeight = 1 } =
+  const { width: containerWidth = 16, height: containerHeight = 16 } =
     useResizeObserver({
       ref: containerRef,
     })
