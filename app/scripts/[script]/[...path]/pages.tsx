@@ -26,8 +26,8 @@ for (const script in symbols) {
 
 function addSymbol(script: string, data: any) {
   router.get(`/${script}/:code/bindings`, async (params: any) => {
-    const state = data[params.code].links.bindings
-    const links = state?.links
+    const state = data[decodeURIComponent(params.code)].links.bindings
+    const links = state.links
       ? (Object.values(state.links as ArrayLike<any>).map(x => ({
           ...omit(x, ['links', 'overview']),
           symbols: x.overview ? x.overview() : x.symbols(),
@@ -44,7 +44,7 @@ function addSymbol(script: string, data: any) {
   })
 
   router.get(`/${script}/:code`, async (params: any) => {
-    const state = data[params.code]
+    const state = data[decodeURIComponent(params.code)]
     return (
       <ScriptPage
         scriptSlug={script}
