@@ -130,6 +130,7 @@ function Body() {
           <FontLink
             slug="geez"
             name="Geez"
+            script="ethiopic"
             sample="ሀ ለ ሐ መ ሠ ረ ሰ ሸ"
           />
           <FontLink
@@ -150,16 +151,19 @@ function Body() {
           <FontLink
             slug="burmese"
             name="Burmese"
+            script="myanmar"
             sample="က ခ ဂ ဃ င စ ဆ ဇ"
           />
           <FontLink
             slug="hangul"
             name="Hangul"
+            script="korean"
             sample="가 나 다 라 마 바 사 아"
           />
           <FontLink
             slug="kana"
             name="Kana"
+            script="japanese"
             sample="カ キ ク ケ コ サ シ ス"
           />
           <FontLink
@@ -170,6 +174,7 @@ function Body() {
           <FontLink
             slug="inuktitut"
             name="Inuktitut"
+            script="canadian-aboriginal"
             sample="ᐃ ᔦ ᕕ ᓰ ᓂ ᐳ ᕉ ᑎ"
           />
           <FontLink
@@ -203,8 +208,9 @@ function Body() {
             sample="ക ഖ ഗ ഘ ങ ച ഛ ജ"
           />
           <FontLink
-            slug="odia"
-            name="Odia"
+            slug="oriya"
+            name="Oriya"
+            script="oriya"
             sample="କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ"
           />
           <FontLink
@@ -255,6 +261,7 @@ function Body() {
           <FontLink
             slug="lontara"
             name="Lontara"
+            script="buginese"
             sample="ᨀ ᨁ ᨂ ᨃ ᨄ ᨅ ᨆ ᨇ"
           />
           <FontLink
@@ -262,16 +269,6 @@ function Body() {
             name="Balinese"
             sample="ᬓ ᬔ ᬕ ᬖ ᬗ ᬘ ᬙ ᬚ"
           />
-        </Grid>
-
-        {/* <H2 className="!text-2xl !mb-0 !text-gray-600 !border-0 text-center uppercase scale-y-80 tracking-wide-015 mt-32">
-          Dead
-        </H2> */}
-        <Grid
-          minWidth={192}
-          gap={16}
-          maxColumns={4}
-        >
           <FontLink
             slug="cuneiform"
             name="Cuneiform"
@@ -321,11 +318,12 @@ function Body() {
           <FontLink
             slug="pahlavi"
             name="Pahlavi"
+            script="inscriptional-pahlavi"
             sample="𐭠 𐭡 𐭢 𐭣 𐭤 𐭥 𐭦 𐭧"
           />
           <FontLink
-            slug="hieroglyphs"
-            name="Hieroglyphs"
+            slug="egyptian"
+            name="Egyptian"
             sample="𓂀 𓀀 𓅓 𓆣 𓆉 𓃘 𓆈 𓆗"
             weight="bold"
           />
@@ -371,7 +369,6 @@ function FontLink({
         </T>
         {sample && (
           <Grid
-            // script={script}
             className="lowercase text-h4 leading-content text-gray-300"
             minWidth={28}
             gap={8}
@@ -380,6 +377,7 @@ function FontLink({
             {sample.split(/\s+/).map(glyph => (
               <T
                 key={glyph}
+                script={script}
                 className={clsx('block', weight && `font-${weight}`)}
               >
                 {glyph}
@@ -404,7 +402,6 @@ function FontLink({
       </T>
       {sample && (
         <Grid
-          // script={script}
           className="lowercase text-h4 leading-content text-gray-400"
           minWidth={28}
           gap={8}
@@ -413,6 +410,7 @@ function FontLink({
           {sample.split(/\s+/).map(glyph => (
             <T
               key={glyph}
+              script={script}
               className={clsx('block', weight && `font-${weight}`)}
             >
               {glyph}
