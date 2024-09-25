@@ -231,26 +231,26 @@ function Body() {
   // const document = new Document(options)
   // const worker = new Worker(options)
 
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState<string | undefined>()
 
-  const pattern = search.toLowerCase()
+  const pattern = search?.toLowerCase()
 
   // Change the pattern
   // https://medium.com/@ngrato/harnessing-the-power-of-web-workers-with-next-js-350901a99a10
-  const filteredGlyphs = search
+  const filteredGlyphs = pattern
     ? glyphs.filter(glyph => glyph.search.indexOf(pattern) > -1)
     : glyphs
 
   return (
     <>
       <div className="relative w-full pb-64 flex flex-col gap-16 p-16">
+        rangeSubset: {rangesSubset.length}, glyphs: {glyphs.length}
         <TextInput
           value={search}
           size="large"
           placeholder={`Search unicode character (❤️, U+2764, symbol)`}
           onChange={v => setSearch(v ?? '')}
         />
-
         {/* <H2 className="!text-2xl !mb-0 !text-gray-600 !border-0 text-center uppercase scale-y-80 tracking-wide-015">
           Ancient
         </H2> */}
