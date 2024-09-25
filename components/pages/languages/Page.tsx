@@ -153,7 +153,7 @@ function Body({ languages }: ContentInput) {
             disabled
             name="Burmese"
             slug="burmese"
-            script="burmese"
+            script="myanmar"
             native="မြန်မာစာ"
           />
           <LanguageLink
@@ -635,7 +635,7 @@ function LanguageLink({
         </T>
         {native && (
           <T
-            // script={script}
+            script={script}
             tag="i"
             className="block lowercase text-h4 leading-content text-gray-300"
           >
@@ -659,7 +659,7 @@ function LanguageLink({
       </T>
       {native && (
         <T
-          // script={script}
+          script={script}
           tag="i"
           className="block lowercase text-h4 leading-content text-gray-400 transition-colors"
         >

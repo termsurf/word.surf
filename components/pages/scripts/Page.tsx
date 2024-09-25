@@ -672,13 +672,13 @@ const SCRIPTS = [
     slug: 'carian',
     name: 'Carian',
     script: 'carian',
-    symbol: '𐊠',
+    symbol: '𐊷',
   },
   {
     slug: 'lydian',
     name: 'Lydian',
     script: 'lydian',
-    symbol: '𐤠',
+    symbol: '𐤤',
   },
   {
     slug: 'nabataean',
@@ -1179,7 +1179,6 @@ function Body() {
             minWidth={192}
             gap={16}
             maxColumns={4}
-            breakpoints={[4, 2, 1]}
             align="center"
           >
             {filteredScripts.map(script => (
