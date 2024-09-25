@@ -171,6 +171,12 @@ function Header() {
       <H1 className="block uppercase scale-y-80 tracking-wide-015">
         Symbols
       </H1>
+      {/* <P
+        type="secondary"
+        align="center"
+      >
+        Browse {(1114112).toLocaleString()} glyphs
+      </P> */}
     </header>
   )
 }
@@ -213,6 +219,8 @@ function Body() {
     }
     return { glyphs, fonts }
   }, [rangesSubset])
+
+  console.log(glyphs.length)
 
   useFonts(Object.keys(fonts))
 
