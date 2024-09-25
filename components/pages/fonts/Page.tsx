@@ -84,46 +84,55 @@ function Body() {
         >
           <FontLink
             slug="latin"
+            script="latin"
             name="Latin"
             sample="A B C D E F G H"
           />
           <FontLink
             slug="chinese"
+            script="chinese"
             name="Chinese"
             sample="凹 半 草 出 大 呆 豆 父"
           />
           <FontLink
             slug="arabic"
+            script="arabic"
             name="Arabic"
             sample="ب ت ج خ د ر س ص"
           />
           <FontLink
             slug="devanagari"
+            script="devanagari"
             name="Devanagari"
             sample="क ख ग घ ङ च छ ज"
           />
           <FontLink
             slug="hebrew"
+            script="hebrew"
             name="Hebrew"
             sample="ש ת ל מ צ ח כ ע"
           />
           <FontLink
             slug="tibetan"
+            script="tibetan"
             name="Tibetan"
             sample="ཀ ཁ ག ང ཅ ཆ ཇ ཉ"
           />
           <FontLink
             slug="tamil"
+            script="tamil"
             name="Tamil"
             sample="க ங ச ஞ ட ண த ந"
           />
           <FontLink
             slug="greek"
+            script="greek"
             name="Greek"
             sample="Α Β Γ Δ Ε Ζ Η Θ"
           />
           <FontLink
             slug="cyrillic"
+            script="cyrillic"
             name="Cyrillic"
             sample="Б В Г Д Е Ж З И"
           />
@@ -135,16 +144,19 @@ function Body() {
           />
           <FontLink
             slug="gurmukhi"
+            script="gurmukhi"
             name="Gurmukhi"
             sample="ਕ ਖ ਗ ਘ ਚ ਛ ਜ ਝ"
           />
           <FontLink
             slug="thai"
+            script="thai"
             name="Thai"
             sample="ก ข ค ฆ ง จ ฉ ช"
           />
           <FontLink
             slug="telugu"
+            script="telugu"
             name="Telugu"
             sample="క ఖ గ ఘ చ ఛ జ ఝ"
           />
@@ -168,6 +180,7 @@ function Body() {
           />
           <FontLink
             slug="cherokee"
+            script="cherokee"
             name="Cherokee"
             sample="Ꭰ Ꭱ Ꭲ Ꭳ Ꭴ Ꭵ Ꭶ Ꭷ"
           />
@@ -179,31 +192,37 @@ function Body() {
           />
           <FontLink
             slug="tifinagh"
+            script="tifinagh"
             name="Tifinagh"
             sample="ⵀ ⵁ ⵂ ⵃ ⵄ ⵅ ⵆ ⵇ"
           />
           <FontLink
             slug="syriac"
+            script="syriac"
             name="Syriac"
             sample="ܐ ܒ ܓ ܕ ܗ ܩ ܙ ܛ"
           />
           <FontLink
             slug="georgian"
+            script="georgian"
             name="Georgian"
             sample="ა ბ გ დ ე ვ ზ თ"
           />
           <FontLink
             slug="bengali"
+            script="bengali"
             name="Bengali"
             sample="ক খ গ ঘ ঙ চ ছ জ"
           />
           <FontLink
             slug="kannada"
+            script="kannada"
             name="Kannada"
             sample="ಕ ಖ ಗ ಘ ಙ ಚ ಛ ಜ"
           />
           <FontLink
             slug="malayalam"
+            script="malayalam"
             name="Malayalam"
             sample="ക ഖ ഗ ഘ ങ ച ഛ ജ"
           />
@@ -215,46 +234,55 @@ function Body() {
           />
           <FontLink
             slug="sinhala"
+            script="sinhala"
             name="Sinhala"
             sample="ක ඛ ග ඝ ඞ ච ඡ ජ"
           />
           <FontLink
             slug="khmer"
+            script="khmer"
             name="Khmer"
             sample="ក ខ គ ឃ ង ច ឆ ជ"
           />
           <FontLink
             slug="armenian"
+            script="armenian"
             name="Armenian"
             sample="Ա Բ Գ Դ Ե Զ Է Ը"
           />
           <FontLink
             slug="mongolian"
+            script="mongolian"
             name="Mongolian"
             sample="ᠠ ᠡ ᠢ ᠣ ᠤ ᠥ ᠦ ᠧ"
           />
           <FontLink
             slug="lao"
+            script="lao"
             name="Lao"
             sample="ກ ຂ ຄ ງ ຈ ສ ຊ ຕ"
           />
           <FontLink
             slug="vai"
+            script="vai"
             name="Vai"
             sample="ꔀ ꔁ ꔂ ꔃ ꔄ ꔅ ꔆ ꔇ"
           />
           <FontLink
             slug="thaana"
+            script="thaana"
             name="Thaana"
             sample="ހ ށ ނ ރ ބ ޅ ކ އ"
           />
           <FontLink
             slug="mandaic"
+            script="mandaic"
             name="Mandaic"
             sample="ࡀ ࡁ ࡂ ࡃ ࡄ ࡅ ࡆ ࡇ"
           />
           <FontLink
             slug="batak"
+            script="batak"
             name="Batak"
             sample="ᯀ ᯁ ᯂ ᯃ ᯄ ᯅ ᯆ ᯇ"
           />
@@ -266,52 +294,62 @@ function Body() {
           />
           <FontLink
             slug="balinese"
+            script="balinese"
             name="Balinese"
             sample="ᬓ ᬔ ᬕ ᬖ ᬗ ᬘ ᬙ ᬚ"
           />
           <FontLink
             slug="cuneiform"
+            script="cuneiform"
             name="Cuneiform"
             sample="𒀭 𒁍 𒀸 𒁇 𒄑 𒂗 𒅆 𒃻"
           />
           <FontLink
             slug="phoenician"
+            script="phoenician"
             name="Phoenician"
             sample="𐤀 𐤁 𐤂 𐤃 𐤄 𐤅 𐤆 𐤇"
           />
           <FontLink
             slug="runic"
+            script="runic"
             name="Runic"
             sample="ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ ᛉ ᛏ"
             weight="bold"
           />
           <FontLink
             slug="gothic"
+            script="gothic"
             name="Gothic"
             sample="𐌰 𐌱 𐌲 𐌳 𐌴 𐌵 𐌶 𐌷"
           />
           <FontLink
             slug="avestan"
+            script="avestan"
             name="Avestan"
             sample="𐬂 𐬉 𐬇 𐬒 𐬟 𐬬 𐬮 𐬐"
           />
           <FontLink
             slug="ogham"
+            script="ogham"
             name="Ogham"
             sample="ᚃ ᚈ ᚆ ᚁ ᚇ ᚅ ᚄ ᚂ"
           />
           <FontLink
             slug="coptic"
+            script="coptic"
             name="Coptic"
             sample="Ⲝ Ⲯ Ⲅ Ⲇ Ⲉ Ⲋ Ⲍ Ϩ"
           />
           <FontLink
             slug="brahmi"
+            script="brahmi"
             name="Brahmi"
             sample="𑀓 𑀔 𑀕 𑀖 𑀗 𑀘 𑀙 𑀚"
           />
           <FontLink
             slug="javanese"
+            script="javanese"
             name="Javanese"
             sample="ꦏ ꦐ ꦑ ꦒ ꦓ ꦔ ꦕ ꦖ"
           />
@@ -323,12 +361,14 @@ function Body() {
           />
           <FontLink
             slug="egyptian"
+            script="egyptian"
             name="Egyptian"
             sample="𓂀 𓀀 𓅓 𓆣 𓆉 𓃘 𓆈 𓆗"
             weight="bold"
           />
           <FontLink
             slug="linear-b"
+            script="linear-b"
             name="Linear B"
             sample="𐀀 𐀁 𐀍 𐀓 𐀞 𐀤 𐀦 𐀐"
             weight="bold"
