@@ -219,9 +219,6 @@ function GlyphLink({
     >
       <T
         script={script}
-        leading={
-          script === 'arabic' || script === 'hebrew' ? 'body' : 'body'
-        }
         className="block h-96 font-semibold text-h0 transition-colors"
       >
         {text}
