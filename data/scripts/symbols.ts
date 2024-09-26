@@ -21,6 +21,11 @@ const DEVANAGARI_CONSONANTS =
     /\s+/,
   )
 
+const DEVANAGARI_VOWELS =
+  `\u0904 \u0905 \u0906 \u0907 \u0908 \u0909 \u090A \u090B \u090C \u090D \u090F \u090E \u0910 \u0911 \u0912 \u0913 \u0914 \u0960 \u0961 \u0972`.split(
+    /\s+/,
+  )
+
 const CHINESE_RADICALS = loadChineseRadicals()
 
 const CHINESE_SIMPLIFIED =
@@ -240,9 +245,11 @@ export const sets = {
       name: 'Vowels',
       slug: 'vowels',
       symbols: () =>
-        `\u0904 \u0905 \u0906 \u0907 \u0908 \u0909 \u090A \u090B \u090C \u090D \u090F \u090E \u0910 \u0911 \u0912 \u0913 \u0914 \u0960 \u0961 \u0972`
-          .split(/\s+/)
-          .map(text => ({ text, hint: talk(devanagari(text)) })),
+        DEVANAGARI_VOWELS.map(text => ({
+          text,
+          slug: text,
+          hint: talk(devanagari(text)),
+        })),
       links: {
         diacritics: {
           name: 'Vowel diacritics',
@@ -261,6 +268,7 @@ export const sets = {
       symbols: () =>
         DEVANAGARI_CONSONANTS.map(text => ({
           text,
+          slug: text,
           hint: talk(devanagari(text)),
         })),
       links: {
@@ -270,7 +278,11 @@ export const sets = {
           symbols: () =>
             `\u0933 \u0915 \u0924 \u091C \u0936 \u0915 \u0916 \u0917 \u091C \u092B \u0921 \u0922`
               .split(/\s+/)
-              .map(text => ({ text, hint: talk(devanagari(text)) })),
+              .map(text => ({
+                text,
+                slug: text,
+                hint: talk(devanagari(text)),
+              })),
         },
       },
     },
@@ -280,7 +292,7 @@ export const sets = {
       symbols: () =>
         `० १ २ ३ ४ ५ ६ ७ ८ ९`
           .split(/\s+/)
-          .map((text, i) => ({ text, hint: String(i) })),
+          .map((text, i) => ({ text, slug: text, hint: String(i) })),
     },
   },
   chinese: {
@@ -342,14 +354,39 @@ export const symbols = {
   devanagari: {},
 }
 
+DEVANAGARI_VOWELS.forEach(text => {
+  symbols.devanagari[point(text)] = {
+    name: text,
+    slug: point(text),
+  }
+})
+
+DEVANAGARI_CONSONANTS.forEach(text => {
+  symbols.devanagari[point(text)] = {
+    name: text,
+    slug: point(text),
+    links: {
+      combinations: {
+        name: `Combinations`,
+        slug: `${point(text)}/combinations`,
+        symbols: () =>
+          DEVANAGARI_VOWEL_DIACRITICS.map(x => ({
+            text: `${text}${x}`,
+            hint: talk(devanagari(`${text}${x}`)),
+          })),
+      },
+    },
+  }
+})
+
 DEVANAGARI_VOWEL_DIACRITICS.forEach(text => {
   symbols.devanagari[point(text)] = {
     name: text,
     slug: point(text),
     links: {
-      bindings: {
-        name: `Bindings`,
-        slug: `${point(text)}/bindings`,
+      combinations: {
+        name: `Combinations`,
+        slug: `${point(text)}/combinations`,
         symbols: () =>
           DEVANAGARI_CONSONANTS.map(x => ({
             text: `${x}${text}`,
@@ -360,7 +397,7 @@ DEVANAGARI_VOWEL_DIACRITICS.forEach(text => {
   }
 })
 
-function point(text: string) {
+export function point(text: string) {
   return `U+${text
     .codePointAt(0)
     ?.toString(16)

@@ -1,9 +1,11 @@
 import omit from 'lodash/omit'
+import GlyphPage from '~/components/pages/scripts/script/glyph/Page'
+import CombinationsPage from '~/components/pages/scripts/script/glyphs/combinations/Page'
 import GlyphsPage, {
   PageLink,
 } from '~/components/pages/scripts/script/glyphs/Page'
 import ScriptPage from '~/components/pages/scripts/script/Page'
-import { sets, symbols } from '~/data/scripts/symbols'
+import { point, sets, symbols } from '~/data/scripts/symbols'
 import { buildRouter, matchPath } from '~/tools/router'
 
 const router = buildRouter()
@@ -25,11 +27,22 @@ for (const script in symbols) {
 }
 
 function addSymbol(script: string, data: any) {
-  router.get(`/${script}/:code/bindings`, async (params: any) => {
-    const state =
-      data[
-        decodeURIComponent(params.code as string).replace(/\s+/g, '+')
-      ].links.bindings
+  router.get(`/${script}/:code/combinations`, async (params: any) => {
+    const something = decodeURIComponent(params.code as string).replace(
+      /\s+/g,
+      '+',
+    )
+
+    const code = something.match(/^U\+/) ? something : point(something)
+
+    const state = data[code].links.combinations
+
+    if (!state) {
+      return
+    }
+
+    const glyph = String.fromCodePoint(parseInt(code.split('+')[1], 16))
+
     const links = state.links
       ? (Object.values(state.links as ArrayLike<any>).map(x => ({
           ...omit(x, ['links', 'overview']),
@@ -37,9 +50,9 @@ function addSymbol(script: string, data: any) {
         })) as Array<PageLink>)
       : []
     return (
-      <GlyphsPage
+      <CombinationsPage
         scriptSlug={script}
-        glyphType={state.name}
+        glyph={glyph}
         symbols={state.symbols()}
         links={links}
       />
@@ -47,18 +60,32 @@ function addSymbol(script: string, data: any) {
   })
 
   router.get(`/${script}/:code`, async (params: any) => {
-    const state =
-      data[
-        decodeURIComponent(params.code as string).replace(/\s+/g, '+')
-      ]
+    const something = decodeURIComponent(params.code as string).replace(
+      /\s+/g,
+      '+',
+    )
+
+    const code = something.match(/^U\+/) ? something : point(something)
+
+    const state = data[code]
+
+    if (!state) {
+      return
+    }
+
+    const glyph = String.fromCodePoint(parseInt(code.split('+')[1], 16))
+
     return (
-      <ScriptPage
+      <GlyphPage
         scriptSlug={script}
+        glyph={glyph}
         links={
-          Object.values(state.links as ArrayLike<any>).map(x => ({
-            ...omit(x, ['links', 'overview']),
-            symbols: x.overview ? x.overview() : x.symbols(),
-          })) as Array<PageLink>
+          state.links
+            ? (Object.values(state.links as ArrayLike<any>).map(x => ({
+                ...omit(x, ['links', 'overview']),
+                symbols: x.overview ? x.overview() : x.symbols(),
+              })) as Array<PageLink>)
+            : []
         }
       />
     )
