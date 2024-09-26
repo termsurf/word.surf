@@ -1,4 +1,5 @@
 import talk from '@termsurf/talk'
+import arabic from '@termsurf/text/arabic'
 import devanagari from '@termsurf/text/devanagari'
 import hebrew from '@termsurf/text/hebrew/talk/israeli'
 import tibetan from '@termsurf/text/tibetan'
@@ -441,6 +442,40 @@ export const sets = {
           text: `\u25cc${x.text}`,
           hint: talk(hebrew(x.text).replace(/"/g, 'Q')),
         })),
+    },
+  },
+  arabic: {
+    alphabet: {
+      name: 'Alphabet',
+      slug: 'alphabet',
+      symbols: () =>
+        split(
+          `ا ب ج د ه و ز ح ط ي ك ل م ن س ع ف ص ق ر ش ت ث خ ذ ض ظ غ`,
+        ).map(x => ({
+          ...x,
+          hint: talk(arabic(x.text).replace(/"/g, 'Q')),
+        })),
+      links: {
+        maghrebian: {
+          name: 'Maghrebian Abjadī Sequence',
+          slug: 'alphabet/maghrebian',
+          symbols: () =>
+            split(
+              `ا ب ج د ه و ز ح ط ي ك ل م ن ص ع ف ض ق ر س ت ث خ ذ ظ غ ش`,
+            ).map(x => ({
+              ...x,
+              hint: talk(arabic(x.text).replace(/"/g, 'Q')),
+            })),
+        },
+      },
+    },
+  },
+  greek: {
+    alphabet: {
+      name: 'Alphabet',
+      slug: 'alphabet',
+      symbols: () =>
+        split(`Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω`),
     },
   },
 }

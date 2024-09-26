@@ -193,7 +193,7 @@ function GlyphLink({
       >
         <T
           script={script}
-          className="block h-112 font-semibold text-h0 sm:text-h0-large leading-content transition-colors"
+          className="block h-96 font-semibold text-h0 sm:text-h0-large leading-content transition-colors"
         >
           {text}
         </T>
@@ -219,7 +219,7 @@ function GlyphLink({
     >
       <T
         script={script}
-        className="block h-112 font-semibold text-h0 leading-content transition-colors"
+        className="block h-96 font-semibold text-h0 leading-content transition-colors"
       >
         {text}
       </T>
