@@ -716,6 +716,18 @@ export const sets = {
         ),
     },
   },
+  kannada: {
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () => split(`ಅ ಇ ಉ ಋ ಎ ಐ ಒ ಔ ಆ ಈ ಊ ೠ ಏ ಓ`),
+    },
+    numbers: {
+      name: 'Numbers',
+      slug: 'numbers',
+      symbols: () => split(`೦ ೧ ೨ ೩ ೪ ೫ ೬ ೭ ೮ ೯`),
+    },
+  },
 }
 
 function split(
