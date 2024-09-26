@@ -338,6 +338,55 @@ export const sets = {
       symbols: () => CHINESE_TRADITIONAL,
     },
   },
+  telugu: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ ళ శ ష స హ ఱ`,
+        ),
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () => split(`అ ఇ ఉ ఋ ఌ ఎ ఐ ఒ ఔ ఆ ఈ ఊ ౠ ౡ ఏ ఓ`),
+      links: {
+        combining: {
+          name: 'Combining Vowels',
+          slug: 'vowels/combining',
+          symbols: () => split(`ా ి ీ ు ూ ృ ౄ ె ే ై ొ ో ౌ ౢ ౣ`),
+        },
+      },
+    },
+  },
+  tamil: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(`க ங ச ஞ ட ண த ந ப ம ய ர ல வ ழ ள ற ன ஜ ஶ ஷ ஸ ஹ`),
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () => split(`அ ஆ இ ஈ உ ஊ எ ஏ ஐ ஒ ஓ ஔ`),
+    },
+  },
+}
+
+function split(
+  text: string,
+  {
+    useTextAsSlug = true,
+    hint,
+  }: { hint?: string; useTextAsSlug?: boolean } = {},
+) {
+  return text.split(/\s+/).map(text => ({
+    text,
+    slug: useTextAsSlug ? text : point(text),
+    hint,
+  }))
 }
 
 function loadChineseRadicals() {

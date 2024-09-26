@@ -1216,7 +1216,7 @@ function ScriptLink({
       <div
         className={clsx(
           className,
-          'shadow-small1 flex flex-col bg-gray-100 text-left p-16 h-full leading-content rounded-sm w-full',
+          'overflow-hidden shadow-small1 flex flex-col bg-gray-100 text-left p-16 h-full leading-content rounded-sm w-full',
         )}
       >
         {symbol && (
@@ -1243,7 +1243,7 @@ function ScriptLink({
       href={`/scripts/${slug}`}
       className={clsx(
         className,
-        'text-center shadow-small1 hover:shadow-small2 flex flex-col bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 p-16 h-full leading-content rounded-sm [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600',
+        'overflow-hidden text-center shadow-small1 hover:shadow-small2 flex flex-col bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 p-16 h-full leading-content rounded-sm [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600',
       )}
     >
       {symbol && (

@@ -181,7 +181,7 @@ function GlyphLink({
       <div
         className={clsx(
           className,
-          'flex flex-col text-center pb-16 h-full leading-content rounded-sm w-full',
+          'flex flex-col overflow-hidden text-center pb-16 h-full leading-content rounded-sm w-full',
         )}
       >
         <T
@@ -207,7 +207,7 @@ function GlyphLink({
       href={slug}
       className={clsx(
         className,
-        'flex flex-col [&_span]:hover:text-violet-600 [&_span]:transition-colors transition-all duration-200 text-center pb-16 h-full leading-content rounded-sm w-full [&_i]:hover:text-violet-400',
+        'flex flex-col overflow-hidden [&_span]:hover:text-violet-600 [&_span]:transition-colors transition-all duration-200 text-center pb-16 h-full leading-content rounded-sm w-full [&_i]:hover:text-violet-400',
       )}
     >
       <T
