@@ -1216,7 +1216,7 @@ function ScriptLink({
       <div
         className={clsx(
           className,
-          'overflow-hidden shadow-small1 flex flex-col bg-gray-100 text-left p-16 h-full leading-content rounded-sm w-full',
+          'overflow-hidden shadow-small1 flex flex-col bg-gray-100 text-left p-16 h-full rounded-sm w-full',
         )}
       >
         {symbol && (
@@ -1225,13 +1225,13 @@ function ScriptLink({
             tag="i"
             className={clsx(
               weight && `font-${weight}`,
-              'block text-mega leading-content text-gray-800',
+              'block text-mega text-gray-800 h-156',
             )}
           >
             {symbol}
           </T>
         )}
-        <T className="block font-semibold lowercase text-h4 leading-content text-gray-500">
+        <T className="block font-semibold lowercase text-h4 text-gray-500">
           {name}
         </T>
       </div>
@@ -1243,7 +1243,7 @@ function ScriptLink({
       href={`/scripts/${slug}`}
       className={clsx(
         className,
-        'overflow-hidden text-center shadow-small1 hover:shadow-small2 flex flex-col bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 p-16 h-full leading-content rounded-sm [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600',
+        'overflow-hidden text-center shadow-small1 hover:shadow-small2 flex flex-col bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 p-16 h-full rounded-sm [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600',
       )}
     >
       {symbol && (
@@ -1252,13 +1252,13 @@ function ScriptLink({
           tag="i"
           className={clsx(
             weight && `font-${weight}`,
-            'block text-mega leading-content text-gray-800 transition-colors',
+            'block text-mega text-gray-800 transition-colors h-156',
           )}
         >
           {symbol}
         </T>
       )}
-      <T className="block font-semibold lowercase text-h4 leading-content text-gray-500 transition-colors">
+      <T className="block font-semibold lowercase text-h4 text-gray-500 transition-colors">
         {name}
       </T>
     </NextLink>
