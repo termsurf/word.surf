@@ -289,7 +289,7 @@ function Glyph({
 }) {
   if (!slug) {
     return (
-      <div className="mb-2 rounded-sm bg-gray-200 h-94 flex text-xl justify-center items-center p-4">
+      <div className="mb-2 rounded-sm bg-gray-200 h-94 flex text-h2 sm:text-h2-large justify-center items-center p-4">
         {' '}
       </div>
     )
@@ -308,7 +308,7 @@ function Glyph({
   return (
     <Link
       href={`/symbols/${slug}`}
-      className="overflow-hidden mb-2 rounded-sm bg-gray-50 h-94 flex text-h2 justify-center items-center p-4 hover:text-violet-600 transition-colors hover:bg-gray-100"
+      className="overflow-hidden mb-2 rounded-sm bg-gray-50 h-94 flex text-h2 sm:text-h2-large justify-center items-center p-4 hover:text-violet-600 transition-colors hover:bg-gray-100"
       title={code}
     >
       <Text
