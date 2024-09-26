@@ -122,6 +122,7 @@ function addSymbols(script: string, data: any) {
         scriptSlug={script}
         glyphType={data.name}
         wide={data.wide}
+        fontSize={data.fontSize}
         symbols={data.symbols()}
         links={links}
       />

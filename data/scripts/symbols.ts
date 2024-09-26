@@ -1,5 +1,6 @@
 import talk from '@termsurf/talk'
 import devanagari from '@termsurf/text/devanagari'
+import hebrew from '@termsurf/text/hebrew/talk/israeli'
 import tibetan from '@termsurf/text/tibetan'
 
 const TIBETAN_FRACTIONS = [
@@ -50,7 +51,7 @@ export const sets = {
       name: 'Letters',
       slug: 'letters',
       symbols: () =>
-        `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Æ Ɑ	Ꞵ	Ð	Ǝ	Ə	Ɛ	Ɣ	I	Ɩ	Ŋ	Œ	Ɔ	Ꞷ	Ʊ	ẞ	Ʃ	Þ	Ʋ	Ƿ	Ȝ	Ʒ	ʔ`
+        `A B C D E F G H I J K L M N O P Q R S T U V W X Y Z Æ Ɑ Ꞵ	Ð	Ǝ	Ə	Ɛ	Ɣ	I	Ɩ	Ŋ	Œ	Ɔ	Ꞷ	Ʊ	ẞ	Ʃ	Þ	Ʋ	Ƿ	Ȝ	Ʒ	ʔ`
           .split(/\s+/)
           .map(text => ({ text })),
       links: {
@@ -365,6 +366,21 @@ export const sets = {
         },
       },
     },
+    numbers: {
+      name: 'Numbers',
+      slug: 'numbers',
+      symbols: () =>
+        split(`౦ ౧ ౨ ౩ ౪ ౫ ౬ ౭ ౮ ౯`).map((x, i) => ({
+          ...x,
+          hint: String(i),
+        })),
+    },
+    fractions: {
+      name: 'Fractions',
+      slug: 'fractions',
+      // 0⁄4	1⁄4	2⁄4	3⁄4	0⁄16	1⁄16	2⁄16	3⁄16
+      symbols: () => split(`౸ ౹ ౺ ౻ ౦ ౼ ౽ ౾`),
+    },
   },
   tamil: {
     consonants: {
@@ -377,6 +393,54 @@ export const sets = {
       slug: 'vowels',
       wide: true,
       symbols: () => TAMIL_VOWELS,
+    },
+  },
+  hebrew: {
+    alphabet: {
+      name: 'Alphabet',
+      slug: 'alphabet',
+      symbols: () =>
+        split(`א ב ג ד ה ו ז ח ט י כ ל מ נ ס ע פ צ ק ר ש ת`).map(x => ({
+          ...x,
+          hint: talk(hebrew(x.text).replace(/"/g, 'Q')),
+        })),
+      links: {
+        'with-finals': {
+          name: 'Alphabet with Finals',
+          slug: 'alphabet/with-finals',
+          symbols: () =>
+            split(
+              `א ב ג ד ה ו ז ח ט י כ ך ל מ נ ס ע פ צ ק ר ש ת ם ן ף ץ`,
+            ).map(x => ({
+              ...x,
+              hint: talk(hebrew(x.text).replace(/"/g, 'Q')),
+            })),
+        },
+      },
+    },
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `\u05D0 \u05D1 \u05D1\u05BC \u05D2 \u05D3\u05F3 \u05D3 \u05D4 \u05D4\u05BC \u05D5\u05BC \u05D5\u05D5 \u05D5 \u05D6\u05F3 \u05D6 \u05D7\u05F3 \u05D7 \u05D8 \u05D9 \u05DA \u05DB \u05DA\u05BC \u05DB\u05BC \u05DC \u05DD \u05DE \u05DF \u05E0 \u05E1 \u05E2\u05F3 \u05E2 \u05E3 \u05E4 \u05E3\u05BC \u05E4\u05BC \u05E6\u05F3 \u05E5 \u05E6 \u05E7 \u05E8\u05F3 \u05E8 \u05E9\u05C1 \u05E9\u05C2 \u05E9 \u05EA\u05F3 \u05EA \u05D2\u05F3`,
+        ).map(x => ({
+          ...x,
+          hint: talk(hebrew(x.text).replace(/"/g, 'Q')),
+        })),
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () =>
+        split(
+          `\u05B0 \u05B1 \u05B2 \u05B3 \u05B4 \u05B5 \u05B6 \u05B7 \u05B8 \u05B9 \u05BA \u05BB \u05C7 \u05D5\u05B9 \u05D9\u05B4`,
+        ).map(x => ({
+          ...x,
+          slug: point(x.text),
+          text: `\u25cc${x.text}`,
+          hint: talk(hebrew(x.text).replace(/"/g, 'Q')),
+        })),
     },
   },
 }
