@@ -54,7 +54,7 @@ export default function GlyphsPage(props: PageInput) {
 type ContentInput = PageInput
 
 function Content(props: ContentInput) {
-  useScripts([props.scriptSlug])
+  useScripts([props.scriptSlug, 'latin'])
   useFonts(['Noto Sans Mono'])
 
   return (
@@ -193,7 +193,7 @@ function GlyphLink({
       >
         <T
           script={script}
-          className="block font-semibold text-h0 sm:text-h0-large leading-content transition-colors"
+          className="block h-112 font-semibold text-h0 sm:text-h0-large leading-content transition-colors"
         >
           {text}
         </T>
@@ -219,7 +219,7 @@ function GlyphLink({
     >
       <T
         script={script}
-        className="block font-semibold text-h0 leading-content transition-colors"
+        className="block h-112 font-semibold text-h0 leading-content transition-colors"
       >
         {text}
       </T>
