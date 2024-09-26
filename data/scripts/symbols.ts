@@ -13,6 +13,10 @@ const ROMAN_NUMERALS = [
   6, 50,
 ]
 
+const GEEZ_SYMBOLS = split(
+  `ሀ ሁ ሂ ሃ ሄ ህ ሆ ለ ሉ ሊ ላ ሌ ል ሎ ሏ ሐ ሑ ሒ ሓ ሔ ሕ ሖ ሗ መ ሙ ሚ ማ ሜ ም ሞ ሟ ፙ ሠ ሡ ሢ ሣ ሤ ሥ ሦ ሧ ረ ሩ ሪ ራ ሬ ር ሮ ሯ ፘ ሰ ሱ ሲ ሳ ሴ ስ ሶ ሷ ቀ ቁ ቂ ቃ ቄ ቅ ቆ ቋ በ ቡ ቢ ባ ቤ ብ ቦ ቧ ተ ቱ ቲ ታ ቴ ት ቶ ቷ ኀ ኁ ኂ ኃ ኄ ኅ ኆ ኋ ነ ኑ ኒ ና ኔ ን ኖ ኗ አ ኡ ኢ ኣ ኤ እ ኦ ኧ ከ ኩ ኪ ካ ኬ ክ ኮ ኳ ወ ዉ ዊ ዋ ዌ ው ዎ ዐ ዑ ዒ ዓ ዔ ዕ ዖ ዘ ዙ ዚ ዛ ዜ ዝ ዞ ዟ የ ዩ ዪ ያ ዬ ይ ዮ ደ ዱ ዲ ዳ ዴ ድ ዶ ዷ ገ ጉ ጊ ጋ ጌ ግ ጎ ጓ ጠ ጡ ጢ ጣ ጤ ጥ ጦ ጧ ጰ ጱ ጲ ጳ ጴ ጵ ጶ ጷ ጸ ጹ ጺ ጻ ጼ ጽ ጾ ጿ ፀ ፁ ፂ ፃ ፄ ፅ ፆ ፈ ፉ ፊ ፋ ፌ ፍ ፎ ፏ ፚ ፐ ፑ ፒ ፓ ፔ ፕ ፖ ፗ`,
+)
+
 const DEVANAGARI_VOWEL_DIACRITICS =
   `\u093A \u093B \u093E \u093F \u0940 \u0941 \u0942 \u0943 \u0944 \u0945 \u0946 \u0947 \u0948 \u0949 \u094A \u094B \u094C \u094E \u094F \u0955 \u0956 \u0962 \u0963`.split(
     /\s+/,
@@ -476,6 +480,20 @@ export const sets = {
       slug: 'alphabet',
       symbols: () =>
         split(`Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω`),
+    },
+  },
+  geez: {
+    abjad: {
+      name: 'Abjad',
+      slug: 'abjad',
+      symbols: () =>
+        split(`ሀ ለ ሐ መ ሠ ረ ሰ ቀ በ ተ ኀ ነ አ ከ ወ ዐ ዘ የ ደ ገ ጠ ጰ ጸ ፀ ፈ ፐ`),
+    },
+    symbols: {
+      name: 'Symbols',
+      slug: 'symbols',
+      overview: () => GEEZ_SYMBOLS.slice(0, 24),
+      symbols: () => GEEZ_SYMBOLS,
     },
   },
 }
