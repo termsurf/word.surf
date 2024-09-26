@@ -292,39 +292,38 @@ export const sets = {
         `鱼 鸟 牛 鹰 蟹 羊 鹅 象 鹿 蛤 壳 票 街 路 桥 镇 店 海 河 山 雨 雪 树 风`
           .split(/\s+/)
           .map(text => ({ text })),
-      links: {
-        radicals: {
-          name: 'Radicals',
-          slug: 'characters/radicals',
-          overview: () => CHINESE_RADICALS.slice(0, 24),
-          symbols: () => CHINESE_RADICALS,
-        },
-        symmetric: {
-          name: 'Symmetric Characters',
-          slug: 'characters/symmetric',
-          overview: () =>
-            `亘 亚 亜 亞 人 仐 仝 伞 全 共 关 其 具 典 兽 冒 凷 凸 凹 出 击 十 半`
-              .split(/\s+/)
-              .map(text => ({ text })),
-          symbols: () =>
-            `〇 一 三 丗 且 业 个 中 丰 串 二 亖 亘 亚 亜 亞 人 仐 仝 伞 全 共 关 其 具 典 兽 冒 凷 凸 凹 出 击 十 半 卋 单 叠 口 古 只 合 吉 吕 吴 呆 呈 品 啚 善 喆 喜 喦 單 喿 嘦 嘼 噐 噩 嚻 囂 囍 回 囯 固 圉 圚 土 圭 垩 基 堂 堇 墓 士 壶 壹 大 夫 央 奰 㝙 㝞 㝠 尘 㞢 㞷 山 㞤 岀 㞬 㞭 㞱 㞵 峀 㞿 峇 崮 㟦 㠑 工 干 平 幸 廿 支 斐 日 旦 早 旱 旲 旵 旹 旻 昊 昋 昌 昔 昚 昱 昷 显 晋 㫩 㫫 晝 曽 普 晶 暃 㫷 暈 㬥 曡 曲 曺 曹 曼 曾 替 木 未 末 本 杏 束 来 杳 果 某 查 柬 栗 棠 森 㮂 榃 㯥 㯱 㰆 王 甘 田 由 甲 申 甴 画 畐 畢 畣 異 㽞 畳 當 畺 畱 畾 㽬 疊 畠 皋 皐 皛 皨 皿 㿻 盅 益 盒 盖 盫 目 睪 瞐 瞢 䁷 矗 䅇 米 类 粜 粟 粪 罜 罝 罟 罣 罪 罬 置 罯 罾 罿 羀 羊 美 耒 舍 舎 艾 芈 芙 苗 苜 苦 苯 英 苴 苷 苹 苿 茁 茉 茭 荃 草 荣 莒 莔 莫 莱 菐 菲 萁 营 萺 蔓 蔷 蕈 蕾 蘁 覃 訔 詈 誊 諅 謇 謈 譶 譻 谷 豆 豊 豐 責 貴 買 賁 賚 賛 賞 賣 賫 贔 車 辜 里 量 金 鑫 雯 雷 霏 霖 非 革 韭 首 黄 堊 圖 菩 茵 奭 蓉 父 釜 因`
-              .split(/\s+/)
-              .sort()
-              .map(text => ({ text })),
-        },
-        simplified: {
-          name: 'Simplified Characters',
-          slug: 'characters/simplified',
-          overview: () => CHINESE_SIMPLIFIED.slice(0, 24),
-          symbols: () => CHINESE_SIMPLIFIED,
-        },
-        traditional: {
-          name: 'Traditional Characters',
-          slug: 'characters/traditional',
-          overview: () => CHINESE_TRADITIONAL.slice(0, 24),
-          symbols: () => CHINESE_TRADITIONAL,
-        },
-      },
+    },
+
+    radicals: {
+      name: 'Radicals',
+      slug: 'characters/radicals',
+      overview: () => CHINESE_RADICALS.slice(0, 24),
+      symbols: () => CHINESE_RADICALS,
+    },
+    symmetric: {
+      name: 'Symmetric Characters',
+      slug: 'characters/symmetric',
+      overview: () =>
+        `亘 亚 亜 亞 人 仐 仝 伞 全 共 关 其 具 典 兽 冒 凷 凸 凹 出 击 十 半`
+          .split(/\s+/)
+          .map(text => ({ text })),
+      symbols: () =>
+        `〇 一 三 丗 且 业 个 中 丰 串 二 亖 亘 亚 亜 亞 人 仐 仝 伞 全 共 关 其 具 典 兽 冒 凷 凸 凹 出 击 十 半 卋 单 叠 口 古 只 合 吉 吕 吴 呆 呈 品 啚 善 喆 喜 喦 單 喿 嘦 嘼 噐 噩 嚻 囂 囍 回 囯 固 圉 圚 土 圭 垩 基 堂 堇 墓 士 壶 壹 大 夫 央 奰 㝙 㝞 㝠 尘 㞢 㞷 山 㞤 岀 㞬 㞭 㞱 㞵 峀 㞿 峇 崮 㟦 㠑 工 干 平 幸 廿 支 斐 日 旦 早 旱 旲 旵 旹 旻 昊 昋 昌 昔 昚 昱 昷 显 晋 㫩 㫫 晝 曽 普 晶 暃 㫷 暈 㬥 曡 曲 曺 曹 曼 曾 替 木 未 末 本 杏 束 来 杳 果 某 查 柬 栗 棠 森 㮂 榃 㯥 㯱 㰆 王 甘 田 由 甲 申 甴 画 畐 畢 畣 異 㽞 畳 當 畺 畱 畾 㽬 疊 畠 皋 皐 皛 皨 皿 㿻 盅 益 盒 盖 盫 目 睪 瞐 瞢 䁷 矗 䅇 米 类 粜 粟 粪 罜 罝 罟 罣 罪 罬 置 罯 罾 罿 羀 羊 美 耒 舍 舎 艾 芈 芙 苗 苜 苦 苯 英 苴 苷 苹 苿 茁 茉 茭 荃 草 荣 莒 莔 莫 莱 菐 菲 萁 营 萺 蔓 蔷 蕈 蕾 蘁 覃 訔 詈 誊 諅 謇 謈 譶 譻 谷 豆 豊 豐 責 貴 買 賁 賚 賛 賞 賣 賫 贔 車 辜 里 量 金 鑫 雯 雷 霏 霖 非 革 韭 首 黄 堊 圖 菩 茵 奭 蓉 父 釜 因`
+          .split(/\s+/)
+          .sort()
+          .map(text => ({ text })),
+    },
+    simplified: {
+      name: 'Simplified Characters',
+      slug: 'characters/simplified',
+      overview: () => CHINESE_SIMPLIFIED.slice(0, 24),
+      symbols: () => CHINESE_SIMPLIFIED,
+    },
+    traditional: {
+      name: 'Traditional Characters',
+      slug: 'characters/traditional',
+      overview: () => CHINESE_TRADITIONAL.slice(0, 24),
+      symbols: () => CHINESE_TRADITIONAL,
     },
   },
 }
