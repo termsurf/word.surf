@@ -73,7 +73,8 @@ function Header({ scriptSlug, glyph }: HeaderInput) {
       <H1 className="flex flex-col !mb-32">
         <Text
           script={scriptSlug}
-          className="block mt-16 text-super-duper-mega !sm:text-super-duper-mega-large font-bold"
+          leading="base"
+          className="block text-super-duper-mega !sm:text-super-duper-mega-large font-bold"
         >
           {glyph}
         </Text>
