@@ -314,6 +314,7 @@ const config = {
         'transform-opacity': 'transform, opacity',
       },
       boxShadow: {
+        nav: `rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px`,
         small1: `rgba(0, 0, 0, 0.05) 0px 0px 0px 1px`,
         small2: `rgba(0, 0, 0, 0.05) 0px 0px 0px 2px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px`,
         normal: `rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px`,
