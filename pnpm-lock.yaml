@@ -180,8 +180,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@termsurf/leaf':
-        specifier: ^0.1.96
-        version: 0.1.96(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)
+        specifier: ^0.1.98
+        version: 0.1.98(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)
       '@termsurf/talk':
         specifier: ^3.1.0
         version: 3.1.0
@@ -3245,8 +3245,8 @@ packages:
   '@termsurf/kink@0.1.6':
     resolution: {integrity: sha512-E2GwKz+HL7A9klsPyzWtobO24ZUB0jOJQHnRl2tjs8OElF2NSM2+qq7N1NlJ2Ry0we0qU/i7N4NuzF4eaAQ8uA==}
 
-  '@termsurf/leaf@0.1.96':
-    resolution: {integrity: sha512-YYdrHZabUJhsFPPDzySl5tRJ8yM5rTTPiv8qElHi3EbmT1WOSLp+LElbPqQyoi6kjQIEiBsixZCG/6yzd+doXg==}
+  '@termsurf/leaf@0.1.98':
+    resolution: {integrity: sha512-mivj56uYMPkxJvyf53ecUR/ampgUH24iLt55k+FRhGos2yqZfxGtRl+5RBgfBu1uhZF+3NkrjpnKhq8KgTpSQw==}
 
   '@termsurf/love-code@0.1.10':
     resolution: {integrity: sha512-nwfUNiteKm33GceRUHre3wcOrn1roYFYpiJZ4tpt01fjFJsjbx6q54z5i2CA2RYB8OHzQcetWyopziVeojKxFQ==}
@@ -13765,7 +13765,7 @@ snapshots:
     dependencies:
       ts-custom-error: 3.3.1
 
-  '@termsurf/leaf@0.1.96(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)':
+  '@termsurf/leaf@0.1.98(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)':
     dependencies:
       '@codemirror/lang-cpp': 6.0.2
       '@codemirror/lang-css': 6.2.1(@codemirror/view@6.33.0)

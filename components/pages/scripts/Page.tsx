@@ -31,7 +31,7 @@ const SCRIPT_NAMES = [
   'gurmukhi',
   'thai',
   'telugu',
-  'myanmar',
+  'burmese',
   'katakana',
   'hiragana',
   'tifinagh',
@@ -308,7 +308,7 @@ const SCRIPTS = [
   },
   {
     slug: 'burmese',
-    script: 'myanmar',
+    script: 'burmese',
     name: 'Burmese',
     symbol: 'က',
   },
