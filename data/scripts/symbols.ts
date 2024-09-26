@@ -38,6 +38,12 @@ const CHINESE_TRADITIONAL =
     .split(/\s+/)
     .map(text => ({ text }))
 
+const TAMIL_CONSONANTS = split(
+  `க ங ச ஞ ட ண த ந ப ம ய ர ல வ ழ ள ற ன ஜ ஶ ஷ ஸ ஹ`,
+)
+
+const TAMIL_VOWELS = split(`அ ஆ இ ஈ உ ஊ எ ஏ ஐ ஒ ஓ ஔ`)
+
 export const sets = {
   latin: {
     letters: {
@@ -364,13 +370,12 @@ export const sets = {
     consonants: {
       name: 'Consonants',
       slug: 'consonants',
-      symbols: () =>
-        split(`க ங ச ஞ ட ண த ந ப ம ய ர ல வ ழ ள ற ன ஜ ஶ ஷ ஸ ஹ`),
+      symbols: () => TAMIL_CONSONANTS,
     },
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
-      symbols: () => split(`அ ஆ இ ஈ உ ஊ எ ஏ ஐ ஒ ஓ ஔ`),
+      symbols: () => TAMIL_VOWELS,
     },
   },
 }
@@ -401,7 +406,15 @@ function loadChineseRadicals() {
 
 export const symbols = {
   devanagari: {},
+  tamil: {},
 }
+
+TAMIL_VOWELS.forEach(({ text }) => {
+  symbols.tamil[point(text)] = {
+    name: text,
+    slug: point(text),
+  }
+})
 
 DEVANAGARI_VOWELS.forEach(text => {
   symbols.devanagari[point(text)] = {
@@ -425,6 +438,13 @@ DEVANAGARI_CONSONANTS.forEach(text => {
           })),
       },
     },
+  }
+})
+
+TAMIL_CONSONANTS.forEach(({ text, slug }) => {
+  symbols.tamil[point(text)] = {
+    name: text,
+    slug,
   }
 })
 
