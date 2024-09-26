@@ -313,9 +313,9 @@ const SCRIPTS = [
     symbol: 'က',
   },
   {
-    slug: 'hangul',
+    slug: 'korean',
     script: 'korean',
-    name: 'Hangul',
+    name: 'Korean',
     symbol: '라',
   },
   {
@@ -325,9 +325,9 @@ const SCRIPTS = [
     symbol: 'Ꭿ',
   },
   {
-    slug: 'inuktitut',
+    slug: 'canadian',
     script: 'canadian',
-    name: 'Inuktitut',
+    name: 'Canadian',
     symbol: 'ᐃ',
   },
   {

@@ -1,6 +1,7 @@
 import talk from '@termsurf/talk'
 import arabic from '@termsurf/text/arabic'
 import devanagari from '@termsurf/text/devanagari'
+import gurmukhi from '@termsurf/text/gurmukhi'
 import hebrew from '@termsurf/text/hebrew/talk/israeli'
 import tibetan from '@termsurf/text/tibetan'
 
@@ -16,6 +17,11 @@ const ROMAN_NUMERALS = [
 const GEEZ_SYMBOLS = split(
   `ሀ ሁ ሂ ሃ ሄ ህ ሆ ለ ሉ ሊ ላ ሌ ል ሎ ሏ ሐ ሑ ሒ ሓ ሔ ሕ ሖ ሗ መ ሙ ሚ ማ ሜ ም ሞ ሟ ፙ ሠ ሡ ሢ ሣ ሤ ሥ ሦ ሧ ረ ሩ ሪ ራ ሬ ር ሮ ሯ ፘ ሰ ሱ ሲ ሳ ሴ ስ ሶ ሷ ቀ ቁ ቂ ቃ ቄ ቅ ቆ ቋ በ ቡ ቢ ባ ቤ ብ ቦ ቧ ተ ቱ ቲ ታ ቴ ት ቶ ቷ ኀ ኁ ኂ ኃ ኄ ኅ ኆ ኋ ነ ኑ ኒ ና ኔ ን ኖ ኗ አ ኡ ኢ ኣ ኤ እ ኦ ኧ ከ ኩ ኪ ካ ኬ ክ ኮ ኳ ወ ዉ ዊ ዋ ዌ ው ዎ ዐ ዑ ዒ ዓ ዔ ዕ ዖ ዘ ዙ ዚ ዛ ዜ ዝ ዞ ዟ የ ዩ ዪ ያ ዬ ይ ዮ ደ ዱ ዲ ዳ ዴ ድ ዶ ዷ ገ ጉ ጊ ጋ ጌ ግ ጎ ጓ ጠ ጡ ጢ ጣ ጤ ጥ ጦ ጧ ጰ ጱ ጲ ጳ ጴ ጵ ጶ ጷ ጸ ጹ ጺ ጻ ጼ ጽ ጾ ጿ ፀ ፁ ፂ ፃ ፄ ፅ ፆ ፈ ፉ ፊ ፋ ፌ ፍ ፎ ፏ ፚ ፐ ፑ ፒ ፓ ፔ ፕ ፖ ፗ`,
 )
+
+const GEEZ_NUMBERS = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100,
+  10000,
+]
 
 const DEVANAGARI_VOWEL_DIACRITICS =
   `\u093A \u093B \u093E \u093F \u0940 \u0941 \u0942 \u0943 \u0944 \u0945 \u0946 \u0947 \u0948 \u0949 \u094A \u094B \u094C \u094E \u094F \u0955 \u0956 \u0962 \u0963`.split(
@@ -233,6 +239,17 @@ export const sets = {
         `༠	༡	༢	༣	༤	༥	༦	༧	༨	༩`
           .split(/\s+/)
           .map((text, i) => ({ text, hint: String(i) })),
+      links: {
+        ordinal: {
+          name: 'Ordinal Numbers',
+          slug: 'numbers/ordinal',
+          symbols: () =>
+            split(`༡ ༢ ༣ ༤ ༥ ༦ ༧ ༨ ༩`).map((x, i) => ({
+              ...x,
+              hint: String(i + 1),
+            })),
+        },
+      },
     },
     punctuation: {
       name: 'Punctuation',
@@ -362,6 +379,7 @@ export const sets = {
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
+      wide: true,
       symbols: () => split(`అ ఇ ఉ ఋ ఌ ఎ ఐ ఒ ఔ ఆ ఈ ఊ ౠ ౡ ఏ ఓ`),
       links: {
         combining: {
@@ -489,11 +507,213 @@ export const sets = {
       symbols: () =>
         split(`ሀ ለ ሐ መ ሠ ረ ሰ ቀ በ ተ ኀ ነ አ ከ ወ ዐ ዘ የ ደ ገ ጠ ጰ ጸ ፀ ፈ ፐ`),
     },
+    numbers: {
+      name: 'Numbers',
+      slug: 'numbers',
+      symbols: () =>
+        split(`፩ ፪ ፫ ፬ ፭ ፮ ፯ ፰ ፱ ፲ ፳ ፴ ፵ ፶ ፷ ፸ ፹ ፺ ፻ ፼`).map(
+          (x, i) => ({
+            ...x,
+            hint: GEEZ_NUMBERS[i].toLocaleString(),
+          }),
+        ),
+    },
+    punctuation: {
+      name: 'Punctuation',
+      slug: 'punctuation',
+      symbols: () => split(`፠ ፡ ። ፣ ፥ ፤ ፦ ፧ ፨`),
+    },
     symbols: {
       name: 'Symbols',
       slug: 'symbols',
       overview: () => GEEZ_SYMBOLS.slice(0, 24),
       symbols: () => GEEZ_SYMBOLS,
+    },
+  },
+  gurmukhi: {
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () =>
+        split(`ਅ ਆ ਇ ਈ ਉ ਊ ਏ ਐ ਓ ਔ`).map(x => ({
+          ...x,
+          hint: talk(gurmukhi(x.text)),
+        })),
+      links: {
+        combining: {
+          name: 'Combining Vowels',
+          slug: 'vowels/combining',
+          symbols: () =>
+            split(
+              `\u0A3e \u0A3f \u0A40 \u0A41 \u0A42 \u0A47 \u0A48 \u0A4b \u0A4c`,
+            ).map(x => ({ ...x, hint: talk(gurmukhi(x.text)) })),
+        },
+      },
+    },
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `ਕ ਖ ਖ਼ ਗ ਗ਼ ਘ ਙ ਚ ਛ ਜ ਜ਼ ਝ ਞ ਟ ਠ ਡ ਢ ਣ ਤ ਥ ਦ ਧ ਨ ਪ ਫ ਫ਼ ਬ ਭ ਮ ਯ ਰ ਲ ਲ਼ ਵ ਸ ਸ਼ ਹ ੜ ਜ਼ ਫ਼ ਖ਼ ਸ਼ ਗ਼`,
+        ).map(x => ({ ...x, hint: talk(gurmukhi(x.text)) })),
+    },
+    numbers: {
+      name: 'Numbers',
+      slug: 'numbers',
+      symbols: () =>
+        split(`੦ ੧ ੨ ੩ ੪ ੫ ੬ ੭ ੮ ੯ ਤ੍ਰੈ`).map((x, i) => ({
+          ...x,
+          hint: String(i === 10 ? 3 : i),
+        })),
+    },
+  },
+  thai: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `ก ข ฃ ค ฅ ฆ ง จ ฉ ช ซ ฌ ญ ฎ ฏ ฐ ฑ ฒ ณ ด ต ถ ท ธ น บ ป ผ ฝ พ ฟ ภ ม ย ร ล ว ศ ษ ส ห ฬ อ ฮ`,
+        ),
+    },
+  },
+  korean: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `ㄱ ㄲ ㄴ ㄷ ㄸ ㄹ ㅁ ㅂ ㅃ ㅅ ㅆ ㅇ ㅈ ㅉ ㅊ ㅋ ㅌ ㅍ ㅎ`,
+        ),
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () =>
+        split(
+          `ㅏ ㅐ ㅑ ㅒ ㅓ ㅔ ㅕ ㅖ ㅗ ㅘ ㅙ ㅚ ㅛ ㅜ ㅝ ㅞ ㅟ ㅠ ㅡ ㅢ ㅣ`,
+        ),
+    },
+  },
+  tifinagh: {
+    alphabet: {
+      name: 'Alphabet',
+      slug: 'alphabet',
+      symbols: () =>
+        split(
+          `ⴰ ⴱ ⴳ ⴳⵯ ⴷ ⴹ ⴻ ⴼ ⴽ ⴽⵯ ⵀ ⵃ ⵄ ⵅ ⵇ ⵉ ⵊ ⵍ ⵎ ⵏ ⵓ ⵔ ⵕ ⵖ ⵙ ⵚ ⵛ ⵜ ⵟ ⵡ ⵢ ⵣ ⵥ`,
+        ),
+    },
+    letters: {
+      name: 'Letters',
+      slug: 'letters',
+      symbols: () =>
+        split(
+          `ⴰ ⴱ ⴳ ⴳⵯ ⴷ ⴹ ⴻ ⴼ ⴽ ⴽⵯ ⵀ ⵃ ⵄ ⵅ ⵇ ⵉ ⵊ ⵍ ⵎ ⵏ ⵓ ⵔ ⵕ ⵖ ⵙ ⵚ ⵛ ⵜ ⵟ ⵡ ⵢ ⵣ ⵥ ⴲ ⴴ ⴺ ⴿ ⵒ ⵝ ⵠ ⴵ ⵁ ⵞ`,
+        ),
+      links: {
+        extended: {
+          name: 'Extended Letters',
+          slug: 'letters/extended',
+          symbols: () => split(`ⴲ ⴴ ⴺ ⴿ ⵒ ⵝ ⵠ ⴵ ⵁ ⵞ`),
+        },
+      },
+    },
+  },
+  syriac: {
+    alphabet: {
+      name: 'Alphabet',
+      slug: 'alphabet',
+      symbols: () =>
+        split(`ܐ ܒ ܓ ܕ ܗ ܘ ܙ ܚ ܛ ܝ ܟܟ ܠ ܡ ܢܢ ܣ ܥ ܦ ܨ ܩ ܪ ܫ ܬ`),
+    },
+  },
+  canadian: {
+    shapes: {
+      name: 'Shapes',
+      slug: 'shapes',
+      symbols: () => split(`ᐃ ᐱ ᑎ ᑭ ᒋ ᒥ ᓯ ᔨ ᕕ ᕆ`),
+    },
+    symbols: {
+      name: 'Symbols',
+      slug: 'symbols',
+      symbols: () =>
+        split(
+          `ᐁ ᐃ ᐅ ᐊ ᐯ ᐱ ᐲ ᐳ ᐴ ᐸ ᐹ ᑌ ᑎ ᑏ ᑐ ᑑ ᑕ ᑖ ᑫ ᑭ ᑮ ᑯ ᑰ ᑲ ᑳ ᒉ ᒋ ᒌ ᒍ ᒎ ᒐ ᒑ ᒣ ᒥ ᒦ ᒧ ᒨ ᒪ ᒫ ᓀ ᓂ ᓃ ᓄ ᓅ ᓇ ᓈ ᓭ ᓯ ᓰ ᓱ ᓲ ᓴ ᓵ ᓓ ᓕ ᓖ ᓗ ᓘ ᓚ ᓛ ᔦ ᔨ ᔩ ᔪ ᔫ ᔭ ᔮ ᕓ ᕕ ᕖ ᕗ ᕘ ᕙ ᕚ ᕃ ᕆ ᕇ ᕈ ᕉ ᕋ ᕌ ᙯ ᕿ ᖀ ᖁ ᖂ ᖃ ᖄ ᙰ ᖏ ᖐ ᖑ ᖒ ᖓ ᖔ ᑉ ᑦ ᒃ ᒡ ᒻ ᓐ ᔅ ᓪ ᔾ ᕝ ᕐ ᖅ ᖕ`,
+        ),
+    },
+  },
+  bengali: {
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () => split(`অ ই উ ঋ ঌ আ ঈ ঊ ৠ ৡ এ ও ঐ ঔ`),
+      links: {
+        combining: {
+          name: 'Combining Vowels',
+          slug: 'vowels/combining',
+          symbols: () => split(`া  ি ী  ু  ূ  ৃ  ৄ  ৢ  ৣ ে ৈ ো ৌ`),
+        },
+        simple: {
+          name: 'Simple Vowels',
+          slug: 'vowels/simple',
+          symbols: () => split(`অ ই উ ঋ ঌ আ ঈ ঊ ৠ ৡ`),
+        },
+        complex: {
+          name: 'Complex Vowels',
+          slug: 'vowels/complex',
+          symbols: () => split(`এ ও ঐ ঔ`),
+        },
+      },
+    },
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `ক খ গ ঘ ঙ হ চ ছ জ ঝ ঞ য শ ট ঠ ড ঢ ণ র ষ ত থ দ ধ ন ল স প ফ ব ভ ম ৱ ড় ঢ় য়`,
+        ),
+      links: {
+        basic: {
+          name: 'Basic Consonants',
+          slug: 'consonants/basic',
+          symbols: () =>
+            split(
+              `ক খ গ ঘ ঙ হ চ ছ জ ঝ ঞ য শ ট ঠ ড ঢ ণ র ষ ত থ দ ধ ন ল স প ফ ব ভ ম ৱ`,
+            ),
+        },
+        'post-reform': {
+          name: 'Post-Reform Consonants',
+          slug: 'consonants/post-reform',
+          symbols: () => split(`ড় ঢ় য়`),
+        },
+      },
+    },
+  },
+  burmese: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `က ခ ဂ ဃ င စ ဆ ဇ ဈ ဉ ည ဋ ဌ ဍ ဎ ဏ တ ထ ဒ ဓ န ပ ဖ ဗ ဘ မ ယ ရ လ ဝ သ ဟ ဠ အ`,
+        ),
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () => split(`ဣ ဤ ဥ ဦ ဧ ဩ ဪ`),
+    },
+  },
+  georgian: {
+    alphabet: {
+      name: 'Alphabet',
+      slug: 'alphabet',
+      symbols: () =>
+        split(
+          `ა ბ გ დ ე ვ ზ თ ი კ ლ მ ნ ო პ ჟ რ ს ტ უ ფ ქ ღ ყ შ ჩ ც ძ წ ჭ ხ ჯ ჰ`,
+        ),
     },
   },
 }
