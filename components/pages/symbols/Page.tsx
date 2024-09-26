@@ -2,7 +2,8 @@
 
 // import { Document, Index, Worker } from 'flexsearch'
 
-import List from '@lancejpollard/react-virtualized/dist/commonjs/List'
+import { VariableSizeList as List } from 'react-window'
+
 import clsx from 'clsx'
 import chunk from 'lodash/chunk'
 import { useResizeObserver } from 'usehooks-ts'
@@ -401,9 +402,10 @@ function VirtualizedGrid({
     breakpoints.join(':'),
   ])
 
-  const ListItem = ({ index, key, style }) => {
+  const ListItem = ({ index, style }) => {
     let iWidth = itemWidth
     const row = rows[index]
+    const key = index
 
     const totalGap = gap * (row.length - 1)
     const gapSegmentCount = row.length * 2 - 2
@@ -470,6 +472,8 @@ function VirtualizedGrid({
     )
   }
 
+  const getItemSize = index => rowHeight
+
   return (
     <>
       <div
@@ -479,15 +483,18 @@ function VirtualizedGrid({
         <List
           className="w-full"
           height={containerHeight}
-          // style={{ height: actualListHeight }}
-          overscanRowCount={4}
-          // noRowsRenderer={this._noRowsRenderer}
-          rowCount={rows.length}
-          rowHeight={rowHeight}
-          rowRenderer={ListItem}
+          itemCount={rows.length}
+          itemSize={getItemSize}
           // scrollToIndex={scrollToIndex}
           width={containerWidth}
-        />
+        >
+          {({ index, style }) => (
+            <ListItem
+              style={style}
+              index={index}
+            />
+          )}
+        </List>
       </div>
     </>
   )

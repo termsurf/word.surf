@@ -1,7 +1,8 @@
-import Grid from '@termsurf/leaf/component/Grid'
 import Text from '@termsurf/leaf/component/Text'
 import clsx from 'clsx'
 import Link from 'next/link'
+import { useMemo } from 'react'
+import HorizontalFlowGrid from './glyphs/HorizontalFlowGrid'
 
 export default function GlyphsLink({
   className,
@@ -11,7 +12,6 @@ export default function GlyphsLink({
   symbols,
   weight,
   font,
-  fontSize,
 }: {
   className?: string
   slug: string
@@ -22,41 +22,61 @@ export default function GlyphsLink({
   font?: string
   fontSize?: number
 }) {
+  const records = useMemo(
+    () =>
+      symbols.map(record => ({
+        ...record,
+        font,
+        script,
+        fontWeight: weight,
+      })),
+    [symbols, font, script, weight],
+  )
+
   return (
     <Link
       href={`/scripts/${slug}`}
       className={clsx(
         className,
-        'shadow-small1 hover:shadow-small2 flex flex-col bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-all duration-200 p-16 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600 min-w-0',
+        'shadow-small1 hover:shadow-small2 flex flex-col bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-colors duration-200 p-16 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600 min-w-0 gap-8',
       )}
     >
-      <Text className="block font-semibold lowercase text-h4 leading-content transition-colors mb-16">
+      <Text className="block font-semibold lowercase text-h6 sm:text-h4 leading-content transition-colors mb-16">
         {name}
       </Text>
 
-      <Grid
-        maxColumns={24}
-        maxRows={1}
-        minWidth={56}
-        maxWidth={56}
+      <HorizontalFlowGrid
         gap={16}
-        className="text-h3 text-gray-500 transition-colors font-bold"
-      >
-        {symbols.map((glyph, i) => (
-          <Text
-            key={`${glyph.text}-${i}`}
-            font={font}
-            size={fontSize}
-            script={script}
-            className={clsx(
-              'block !leading-1-2',
-              weight && `font-${weight}`,
-            )}
-          >
-            {glyph.text}
-          </Text>
-        ))}
-      </Grid>
+        className="text-h3 text-gray-500 transition-colors font-bold w-full"
+        records={records}
+        itemRenderer={Glyph}
+      />
     </Link>
+  )
+}
+
+function Glyph({
+  record,
+  index,
+}: {
+  record: {
+    text: string
+    script?: string
+    font?: string
+    fontWeight?: string
+  }
+  index: number
+}) {
+  return (
+    <Text
+      font={record.font}
+      script={record.script}
+      className={clsx(
+        'block !leading-1-2',
+        record.fontWeight && `font-${record.fontWeight}`,
+      )}
+    >
+      {record.text}
+    </Text>
   )
 }

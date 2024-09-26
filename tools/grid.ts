@@ -37,6 +37,25 @@ export function distributeGridLayout(
     return [length]
   }
 
+  if (maxColumns >= minColumns && length % maxColumns === 0) {
+    const result: Array<number> = []
+    while (length) {
+      result.push(maxColumns)
+      length -= maxColumns
+    }
+    return result
+  }
+
+  if (maxColumns > minColumns && length % (maxColumns - 1) === 0) {
+    const result: Array<number> = []
+    maxColumns--
+    while (length) {
+      result.push(maxColumns)
+      length -= maxColumns
+    }
+    return result
+  }
+
   const dec = 2 - (length % 2)
 
   maxColumns -= maxColumns % dec
@@ -49,7 +68,7 @@ export function distributeGridLayout(
   for (let width = maxColumns; width > 0; width -= dec) {
     const result = recur(dp, length - width, width)
     if (result) {
-      if (width < minColumns) {
+      if (width <= minColumns) {
         return
       }
       return [width, ...result]
