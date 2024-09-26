@@ -117,7 +117,7 @@ function Body({ symbols, links, fontSize, scriptSlug }: ContentInput) {
       >
         <Grid
           maxColumns={6}
-          minWidth={120}
+          minWidth={width < 500 ? 96 : 120}
           maxWidth={168}
           gap={width < 500 ? 8 : 16}
           rowGap={width < 500 ? 24 : 32}
