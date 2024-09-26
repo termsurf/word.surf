@@ -188,19 +188,19 @@ function GlyphLink({
       <div
         className={clsx(
           className,
-          'flex flex-col overflow-hidden text-center pb-16 h-full leading-content rounded-sm w-full',
+          'flex flex-col overflow-hidden text-center pb-16 h-full rounded-sm w-full',
         )}
       >
         <T
           script={script}
-          className="block h-96 font-semibold text-h0 sm:text-h0-large leading-content transition-colors"
+          className="block h-96 font-semibold text-h0 sm:text-h0-large transition-colors"
         >
           {text}
         </T>
         {hint && (
           <T
             script="latin"
-            className="block text-xl leading-content transition-colors text-gray-400"
+            className="block text-xl transition-colors text-gray-400"
           >
             {hint}
           </T>
@@ -214,19 +214,19 @@ function GlyphLink({
       href={slug}
       className={clsx(
         className,
-        'flex flex-col overflow-hidden [&_span]:hover:text-violet-600 [&_span]:transition-colors transition-all duration-200 text-center pb-16 h-full leading-content rounded-sm w-full [&_i]:hover:text-violet-400',
+        'flex flex-col overflow-hidden [&_span]:hover:text-violet-600 [&_span]:transition-colors transition-all duration-200 text-center pb-16 h-full rounded-sm w-full [&_i]:hover:text-violet-400',
       )}
     >
       <T
         script={script}
-        className="block h-96 font-semibold text-h0 leading-content transition-colors"
+        className="block h-96 font-semibold text-h0 transition-colors"
       >
         {text}
       </T>
       {hint && (
         <T
           script="latin"
-          className="block text-xl leading-content transition-colors text-gray-400"
+          className="block text-xl transition-colors text-gray-400"
         >
           {hint}
         </T>
