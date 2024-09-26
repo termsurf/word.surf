@@ -268,6 +268,7 @@ function Body() {
           breakpoints={[8, 4, 2]}
           records={filteredGlyphs}
           render={Glyph}
+          className="shadow-box h-192 sm:h-384 border-4 border-b-4 border-solid border-gray-100"
         />
       </div>
     </>
@@ -483,7 +484,7 @@ function VirtualizedGrid({
   return (
     <>
       <div
-        className="w-full shadow-box h-384 border-4 border-b-4 border-solid border-gray-100"
+        className={clsx(className, 'w-full')}
         ref={containerRef}
       >
         <List
