@@ -40,6 +40,7 @@ type PageInput = {
   links?: Array<PageLink>
   fontSize?: number
   glyphType: string
+  wide?: boolean
 }
 
 export default function GlyphsPage(props: PageInput) {
@@ -106,7 +107,13 @@ function Header({ scriptSlug, glyphType }: HeaderInput) {
 //   return result
 // }
 
-function Body({ symbols, links, fontSize, scriptSlug }: ContentInput) {
+function Body({
+  symbols,
+  links,
+  fontSize,
+  scriptSlug,
+  wide,
+}: ContentInput) {
   const ref = useRef(null)
   const { width = 0 } = useResizeObserver({ ref })
   return (
@@ -117,7 +124,7 @@ function Body({ symbols, links, fontSize, scriptSlug }: ContentInput) {
       >
         <Grid
           maxColumns={6}
-          minWidth={width < 500 ? 96 : 120}
+          minWidth={width < 500 ? (wide ? 128 : 96) : wide ? 160 : 120}
           maxWidth={168}
           gap={width < 500 ? 8 : 16}
           rowGap={width < 500 ? 24 : 32}

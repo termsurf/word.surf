@@ -121,6 +121,7 @@ function addSymbols(script: string, data: any) {
       <GlyphsPage
         scriptSlug={script}
         glyphType={data.name}
+        wide={data.wide}
         symbols={data.symbols()}
         links={links}
       />

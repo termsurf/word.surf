@@ -375,6 +375,7 @@ export const sets = {
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
+      wide: true,
       symbols: () => TAMIL_VOWELS,
     },
   },
