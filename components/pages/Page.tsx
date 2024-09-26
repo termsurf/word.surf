@@ -14,7 +14,7 @@ export default function Page() {
 
   return (
     <Environment settings={{ fonts: FONT, scripts: SCRIPT }}>
-      <H1 className="uppercase scale-y-80 !mb-0 tracking-wide-015">
+      <H1 className="mt-64 uppercase scale-y-80 !mb-0 tracking-wide-015">
         ChatSurf
       </H1>
       <P
