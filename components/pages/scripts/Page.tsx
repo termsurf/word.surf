@@ -27,7 +27,7 @@ const SCRIPT_NAMES = [
   'tamil',
   'greek',
   'cyrillic',
-  'ethiopic',
+  'geez',
   'gurmukhi',
   'thai',
   'telugu',
@@ -284,7 +284,7 @@ const SCRIPTS = [
   },
   {
     slug: 'geez',
-    script: 'ethiopic',
+    script: 'geez',
     name: 'Geez',
     symbol: 'ቀ',
   },
