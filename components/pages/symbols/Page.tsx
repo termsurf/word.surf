@@ -228,6 +228,9 @@ function Body() {
     return () => clearTimeout(timer)
   }, [])
 
+  const ref = useRef(null)
+  const { width = 0 } = useResizeObserver({ ref })
+
   // const index = new Index(options)
   // const document = new Document(options)
   // const worker = new Worker(options)
@@ -244,7 +247,10 @@ function Body() {
 
   return (
     <>
-      <div className="relative w-full pb-64 flex flex-col gap-16 p-16">
+      <div
+        ref={ref}
+        className="relative w-full pb-64 flex flex-col gap-16 p-16"
+      >
         <TextInput
           value={search}
           size="large"
@@ -255,7 +261,7 @@ function Body() {
           Ancient
         </H2> */}
         <VirtualizedGrid
-          minWidth={96}
+          minWidth={width < 500 ? 64 : 96}
           gap={2}
           rowHeight={96}
           maxColumns={8}
