@@ -47,7 +47,7 @@ function Header({ language }: ContentInput) {
   const { cached } = usePageSettings<any, Cached>()
 
   return (
-    <header>
+    <header className="mt-64">
       <H1 className="flex flex-col !mb-16">
         <NextLink
           href={languagePath({ language: language.slug })}

@@ -51,7 +51,7 @@ function Header({ scriptSlug }: ContentInput) {
   const { cached } = usePageSettings<any, Cached>()
 
   return (
-    <header>
+    <header className="mt-64">
       <H1 className="flex flex-col">
         <span className="block uppercase scale-y-80 tracking-wide-015 hover:text-violet-600 transition-colors">
           {scriptSlug.replace(/-/g, ' ')}

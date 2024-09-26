@@ -63,7 +63,7 @@ function Header({ language }: ContentInput) {
   const { cached } = usePageSettings<any, Cached>()
 
   return (
-    <header>
+    <header className="mt-64">
       <H1 className="flex flex-col !mb-16">
         <span className="block uppercase scale-y-[0.8] tracking-wide-015">
           {language.name}
