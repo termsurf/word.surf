@@ -1176,7 +1176,7 @@ function Body() {
         </H2> */}
         {filteredScripts.length ? (
           <Grid
-            minWidth={192}
+            minWidth={160}
             gap={16}
             maxColumns={4}
             align="center"
@@ -1225,13 +1225,13 @@ function ScriptLink({
             tag="i"
             className={clsx(
               weight && `font-${weight}`,
-              'block text-mega text-gray-800 h-156',
+              'block text-mega sm:text-mega-large text-gray-800 h-156',
             )}
           >
             {symbol}
           </T>
         )}
-        <T className="block font-semibold lowercase text-h4 text-gray-500">
+        <T className="block font-semibold lowercase text-base sm:text-base-large text-gray-500">
           {name}
         </T>
       </div>
@@ -1252,13 +1252,13 @@ function ScriptLink({
           tag="i"
           className={clsx(
             weight && `font-${weight}`,
-            'block text-mega text-gray-800 transition-colors h-156',
+            'block text-mega sm:text-mega-large text-gray-800 transition-colors h-156',
           )}
         >
           {symbol}
         </T>
       )}
-      <T className="block font-semibold lowercase text-h4 text-gray-500 transition-colors">
+      <T className="block font-semibold lowercase text-lg sm:text-lg-large text-gray-500 transition-colors">
         {name}
       </T>
     </NextLink>

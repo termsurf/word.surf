@@ -168,7 +168,7 @@ const config = {
       fontSize: {
         'super-duper-mega-large': ['160px', '1.2'],
         'super-mega-large': ['128px', '1.2'],
-        mega: ['96px', '1.2'],
+        'mega-large': ['108px', '1.2'],
         'h0-large': ['72px', '1.2'],
         'h1-large': ['56px', '1.2'],
         'h2-large': ['44px', '1.2'],
@@ -185,6 +185,7 @@ const config = {
 
         'super-duper-mega': ['140px', '1.2'],
         'super-mega': ['112px', '1.2'],
+        mega: ['96px', '1.2'],
         h0: ['64px', '1.2'],
         h1: ['44px', '1.2'],
         h2: ['32px', '1.2'],
