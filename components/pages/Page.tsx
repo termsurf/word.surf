@@ -35,7 +35,7 @@ export default function Page() {
       <Grid
         maxColumns={4}
         gap={16}
-        minWidth={192}
+        minWidth={160}
         className="p-16"
         breakpoints={[4, 2, 1]}
       >
