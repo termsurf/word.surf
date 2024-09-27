@@ -1,8 +1,11 @@
 import talk from '@termsurf/talk'
 import arabic from '@termsurf/text/arabic'
 import devanagari from '@termsurf/text/devanagari'
+import geez from '@termsurf/text/geez'
 import gurmukhi from '@termsurf/text/gurmukhi'
 import hebrew from '@termsurf/text/hebrew/talk/israeli'
+import kannada from '@termsurf/text/kannada'
+import oriya from '@termsurf/text/oriya'
 import tibetan from '@termsurf/text/tibetan'
 
 const TIBETAN_FRACTIONS = [
@@ -512,7 +515,9 @@ export const sets = {
       name: 'Abjad',
       slug: 'abjad',
       symbols: () =>
-        split(`ሀ ለ ሐ መ ሠ ረ ሰ ቀ በ ተ ኀ ነ አ ከ ወ ዐ ዘ የ ደ ገ ጠ ጰ ጸ ፀ ፈ ፐ`),
+        split(
+          `ሀ ለ ሐ መ ሠ ረ ሰ ቀ በ ተ ኀ ነ አ ከ ወ ዐ ዘ የ ደ ገ ጠ ጰ ጸ ፀ ፈ ፐ`,
+        ).map(x => ({ ...x, hint: talk(geez(x.text)) })),
     },
     numbers: {
       name: 'Numbers',
@@ -729,7 +734,11 @@ export const sets = {
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
-      symbols: () => split(`ಅ ಇ ಉ ಋ ಎ ಐ ಒ ಔ ಆ ಈ ಊ ೠ ಏ ಓ`),
+      symbols: () =>
+        split(`ಅ ಇ ಉ ಋ ಎ ಐ ಒ ಔ ಆ ಈ ಊ ೠ ಏ ಓ`).map(x => ({
+          ...x,
+          hint: talk(kannada(x.text)),
+        })),
     },
     numbers: {
       name: 'Numbers',
@@ -840,21 +849,33 @@ export const sets = {
       symbols: () =>
         split(
           `କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ ଟ ଠ ଡ ଢ ଣ ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ ଯ ୟ ର ଳ ଲ ୱ ଶ ଷ ସ ହ ଡ଼ ଢ଼ କ୍ଷ`,
-        ),
+        ).map(x => ({
+          ...x,
+          hint: talk(oriya(x.text)),
+        })),
     },
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
-      symbols: () => split(`ଅ ଇ ଉ ଋ ଌ ଆ ଈ ଊ ୠ ୡ ଏ ଓ ଐ ଔ`),
+      symbols: () =>
+        split(`ଅ ଇ ଉ ଋ ଌ ଆ ଈ ଊ ୠ ୡ ଏ ଓ ଐ ଔ`).map(x => ({
+          ...x,
+          hint: talk(oriya(x.text)),
+        })),
       links: {
         diacritics: {
           name: 'Vowel Diacritics',
           slug: 'vowels/diacritics',
           symbols: () =>
             split(
-              `\u0B3e \u0B3f \u0B40 \u0B41 \u0B42 \u0B43 \u0B44 \u0B47 \u0B48 \u0B4b \u0B4c \u0B62 \u0B63`,
+              `\u0B3e \u0B3f \u0B40 \u0B41 \u0B42 \u0B43 \u0B44 \u0B47 \u0B48 \u0B4b \u0B4c \u0B62 \u0B63`.trim(),
               { useTextAsSlug: false },
-            ),
+            ).map(x => {
+              return {
+                ...x,
+                hint: talk(oriya(`କ${x.text}`)).replace('k', ''),
+              }
+            }),
         },
       },
     },
