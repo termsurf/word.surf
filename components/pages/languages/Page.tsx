@@ -150,7 +150,7 @@ function Body({ languages }: ContentInput) {
             disabled
             name="Burmese"
             slug="burmese"
-            script="myanmar"
+            script="burmese"
             native="မြန်မာစာ"
           />
           <LanguageLink
