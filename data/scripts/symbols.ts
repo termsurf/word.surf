@@ -6,6 +6,7 @@ import gurmukhi from '@termsurf/text/gurmukhi'
 import hebrew from '@termsurf/text/hebrew/talk/israeli'
 import kannada from '@termsurf/text/kannada'
 import oriya from '@termsurf/text/oriya'
+import tamil from '@termsurf/text/tamil'
 import telugu from '@termsurf/text/telugu'
 import tibetan from '@termsurf/text/tibetan'
 
@@ -352,7 +353,8 @@ export const sets = {
       name: 'Radicals',
       slug: 'characters/radicals',
       overview: () => CHINESE_RADICALS.slice(0, 24),
-      symbols: () => CHINESE_RADICALS,
+      symbols: () =>
+        CHINESE_RADICALS.map((x, i) => ({ ...x, hint: String(i + 1) })),
     },
     symmetric: {
       name: 'Symmetric Characters',
@@ -433,13 +435,21 @@ export const sets = {
     consonants: {
       name: 'Consonants',
       slug: 'consonants',
-      symbols: () => TAMIL_CONSONANTS,
+      symbols: () =>
+        TAMIL_CONSONANTS.map(x => ({
+          ...x,
+          hint: talk(tamil(x.text)),
+        })),
     },
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
       wide: true,
-      symbols: () => TAMIL_VOWELS,
+      symbols: () =>
+        TAMIL_VOWELS.map(x => ({
+          ...x,
+          hint: talk(tamil(x.text)),
+        })),
     },
   },
   hebrew: {
