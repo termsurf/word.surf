@@ -138,8 +138,8 @@ function Body() {
           />
           <FontLink
             slug="geez"
-            name="Geez"
-            script="ethiopic"
+            name="Ge'ez"
+            script="geez"
             sample="ሀ ለ ሐ መ ሠ ረ ሰ ሸ"
           />
           <FontLink
@@ -163,7 +163,7 @@ function Body() {
           <FontLink
             slug="burmese"
             name="Burmese"
-            script="myanmar"
+            script="burmese"
             sample="က ခ ဂ ဃ င စ ဆ ဇ"
           />
           <FontLink
