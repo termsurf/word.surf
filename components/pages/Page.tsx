@@ -52,6 +52,10 @@ export default function Page() {
           path="/symbols"
         />
         <Link
+          title="Fonts"
+          path="/fonts"
+        />
+        <Link
           disabled
           title="Guides"
           path="/guides"
@@ -60,10 +64,6 @@ export default function Page() {
           disabled
           title="Keyboards"
           path="/keyboards"
-        />
-        <Link
-          title="Fonts"
-          path="/fonts"
         />
         <Link
           disabled
