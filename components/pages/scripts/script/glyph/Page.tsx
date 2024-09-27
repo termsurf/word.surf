@@ -68,6 +68,12 @@ function Header({ scriptSlug, glyph }: ContentInput) {
         >
           <Text script="latin">{scriptSlug.replace(/-/g, ' ')}</Text>
         </Link>
+        <Link
+          href={`/symbols/${glyph}`}
+          className="block font-semibold text-base sm:text-base-large text-gray-400 hover:text-violet-400 transition-colors mb-4"
+        >
+          <Text script="code">U+{glyph.codePointAt(0)}</Text>
+        </Link>
       </H1>
     </header>
   )

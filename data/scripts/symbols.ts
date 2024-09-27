@@ -9,6 +9,15 @@ const TIBETAN_FRACTIONS = [
   -0.5, 0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5,
 ]
 
+const HEBREW_ALPHABET = split(
+  `א ב ג ד ה ו ז ח ט י כ ל מ נ ס ע פ צ ק ר ש ת`,
+)
+
+const HEBREW_VOWELS = split(
+  `\u05B0 \u05B1 \u05B2 \u05B3 \u05B4 \u05B5 \u05B6 \u05B7 \u05B8 \u05B9 \u05BA \u05BB \u05C7 \u05D5\u05B9 \u05D9\u05B4`,
+  { useTextAsSlug: false },
+)
+
 const ROMAN_NUMERALS = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 50, 100, 500, 1000, 10000, 100,
   6, 50,
@@ -423,7 +432,7 @@ export const sets = {
       name: 'Alphabet',
       slug: 'alphabet',
       symbols: () =>
-        split(`א ב ג ד ה ו ז ח ט י כ ל מ נ ס ע פ צ ק ר ש ת`).map(x => ({
+        HEBREW_ALPHABET.map(x => ({
           ...x,
           hint: talk(hebrew(x.text).replace(/"/g, 'Q')),
         })),
@@ -456,9 +465,7 @@ export const sets = {
       name: 'Vowels',
       slug: 'vowels',
       symbols: () =>
-        split(
-          `\u05B0 \u05B1 \u05B2 \u05B3 \u05B4 \u05B5 \u05B6 \u05B7 \u05B8 \u05B9 \u05BA \u05BB \u05C7 \u05D5\u05B9 \u05D9\u05B4`,
-        ).map(x => ({
+        HEBREW_VOWELS.map(x => ({
           ...x,
           slug: point(x.text),
           text: `\u25cc${x.text}`,
@@ -562,9 +569,9 @@ export const sets = {
       name: 'Numbers',
       slug: 'numbers',
       symbols: () =>
-        split(`੦ ੧ ੨ ੩ ੪ ੫ ੬ ੭ ੮ ੯ ਤ੍ਰੈ`).map((x, i) => ({
+        split(`੦ ੧ ੨ ੩ ੪ ੫ ੬ ੭ ੮ ੯`).map((x, i) => ({
           ...x,
-          hint: String(i === 10 ? 3 : i),
+          hint: String(i),
         })),
     },
   },
@@ -799,6 +806,113 @@ export const sets = {
       symbols: () => split(`𓆈 𓆉 𓆊 𓆋 𓆌 𓆍 𓆎 𓆏 𓆐 𓆑 𓆒 𓆓 𓆔 𓆕 𓆖 𓆗 𓆘 𓆙 𓆚`),
     },
   },
+  malayalam: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ത ഥ ദ ധ ന പ ഫ ബ ഭ മ യ ര ല വ ശ ഷ സ ഹ ള ഴ റ ഩ ഺ ൿ ൾ ൽ ർ ൻ ൺ`,
+        ),
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      wide: true,
+      symbols: () => split(`അ ഇ ഉ ഋ ഌ എ ഒ ആ ഈ ഊ ൠ ൡ ഏ ഓ ഐ ഔ`),
+      links: {
+        diacritics: {
+          name: 'Vowel Diacritics',
+          slug: 'vowels/diacritics',
+          symbols: () =>
+            split(
+              `\u0D3e \u0D3f \u0D40 \u0D41 \u0D42 \u0D43 \u0D44 \u0D46 \u0D47 \u0D48 \u0D4a \u0D4b \u0D4c \u0D62 \u0D63`,
+              { useTextAsSlug: false },
+            ),
+        },
+      },
+    },
+  },
+  oriya: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ ଟ ଠ ଡ ଢ ଣ ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ ଯ ୟ ର ଳ ଲ ୱ ଶ ଷ ସ ହ ଡ଼ ଢ଼ କ୍ଷ`,
+        ),
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () => split(`ଅ ଇ ଉ ଋ ଌ ଆ ଈ ଊ ୠ ୡ ଏ ଓ ଐ ଔ`),
+      links: {
+        diacritics: {
+          name: 'Vowel Diacritics',
+          slug: 'vowels/diacritics',
+          symbols: () =>
+            split(
+              `\u0B3e \u0B3f \u0B40 \u0B41 \u0B42 \u0B43 \u0B44 \u0B47 \u0B48 \u0B4b \u0B4c \u0B62 \u0B63`,
+              { useTextAsSlug: false },
+            ),
+        },
+      },
+    },
+  },
+  sinhala: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `ක ඛ ග ඝ ඞ හ ච ඡ ජ ඣ ඤ ය ශ ඥ ට ඨ ඩ ඪ ණ ර ෂ ළ ත ථ ද ධ න ල ස ප ඵ බ භ ම ව ෆ`,
+        ),
+      links: {
+        prenasalized: {
+          name: 'Prenasalized Consonants',
+          slug: 'consonants/prenasalized',
+          symbols: () => split(`ඟ ඦ ඬ ඳ ඹ`),
+        },
+      },
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () => split(`අ ඇ ඉ උ එ ඔ ආ ඈ ඊ ඌ ඒ ඕ`),
+      links: {
+        diacritics: {
+          name: 'Vowel Diacritics',
+          slug: 'vowels/diacritics',
+          symbols: () => split(`ැ  ි  ු  ෙ  ො  ා  ෑ  ී  ූ  ේ  ෝ`),
+        },
+      },
+    },
+  },
+  khmer: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `ក ខ គ ឃ ង ច ឆ ជ ឈ ញ ដ ឋ ឌ ឍ ណ ត ថ ទ ធ ន ប ផ ព ភ ម យ រ ល វ ឝ ឞ ស ហ ឡ អ ហ្គ ហ្គ៊ ហ្ន ប៉ ហ្ម ហ្ល ហ្វ ហ្វ៊ ហ្ស ហ្ស៊`,
+        ),
+      links: {
+        subscripts: {
+          name: 'Subscript Consonants',
+          slug: 'consonants/subscripts',
+          symbols: () =>
+            split(
+              ` ្ក  ្ខ  ្គ  ្ឃ  ្ង  ្ច  ្ឆ  ្ជ  ្ឈ  ្ញ  ្ដ  ្ឋ  ្ឌ  ្ឍ  ្ណ  ្ត  ្ថ  ្ទ  ្ធ  ្ន  ្ប  ្ផ  ្ព  ្ភ  ្ម  ្យ  ្រ  ្ល  ្វ  ្ស`.trim(),
+            ),
+        },
+      },
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () => split(`ឥ ឦ ឧ ឩ ឪ ឫ ឬ ឭ ឮ ឯ ឰ ឱ ឲ ឳ`),
+    },
+  },
 }
 
 function split(
@@ -828,6 +942,7 @@ function loadChineseRadicals() {
 export const symbols = {
   devanagari: {},
   tamil: {},
+  hebrew: {},
 }
 
 TAMIL_VOWELS.forEach(({ text }) => {
@@ -881,6 +996,30 @@ DEVANAGARI_VOWEL_DIACRITICS.forEach(text => {
           DEVANAGARI_CONSONANTS.map(x => ({
             text: `${x}${text}`,
             hint: talk(devanagari(`${x}${text}`)),
+          })),
+      },
+    },
+  }
+})
+
+HEBREW_VOWELS.forEach(({ text, slug }) => {
+  symbols.hebrew[point(text)] = {
+    name: text,
+    slug,
+  }
+})
+
+HEBREW_ALPHABET.forEach(({ text, slug }) => {
+  symbols.hebrew[point(text)] = {
+    name: text,
+    slug,
+    links: {
+      vowels: {
+        name: 'Combining Vowels',
+        slug: `${text}/vowels`,
+        symbols: () =>
+          HEBREW_VOWELS.map(v => ({
+            text: `${text}${v.text}`,
           })),
       },
     },

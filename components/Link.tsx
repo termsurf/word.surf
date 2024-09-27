@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 
 import T from '@termsurf/leaf/component/Text'
 
-function Link({
+function GridLink({
   className,
   path,
   title,
@@ -55,4 +55,4 @@ function Link({
   )
 }
 
-export default Link
+export default GridLink

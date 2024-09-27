@@ -53,7 +53,7 @@ function Header({ scriptSlug }: ContentInput) {
   return (
     <header className="mt-64">
       <H1 className="flex flex-col">
-        <span className="block uppercase scale-y-80 tracking-wide-015 hover:text-violet-600 transition-colors">
+        <span className="block uppercase scale-y-80 tracking-wide-015">
           {scriptSlug.replace(/-/g, ' ')}
         </span>
         <Link
@@ -80,6 +80,51 @@ function Body({ links, scriptSlug }: ContentInput) {
             script={scriptSlug}
           />
         ))}
+        {/*
+        <Grid
+          maxColumns={4}
+          minWidth={160}
+          gap={16}
+          breakpoints={[4, 2, 1]}
+        >
+          <GridLink
+            title="features"
+            path={`/scripts/${scriptSlug}/features`}
+          />
+          <GridLink
+            title="symbols"
+            path={`/scripts/${scriptSlug}/symbols`}
+          />
+          <GridLink
+            disabled
+            title="styles"
+            path={`/scripts/${scriptSlug}/styles`}
+          />
+          <GridLink
+            disabled
+            title="fonts"
+            path={`/scripts/${scriptSlug}/fonts`}
+          />
+          <GridLink
+            disabled
+            title="comparisons"
+            path={`/scripts/${scriptSlug}/comparisons`}
+          />
+          <GridLink
+            disabled
+            title="languages"
+            path={`/scripts/${scriptSlug}/languages`}
+          />
+          <GridLink
+            disabled
+            title="keyboards"
+            path={`/scripts/${scriptSlug}/keyboards`}
+          />
+          <GridLink
+            title="resources"
+            path={`/scripts/${scriptSlug}/resources`}
+          />
+        </Grid> */}
       </div>
     </>
   )
