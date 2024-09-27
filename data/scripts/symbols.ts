@@ -6,6 +6,7 @@ import gurmukhi from '@termsurf/text/gurmukhi'
 import hebrew from '@termsurf/text/hebrew/talk/israeli'
 import kannada from '@termsurf/text/kannada'
 import oriya from '@termsurf/text/oriya'
+import telugu from '@termsurf/text/telugu'
 import tibetan from '@termsurf/text/tibetan'
 
 const TIBETAN_FRACTIONS = [
@@ -386,18 +387,29 @@ export const sets = {
       symbols: () =>
         split(
           `క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ ళ శ ష స హ ఱ`,
-        ),
+        ).map(x => ({
+          ...x,
+          hint: talk(telugu(x.text)),
+        })),
     },
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
       wide: true,
-      symbols: () => split(`అ ఇ ఉ ఋ ఌ ఎ ఐ ఒ ఔ ఆ ఈ ఊ ౠ ౡ ఏ ఓ`),
+      symbols: () =>
+        split(`అ ఇ ఉ ఋ ఌ ఎ ఐ ఒ ఔ ఆ ఈ ఊ ౠ ౡ ఏ ఓ`).map(x => ({
+          ...x,
+          hint: talk(telugu(x.text)),
+        })),
       links: {
         combining: {
           name: 'Combining Vowels',
           slug: 'vowels/combining',
-          symbols: () => split(`ా ి ీ ు ూ ృ ౄ ె ే ై ొ ో ౌ ౢ ౣ`),
+          symbols: () =>
+            split(`ా ి ీ ు ూ ృ ౄ ె ే ై ొ ో ౌ ౢ ౣ`).map(x => ({
+              ...x,
+              hint: talk(telugu(`క${x.text}`)).replace('k', ''),
+            })),
         },
       },
     },
