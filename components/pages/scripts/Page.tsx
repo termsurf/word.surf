@@ -244,7 +244,7 @@ const SCRIPTS = [
     slug: 'arabic',
     script: 'arabic',
     name: 'Arabic',
-    symbol: 'ج',
+    symbol: 'ح',
   },
   {
     slug: 'devanagari',
@@ -286,7 +286,7 @@ const SCRIPTS = [
     slug: 'geez',
     script: 'geez',
     name: 'Geez',
-    symbol: 'ቀ',
+    symbol: 'ሐ',
   },
   {
     slug: 'gurmukhi',
