@@ -695,6 +695,7 @@ export const sets = {
     consonants: {
       name: 'Consonants',
       slug: 'consonants',
+      wide: true,
       symbols: () =>
         split(
           `က ခ ဂ ဃ င စ ဆ ဇ ဈ ဉ ည ဋ ဌ ဍ ဎ ဏ တ ထ ဒ ဓ န ပ ဖ ဗ ဘ မ ယ ရ လ ဝ သ ဟ ဠ အ`,
@@ -703,6 +704,7 @@ export const sets = {
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
+      wide: true,
       symbols: () => split(`ဣ ဤ ဥ ဦ ဧ ဩ ဪ`),
     },
   },

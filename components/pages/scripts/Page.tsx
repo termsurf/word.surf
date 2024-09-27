@@ -292,7 +292,7 @@ const SCRIPTS = [
     slug: 'gurmukhi',
     script: 'gurmukhi',
     name: 'Gurmukhi',
-    symbol: 'ੴ',
+    symbol: 'ਓ',
   },
   {
     slug: 'thai',

@@ -37,6 +37,10 @@ export function distributeGridLayout(
     return [length]
   }
 
+  if (maxColumns >= 3 && length === 7) {
+    return [3, 3, 1]
+  }
+
   if (maxColumns >= minColumns && length % maxColumns === 0) {
     const result: Array<number> = []
     while (length) {
