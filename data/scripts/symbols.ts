@@ -792,6 +792,16 @@ export const sets = {
       symbols: () => split(`ဣ ဤ ဥ ဦ ဧ ဩ ဪ`),
     },
   },
+  cyrillic: {
+    letters: {
+      name: 'Letters',
+      slug: 'letters',
+      symbols: () =>
+        split(
+          `А Б В Г Д Є Ж Ꙃ Ꙁ И І К Л М Н О П Р С Т Ꙋ ОУ Ф Х Ѡ Ц Ч Ш Щ Ъ ЪІ Ь Ѣ Ҍ Ꙗ Ѥ Ю Ѫ Ѭ Ѧ Ѩ Ѯ Ѱ Ѳ Ѵ Ҁ`,
+        ),
+    },
+  },
   georgian: {
     alphabet: {
       name: 'Alphabet',
