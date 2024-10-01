@@ -1,8 +1,8 @@
+import FlowGrid from '@termsurf/leaf/component/FlowGrid'
 import Text from '@termsurf/leaf/component/Text'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useMemo } from 'react'
-import HorizontalFlowGrid from './glyphs/HorizontalFlowGrid'
 
 export default function GlyphsLink({
   className,
@@ -45,11 +45,12 @@ export default function GlyphsLink({
         {name}
       </Text>
 
-      <HorizontalFlowGrid
+      <FlowGrid
         gap={16}
         className="text-h3 sm:text-h3-large text-gray-500 transition-colors font-bold w-full"
         records={records}
         itemRenderer={Glyph}
+        more={{ text: '…' }}
       />
     </Link>
   )

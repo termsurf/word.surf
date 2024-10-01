@@ -5,10 +5,17 @@ import geez from '@termsurf/text/geez'
 import gurmukhi from '@termsurf/text/gurmukhi'
 import hebrew from '@termsurf/text/hebrew/talk/israeli'
 import kannada from '@termsurf/text/kannada'
+import malayalam from '@termsurf/text/malayalam'
 import oriya from '@termsurf/text/oriya'
 import tamil from '@termsurf/text/tamil'
 import telugu from '@termsurf/text/telugu'
 import tibetan from '@termsurf/text/tibetan'
+
+const TELUGU_CONSONANTS = split(
+  `క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ ళ శ ష స హ ఴ ఱ ౚ ౘ ౙ`,
+)
+
+const TELUGU_VOWEL_DIACRITICS = split(`ా ి ీ ు ూ ృ ౄ ె ే ై ొ ో ౌ ౢ ౣ`)
 
 const TIBETAN_FRACTIONS = [
   -0.5, 0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5,
@@ -387,12 +394,24 @@ export const sets = {
       name: 'Consonants',
       slug: 'consonants',
       symbols: () =>
-        split(
-          `క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ ళ శ ష స హ ఱ`,
-        ).map(x => ({
+        TELUGU_CONSONANTS.map(x => ({
           ...x,
           hint: talk(telugu(x.text)),
         })),
+      links: {
+        diacritics: {
+          name: 'Consonant Diacritics',
+          slug: 'consonants/diacritics',
+          symbols: () =>
+            split(
+              ` ్క  ్ఖ  ్గ  ్ఘ  ్ఙ  ్చ  ్ఛ  ్జ  ్ఝ  ్ఞ  ్ట  ్ఠ  ్డ  ్ఢ  ్ణ  ్త  ్థ  ్ద  ్ధ  ్న  ్ప  ్ఫ  ్బ  ్భ  ్మ  ్య  ్ర  ్ల  ్వ  ్ళ  ్శ  ్ష  ్స  ్హ`.trim(),
+            ).map(x => ({
+              ...x,
+              slug: undefined,
+              hint: talk(telugu(`క${x.text}`)).replace(/^ka/, ''),
+            })),
+        },
+      },
     },
     vowels: {
       name: 'Vowels',
@@ -404,11 +423,11 @@ export const sets = {
           hint: talk(telugu(x.text)),
         })),
       links: {
-        combining: {
-          name: 'Combining Vowels',
-          slug: 'vowels/combining',
+        diacritics: {
+          name: 'Vowel Diacritics',
+          slug: 'vowels/diacritics',
           symbols: () =>
-            split(`ా ి ీ ు ూ ృ ౄ ె ే ై ొ ో ౌ ౢ ౣ`).map(x => ({
+            TELUGU_VOWEL_DIACRITICS.map(x => ({
               ...x,
               hint: talk(telugu(`క${x.text}`)).replace('k', ''),
             })),
@@ -844,22 +863,33 @@ export const sets = {
       symbols: () =>
         split(
           `ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ത ഥ ദ ധ ന പ ഫ ബ ഭ മ യ ര ല വ ശ ഷ സ ഹ ള ഴ റ ഩ ഺ ൿ ൾ ൽ ർ ൻ ൺ`,
-        ),
+        ).map(x => ({
+          ...x,
+          hint: talk(malayalam(x.text)),
+        })),
     },
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
       wide: true,
-      symbols: () => split(`അ ഇ ഉ ഋ ഌ എ ഒ ആ ഈ ഊ ൠ ൡ ഏ ഓ ഐ ഔ`),
+      symbols: () =>
+        split(`അ ഇ ഉ ഋ ഌ എ ഒ ആ ഈ ഊ ൠ ൡ ഏ ഓ ഐ ഔ`).map(x => ({
+          ...x,
+          hint: talk(malayalam(x.text)),
+        })),
       links: {
         diacritics: {
           name: 'Vowel Diacritics',
           slug: 'vowels/diacritics',
+          wide: true,
           symbols: () =>
             split(
               `\u0D3e \u0D3f \u0D40 \u0D41 \u0D42 \u0D43 \u0D44 \u0D46 \u0D47 \u0D48 \u0D4a \u0D4b \u0D4c \u0D62 \u0D63`,
               { useTextAsSlug: false },
-            ),
+            ).map(x => ({
+              ...x,
+              hint: talk(malayalam(`ക${x.text}`)).replace(/k/, ''),
+            })),
         },
       },
     },
@@ -986,6 +1016,7 @@ export const symbols = {
   devanagari: {},
   tamil: {},
   hebrew: {},
+  telugu: {},
 }
 
 TAMIL_VOWELS.forEach(({ text }) => {
@@ -999,6 +1030,24 @@ DEVANAGARI_VOWELS.forEach(text => {
   symbols.devanagari[point(text)] = {
     name: text,
     slug: point(text),
+  }
+})
+
+TELUGU_CONSONANTS.forEach(({ text }) => {
+  symbols.telugu[point(text)] = {
+    name: text,
+    slug: point(text),
+    links: {
+      combinations: {
+        name: `Combinations`,
+        slug: `${point(text)}/combinations`,
+        symbols: () =>
+          TELUGU_VOWEL_DIACRITICS.map(x => ({
+            text: `${text}${x.text}`,
+            hint: talk(telugu(`${text}${x.text}`)),
+          })),
+      },
+    },
   }
 })
 

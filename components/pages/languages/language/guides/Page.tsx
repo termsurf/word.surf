@@ -141,8 +141,6 @@ function Header({ language, title, description }: HeaderInput) {
   )
 }
 
-const TERMS = [{}]
-
 function Body({
   pages,
   related,
