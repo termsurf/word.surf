@@ -173,8 +173,7 @@ export default function FlowGrid<T>({
       className={clsx(
         className,
         !isMeasured && 'opacity-0',
-        'relative',
-        'overflow-hidden',
+        'relative w-full',
       )}
     >
       <div className="whitespace-nowrap overflow-hidden opacity-0 absolute">
@@ -202,7 +201,7 @@ export default function FlowGrid<T>({
           </FlowGridItem>
         ))}
       </div>
-      <div className="whitespace-nowrap overflow-hidden">
+      <div className="whitespace-nowrap">
         {visibleItems.map((item, index) => (
           <FlowGridItem
             key={index}
