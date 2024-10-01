@@ -21,8 +21,7 @@ export default function Page() {
         align="center"
         type="secondary"
       >
-        A Collection of Language Tools
-        <wbr /> for Everyday Use
+        Language Tools for Everyday Use
         <span className="text-center block pt-8">
           <Tag
             color="blue"
