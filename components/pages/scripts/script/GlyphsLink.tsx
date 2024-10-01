@@ -1,8 +1,8 @@
-import FlowGrid from '@termsurf/leaf/component/FlowGrid'
 import Text from '@termsurf/leaf/component/Text'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useMemo } from 'react'
+import FlowGrid from './FlowGrid'
 
 export default function GlyphsLink({
   className,
@@ -38,20 +38,22 @@ export default function GlyphsLink({
       href={`/scripts/${slug}`}
       className={clsx(
         className,
-        'shadow-small1 hover:shadow-small2 flex flex-col bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-colors duration-200 p-16 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600 min-w-0 gap-8',
+        'overflow-hidden shadow-small1 hover:shadow-small2 bg-gray-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-colors duration-200 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600 min-w-0',
       )}
     >
-      <Text className="block font-semibold lowercase text-h6 sm:text-h4 leading-content transition-colors mb-16">
-        {name}
-      </Text>
+      <div className="w-full h-full p-16 flex flex-col gap-8">
+        <Text className="block font-semibold lowercase text-h6 sm:text-h4 leading-content transition-colors mb-16">
+          {name}
+        </Text>
 
-      <FlowGrid
-        gap={16}
-        className="pb-8 text-h3 sm:text-h3-large text-gray-500 transition-colors font-bold w-full leading-content overflow-hidden"
-        records={records}
-        itemRenderer={Glyph}
-        more={{ text: '...', script: 'latin' }}
-      />
+        <FlowGrid
+          gap={16}
+          className="text-h3 sm:text-h3-large text-gray-500 transition-colors font-bold w-full leading-content"
+          records={records}
+          itemRenderer={Glyph}
+          more={{ text: '...', script: 'latin' }}
+        />
+      </div>
     </Link>
   )
 }
