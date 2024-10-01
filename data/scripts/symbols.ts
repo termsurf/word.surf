@@ -2,6 +2,7 @@ import talk from '@termsurf/talk'
 import arabic from '@termsurf/text/arabic'
 import devanagari from '@termsurf/text/devanagari'
 import geez from '@termsurf/text/geez'
+import georgian from '@termsurf/text/georgian'
 import gurmukhi from '@termsurf/text/gurmukhi'
 import hebrew from '@termsurf/text/hebrew/talk/israeli'
 import kannada from '@termsurf/text/kannada'
@@ -10,6 +11,7 @@ import oriya from '@termsurf/text/oriya'
 import tamil from '@termsurf/text/tamil'
 import telugu from '@termsurf/text/telugu'
 import tibetan from '@termsurf/text/tibetan'
+import tifinagh from '@termsurf/text/tifinagh'
 
 const TELUGU_CONSONANTS = split(
   `క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ ళ శ ష స హ ఴ ఱ ౚ ౘ ౙ`,
@@ -682,7 +684,10 @@ export const sets = {
       symbols: () =>
         split(
           `ⴰ ⴱ ⴳ ⴳⵯ ⴷ ⴹ ⴻ ⴼ ⴽ ⴽⵯ ⵀ ⵃ ⵄ ⵅ ⵇ ⵉ ⵊ ⵍ ⵎ ⵏ ⵓ ⵔ ⵕ ⵖ ⵙ ⵚ ⵛ ⵜ ⵟ ⵡ ⵢ ⵣ ⵥ`,
-        ),
+        ).map(x => ({
+          ...x,
+          hint: talk(tifinagh(x.text)),
+        })),
     },
     letters: {
       name: 'Letters',
@@ -794,7 +799,10 @@ export const sets = {
       symbols: () =>
         split(
           `ა ბ გ დ ე ვ ზ თ ი კ ლ მ ნ ო პ ჟ რ ს ტ უ ფ ქ ღ ყ შ ჩ ც ძ წ ჭ ხ ჯ ჰ`,
-        ),
+        ).map(x => ({
+          ...x,
+          hint: talk(georgian(x.text)),
+        })),
     },
   },
   kannada: {

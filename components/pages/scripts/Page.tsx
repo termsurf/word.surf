@@ -277,10 +277,10 @@ const SCRIPTS = [
     symbol: 'Π',
   },
   {
-    slug: 'cyrillic',
-    script: 'cyrillic',
-    name: 'Cyrillic',
-    symbol: 'ж',
+    slug: 'telugu',
+    script: 'telugu',
+    name: 'Telugu',
+    symbol: 'జ',
   },
   {
     slug: 'geez',
@@ -301,10 +301,10 @@ const SCRIPTS = [
     symbol: 'ก',
   },
   {
-    slug: 'telugu',
-    script: 'telugu',
-    name: 'Telugu',
-    symbol: 'జ',
+    slug: 'cyrillic',
+    script: 'cyrillic',
+    name: 'Cyrillic',
+    symbol: 'ж',
   },
   {
     slug: 'burmese',
