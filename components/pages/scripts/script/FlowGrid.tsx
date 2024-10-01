@@ -9,20 +9,7 @@ import React, {
 } from 'react'
 import { useResizeObserver } from 'usehooks-ts'
 
-const canvas =
-  typeof document !== 'undefined'
-    ? document.createElement('canvas')
-    : undefined
-
 type ItemElement<T> = { style?: CSSProperties; record: T }
-
-function measureGlyph(element, text) {
-  const context = canvas!.getContext('2d')!
-  context.font = window.getComputedStyle(element).font
-
-  const metrics = context.measureText(text)
-  return metrics.width
-}
 
 function FlowGridItem({
   children,
@@ -186,7 +173,7 @@ export default function FlowGrid<T>({
     }
 
     return items
-  }, [containerWidth, records, isMeasured, itemWidths, gap])
+  }, [containerWidth, records, more, isMeasured, itemWidths, gap])
 
   return (
     <div
