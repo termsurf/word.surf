@@ -1,8 +1,8 @@
-import FlowGrid from '@termsurf/leaf/component/FlowGrid'
 import Text from '@termsurf/leaf/component/Text'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { useMemo } from 'react'
+import FlowGrid from './FlowGrid'
 
 export default function GlyphsLink({
   className,
