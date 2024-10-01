@@ -6,6 +6,7 @@ import Toast from '@termsurf/leaf/component/Toast'
 import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
+import useScripts from '@termsurf/leaf/hook/useScripts'
 
 import Link from 'next/link'
 import { Cached } from './config'
@@ -36,6 +37,7 @@ export default function ScriptPage(props: PageInput) {
 type ContentInput = PageInput
 
 function Content(props: ContentInput) {
+  useScripts([props.scriptSlug])
   useFonts(['Tone Etch'])
 
   return (
