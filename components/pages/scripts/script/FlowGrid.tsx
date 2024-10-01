@@ -20,7 +20,7 @@ function FlowGridItem({
   children: React.ReactNode
   style?: CSSProperties
   index: number
-  onResize: (width: number, index: number) => void
+  onResize?: (width: number, index: number) => void
 }) {
   const ref = useRef<HTMLDivElement>(null)
   const { width = 0 } = useResizeObserver({
@@ -29,12 +29,7 @@ function FlowGridItem({
 
   useLayoutEffect(() => {
     if (width) {
-      // console.log(
-      //   index,
-      //   measureGlyph(ref.current, ref.current.textContent),
-      // )
-      // console.log(index, width)
-      onResize(width, index)
+      onResize?.(width, index)
     }
   }, [onResize, width, index])
 
@@ -72,6 +67,7 @@ export default function FlowGrid<T>({
   const [itemWidths, setItemWidths] = useState<Record<number, number>>(
     {},
   )
+  // const widthsRef = useRef<Array<number>>([])
   const { width: containerWidth } = useResizeObserver({
     ref: containerRef,
   })
@@ -111,11 +107,10 @@ export default function FlowGrid<T>({
 
     let totalWidth = 0
 
-    const moreWidth = more && itemWidths[records.length - 1]
-    const subRecords = more ? records.slice(0, records.length) : records
+    const moreWidth = more && itemWidths[-1]
 
     let i = 0
-    for (const record of subRecords) {
+    for (const record of records) {
       const width = itemWidths[i]
 
       if (i === 0) {
@@ -123,7 +118,7 @@ export default function FlowGrid<T>({
           break
         } else {
           items.push({
-            style: { minWidth: width },
+            style: {},
             record,
           })
           totalWidth += width
@@ -138,7 +133,7 @@ export default function FlowGrid<T>({
             }
 
             items.push({
-              style: { minWidth: moreWidth, marginLeft: gap },
+              style: { marginLeft: gap },
               record: more,
             })
 
@@ -147,7 +142,7 @@ export default function FlowGrid<T>({
           break
         } else {
           items.push({
-            style: { minWidth: width, marginLeft: gap },
+            style: { marginLeft: gap },
             record,
           })
           totalWidth += gap + width
@@ -156,10 +151,7 @@ export default function FlowGrid<T>({
       i++
     }
 
-    if (
-      items.length < subRecords.length &&
-      totalWidth < containerWidth
-    ) {
+    if (items.length < records.length && totalWidth < containerWidth) {
       const extraGapPerItem =
         (containerWidth - totalWidth) / (items.length - 1)
 
@@ -181,36 +173,48 @@ export default function FlowGrid<T>({
       className={clsx(
         className,
         !isMeasured && 'opacity-0',
-        'whitespace-nowrap',
+        'relative',
       )}
     >
-      {!isMeasured && more && (
-        <FlowGridItem
-          index={-1}
-          onResize={handleResize}
-        >
-          <ItemRenderer
-            record={more}
+      <div className="whitespace-nowrap overflow-hidden opacity-0 absolute">
+        {more && (
+          <FlowGridItem
             index={-1}
-          />
-        </FlowGridItem>
-      )}
-      {visibleItems.map((item, index) => (
-        <>
-          {/* {'\u200C'} */}
+            onResize={handleResize}
+          >
+            <ItemRenderer
+              record={more}
+              index={-1}
+            />
+          </FlowGridItem>
+        )}
+        {records.map((item, index) => (
+          <FlowGridItem
+            key={index}
+            index={index}
+            onResize={handleResize}
+          >
+            <ItemRenderer
+              record={item}
+              index={index}
+            />
+          </FlowGridItem>
+        ))}
+      </div>
+      <div className="whitespace-nowrap">
+        {visibleItems.map((item, index) => (
           <FlowGridItem
             key={index}
             style={item.style}
             index={index}
-            onResize={handleResize}
           >
             <ItemRenderer
               record={item.record}
               index={index}
             />
           </FlowGridItem>
-        </>
-      ))}
+        ))}
+      </div>
     </div>
   )
 }
