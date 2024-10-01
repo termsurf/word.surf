@@ -537,10 +537,20 @@ export const sets = {
               `ا ب ج د ه و ز ح ط ي ك ل م ن ص ع ف ض ق ر س ت ث خ ذ ظ غ ش`,
             ).map(x => ({
               ...x,
-              hint: talk(arabic(x.text).replace(/"/g, 'Q')),
+              hint: talk(arabic(x.text)),
             })),
         },
       },
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      symbols: () =>
+        split(`\u064e \u0650 \u064f \u0670`).map(x => ({
+          ...x,
+          text: `\u25cc${x.text}`,
+          hint: talk(arabic(x.text)),
+        })),
     },
   },
   greek: {
@@ -648,6 +658,22 @@ export const sets = {
           `ㅏ ㅐ ㅑ ㅒ ㅓ ㅔ ㅕ ㅖ ㅗ ㅘ ㅙ ㅚ ㅛ ㅜ ㅝ ㅞ ㅟ ㅠ ㅡ ㅢ ㅣ`,
         ),
     },
+    // syllables: {
+    //   name: 'Syllables',
+    //   slug: 'syllables',
+    //   overview: () =>
+    //     filter(KOREAN_SYLLABLES, (x, i) => i % (21 * 28) === 0)
+    //       .slice(0, 24)
+    //       .map(x => ({
+    //         text: x.s,
+    //         hint: x.t,
+    //       })),
+    //   symbols: () =>
+    //     KOREAN_SYLLABLES.map(x => ({
+    //       text: x.s,
+    //       hint: x.t,
+    //     })),
+    // },
   },
   tifinagh: {
     alphabet: {

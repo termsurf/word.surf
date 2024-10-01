@@ -50,7 +50,7 @@ export default function GlyphsLink({
         className="text-h3 sm:text-h3-large text-gray-500 transition-colors font-bold w-full"
         records={records}
         itemRenderer={Glyph}
-        more={{ text: '…' }}
+        more={{ text: '…', script: 'latin' }}
       />
     </Link>
   )

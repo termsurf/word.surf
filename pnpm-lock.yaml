@@ -180,14 +180,14 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@termsurf/leaf':
-        specifier: ^0.1.200
-        version: 0.1.200(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)
+        specifier: ^0.1.206
+        version: 0.1.206(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)
       '@termsurf/talk':
         specifier: ^3.1.0
         version: 3.1.0
       '@termsurf/text':
-        specifier: ^0.3.18
-        version: 0.3.18
+        specifier: ^0.3.22
+        version: 0.3.22
       '@termsurf/tone':
         specifier: ^3.0.10
         version: 3.0.10
@@ -3245,8 +3245,8 @@ packages:
   '@termsurf/kink@0.1.6':
     resolution: {integrity: sha512-E2GwKz+HL7A9klsPyzWtobO24ZUB0jOJQHnRl2tjs8OElF2NSM2+qq7N1NlJ2Ry0we0qU/i7N4NuzF4eaAQ8uA==}
 
-  '@termsurf/leaf@0.1.200':
-    resolution: {integrity: sha512-kNHf0HbYOvBx51FA5UoYqOydvxX/1FWfsW2GxbrqQlT/AKM1i7PLLuaF8Hf6de2Fc7wZOIsVak81axPAnS7SEw==}
+  '@termsurf/leaf@0.1.206':
+    resolution: {integrity: sha512-zl/xeiIgttZK0SztwpeHBqX8yQdJcrFNySX2y3vGiDKdIsK+AB/5nIKsljtTKc7co1P3YoLVRUEyCI45TEt5tA==}
 
   '@termsurf/love-code@0.1.10':
     resolution: {integrity: sha512-nwfUNiteKm33GceRUHre3wcOrn1roYFYpiJZ4tpt01fjFJsjbx6q54z5i2CA2RYB8OHzQcetWyopziVeojKxFQ==}
@@ -3254,8 +3254,8 @@ packages:
   '@termsurf/talk@3.1.0':
     resolution: {integrity: sha512-APkxJrFk1UVDeYZ8DoP27hHiQ6UtgX7ul3slMIy4cVQkWc8qufpI1570JysiU2/CnwUbSr663jUnNsAQ/oArjA==}
 
-  '@termsurf/text@0.3.18':
-    resolution: {integrity: sha512-P2jRDA3tmITYB8oraBlQ1VBOk6t0rPai7hLmV7IOHq0c5gNUdD6ra9BBuD1xkRfvSNrY6GsFGNs8bmQe3x/deg==}
+  '@termsurf/text@0.3.22':
+    resolution: {integrity: sha512-xpa0f2ALUlpu/oelFpSSeuGUi1bo2evj9JYyo5Hirv0V6IPj9YvO5YedTxFo4TRHejiXZ526zT2WZm/lbDuWKg==}
 
   '@termsurf/tint-text@0.0.4':
     resolution: {integrity: sha512-2Yu+pID5rXPcRgQLhjqpndlIc7dYQ8aWDv71DSMrG7Ten0ihD2vzy+Q9KCudCu/Hn6ZuB0vsc7CEht1uT9sS+g==}
@@ -13765,7 +13765,7 @@ snapshots:
     dependencies:
       ts-custom-error: 3.3.1
 
-  '@termsurf/leaf@0.1.200(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)':
+  '@termsurf/leaf@0.1.206(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.0)(@codemirror/view@6.24.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@types/node@18.19.15)(@types/react-dom@18.0.10)(@types/react@18.2.61)(codemirror@6.0.1(@lezer/common@1.2.1))(typescript@5.3.3)':
     dependencies:
       '@codemirror/lang-cpp': 6.0.2
       '@codemirror/lang-css': 6.2.1(@codemirror/view@6.33.0)
@@ -13869,7 +13869,7 @@ snapshots:
     dependencies:
       '@lancejpollard/script-tree': 1.1.2
 
-  '@termsurf/text@0.3.18':
+  '@termsurf/text@0.3.22':
     dependencies:
       tibetan-ewts-converter: 1.0.1
 

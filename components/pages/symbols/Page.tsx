@@ -257,7 +257,7 @@ function Body() {
           breakpoints={[8, 4, 2]}
           records={filteredGlyphs}
           render={Glyph}
-          className="shadow-box h-192 sm:h-384 border-4 border-b-4 border-solid border-gray-100"
+          className="shadow-box h-288 sm:h-384 border-4 border-b-4 border-solid border-gray-100"
         />
       </div>
     </>
