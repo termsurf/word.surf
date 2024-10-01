@@ -799,6 +799,46 @@ export const sets = {
       symbols: () => split(`𐌀 𐌁 𐌂 𐌃 𐌄 𐌅 𐌆 𐌇 𐌉 𐌊 𐌋 𐌌 𐌍 𐌏 𐌐 𐌒 𐌓 𐌔 𐌕 𐌖 𐌗`),
     },
   },
+  thaana: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(`ހ ށ ނ ރ ބ ޅ ކ އ ވ މ ފ ދ ތ ލ ގ ޱ ސ ޑ ޒ ޓ ޔ ޕ ޖ ޗ ޏ`),
+    },
+  },
+  runic: {
+    'elder-futhark': {
+      name: 'Elder Futhark',
+      slug: 'elder-futhark',
+      symbols: () =>
+        split(`ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ ᚷ ᚹ ᚺ ᚾ ᛁ ᛃ ᛈ ᛇ ᛉ ᛊ ᛏ ᛒ ᛖ ᛗ ᛚ ᛜ ᛞ ᛟ`),
+    },
+  },
+  javanese: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(
+          `ꦏ ꦑ ꦒ ꦓ ꦔ ṅ ꦲ ꦕ ꦖ ꦗ ꦙ ꦚ ꦯ ꦛ ꦜ ꦝ ꦞ ꦟ ꦫ ꦰ ꦠ ꦡ ꦢ ꦣ ꦤ ꦭ ꦱ ꦥ ꦦ ꦧ ꦨ ꦩ ꦮ`,
+        ),
+    },
+    vowels: {
+      name: 'Vowels',
+      slug: 'vowels',
+      wide: true,
+      symbols: () => split(`ꦄ ꦆ ꦈ ꦌ ꦎ ꦄꦴ ꦇ ꦈꦴ ꦍ ꦎꦴ`),
+    },
+  },
+  lao: {
+    consonants: {
+      name: 'Consonants',
+      slug: 'consonants',
+      symbols: () =>
+        split(`ກ ຂ ຄ ງ ຈ ສ ຊ ຍ ດ ຕ ຖ ທ ນ ບ ປ ຜ ຝ ພ ຟ ມ ຢ ຣ ລ ວ ຫ ອ ຮ`),
+    },
+  },
   vai: {
     syllables: {
       name: 'Syllables',
