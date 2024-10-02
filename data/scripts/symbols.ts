@@ -1,6 +1,7 @@
 import talk from '@termsurf/talk'
 import arabic from '@termsurf/text/arabic'
 import avestan from '@termsurf/text/avestan'
+import cherokee from '@termsurf/text/cherokee'
 import devanagari from '@termsurf/text/devanagari'
 import geez from '@termsurf/text/geez'
 import georgian from '@termsurf/text/georgian'
@@ -9,7 +10,9 @@ import gurmukhi from '@termsurf/text/gurmukhi'
 import hebrew from '@termsurf/text/hebrew/talk/israeli'
 import japanese from '@termsurf/text/japanese'
 import kannada from '@termsurf/text/kannada'
+import linearB from '@termsurf/text/linear-b'
 import malayalam from '@termsurf/text/malayalam'
+import mandaic from '@termsurf/text/mandaic'
 import oriya from '@termsurf/text/oriya'
 import tamil from '@termsurf/text/tamil'
 import telugu from '@termsurf/text/telugu'
@@ -905,12 +908,16 @@ export const sets = {
       symbols: () =>
         split(
           `𐀀 𐀁 𐀂 𐀃 𐀄 𐀅 𐀆 𐀇 𐀈 𐀉 𐀊 𐀋 𐀍 𐀏 𐀐 𐀑 𐀒 𐀓 𐀔 𐀕 𐀖 𐀗 𐀘 𐀙 𐀚 𐀛 𐀜 𐀝 𐀞 𐀟 𐀠 𐀡 𐀢 𐀣 𐀤 𐀥 𐀦 𐀨 𐀩 𐀪 𐀫 𐀬 𐀭 𐀮 𐀯 𐀰 𐀱 𐀲 𐀳 𐀴 𐀵 𐀶 𐀷 𐀸 𐀹 𐀺 𐀼 𐀽 𐀿`,
-        ),
+        ).map(x => ({ ...x, hint: talk(linearB(x.text)) })),
       links: {
         special: {
           name: 'Special Syllables',
           slug: 'syllables/special',
-          symbols: () => split(`𐁀 𐁁 𐁂 𐁃 𐁄 𐁅 𐁇 𐁆 𐁈 𐁉 𐁊 𐁋 𐁌 𐁍`),
+          symbols: () =>
+            split(`𐁀 𐁁 𐁂 𐁃 𐁄 𐁅 𐁇 𐁆 𐁈 𐁉 𐁊 𐁋 𐁌 𐁍`).map(x => ({
+              ...x,
+              hint: talk(linearB(x.text)),
+            })),
         },
         untranscribed: {
           name: 'Untranscribed Syllables',
@@ -927,7 +934,7 @@ export const sets = {
       symbols: () =>
         split(
           `Ꭰ Ꭱ Ꭲ Ꭳ Ꭴ Ꭵ Ꭶ Ꭷ Ꭸ Ꭹ Ꭺ Ꭻ Ꭼ Ꭽ Ꭾ Ꭿ Ꮀ Ꮁ Ꮂ Ꮃ Ꮄ Ꮅ Ꮆ Ꮇ Ꮈ Ꮉ Ꮊ Ꮋ Ꮌ Ꮍ Ᏽ Ꮎ Ꮏ Ꮐ Ꮑ Ꮒ Ꮓ Ꮔ Ꮕ Ꮖ Ꮗ Ꮘ Ꮙ Ꮚ Ꮛ Ꮝ Ꮜ Ꮞ Ꮟ Ꮠ Ꮡ Ꮢ Ꮣ Ꮤ Ꮥ Ꮦ Ꮧ Ꮨ Ꮩ Ꮪ Ꮫ Ꮬ Ꮭ Ꮮ Ꮯ Ꮰ Ꮱ Ꮲ Ꮳ Ꮴ Ꮵ Ꮶ Ꮷ Ꮸ Ꮹ Ꮺ Ꮻ Ꮼ Ꮽ Ꮾ Ꮿ Ᏸ Ᏹ Ᏺ Ᏻ Ᏼ`,
-        ),
+        ).map(x => ({ ...x, hint: talk(cherokee(x.text)) })),
     },
   },
   mandaic: {
@@ -935,7 +942,9 @@ export const sets = {
       name: 'Alphabet',
       slug: 'alphabet',
       symbols: () =>
-        split(`ࡀ ࡁ ࡂ ࡃ ࡄ ࡅ ࡆ ࡇ ࡈ ࡉ ࡊ ࡋ ࡌ ࡍ ࡎ ࡏ ࡐ ࡑ ࡒ ࡓ ࡔ ࡕ ࡖ`),
+        split(`ࡀ ࡁ ࡂ ࡃ ࡄ ࡅ ࡆ ࡇ ࡈ ࡉ ࡊ ࡋ ࡌ ࡍ ࡎ ࡏ ࡐ ࡑ ࡒ ࡓ ࡔ ࡕ ࡖ`).map(
+          x => ({ ...x, hint: talk(mandaic(x.text)) }),
+        ),
     },
   },
   hiragana: {
