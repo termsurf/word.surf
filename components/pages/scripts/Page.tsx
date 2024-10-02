@@ -20,6 +20,8 @@ import { Cached } from './config'
 const SCRIPT_NAMES = [
   'latin',
   'chinese',
+  'canadian',
+  'korean',
   'arabic',
   'devanagari',
   'hebrew',
