@@ -48,7 +48,7 @@ export default function GlyphsLink({
 
         <FlowGrid
           gap={16}
-          className="text-h3 sm:text-h3-large text-gray-500 transition-colors font-bold w-full leading-content"
+          className="text-h3 sm:text-h3-large text-gray-500 transition-colors font-semibold w-full leading-content"
           records={records}
           itemRenderer={Glyph}
           more={{ text: '...', script: 'latin' }}
