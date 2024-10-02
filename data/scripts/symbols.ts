@@ -1,6 +1,7 @@
 import talk from '@termsurf/talk'
 import arabic from '@termsurf/text/arabic'
 import avestan from '@termsurf/text/avestan'
+import canadian from '@termsurf/text/canadian'
 import cherokee from '@termsurf/text/cherokee'
 import devanagari from '@termsurf/text/devanagari'
 import geez from '@termsurf/text/geez'
@@ -22,6 +23,8 @@ import tifinagh from '@termsurf/text/tifinagh'
 const TELUGU_CONSONANTS = split(
   `క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ల వ ళ శ ష స హ ఴ ఱ ౚ ౘ ౙ`,
 )
+
+const TAMIL_NUMBERS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100, 1000]
 
 const TELUGU_VOWEL_DIACRITICS = split(`ా ి ీ ు ూ ృ ౄ ె ే ై ొ ో ౌ ౢ ౣ`)
 
@@ -478,6 +481,21 @@ export const sets = {
           hint: talk(tamil(x.text)),
         })),
     },
+    numbers: {
+      name: 'Numbers',
+      slug: 'numbers',
+      symbols: () =>
+        split(`௦ ௧ ௨ ௩ ௪ ௫ ௬ ௭ ௮ ௯ ௰ ௱ ௲`).map((x, i) => ({
+          ...x,
+          hint: String(TAMIL_NUMBERS[i].toLocaleString()),
+        })),
+    },
+    terms: {
+      name: 'Terms',
+      slug: 'terms',
+      wide: true,
+      symbols: () => split(`௳ ௴ ௵ ௶ ௷ ௸ ௹ ௺ ள வ`),
+    },
   },
   hebrew: {
     alphabet: {
@@ -731,7 +749,7 @@ export const sets = {
       symbols: () =>
         split(
           `ᐁ ᐃ ᐅ ᐊ ᐯ ᐱ ᐲ ᐳ ᐴ ᐸ ᐹ ᑌ ᑎ ᑏ ᑐ ᑑ ᑕ ᑖ ᑫ ᑭ ᑮ ᑯ ᑰ ᑲ ᑳ ᒉ ᒋ ᒌ ᒍ ᒎ ᒐ ᒑ ᒣ ᒥ ᒦ ᒧ ᒨ ᒪ ᒫ ᓀ ᓂ ᓃ ᓄ ᓅ ᓇ ᓈ ᓭ ᓯ ᓰ ᓱ ᓲ ᓴ ᓵ ᓓ ᓕ ᓖ ᓗ ᓘ ᓚ ᓛ ᔦ ᔨ ᔩ ᔪ ᔫ ᔭ ᔮ ᕓ ᕕ ᕖ ᕗ ᕘ ᕙ ᕚ ᕃ ᕆ ᕇ ᕈ ᕉ ᕋ ᕌ ᙯ ᕿ ᖀ ᖁ ᖂ ᖃ ᖄ ᙰ ᖏ ᖐ ᖑ ᖒ ᖓ ᖔ ᑉ ᑦ ᒃ ᒡ ᒻ ᓐ ᔅ ᓪ ᔾ ᕝ ᕐ ᖅ ᖕ`,
-        ),
+        ).map(x => ({ ...x, hint: talk(canadian(x.text)) })),
     },
   },
   bengali: {
