@@ -8,7 +8,7 @@ export const FONT = {
   MiSansTibetan: {
     lineHeight: {
       heading: 1.7,
-      body: 2,
+      body: 1.6,
       base: 1,
     },
     test: '',
