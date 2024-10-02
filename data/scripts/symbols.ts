@@ -1,10 +1,13 @@
 import talk from '@termsurf/talk'
 import arabic from '@termsurf/text/arabic'
+import avestan from '@termsurf/text/avestan'
 import devanagari from '@termsurf/text/devanagari'
 import geez from '@termsurf/text/geez'
 import georgian from '@termsurf/text/georgian'
+import gothic from '@termsurf/text/gothic'
 import gurmukhi from '@termsurf/text/gurmukhi'
 import hebrew from '@termsurf/text/hebrew/talk/israeli'
+import japanese from '@termsurf/text/japanese'
 import kannada from '@termsurf/text/kannada'
 import malayalam from '@termsurf/text/malayalam'
 import oriya from '@termsurf/text/oriya'
@@ -862,7 +865,9 @@ export const sets = {
       name: 'Alphabet',
       slug: 'alphabet',
       symbols: () =>
-        split(`𐌰 𐌱 𐌲 𐌳 𐌴 𐌵 𐌶 𐌷 𐌸 𐌹 𐌺 𐌻 𐌼 𐌽 𐌾 𐌿 𐍀 𐍁 𐍂 𐍃 𐍄 𐍅 𐍆 𐍇 𐍈 𐍉 𐍊`),
+        split(
+          `𐌰 𐌱 𐌲 𐌳 𐌴 𐌵 𐌶 𐌷 𐌸 𐌹 𐌺 𐌻 𐌼 𐌽 𐌾 𐌿 𐍀 𐍁 𐍂 𐍃 𐍄 𐍅 𐍆 𐍇 𐍈 𐍉 𐍊`,
+        ).map(x => ({ ...x, hint: talk(gothic(x.text)) })),
     },
   },
   phoenician: {
@@ -893,6 +898,67 @@ export const sets = {
         ), //.map(x => ({ ...x, hint: talk(coptic(x.text)) })),
     },
   },
+  'linear-b': {
+    syllables: {
+      name: 'Syllables',
+      slug: 'syllables',
+      symbols: () =>
+        split(
+          `𐀀 𐀁 𐀂 𐀃 𐀄 𐀅 𐀆 𐀇 𐀈 𐀉 𐀊 𐀋 𐀍 𐀏 𐀐 𐀑 𐀒 𐀓 𐀔 𐀕 𐀖 𐀗 𐀘 𐀙 𐀚 𐀛 𐀜 𐀝 𐀞 𐀟 𐀠 𐀡 𐀢 𐀣 𐀤 𐀥 𐀦 𐀨 𐀩 𐀪 𐀫 𐀬 𐀭 𐀮 𐀯 𐀰 𐀱 𐀲 𐀳 𐀴 𐀵 𐀶 𐀷 𐀸 𐀹 𐀺 𐀼 𐀽 𐀿`,
+        ),
+      links: {
+        special: {
+          name: 'Special Syllables',
+          slug: 'syllables/special',
+          symbols: () => split(`𐁀 𐁁 𐁂 𐁃 𐁄 𐁅 𐁇 𐁆 𐁈 𐁉 𐁊 𐁋 𐁌 𐁍`),
+        },
+        untranscribed: {
+          name: 'Untranscribed Syllables',
+          slug: 'syllables/untranscribed',
+          symbols: () => split(`𐁐 𐁑 𐁒 𐁓 𐁔 𐁕 𐁖 𐁗 𐁘 𐀎 𐁙 𐁚 𐁛 𐁜 𐁝`),
+        },
+      },
+    },
+  },
+  cherokee: {
+    syllables: {
+      name: 'Syllables',
+      slug: 'syllables',
+      symbols: () =>
+        split(
+          `Ꭰ Ꭱ Ꭲ Ꭳ Ꭴ Ꭵ Ꭶ Ꭷ Ꭸ Ꭹ Ꭺ Ꭻ Ꭼ Ꭽ Ꭾ Ꭿ Ꮀ Ꮁ Ꮂ Ꮃ Ꮄ Ꮅ Ꮆ Ꮇ Ꮈ Ꮉ Ꮊ Ꮋ Ꮌ Ꮍ Ᏽ Ꮎ Ꮏ Ꮐ Ꮑ Ꮒ Ꮓ Ꮔ Ꮕ Ꮖ Ꮗ Ꮘ Ꮙ Ꮚ Ꮛ Ꮝ Ꮜ Ꮞ Ꮟ Ꮠ Ꮡ Ꮢ Ꮣ Ꮤ Ꮥ Ꮦ Ꮧ Ꮨ Ꮩ Ꮪ Ꮫ Ꮬ Ꮭ Ꮮ Ꮯ Ꮰ Ꮱ Ꮲ Ꮳ Ꮴ Ꮵ Ꮶ Ꮷ Ꮸ Ꮹ Ꮺ Ꮻ Ꮼ Ꮽ Ꮾ Ꮿ Ᏸ Ᏹ Ᏺ Ᏻ Ᏼ`,
+        ),
+    },
+  },
+  mandaic: {
+    alphabet: {
+      name: 'Alphabet',
+      slug: 'alphabet',
+      symbols: () =>
+        split(`ࡀ ࡁ ࡂ ࡃ ࡄ ࡅ ࡆ ࡇ ࡈ ࡉ ࡊ ࡋ ࡌ ࡍ ࡎ ࡏ ࡐ ࡑ ࡒ ࡓ ࡔ ࡕ ࡖ`),
+    },
+  },
+  hiragana: {
+    graphs: {
+      name: 'Graphs',
+      slug: 'graphs',
+      wide: true,
+      symbols: () =>
+        split(
+          `あ い う え お か き く け こ きゃ きゅ きょ さ し す せ そ しゃ しゅ しょ た ち つ て と ちゃ ちゅ ちょ な に ぬ ね の にゃ にゅ にょ は ひ ふ へ ほ ひゃ ひゅ ひょ ま み む め も みゃ みゅ みょ や ゆ よ ら り る れ ろ りゃ りゅ りょ わ ゐ ゑ を が ぎ ぐ げ ご ぎゃ ぎゅ ぎょ ざ じ ず ぜ ぞ じゃ じゅ じょ だ ぢ づ で ど ぢゃ ぢゅ ぢょ ば び ぶ べ ぼ びゃ びゅ びょ ぱ ぴ ぷ ぺ ぽ ぴゃ ぴゅ ぴょ ん`,
+        ).map(x => ({ ...x, hint: talk(japanese(x.text)) })),
+    },
+  },
+  katakana: {
+    graphs: {
+      name: 'Graphs',
+      slug: 'graphs',
+      symbols: () =>
+        split(
+          `ア イ ウ エ オ カ キ ク ケ コ ガ ギ グ ゲ ゴ サ シ ス セ ソ ザ ジ ズ ゼ ゾ タ チ ツ テ ト ダ ヂ ヅ デ ド ナ ニ ヌ ネ ノ ハ ヒ フ ヘ ホ バ ビ ブ ベ ボ パ ピ プ ペ ポ マ ミ ム メ モ ヤ ユ ヨ ラ リ ル レ ロ ワ ヰ ヱ ヲ ン`,
+        ).map(x => ({ ...x, hint: talk(japanese(x.text)) })),
+    },
+  },
   avestan: {
     consonants: {
       name: 'Consonants',
@@ -900,12 +966,16 @@ export const sets = {
       symbols: () =>
         split(
           `𐬐 𐬑 𐬒 𐬓 𐬔 𐬕 𐬖 𐬗 𐬘 𐬙 𐬚 𐬛 𐬜 𐬝 𐬞 𐬟 𐬠 𐬡 𐬢 𐬣 𐬤 𐬥 𐬦 𐬧 𐬨 𐬩 𐬪 𐬫 𐬌𐬌 𐬬 𐬎𐬎 𐬭 𐬮 𐬯 𐬰 𐬱 𐬲 𐬳 𐬴 𐬵`,
-        ),
+        ).map(x => ({ ...x, hint: talk(avestan(x.text)) })),
     },
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
-      symbols: () => split(`𐬀 𐬁 𐬂 𐬃 𐬄 𐬅 𐬆 𐬇 𐬈 𐬉 𐬊 𐬋 𐬌 𐬍 𐬎 𐬏`),
+      symbols: () =>
+        split(`𐬀 𐬁 𐬂 𐬃 𐬄 𐬅 𐬆 𐬇 𐬈 𐬉 𐬊 𐬋 𐬌 𐬍 𐬎 𐬏`).map(x => ({
+          ...x,
+          hint: talk(avestan(x.text)),
+        })),
     },
   },
   cyrillic: {
