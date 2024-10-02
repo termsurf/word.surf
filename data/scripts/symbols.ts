@@ -102,7 +102,8 @@ export const sets = {
       slug: 'signs',
       wide: true,
       fontSize: 48,
-      overview: () => CUNEIFORM.slice(0, 24),
+      overview: () =>
+        split(`𒀀 𒀭 𒁹 𒂗 𒂍 𒃲 𒆠 𒇻 𒄑 𒇽 𒂊 𒋼 𒈨 𒋗 𒍑 𒁍 𒈾 𒅆 𒂉 𒍣 𒉿 𒀸 𒌑 𒆜`),
       symbols: () => CUNEIFORM,
     },
   },
