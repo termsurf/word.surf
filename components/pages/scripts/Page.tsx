@@ -237,6 +237,18 @@ const SCRIPTS = [
     symbol: 'A',
   },
   {
+    slug: 'hebrew',
+    script: 'hebrew',
+    name: 'Hebrew',
+    symbol: 'א',
+  },
+  {
+    slug: 'devanagari',
+    script: 'devanagari',
+    name: 'Devanagari',
+    symbol: 'ॐ',
+  },
+  {
     slug: 'chinese',
     script: 'chinese',
     name: 'Chinese',
@@ -247,18 +259,6 @@ const SCRIPTS = [
     script: 'arabic',
     name: 'Arabic',
     symbol: 'ح',
-  },
-  {
-    slug: 'devanagari',
-    script: 'devanagari',
-    name: 'Devanagari',
-    symbol: 'ॐ',
-  },
-  {
-    slug: 'hebrew',
-    script: 'hebrew',
-    name: 'Hebrew',
-    symbol: 'א',
   },
   {
     slug: 'tibetan',
