@@ -2,7 +2,7 @@
 
 import Environment from '@termsurf/leaf/component/Environment'
 import BaseNotFoundPage from '@termsurf/leaf/component/page/NotFoundPage'
-import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
+import { FONT, SCRIPT } from '~/data/fonts'
 
 export default function NotFoundPage() {
   return (

@@ -125,6 +125,24 @@
   src: url('/font/TW-Kai-98_1.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'SantakkuM';
+  src: url('/font/SantakkuM.ttf') format('truetype');
+}
+
+.font-SantakkuM {
+  font-family: SantakkuM, serif;
+}
+
+@font-face {
+  font-family: 'CuneiformComposite';
+  src: url('/font/CuneiformComposite.ttf') format('truetype');
+}
+
+.font-CuneiformComposite {
+  font-family: CuneiformComposite, serif;
+}
+
 .font-TWKai {
   font-family: 'TW Kai', serif;
   font-optical-sizing: auto;

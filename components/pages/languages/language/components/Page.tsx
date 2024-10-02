@@ -3,9 +3,9 @@
 import { H1 } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Toast from '@termsurf/leaf/component/Toast'
-import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
+import { FONT, SCRIPT } from '~/data/fonts'
 
 import Entry from '~/components/Entry'
 import HeaderContextButton from '~/components/HeaderContextButton'

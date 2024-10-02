@@ -3,9 +3,9 @@
 import { H1 } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Toast from '@termsurf/leaf/component/Toast'
-import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 import useScripts from '@termsurf/leaf/hook/useScripts'
+import { FONT, SCRIPT } from '~/data/fonts'
 
 import Text from '@termsurf/leaf/component/Text'
 import Link from 'next/link'

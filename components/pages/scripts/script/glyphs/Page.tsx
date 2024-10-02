@@ -9,9 +9,9 @@ import { H1 } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Grid from '@termsurf/leaf/component/Grid'
 import Toast from '@termsurf/leaf/component/Toast'
-import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 import useScripts from '@termsurf/leaf/hook/useScripts'
+import { FONT, SCRIPT } from '~/data/fonts'
 
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { useRef } from 'react'
@@ -120,7 +120,10 @@ function Body({
     <>
       <div
         ref={ref}
-        className="relative w-full pb-64 flex flex-col gap-16 p-16"
+        className={clsx(
+          'relative w-full pb-64 flex flex-col gap-16 p-16',
+          width === 0 && 'opacity-0',
+        )}
       >
         <Grid
           maxColumns={6}
@@ -223,7 +226,7 @@ function GlyphLink({
         size={fontSize}
         className={clsx(
           script === 'cuneiform' ? 'h-128' : 'h-96',
-          'block h-96 font-semibold text-h0 transition-colors',
+          'block font-semibold text-h0 transition-colors',
         )}
       >
         {text}

@@ -3,7 +3,7 @@
 import Environment from '@termsurf/leaf/component/Environment'
 import type { ErrorPageInput } from '@termsurf/leaf/component/page/ErrorPage'
 import BaseGlobalErrorPage from '@termsurf/leaf/component/page/GlobalErrorPage'
-import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
+import { FONT, SCRIPT } from '~/data/fonts'
 
 export default function GlobalErrorPage({
   error,

@@ -10,9 +10,9 @@ import Environment from '@termsurf/leaf/component/Environment'
 import Grid from '@termsurf/leaf/component/Grid'
 import TextInput from '@termsurf/leaf/component/TextInput'
 import Toast from '@termsurf/leaf/component/Toast'
-import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
+import { FONT, SCRIPT } from '~/data/fonts'
 
 import { Language } from '~/data/types'
 

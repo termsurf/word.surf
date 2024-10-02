@@ -4,7 +4,7 @@ import { H1, P } from '@termsurf/leaf/component/Content'
 import Environment from '@termsurf/leaf/component/Environment'
 import Grid from '@termsurf/leaf/component/Grid'
 import Tag from '@termsurf/leaf/component/Tag'
-import { FONT, SCRIPT } from '@termsurf/leaf/constant/settings'
+import { FONT, SCRIPT } from '~/data/fonts'
 
 import useFonts from '@termsurf/leaf/hook/useFonts'
 import Link from '../Link'
