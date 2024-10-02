@@ -135,6 +135,21 @@
 }
 
 @font-face {
+  font-family: 'MiSansTibetan';
+  src: url('/font/MiSansTibetan-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MiSansTibetan';
+  src: url('/font/MiSansTibetan-Semibold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+.font-MiSansTibetan {
+  font-family: MiSansTibetan, serif;
+}
+
+@font-face {
   font-family: 'CuneiformComposite';
   src: url('/font/CuneiformComposite.ttf') format('truetype');
 }

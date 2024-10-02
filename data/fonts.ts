@@ -5,6 +5,23 @@ import {
 
 export const FONT = {
   ...fonts,
+  MiSansTibetan: {
+    lineHeight: {
+      heading: 1.7,
+      body: 2,
+      base: 1,
+    },
+    test: '',
+    family: 'MiSansTibetan',
+    styles: [
+      {
+        weight: 400,
+      },
+      {
+        weight: 700,
+      },
+    ],
+  },
   CuneiformComposite: {
     lineHeight: {
       heading: 1.2,
@@ -31,6 +48,13 @@ export const SCRIPT = {
     font: 'modern',
     fonts: {
       modern: 'CuneiformComposite',
+    },
+  },
+  tibetan: {
+    default: 'modern',
+    font: 'modern',
+    fonts: {
+      modern: 'MiSansTibetan',
     },
   },
 }
