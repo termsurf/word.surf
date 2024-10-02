@@ -31,12 +31,22 @@ export type GridLink = {
 export type PageLink = {
   name: string
   slug: string
-  symbols: Array<{ text: string; hint?: string; slug?: string }>
+  symbols: Array<{
+    text: string
+    hint?: string
+    slug?: string
+    fontSize?: number
+  }>
 }
 
 type PageInput = {
   scriptSlug: string
-  symbols: Array<{ text: string; hint?: string; slug?: string }>
+  symbols: Array<{
+    text: string
+    hint?: string
+    slug?: string
+    fontSize?: number
+  }>
   links?: Array<PageLink>
   fontSize?: number
   glyphType: string
@@ -140,7 +150,7 @@ function Body({
               text={symbol.text}
               hint={symbol.hint}
               script={scriptSlug}
-              fontSize={fontSize}
+              fontSize={symbol.fontSize ?? fontSize}
               slug={
                 symbol.slug
                   ? `/scripts/${scriptSlug}/${symbol.slug}`
@@ -204,7 +214,7 @@ function GlyphLink({
         {hint && (
           <T
             script="latin"
-            className="block text-xl transition-colors text-gray-400"
+            className="block text-2xl font-semibold transition-colors text-gray-300"
           >
             {hint}
           </T>
@@ -234,7 +244,7 @@ function GlyphLink({
       {hint && (
         <T
           script="latin"
-          className="block text-xl transition-colors text-gray-400"
+          className="block text-2xl font-semibold transition-colors text-gray-300"
         >
           {hint}
         </T>

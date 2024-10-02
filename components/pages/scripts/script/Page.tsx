@@ -15,6 +15,30 @@ import GlyphsLink from './GlyphsLink'
 
 const KEY = '/languages'
 
+const HEBREW = {
+  time: '~1000 BCE',
+  base: 'consonants (abjad)',
+  direction: 'right-to-left',
+  spaces: 'none in ancient texts',
+  pause_markers: 'introduced later (punctuation)',
+  phonetic: 'yes',
+  numerals: 'Gematria (letters represent numbers)',
+  combining_marks: 'diacritics (Niqqud, cantillation marks)',
+  sources: 'Proto-Sinaitic, Phoenician',
+  languages: ['Hebrew', 'Yiddish', 'Ladino'],
+  places: ['Israel', 'Jewish diaspora'],
+  line: 'no top-line connection',
+  vowels: 'indicated with Niqqud (dots and dashes)',
+  clusters: 'consonant clusters allowed',
+  time_periods: ['Biblical Hebrew', 'Medieval Hebrew', 'Modern Hebrew'],
+  evolution: 'Canaanite to Paleo-Hebrew to Square Hebrew',
+  modern_adoption: 'revived as the official script of Modern Hebrew',
+  punctuation: 'period, comma, question mark, etc. (modern use)',
+  phonemes: 'corresponds to consonants, vowels indicated by marks',
+  regional_variants: ['Sephardic, Ashkenazi pronunciation'],
+  script_family: 'Semitic abjad',
+}
+
 export type GridLink = {
   title: string
   description?: string
@@ -73,6 +97,18 @@ function Body({ links, scriptSlug }: ContentInput) {
   return (
     <>
       <div className="relative w-full pb-64 flex flex-col gap-16 p-16">
+        {/* <Grid
+          maxColumns={2}
+          gap={16}
+          minWidth={320}
+        >
+          {Object.keys(HEBREW).map(key => (
+            <div key={key}>
+              <Text className="block text-xs text-gray-500">{key}</Text>
+              <Text className="text-gray-950">{HEBREW[key]}</Text>
+            </div>
+          ))}
+        </Grid> */}
         {links.map(link => (
           <GlyphsLink
             key={link.slug}
