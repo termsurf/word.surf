@@ -1,6 +1,7 @@
 import talk from '@termsurf/talk'
 import arabic from '@termsurf/text/arabic'
 import avestan from '@termsurf/text/avestan'
+import bengali from '@termsurf/text/bengali'
 import buginese from '@termsurf/text/buginese'
 import canadian from '@termsurf/text/canadian'
 import cherokee from '@termsurf/text/cherokee'
@@ -779,22 +780,38 @@ export const sets = {
     vowels: {
       name: 'Vowels',
       slug: 'vowels',
-      symbols: () => split(`অ ই উ ঋ ঌ আ ঈ ঊ ৠ ৡ এ ও ঐ ঔ`),
+      symbols: () =>
+        split(`অ ই উ ঋ ঌ আ ঈ ঊ ৠ ৡ এ ও ঐ ঔ`).map(x => ({
+          ...x,
+          hint: talk(bengali(x.text)),
+        })),
       links: {
         combining: {
           name: 'Combining Vowels',
           slug: 'vowels/combining',
-          symbols: () => split(`া  ি ী  ু  ূ  ৃ  ৄ  ৢ  ৣ ে ৈ ো ৌ`),
+          symbols: () =>
+            split(`া  ি ী  ু  ূ  ৃ  ৄ  ৢ  ৣ ে ৈ ো ৌ`).map(x => ({
+              ...x,
+              hint: talk(bengali(x.text)),
+            })),
         },
         simple: {
           name: 'Simple Vowels',
           slug: 'vowels/simple',
-          symbols: () => split(`অ ই উ ঋ ঌ আ ঈ ঊ ৠ ৡ`),
+          symbols: () =>
+            split(`অ ই উ ঋ ঌ আ ঈ ঊ ৠ ৡ`).map(x => ({
+              ...x,
+              hint: talk(bengali(x.text)),
+            })),
         },
         complex: {
           name: 'Complex Vowels',
           slug: 'vowels/complex',
-          symbols: () => split(`এ ও ঐ ঔ`),
+          symbols: () =>
+            split(`এ ও ঐ ঔ`).map(x => ({
+              ...x,
+              hint: talk(bengali(x.text)),
+            })),
         },
       },
     },
@@ -804,7 +821,10 @@ export const sets = {
       symbols: () =>
         split(
           `ক খ গ ঘ ঙ হ চ ছ জ ঝ ঞ য শ ট ঠ ড ঢ ণ র ষ ত থ দ ধ ন ল স প ফ ব ভ ম ৱ ড় ঢ় য়`,
-        ),
+        ).map(x => ({
+          ...x,
+          hint: talk(bengali(x.text)),
+        })),
       links: {
         basic: {
           name: 'Basic Consonants',
@@ -812,12 +832,19 @@ export const sets = {
           symbols: () =>
             split(
               `ক খ গ ঘ ঙ হ চ ছ জ ঝ ঞ য শ ট ঠ ড ঢ ণ র ষ ত থ দ ধ ন ল স প ফ ব ভ ম ৱ`,
-            ),
+            ).map(x => ({
+              ...x,
+              hint: talk(bengali(x.text)),
+            })),
         },
         'post-reform': {
           name: 'Post-Reform Consonants',
           slug: 'consonants/post-reform',
-          symbols: () => split(`ড় ঢ় য়`),
+          symbols: () =>
+            split(`ড় ঢ় য়`).map(x => ({
+              ...x,
+              hint: talk(bengali(x.text)),
+            })),
         },
       },
     },
