@@ -50,14 +50,16 @@ export function distributeGridLayout(
     return result
   }
 
-  if (maxColumns > minColumns && length % (maxColumns - 1) === 0) {
-    const result: Array<number> = []
-    maxColumns--
-    while (length) {
-      result.push(maxColumns)
-      length -= maxColumns
+  if (maxColumns > 4) {
+    if (maxColumns > minColumns && length % (maxColumns - 1) === 0) {
+      const result: Array<number> = []
+      maxColumns--
+      while (length) {
+        result.push(maxColumns)
+        length -= maxColumns
+      }
+      return result
     }
-    return result
   }
 
   const dec = 2 - (length % 2)

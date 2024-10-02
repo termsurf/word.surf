@@ -137,6 +137,7 @@ function Body({
               text={symbol.text}
               hint={symbol.hint}
               script={scriptSlug}
+              fontSize={fontSize}
               slug={
                 symbol.slug
                   ? `/scripts/${scriptSlug}/${symbol.slug}`
@@ -193,7 +194,7 @@ function GlyphLink({
       >
         <T
           script={script}
-          className="block h-96 font-semibold text-h0 sm:text-h0-large transition-colors"
+          className="block h-112 font-semibold text-h0 sm:text-h0-large transition-colors"
         >
           {text}
         </T>
@@ -219,7 +220,11 @@ function GlyphLink({
     >
       <T
         script={script}
-        className="block h-96 font-semibold text-h0 transition-colors"
+        size={fontSize}
+        className={clsx(
+          script === 'cuneiform' ? 'h-128' : 'h-96',
+          'block h-96 font-semibold text-h0 transition-colors',
+        )}
       >
         {text}
       </T>

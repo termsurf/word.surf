@@ -74,7 +74,7 @@
     "@termsurf/kink": "^0.1.2",
     "@termsurf/leaf": "^0.1.226",
     "@termsurf/talk": "^3.1.2",
-    "@termsurf/text": "^0.3.30",
+    "@termsurf/text": "^0.3.32",
     "@termsurf/tone": "^3.0.10",
     "@termsurf/tone-code": "^0.4.0",
     "@textsurf/chat": "^1.2.13",
