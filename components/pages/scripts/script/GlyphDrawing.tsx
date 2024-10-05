@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 // Lerp function for interpolation
 const lerp = (start: number, end: number, t: number): number => {
@@ -44,7 +44,9 @@ function GlyphDrawing() {
   }
 
   const renderFrame = (timestamp: number) => {
-    if (!startTime) startTime = timestamp // Set start time on first call
+    if (!startTime) {
+      startTime = timestamp // Set start time on first call
+    }
     const elapsed = timestamp - startTime // Elapsed time since start of transition
 
     const video = videoRef.current
