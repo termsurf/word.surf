@@ -22,7 +22,10 @@ import Guide from '~/components/mdx/Guide'
 
 import HeaderContextButton from '~/components/HeaderContextButton'
 import { languagePath } from '~/tools/paths'
-import { Cached } from './config'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages/language/guide'
 

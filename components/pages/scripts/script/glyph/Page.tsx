@@ -11,7 +11,10 @@ import Text from '@termsurf/leaf/component/Text'
 import Link from 'next/link'
 import { PageLink } from '../glyphs/Page'
 import GlyphsLink from '../GlyphsLink'
-import { Cached } from './config'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages'
 

@@ -17,7 +17,10 @@ import { FONT, SCRIPT } from '~/data/fonts'
 import Text from '@termsurf/leaf/component/Text'
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Cached } from './config'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages'
 

@@ -18,7 +18,10 @@ import { useRef } from 'react'
 import { useResizeObserver } from 'usehooks-ts'
 import { distributeGridLayout } from '~/tools/grid'
 import GlyphsLink from '../GlyphsLink'
-import { Cached } from './config'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages'
 

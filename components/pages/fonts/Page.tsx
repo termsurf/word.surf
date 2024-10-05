@@ -14,7 +14,9 @@ import useFonts from '@termsurf/leaf/hook/useFonts'
 import { usePageSettings } from '@termsurf/leaf/hook/usePageSettings'
 import { FONT, SCRIPT } from '~/data/fonts'
 
-import { Cached } from './config'
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages'
 

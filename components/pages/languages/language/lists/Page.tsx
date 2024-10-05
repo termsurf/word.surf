@@ -13,8 +13,11 @@ import { Language } from '~/data/types'
 import Grid from '@termsurf/leaf/component/Grid'
 import Text from '@termsurf/leaf/component/Text'
 import { languageListPath, languagePath } from '~/tools/paths'
-import { Cached } from './config'
-import SML from './nouns/small/SML'
+import SML from '../../../../SML'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages/language/lists'
 

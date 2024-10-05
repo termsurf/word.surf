@@ -13,7 +13,10 @@ import Grid from '@termsurf/leaf/component/Grid'
 import Link from '~/components/Link'
 // import { calculateGlyphColumns } from '~/tools/grid'
 import { languagePath } from '~/tools/paths'
-import { Cached } from './config'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages/language'
 

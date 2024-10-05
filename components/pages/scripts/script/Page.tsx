@@ -9,9 +9,12 @@ import useScripts from '@termsurf/leaf/hook/useScripts'
 import { FONT, SCRIPT } from '~/data/fonts'
 
 import Link from 'next/link'
-import { Cached } from './config'
 import { PageLink } from './glyphs/Page'
 import GlyphsLink from './GlyphsLink'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages'
 

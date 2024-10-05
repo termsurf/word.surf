@@ -11,7 +11,9 @@ import HeaderContextButton from '~/components/HeaderContextButton'
 import { Language, LanguageComponentItem } from '~/data/types'
 import { languagePath } from '~/tools/paths'
 
-import { Cached } from './config'
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languagse/language/components/component'
 

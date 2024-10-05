@@ -21,10 +21,13 @@ import { Language, LanguageItem, LanguageListItem } from '~/data/types'
 
 import Text from '@termsurf/leaf/component/Text'
 import HeaderContextButton from '~/components/HeaderContextButton'
+import SML from '~/components/SML'
+import Title from '~/components/Title'
 import { languagePath } from '~/tools/paths'
-import SML from '../small/SML'
-import Title from '../small/Title'
-import { Cached } from './config'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages/language/lists/nouns/medium'
 

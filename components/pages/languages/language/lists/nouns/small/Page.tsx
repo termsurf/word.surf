@@ -23,10 +23,13 @@ import Text from '@termsurf/leaf/component/Text'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import NVA from '~/components/NVA'
+import SML from '~/components/SML'
 import { languageComponentPath, slugify } from '~/tools/paths'
-import { Cached } from './config'
-import NVA from './NVA'
-import SML from './SML'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages/language/lists/nouns/small'
 

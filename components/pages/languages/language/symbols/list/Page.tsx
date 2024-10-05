@@ -14,7 +14,10 @@ import Grid from '@termsurf/leaf/component/Grid'
 import SoundIcon from '@termsurf/leaf/component/icon/Sound'
 import Text from '@termsurf/leaf/component/Text'
 import { languagePath } from '~/tools/paths'
-import { Cached } from './config'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages/language'
 

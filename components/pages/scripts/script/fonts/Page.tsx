@@ -15,7 +15,10 @@ import { FONT, SCRIPT } from '~/data/fonts'
 
 import TextInput from '@termsurf/leaf/component/TextInput'
 import { BREAKPOINTS_3_1 } from '~/data/breakpoints'
-import { Cached } from './config'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages'
 

@@ -18,7 +18,10 @@ import { Language } from '~/data/types'
 
 import { LinkButton } from '@termsurf/leaf/component/Button'
 import { languagePath } from '~/tools/paths'
-import { Cached } from './config'
+
+export const CACHED = {}
+
+export type Cached = {}
 
 const KEY = '/languages'
 
