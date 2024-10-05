@@ -1,12 +1,14 @@
 import { notFound } from 'next/navigation'
-import render from './[...path]/pages'
+import { generateMetadata, renderPage } from '~/handlers/scripts/script'
 
 type Input = {
   params: { script: string; path: Array<string> }
 }
 
+export { generateMetadata }
+
 export default async function View({ params }: Input) {
-  const page = await render(`/${params.script}`)
+  const page = await renderPage(`/${params.script}`)
 
   if (!page) {
     notFound()

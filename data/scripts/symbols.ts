@@ -101,7 +101,19 @@ const TAMIL_CONSONANTS = split(
 
 const TAMIL_VOWELS = split(`அ ஆ இ ஈ உ ஊ எ ஏ ஐ ஒ ஓ ஔ`)
 
-export const sets = {
+export type SymbolSet = {
+  name: string
+  slug: string
+  wide?: boolean
+  fontSize?: number
+  overview?: () => Array<{ text: string; slug?: string; hint?: string }>
+  symbols: () => Array<{ text: string; slug?: string; hint?: string }>
+  links?: Record<string, SymbolSet>
+}
+
+export type SymbolSets = Record<string, SymbolSet>
+
+export const sets: Record<string, SymbolSets> = {
   cuneiform: {
     signs: {
       name: 'Signs',
