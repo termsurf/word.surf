@@ -1,32 +1,31 @@
-resources:
-  path: /languages/tune/guides
-  title: Tune Language
-  description: A simplified spoken language for modeling reality
-  scripts:
-    - tone
-  consonants:
-    - m
-    - n
-    - q
-    - g
-    - d
-    - b
-    - p
-    - t
-    - k
-    - h
-    - s
-    - f
-    - v
-    - z
-    - j
-    - x
-    - c
-    - C
-    - w
-    - l
-    - r
-    - y
+path: /languages/tune/guides
+title: Tune Language
+description: A simplified spoken language for modeling reality
+scripts:
+  - tone
+consonants:
+  - m
+  - n
+  - q
+  - g
+  - d
+  - b
+  - p
+  - t
+  - k
+  - h
+  - s
+  - f
+  - v
+  - z
+  - j
+  - x
+  - c
+  - C
+  - w
+  - l
+  - r
+  - y
 components:
   - type: header
     children:

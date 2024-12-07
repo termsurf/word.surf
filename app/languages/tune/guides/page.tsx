@@ -5,8 +5,8 @@ import type { Metadata } from 'next'
 
 export async function generateMetadata({ params }): Promise<Metadata> {
   return {
-    title: PAGE.resources.title,
-    description: PAGE.resources.descrpition,
+    title: PAGE.title,
+    description: PAGE.descrpition,
   }
 }
 

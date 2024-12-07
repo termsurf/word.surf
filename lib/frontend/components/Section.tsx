@@ -534,19 +534,20 @@ function renderValue(val: any, scope: Record<string, any>) {
   return val ?? null
 }
 
-export const SectionPage = ({
-  resources = {},
-  components = [],
-}: {
-  resources: Record<string, any>
-  components: Array<any>
-}) => {
+export const SectionPage = (
+  props: Record<string, any> & {
+    scripts: Array<string>
+    path: string
+    view: Array<any>
+    components: Array<any>
+  },
+) => {
   return (
-    <Section.Environment path={resources.path}>
-      <Section scripts={resources.scripts}>
-        {components.map((x, i) => {
+    <Section.Environment path={props.path}>
+      <Section scripts={props.scripts}>
+        {props.components.map((x, i) => {
           const rendered = renderComponent(x, {
-            ...resources,
+            ...props,
             key: String(i),
           })
           return rendered
