@@ -1,3 +1,5 @@
+'use client'
+
 import Box from '@termsurf/leaf/component/Box'
 import { H1, H2, H3, P } from '@termsurf/leaf/component/Content'
 import assert from 'assert'
@@ -515,7 +517,7 @@ function renderComponent(node: any, scope: Record<string, any>) {
 function renderValue(val: any, scope: Record<string, any>) {
   if (val) {
     if (val.$ref) {
-      return get(scope, val.$ref)
+      return get(scope, val.$ref) ?? null
     } else if (val.$text) {
       return val.$text
         .map(x => (x.$ref ? get(scope, x.$ref) : x))
@@ -526,15 +528,15 @@ function renderValue(val: any, scope: Record<string, any>) {
       const args = (val.$call.args ?? []).map(arg =>
         renderValue(arg, scope),
       )
-      return fn(...args)
+      return fn(...args) ?? null
     }
   }
-  return val
+  return val ?? null
 }
 
-Section.Page = ({
-  resources,
-  components,
+export const SectionPage = ({
+  resources = {},
+  components = [],
 }: {
   resources: Record<string, any>
   components: Array<any>
@@ -542,9 +544,13 @@ Section.Page = ({
   return (
     <Section.Environment path={resources.path}>
       <Section scripts={resources.scripts}>
-        {components.map((x, i) =>
-          renderComponent(x, { ...resources, key: String(i) }),
-        )}
+        {components.map((x, i) => {
+          const rendered = renderComponent(x, {
+            ...resources,
+            key: String(i),
+          })
+          return rendered
+        })}
       </Section>
     </Section.Environment>
   )

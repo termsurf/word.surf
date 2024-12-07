@@ -1,10 +1,17 @@
-'use client'
-
-import Section from '~/lib/frontend/components/Section'
+import { SectionPage } from '~/lib/frontend/components/Section'
 import PAGE from './page.yaml'
 
+import type { Metadata } from 'next'
+
+export async function generateMetadata({ params }): Promise<Metadata> {
+  return {
+    title: PAGE.resources.title,
+    description: PAGE.resources.descrpition,
+  }
+}
+
 export default function Page() {
-  return <Section.Page {...PAGE} />
+  return <SectionPage {...PAGE} />
 }
 
 // // ## Action Words
