@@ -37,7 +37,7 @@ components:
       - type: box
         layout: vertical
         items: center
-        p: 16
+        padding: 16
         children:
           - type: text
             className: block text-zinc-600 font-semibold
@@ -54,7 +54,7 @@ components:
       - type: box
         layout: vertical
         items: center
-        p: 16
+        padding: 16
         children:
           - type: text
             className: block
@@ -74,7 +74,7 @@ components:
       - type: p
         children: All glyphs are derived from these 3 symbols
       - type: box
-        p: 16
+        padding: 16
         children:
           - type: grid
             maxColumns: 3
@@ -117,7 +117,7 @@ components:
       - type: p
         children: The 5 vowels used in Tune
       - type: box
-        p: 16
+        padding: 16
         children:
           - type: grid
             maxColumns: 5
@@ -154,7 +154,7 @@ components:
       - type: p
         children: The 22 consonants used in Tune
       - type: box
-        p: 16
+        padding: 16
         children:
           - type: grid
             maxColumns: 4
@@ -186,7 +186,7 @@ components:
       - type: box
         layout: vertical
         gap: 8
-        p: 16
+        padding: 16
         items: center
         children:
           - type: box
@@ -379,7 +379,7 @@ components:
       - type: p
         children: Base words used to generate all other word forms
       - type: box
-        p: 16
+        padding: 16
         children:
           - type: grid
             breakpoints: [4, 2, 1]
@@ -450,7 +450,7 @@ components:
       - type: p
         children: Add suffixes to the roots
       - type: box
-        p: 16
+        padding: 16
         children:
           - type: grid
             maxColumns: 3
@@ -482,7 +482,7 @@ components:
       - type: p
         children: These are some realized verbs of Tune
       - type: box
-        p: 16
+        padding: 16
         children:
           - type: grid
             gap: 16
@@ -520,7 +520,7 @@ components:
       - type: p
         children: These are some realized nouns of Tune
       - type: box
-        p: 16
+        padding: 16
         children:
           - type: grid
             gap: 16
