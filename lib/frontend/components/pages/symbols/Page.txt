@@ -1,0 +1,388 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+import { PagePropsType } from '@lancejpollard/kit'
+import {
+  GetServerSidePropsContext,
+  GetServerSidePropsResult,
+} from 'next'
+import React from 'react'
+import AdSense from 'react-adsense'
+import Link from 'next/link'
+import {
+  H2,
+  P,
+  Table,
+  TableCell,
+  TableCellContent,
+  TableCellLink,
+  TableScroller,
+} from '~/components/Content'
+import Padded from '~/components/Padded'
+import PostLayout from '~/components/PostLayout'
+import Title from '~/components/TitleVibe'
+import Symbol from '~/contents/unicode/Symbol.mdx'
+import getSymbolData, {
+  SymbolBasicType,
+  BIDIRECTIONAL_CLASS,
+  UNICODE_CATEGORY,
+  FontType,
+} from '~/utils/symbol'
+import styled from 'styled-components'
+import shuffleArray from '~/utils/shuffleArray'
+import pathResolver from 'path'
+import { BlockCode } from '~/components/TableUnicode'
+import { ApiCall } from '~/components/ApiCall'
+
+type SymbolPagePropsType = PagePropsType & {
+  fonts: Array<FontType>
+  symbol: SymbolBasicType
+}
+
+const LargeBlockCodeContainerCenter = styled.div({
+  alignItems: 'center',
+  display: 'flex',
+  justifyContent: 'center',
+  padding: 16,
+})
+
+const LargeBlockCodeContainer = styled.div({
+  display: 'flex',
+  padding: 16,
+})
+
+const LargeBlockCode = styled.span(props => ({
+  background: props.theme.colors.white2,
+  borderBottom: 'none !important',
+  borderRadius: 4,
+  fontFamily:
+    "'Noto Sans Ethiopic', 'Noto Kufi Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans Canadian Aboriginal', 'Noto Sans SC', 'Noto Sans Cuneiform', 'Noto Sans Devanagari', 'Noto Sans Egyptian Hieroglyphs', 'Noto Sans Georgian', 'Noto Sans Gujarati', 'Noto Sans Gurmukhi', 'Noto Sans Hebrew', 'Noto Sans Canadian Aboriginal', 'Noto Sans JP', 'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Mono', monospace, 'Noto Sans Malayalam', 'Noto Sans Oriya', 'Noto Sans Runic', 'Noto Sans Devanagari', 'Noto Sans Sinhala', 'Noto Sans Syriac', 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Serif Tibetan', 'Noto Sans Mono'",
+  fontSize: 128,
+  height: 256,
+  lineHeight: 1,
+  padding: 48,
+  textAlign: 'center',
+  width: 256,
+}))
+
+const FontDemoContainer = styled.div(props => ({
+  display: 'flex',
+  gap: props.theme.isMobile ? 4 : 8,
+  padding: 16,
+}))
+
+const FontDemoGlyph = styled.span(props => ({
+  height: 64,
+  padding: 16,
+  width: 64,
+}))
+
+const H3 = styled.h3(props => ({
+  background: props.theme.colors.white3,
+  fontSize: 20,
+  marginTop: 32,
+  padding: 16,
+  textAlign: 'center',
+}))
+
+// export async function getStaticPaths() {
+//   const fs = (await import('fs')).default
+//   const symbolsMap = loadJSON(
+//     'configurations/unicode.symbol.json',
+//   ) as unknown as Record<string, SymbolBasicType>
+//   const paths = Object.keys(symbolsMap).map(collection => ({
+//     params: { collection },
+//   }))
+
+//   return {
+//     fallback: false,
+//     paths: paths,
+//   }
+
+//   function loadJSON(path: string) {
+//     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+//     return JSON.parse(fs.readFileSync(path, 'utf-8'))
+//   }
+// }
+
+export async function getServerSideProps({
+  params,
+}: GetServerSidePropsContext): Promise<
+  GetServerSidePropsResult<SymbolPagePropsType>
+> {
+  const loadJSON = (await import('~/utils/loadJSON')).default
+  const type = String(params?.collection)
+  const symbolsMap = loadJSON(
+    pathResolver.resolve('./configurations/unicode.symbol.json'),
+  ) as unknown as Record<string, SymbolBasicType>
+  const symbol = symbolsMap[type]
+
+  if (!symbol) {
+    return {
+      redirect: {
+        destination: '/symbol',
+        permanent: false,
+      },
+    }
+  }
+
+  const glyphFontMap = loadJSON(
+    pathResolver.resolve('./configurations/glyph.font.json'),
+  ) as unknown as Record<string, Array<number>>
+  const fontIndices = glyphFontMap[type]
+  const fontsIndex = loadJSON(
+    pathResolver.resolve('./configurations/font.google.index.json'),
+  ) as unknown as Array<FontType>
+  const allFonts = fontIndices?.map(i => fontsIndex[i]) ?? []
+
+  const fonts = allFonts.slice(0, 5)
+
+  return {
+    props: {
+      fonts,
+      symbol,
+      tab: `Unicode Symbol ${symbol.code}`,
+      url: `/symbol/${type}`,
+    },
+  }
+}
+
+export default function SymbolPage({
+  tab,
+  url,
+  symbol,
+  fonts,
+}: SymbolPagePropsType) {
+  const symbolData = getSymbolData(symbol, fonts)
+
+  const boldSymbol = <strong>{symbol.code}</strong>
+  const title = <>Unicode Symbol {boldSymbol}</>
+
+  return (
+    <PostLayout
+      tab={tab}
+      url={url}
+      stylesheets={symbolData.fonts.map(font => font.stylesheet)}
+    >
+      <Title
+        title={title}
+        url={url}
+      />
+      {symbolData.glyph && (
+        <LargeBlockCodeContainerCenter>
+          <LargeBlockCode>{symbolData.glyph}</LargeBlockCode>
+        </LargeBlockCodeContainerCenter>
+      )}
+      <Padded>
+        <AdSense.Google
+          client="ca-pub-2593838011725409"
+          slot="4719225000"
+          style={{ minHeight: 90 }}
+          format=""
+          responsive="true"
+        />
+      </Padded>
+      <Symbol
+        symbolName={symbolData.name}
+        glyph={symbolData.glyph}
+        category={symbolData.unicodeCategories.join(', ')}
+        combiningClass={symbolData.combiningClasses?.join(', ')}
+        bidirectionalClass={symbolData.bidirectionalClasses.join(', ')}
+        codePoint={symbolData.code}
+      />
+      <ApiCall url={`/api/v1/symbol/${symbolData.slug}`} />
+      <TableScroller>
+        <Table>
+          <thead>
+            <tr>
+              <th>
+                <TableCellContent>property</TableCellContent>
+              </th>
+              <th>
+                <TableCellContent>value</TableCellContent>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <TableCell>glyph</TableCell>
+              <TableCell>
+                {symbolData.glyph ? (
+                  <BlockCode>{symbolData.glyph}</BlockCode>
+                ) : (
+                  '[INVISIBLE]'
+                )}
+              </TableCell>
+            </tr>
+            <tr>
+              <TableCell>name</TableCell>
+              <TableCell>{symbolData.name}</TableCell>
+            </tr>
+            <tr>
+              <TableCell>block</TableCell>
+              <td>
+                <TableCellLink
+                  href={`/symbol/unicode/${symbolData.block.slug}`}
+                >
+                  {symbolData.block.title}
+                </TableCellLink>
+              </td>
+            </tr>
+            <tr>
+              <TableCell>code</TableCell>
+              <TableCell>{symbolData.code}</TableCell>
+            </tr>
+            <tr>
+              <TableCell>decimal value</TableCell>
+              <TableCell>{String(symbolData.value)}</TableCell>
+            </tr>
+            <tr>
+              <TableCell>category</TableCell>
+              <TableCell>
+                {symbolData.unicodeCategories
+                  .map(({ label }) => label)
+                  .join(', ')}{' '}
+                (
+                {symbolData.unicodeCategories
+                  .map(({ code }) => code)
+                  .join(', ')}
+                )
+              </TableCell>
+            </tr>
+            <tr>
+              <TableCell>bidirectional class</TableCell>
+              <TableCell>
+                {symbolData.bidirectionalClasses
+                  .map(({ label }) => label)
+                  .join(', ')}{' '}
+                (
+                {symbolData.bidirectionalClasses
+                  .map(({ code }) => code)
+                  .join(', ')}
+                )
+              </TableCell>
+            </tr>
+            {Boolean(symbolData.combiningClasses?.length) && (
+              <tr>
+                <TableCell>combining class</TableCell>
+                <TableCell>
+                  {symbolData.combiningClasses
+                    ?.map(({ label }) => label)
+                    .join(', ')}{' '}
+                  (
+                  {symbolData.combiningClasses
+                    ?.map(({ code }) => code)
+                    .join(', ')}
+                  )
+                </TableCell>
+              </tr>
+            )}
+            <tr>
+              <TableCell>mirrored</TableCell>
+              <TableCell>
+                {symbolData.mirrored ? 'Yes' : 'No'}
+              </TableCell>
+            </tr>
+            <tr>
+              <TableCell>html entity</TableCell>
+              <TableCell>{symbolData.encodings.html}</TableCell>
+            </tr>
+            <tr>
+              <TableCell>html hex entity</TableCell>
+              <TableCell>{symbolData.encodings.htmlHex}</TableCell>
+            </tr>
+            <tr>
+              <TableCell>uri encoded value</TableCell>
+              <TableCell>{symbolData.encodings.uri}</TableCell>
+            </tr>
+            {symbolData.encodings.named && (
+              <tr>
+                <TableCell>html named entity</TableCell>
+                <TableCell>{symbolData.encodings.named}</TableCell>
+              </tr>
+            )}
+            {symbolData.encodings.utf8 && (
+              <tr>
+                <TableCell>utf-8 hex encoding</TableCell>
+                <TableCell>
+                  {symbolData.encodings.utf8
+                    .map(
+                      (x: number) =>
+                        `${x
+                          .toString(16)
+                          .toUpperCase()
+                          .padStart(2, '0')}`,
+                    )
+                    .join(' ')}
+                </TableCell>
+              </tr>
+            )}
+            {symbolData.encodings.utf16 && (
+              <tr>
+                <TableCell>utf-16 hex encoding</TableCell>
+                <TableCell>
+                  {symbolData.encodings.utf16
+                    .map(
+                      (x: number) =>
+                        `${x
+                          .toString(16)
+                          .toUpperCase()
+                          .padStart(4, '0')}`,
+                    )
+                    .join(' ')}
+                </TableCell>
+              </tr>
+            )}
+            {symbolData.encodings.utf32 && (
+              <tr>
+                <TableCell>utf-32 hex encoding</TableCell>
+                <TableCell>
+                  {symbolData.encodings.utf32
+                    .map(
+                      (x: number) =>
+                        `${x
+                          .toString(16)
+                          .toUpperCase()
+                          .padStart(8, '0')}`,
+                    )
+                    .join(' ')}
+                </TableCell>
+              </tr>
+            )}
+          </tbody>
+        </Table>
+      </TableScroller>
+      {Boolean(fonts.length) && (
+        <>
+          <H2>
+            Fonts containing glyph <strong>{symbolData.code}</strong>
+          </H2>
+          <P>
+            This is a list of some fonts that contain this glyph{' '}
+            {symbolData.code}.
+          </P>
+          {fonts.map(font => (
+            <React.Fragment key={font.name}>
+              <H3>{font.name} Font</H3>
+              {symbolData.glyph && (
+                <LargeBlockCodeContainerCenter>
+                  <LargeBlockCode
+                    style={{ fontFamily: font.name }}
+                    as="a"
+                    target="_blank"
+                    rel="nofollow"
+                    href={`https://fonts.google.com/specimen/${font.name.replace(
+                      /\s+/g,
+                      '+',
+                    )}`}
+                  >
+                    {symbolData.glyph}
+                  </LargeBlockCode>
+                </LargeBlockCodeContainerCenter>
+              )}
+            </React.Fragment>
+          ))}
+        </>
+      )}
+    </PostLayout>
+  )
+}
