@@ -2,13 +2,9 @@
 
 import Grid from '@termsurf/leaf/component/Grid'
 import Text from '@termsurf/leaf/component/Text'
-import FontsContext from '@termsurf/leaf/context/FontsContext'
-import useScripts from '@termsurf/leaf/hook/useScripts'
-import clsx from 'clsx'
-import React, { RefObject, useContext, useMemo, useRef } from 'react'
-import { useResizeObserver } from 'usehooks-ts'
-import Section, { BOX_COLOR } from '~/lib/frontend/components/Section'
-import { getMeasuredMaxWidthFromStrings } from '~/lib/frontend/utilities/elements'
+import Glyph from '~/lib/frontend/components/Glyph'
+import Section from '~/lib/frontend/components/Section'
+import TextBox from '~/lib/frontend/components/TextBox'
 
 export default function Page() {
   return (
@@ -42,10 +38,8 @@ r
 y`.split(/\n+/)
 
 function Content() {
-  useScripts(['tone', 'code'])
-
   return (
-    <Section>
+    <Section scripts={['tone']}>
       <Section.Header>
         <Section.H1>Tune</Section.H1>
         <Section.P>
@@ -565,149 +559,6 @@ function Content() {
   )
 }
 
-function Glyph({
-  text,
-  script,
-  pronunciation,
-  label,
-  size = 'medium',
-  contrast,
-  align = 'center',
-}: {
-  text: string
-  script?: string
-  pronunciation?: string
-  size?: 'small' | 'medium' | 'large'
-  contrast?: boolean
-  label?: string
-  align?: 'left' | 'center' | 'right'
-}) {
-  return (
-    <div
-      className={clsx(
-        size === 'small' ? 'px-16 pb-8' : 'px-16 pb-16',
-        size === 'small' && 'w-64',
-        contrast
-          ? 'bg-zinc-700 dark:bg-zinc-300'
-          : 'bg-zinc-100 dark:bg-zinc-800',
-        'rounded-sm',
-        align === 'center'
-          ? 'text-center'
-          : align === 'right'
-          ? 'text-right'
-          : 'text-left',
-      )}
-    >
-      <Text
-        className={clsx(
-          'block',
-          contrast
-            ? 'text-zinc-100 dark:text-zinc-800'
-            : 'text-zinc-700 dark:text-zinc-300',
-        )}
-        script={script}
-        size={size === 'small' ? 32 : size === 'medium' ? 92 : 156}
-      >
-        {text}
-      </Text>
-      {pronunciation != null && (
-        <Text
-          className={clsx(
-            'block',
-            contrast
-              ? 'text-zinc-400 dark:text-zinc-500'
-              : 'text-zinc-400 dark:text-zinc-500',
-          )}
-          size={size === 'small' ? 12 : size === 'medium' ? 22 : 32}
-        >
-          {pronunciation}
-        </Text>
-      )}
-      {label != null && (
-        <Text
-          className={clsx(
-            'block font-bold',
-            contrast
-              ? 'text-zinc-200 dark:text-zinc-800'
-              : 'text-zinc-800 dark:text-zinc-200',
-            pronunciation && 'mt-8',
-          )}
-          size={size === 'small' ? 12 : size === 'medium' ? 16 : 20}
-        >
-          {label}
-        </Text>
-      )}
-    </div>
-  )
-}
-
-function FittedGrid({
-  fontWeight,
-  fontSize,
-  fontFamily,
-  strings,
-  children,
-  itemPadding,
-  ...gridProps
-}: {
-  fontWeight: number
-  fontSize: number
-  fontFamily: string
-  strings: Array<string>
-  maxWidth?: number
-  maxRows?: number
-  gap: number
-  itemPadding?: number
-  children: React.ReactNode
-}) {
-  const state = useContext(FontsContext)
-  const isFontLoaded = state.fonts[fontFamily]
-  const ref = useRef<HTMLDivElement>(null) as RefObject<HTMLDivElement>
-  const { width: containerWidth = 0 } = useResizeObserver({ ref })
-
-  const maxItemWidth = useMemo(
-    () =>
-      !isFontLoaded
-        ? 320
-        : Math.min(
-            320,
-            getMeasuredMaxWidthFromStrings(strings, {
-              fontWeight,
-              fontSize: fontSize,
-              fontFamily: fontFamily,
-            }) + (itemPadding ?? 0),
-          ),
-    [
-      fontSize,
-      itemPadding,
-      isFontLoaded,
-      fontWeight,
-      fontFamily,
-      strings,
-    ],
-  )
-
-  const maxColumns = Math.max(
-    1,
-    Math.floor(containerWidth / maxItemWidth),
-  )
-
-  return (
-    <div
-      ref={ref}
-      className="w-full"
-    >
-      <Grid
-        maxColumns={maxColumns}
-        minWidth={maxItemWidth}
-        {...gridProps}
-      >
-        {children}
-      </Grid>
-    </div>
-  )
-}
-
 // ## Action Words
 
 // - siz
@@ -743,70 +594,3 @@ function FittedGrid({
 // [pronoun]
 
 // ## Sentences
-
-const TextBox = ({
-  className,
-  native,
-  script,
-  roman,
-  english,
-  color = 'base',
-  align = 'center',
-}: {
-  className?: string
-  native?: React.ReactNode
-  script?: string
-  roman?: React.ReactNode
-  english?: React.ReactNode
-  color?: keyof typeof BOX_COLOR
-  align?: 'left' | 'center' | 'right'
-}) => {
-  const ENGLISH_COLOR = {
-    neutral: 'text-zinc-400 dark:text-zinc-600',
-  }
-  return (
-    <div
-      className={clsx(
-        className,
-        BOX_COLOR[color],
-        'rounded-sm p-16 flex flex-col',
-        align === 'center'
-          ? 'text-center'
-          : align === 'right'
-          ? 'text-right'
-          : 'text-left',
-      )}
-    >
-      {native && (
-        <Text
-          className="font-semibold block"
-          size={28}
-          script={script}
-        >
-          {native}
-        </Text>
-      )}
-      {roman && (
-        <Text
-          className={clsx(
-            'block',
-            !native ? 'font-bold' : 'font-medium',
-          )}
-          size={18}
-        >
-          {roman}
-        </Text>
-      )}
-      {english && (
-        <Text
-          className={clsx(
-            ENGLISH_COLOR[color],
-            'block dark:font-medium',
-          )}
-        >
-          {english}
-        </Text>
-      )}
-    </div>
-  )
-}

@@ -63,12 +63,14 @@ Section.Environment = ({
 
 export default function Section({
   children,
+  scripts = [],
 }: {
   children: React.ReactNode
+  scripts?: Array<string>
 }) {
   const { cached } = usePageSettings<any, Cached>()
 
-  useScripts(['code'])
+  useScripts(['code'].concat(scripts))
 
   return (
     <SectionContext.Provider value={{ layout: cached.layout }}>
