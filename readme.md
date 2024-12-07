@@ -72,7 +72,7 @@ That plus it would be amazing to turn this into a small revenue stream somehow, 
 
 ## Development
 
-This repo is currently a frontend **Next.js v14** "app router" style app. It used [`@termsurf/leaf`](https://github.com/termsurf/leaf) for most of the UI. Leaf is a simple UI kit for TermSurf projects, just the general theme basically, didn't reinvent the wheel too much here. Built on top of some of these things:
+This repo is currently a frontend **Next.js v15** "app router" style app. It used [`@termsurf/leaf`](https://github.com/termsurf/leaf) for most of the UI. Leaf is a simple UI kit for TermSurf projects, just the general theme basically, didn't reinvent the wheel too much here. Built on top of some of these things:
 
 - [React](https://react.dev/)
 - [Next.js](https://nextjs.org/)
@@ -92,7 +92,7 @@ This repo is currently a frontend **Next.js v14** "app router" style app. It use
 #### Start the server
 
 ```bash
-pnpm work
+pnpm dev
 ```
 
 Then visit http://localhost:3000 or whatever port it takes you to.
@@ -100,7 +100,7 @@ Then visit http://localhost:3000 or whatever port it takes you to.
 #### Test production build
 
 ```bash
-pnpm make
+pnpm build
 ```
 
 ## License
@@ -115,15 +115,3 @@ computation. Find us on [X](https://x.com/termsurf),
 [LinkedIn](https://www.linkedin.com/company/termsurf), and
 [Facebook](https://www.facebook.com/termsurf). Check out our other
 [GitHub projects](https://github.com/termsurf) as well!
-
-- https://www.ashleydanyew.com/posts/latin-pronunciation-guide
-
-```
-/symbols/icons
-/symbols/unicode
-/symbols/U+1234
-/scripts/latin/fonts
-/scripts/latin/symbols/d/fonts
-/fonts/noto-sans/symbols/d
-/fonts/noto-sans/blocks/:block
-```
