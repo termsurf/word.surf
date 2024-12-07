@@ -1,0 +1,553 @@
+resources:
+  path: /languages/tune/guides
+  title: Tune Language
+  description: A simplified spoken language for modeling reality
+  scripts:
+    - tone
+  consonants:
+    - m
+    - n
+    - q
+    - g
+    - d
+    - b
+    - p
+    - t
+    - k
+    - h
+    - s
+    - f
+    - v
+    - z
+    - j
+    - x
+    - c
+    - C
+    - w
+    - l
+    - r
+    - y
+components:
+  - type: header
+    children:
+      - type: h1
+        children: Tune
+      - type: p
+        children: A simplified spoken language for modeling reality
+      - type: box
+        layout: vertical
+        items: center
+        p: 16
+        children:
+          - type: text
+            className: block text-zinc-600 font-semibold
+            children: hen wolda
+          - type: text
+            className: block text-zinc-400
+            children: Hello World
+  - type: block
+    children:
+      - type: h2
+        children: Tone
+      - type: p
+        children: A rune-inspired writing system for human languages
+      - type: box
+        layout: vertical
+        items: center
+        p: 16
+        children:
+          - type: text
+            className: block
+            script: tone
+            size: 32
+            children: hen wolda
+          - type: text
+            className: block text-zinc-600 font-semibold
+            children: hen wolda
+          - type: text
+            className: block text-zinc-400
+            children: Hello World
+  - type: block
+    children:
+      - type: h2
+        children: The 3 Base Tones
+      - type: p
+        children: All glyphs are derived from these 3 symbols
+      - type: box
+        p: 16
+        children:
+          - type: grid
+            maxColumns: 3
+            minWidth: 192
+            maxWidth: 192
+            gap: 16
+            breakpoints: [3, 1]
+            align: center
+            children:
+              - type: glyph
+                script: tone
+                text: i
+                pronunciation: i
+              - type: glyph
+                script: tone
+                text: a
+                pronunciation: a
+              - type: glyph
+                script: tone
+                text: u
+                pronunciation: u
+  - type: block
+    children:
+      - type: h2
+        children: Glyph Structure
+      - type: p
+        children: Rotate and add tail to generate all possible glyphs
+      - type: box
+        paddingX: 16
+        display: flex
+        justify: center
+        children:
+          - type: image
+            src: /tone.gif
+            width: 512
+  - type: block
+    children:
+      - type: h2
+        children: Vowels
+      - type: p
+        children: The 5 vowels used in Tune
+      - type: box
+        p: 16
+        children:
+          - type: grid
+            maxColumns: 5
+            minWidth: 128
+            maxWidth: 192
+            gap: 16
+            breakpoints: [5, 3, 2, 1]
+            align: center
+            children:
+              - type: glyph
+                script: tone
+                text: i
+                pronunciation: i
+              - type: glyph
+                script: tone
+                text: e
+                pronunciation: e
+              - type: glyph
+                script: tone
+                text: a
+                pronunciation: a
+              - type: glyph
+                script: tone
+                text: o
+                pronunciation: o
+              - type: glyph
+                script: tone
+                text: u
+                pronunciation: u
+  - type: block
+    children:
+      - type: h2
+        children: Consonants
+      - type: p
+        children: The 22 consonants used in Tune
+      - type: box
+        p: 16
+        children:
+          - type: grid
+            maxColumns: 4
+            minWidth: 128
+            maxWidth: 192
+            gap: 16
+            breakpoints: [4, 3, 2, 1]
+            align: center
+            children:
+              - type: mapping
+                data:
+                  $ref: consonants
+                item: c
+                template:
+                  type: glyph
+                  script: tone
+                  key:
+                    $ref: c
+                  text:
+                    $ref: c
+                  pronunciation:
+                    $ref: c
+  - type: block
+    children:
+      - type: h2
+        children: Alphabet
+      - type: p
+        children: How to remember the 27 sounds in alphabetic order
+      - type: box
+        layout: vertical
+        gap: 8
+        p: 16
+        items: center
+        children:
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: i
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: e
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: a
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: o
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: u
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: m
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: n
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: q
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: b
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: d
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: g
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: p
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: t
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: k
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: h
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: f
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: s
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: v
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: z
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: x
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: j
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: c
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: C
+                size: small
+          - type: box
+            display: flex
+            gap: 8
+            children:
+              - type: glyph
+                script: tone
+                contrast: true
+                text: w
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: l
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: r
+                size: small
+              - type: glyph
+                script: tone
+                contrast: true
+                text: y
+                size: small
+  - type: block
+    children:
+      - type: h2
+        children: Roots
+      - type: p
+        children: Base words used to generate all other word forms
+      - type: box
+        p: 16
+        children:
+          - type: grid
+            breakpoints: [4, 2, 1]
+            maxColumns: 4
+            gap: 16
+            minWidth: 156
+            children:
+              - type: textbox
+                script: tone
+                color: neutral
+                native: red
+                roman: red
+                english: red
+              - type: textbox
+                script: tone
+                color: neutral
+                native: dip
+                roman: dip
+                english: tree
+              - type: textbox
+                script: tone
+                color: neutral
+                native: groq
+                roman: groq
+                english: grow
+              - type: textbox
+                script: tone
+                color: neutral
+                native: kwik
+                roman: kwik
+                english: quickly
+  - type: block
+    children:
+      - type: h2
+        children: Root Rules
+      - type: p
+        children: All roots start and end with a consonant
+      - type: list
+        children:
+          - type: item
+            label: Vowel clusters
+            children: No diphthongs exist like "oi" or "ai".
+          - type: item
+            label: Consonant clusters
+            children:
+              Any straightforward to pronounce consonant cluster is
+              allowed.
+          - type: item
+            label: Root endings
+            children: Roots can't end in -h, -y, or -w.
+          - type: item
+            label: Root beginnings
+            children: Roots can't start in q-.
+          - type: item
+            label: Compound roots
+            children:
+              Join roots with -ya- or -wa-, depending on what sounds
+              best after a particular consonant.
+          - type: item
+            label: Syllables
+            children:
+              Most words are 1-2 syllables, but arbitrary numbers of
+              syllables are allowed.
+  - type: block
+    children:
+      - type: h2
+        children: Realized Words
+      - type: p
+        children: Add suffixes to the roots
+      - type: box
+        p: 16
+        children:
+          - type: grid
+            maxColumns: 3
+            minWidth: 192
+            maxWidth: 192
+            gap: 16
+            breakpoints: [3, 1]
+            align: center
+            children:
+              - type: glyph
+                script: tone
+                text: -i
+                pronunciation: -i
+                label: action
+              - type: glyph
+                script: tone
+                text: -a
+                pronunciation: -a
+                label: object
+              - type: glyph
+                script: tone
+                text: -u
+                pronunciation: -u
+                label: feature
+  - type: block
+    children:
+      - type: h2
+        children: Action Words
+      - type: p
+        children: These are some realized verbs of Tune
+      - type: box
+        p: 16
+        children:
+          - type: grid
+            gap: 16
+            minWidth: 256
+            maxColumns: 4
+            children:
+              - type: textbox
+                script: tone
+                color: neutral
+                native: sizi
+                roman: sizi
+                english: experience
+              - type: textbox
+                script: tone
+                color: neutral
+                native: zusi
+                roman: zusi
+                english: do
+              - type: textbox
+                script: tone
+                color: neutral
+                native: niqi
+                roman: niqi
+                english: flow
+              - type: textbox
+                script: tone
+                color: neutral
+                native: nuqi
+                roman: nuqi
+                english: bond
+  - type: block
+    children:
+      - type: h2
+        children: Object Words
+      - type: p
+        children: These are some realized nouns of Tune
+      - type: box
+        p: 16
+        children:
+          - type: grid
+            gap: 16
+            minWidth: 256
+            maxColumns: 4
+            children:
+              - type: textbox
+                script: tone
+                color: neutral
+                native: siza
+                roman: siza
+                english: experience
+              - type: textbox
+                script: tone
+                color: neutral
+                native: zusa
+                roman: zusa
+                english: deed
+              - type: textbox
+                script: tone
+                color: neutral
+                native: niqa
+                roman: niqa
+                english: flow
+              - type: textbox
+                script: tone
+                color: neutral
+                native: nuqa
+                roman: nuqa
+                english: bond

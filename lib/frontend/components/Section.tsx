@@ -1,4 +1,11 @@
+import Box from '@termsurf/leaf/component/Box'
 import { H1, H2, H3, P } from '@termsurf/leaf/component/Content'
+import assert from 'assert'
+import get from 'lodash/get'
+import Glyph from '~/lib/frontend/components/Glyph'
+import Grid from '~/lib/frontend/components/Grid'
+import TextBox from '~/lib/frontend/components/TextBox'
+
 import Layout from '@termsurf/leaf/component/Layout'
 import Text from '@termsurf/leaf/component/Text'
 import {
@@ -422,4 +429,183 @@ const useKeyboardSectionNav = () => {
   }, [handleKeyPress, layout])
 
   return currentSectionIndex
+}
+
+function renderComponent(node: any, scope: Record<string, any>) {
+  const type = typeof node
+
+  if (type === 'string' || type === 'number') {
+    return <React.Fragment key={scope.key}>{node}</React.Fragment>
+  }
+
+  if (node.$ref) {
+    return (
+      <React.Fragment key={scope.key}>
+        {get(scope, node.$ref)}
+      </React.Fragment>
+    )
+  }
+
+  if (node.type === 'mapping') {
+    return mapping({
+      scope,
+      ...node,
+    })
+  }
+
+  const Component = COMPONENTS[node.type]
+  if (!Component) {
+    console.error(node)
+  }
+  assert(Component, `Component ${node.type} doesn't exist`)
+
+  let children
+
+  if (node.children) {
+    if (Array.isArray(node.children)) {
+      children = node.children.map((x, i) => {
+        const key = x.key
+          ? x.key
+          : scope.key
+          ? `${scope.key}-${i}`
+          : String(i)
+        return renderComponent(x, { ...scope, key })
+      })
+    } else {
+      // console.log('scope', node.type, scope)
+      children = renderComponent(node.children, {
+        ...scope,
+        key: `${scope.key}-0`,
+      })
+    }
+  }
+
+  const props: Record<string, any> = {}
+
+  for (const name in node) {
+    const val = node[name]
+    props[name] = val?.$ref ? get(scope, val.$ref) : val
+  }
+
+  const {
+    key: keyX,
+    type: typeX,
+    children: childrenX,
+    ...propsWithoutKey
+  } = props
+
+  if (scope.key) {
+    return (
+      <ScopeContext.Provider
+        key={scope.key}
+        value={scope}
+      >
+        <Component {...propsWithoutKey}>{children}</Component>
+      </ScopeContext.Provider>
+    )
+  }
+
+  return (
+    <ScopeContext.Provider value={scope}>
+      <Component {...propsWithoutKey}>{children}</Component>
+    </ScopeContext.Provider>
+  )
+}
+
+Section.Page = ({
+  resources,
+  components,
+}: {
+  resources: Record<string, any>
+  components: Array<any>
+}) => {
+  return (
+    <Section.Environment path={resources.path}>
+      <Section scripts={resources.scripts}>
+        {components.map((x, i) =>
+          renderComponent(x, { ...resources, key: String(i) }),
+        )}
+      </Section>
+    </Section.Environment>
+  )
+}
+
+const COMPONENTS: Record<string, React.ComponentType<any>> = {
+  box: Box,
+  grid: Grid,
+  text: Text,
+  glyph: Glyph,
+  section: Section,
+  textbox: TextBox,
+  block: Section.Block,
+  list: Section.List,
+  item: Section.Item,
+  p: Section.P,
+  h1: Section.H1,
+  h2: Section.H2,
+  h3: Section.H3,
+  header: Section.Header,
+  image: Image,
+}
+
+const ScopeContext = createContext<Record<string, any>>({})
+
+const COMPONENT_TYPES = Object.keys(COMPONENTS)
+
+function mapping({
+  scope,
+  data: dataProp,
+  item,
+  template,
+}: {
+  scope: any
+  data: any
+  item: string
+  template: any
+}) {
+  const data = dataProp.$ref ? get(scope, dataProp.$ref) : dataProp
+  assert(
+    COMPONENT_TYPES.includes(template.type),
+    `Don't know how to process '${template.type}' component`,
+  )
+
+  if (Array.isArray(data)) {
+    return data.map((x, i) => {
+      const childScope = { ...scope, [item]: x }
+      const key = x.key
+        ? x.key
+        : template.key?.$ref
+        ? get(childScope, template.key.$ref) ?? String(i)
+        : childScope.key
+        ? `${childScope.key}-${i}`
+        : String(i)
+      return renderComponent(template, { ...childScope, key })
+    })
+  } else {
+    return Object.keys(data).map(key => {
+      return renderComponent(template, {
+        ...scope,
+        key,
+        [item]: data[key],
+      })
+    })
+  }
+}
+
+function Image({
+  src,
+  width,
+  height,
+}: {
+  src: string
+  width?: number
+  height?: number
+}) {
+  return (
+    <img
+      src={src}
+      width={width}
+      height={height}
+    />
+  )
 }
