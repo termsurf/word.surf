@@ -15,7 +15,5 @@ export type GridProps = {
 export default function Grid(props: GridProps) {
   assert(GAP.includes(props.gap), GAP_ERROR)
 
-  console.log(props)
-
   return <LeafGrid {...props} />
 }

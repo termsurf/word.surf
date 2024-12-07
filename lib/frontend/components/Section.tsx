@@ -438,10 +438,10 @@ function renderComponent(node: any, scope: Record<string, any>) {
     return <React.Fragment key={scope.key}>{node}</React.Fragment>
   }
 
-  if (node.$ref) {
+  if (node.$ref || node.$text || node.$call) {
     return (
       <React.Fragment key={scope.key}>
-        {get(scope, node.$ref)}
+        {renderValue(node, scope)}
       </React.Fragment>
     )
   }
@@ -483,8 +483,8 @@ function renderComponent(node: any, scope: Record<string, any>) {
   const props: Record<string, any> = {}
 
   for (const name in node) {
-    const val = node[name]
-    props[name] = val?.$ref ? get(scope, val.$ref) : val
+    const val = renderValue(node[name], scope)
+    props[name] = val
   }
 
   const {
@@ -510,6 +510,26 @@ function renderComponent(node: any, scope: Record<string, any>) {
       <Component {...propsWithoutKey}>{children}</Component>
     </ScopeContext.Provider>
   )
+}
+
+function renderValue(val: any, scope: Record<string, any>) {
+  if (val) {
+    if (val.$ref) {
+      return get(scope, val.$ref)
+    } else if (val.$text) {
+      return val.$text
+        .map(x => (x.$ref ? get(scope, x.$ref) : x))
+        .join('')
+    } else if (val.$call) {
+      const fn = scope[val.$call.name]
+      assert(fn, `Function '${val.$call.name}' does not exist`)
+      const args = (val.$call.args ?? []).map(arg =>
+        renderValue(arg, scope),
+      )
+      return fn(...args)
+    }
+  }
+  return val
 }
 
 Section.Page = ({
