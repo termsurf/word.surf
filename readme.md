@@ -25,7 +25,7 @@
 
 ## Welcome
 
-CodeSurf is an open source language website (_currently still **pre-alpha** WIP), where you can (_eventually_):
+CodeSurf is an open source language website (_currently still **pre-alpha** WIP_), where you can (_eventually_):
 
 - Publish your conlang or natural language
 - Publish your conscript or natural writing system
