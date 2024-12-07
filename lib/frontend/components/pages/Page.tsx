@@ -24,6 +24,12 @@ function Content() {
     <Layout>
       <div className="mt-32 flex flex-col gap-16">
         <header className="mt-64">
+          <div className="pb-16">
+            <img
+              src="/moon.svg"
+              height="192"
+            />
+          </div>
           <H1>WordSurf</H1>
           <P
             align="center"

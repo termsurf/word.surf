@@ -25,13 +25,13 @@
 
 ## Welcome
 
-CodeSurf is an open source language website where you can:
+CodeSurf is an open source language website (_currently still **pre-alpha** WIP), where you can (_eventually_):
 
 - Publish your conlang or natural language
+- Publish your conscript or natural writing system
 - Publish a language's vocabulary
 - Publish a language's grammar
 - Publish word lists
-- Publish your conscript or other writing system
 
 It's basically like Wiktionary but with a different bar for quality, a more integrated and helpful UI (with various tools and such), an API for developers to use, and easier for others to contribute to (assuming you are familiar with Git/GitHub). And of course we would welcome all conlangs which Wiktionary probably won't support.
 
@@ -42,8 +42,8 @@ You'll also be able to:
 
 ## Ecosystem
 
-- `@termsurf/basesurfbase`: Base content for standard languages, scripts, and worlds.
-- `@termsurf/basesurfhost`: Generator for creating your own content repository.
+- `@termsurf/wordsurfbase`: Base content for standard languages, scripts, and worlds.
+- `@termsurf/wordsurfhost`: Generator for creating your own content repository.
 - `@termsurf/leaf`: Generator for creating your own content repository.
 
 ## Motivation
@@ -63,10 +63,6 @@ In addition, I personally would like to learn how to communicate in these 7 anci
 So needed a system to normalize and unify the lexicons and rules for the different languages, so you can see more at once, in as nice and easy a way as possible.
 
 That plus it would be amazing to turn this into a small revenue stream somehow, to fund further open developments in the future.
-
-## Site Notes
-
-- REST API documentation at https://word.surf/*.json
 
 ## Contributing
 
