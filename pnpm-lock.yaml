@@ -122,8 +122,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.6
       '@termsurf/leaf':
-        specifier: ^0.5.40
-        version: 0.5.40(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.33.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@reduxjs/toolkit@2.4.0(react-redux@9.1.2(react@19.0.0-rc-02c0e824-20241028)(redux@5.0.1)(types-react@19.0.0-rc.1))(react@19.0.0-rc-02c0e824-20241028))(@types/node@18.19.45)(codemirror@6.0.1(@lezer/common@1.2.1))(postcss@8.4.35)(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react-redux@9.1.2(react@19.0.0-rc-02c0e824-20241028)(redux@5.0.1)(types-react@19.0.0-rc.1))(react@19.0.0-rc-02c0e824-20241028)(types-react-dom@19.0.0-rc.1)(types-react@19.0.0-rc.1)(typescript@5.3.3)
+        specifier: ^0.5.42
+        version: 0.5.42(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.33.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@reduxjs/toolkit@2.4.0(react-redux@9.1.2(react@19.0.0-rc-02c0e824-20241028)(redux@5.0.1)(types-react@19.0.0-rc.1))(react@19.0.0-rc-02c0e824-20241028))(@types/node@18.19.45)(codemirror@6.0.1(@lezer/common@1.2.1))(postcss@8.4.35)(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react-redux@9.1.2(react@19.0.0-rc-02c0e824-20241028)(redux@5.0.1)(types-react@19.0.0-rc.1))(react@19.0.0-rc-02c0e824-20241028)(types-react-dom@19.0.0-rc.1)(types-react@19.0.0-rc.1)(typescript@5.3.3)
       '@termsurf/talk':
         specifier: ^3.4.4
         version: 3.4.4
@@ -3137,8 +3137,8 @@ packages:
   '@termsurf/kink@0.1.6':
     resolution: {integrity: sha512-E2GwKz+HL7A9klsPyzWtobO24ZUB0jOJQHnRl2tjs8OElF2NSM2+qq7N1NlJ2Ry0we0qU/i7N4NuzF4eaAQ8uA==}
 
-  '@termsurf/leaf@0.5.40':
-    resolution: {integrity: sha512-IQUEuQi1hVneUJcBRtV0cn3sCbiZzHbvdSruV7q6RvlTV98RmO82mCrs0LuIrGNSsjQ5FyVJ67bftfb9ZfZoCA==}
+  '@termsurf/leaf@0.5.42':
+    resolution: {integrity: sha512-GeISjmPHdBMEK5R8faX47Q9H7hm7uAm/cPerbvOp2XsvDvUrFgWEadptq2pNGLbDRtwIzWdgx+oGaQM9nkM1iQ==}
     peerDependencies:
       '@reduxjs/toolkit': ^2.4.0
       react: 19.0.0-rc-66855b96-20241106
@@ -13932,7 +13932,7 @@ snapshots:
     dependencies:
       ts-custom-error: 3.3.1
 
-  '@termsurf/leaf@0.5.40(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.33.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@reduxjs/toolkit@2.4.0(react-redux@9.1.2(react@19.0.0-rc-02c0e824-20241028)(redux@5.0.1)(types-react@19.0.0-rc.1))(react@19.0.0-rc-02c0e824-20241028))(@types/node@18.19.45)(codemirror@6.0.1(@lezer/common@1.2.1))(postcss@8.4.35)(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react-redux@9.1.2(react@19.0.0-rc-02c0e824-20241028)(redux@5.0.1)(types-react@19.0.0-rc.1))(react@19.0.0-rc-02c0e824-20241028)(types-react-dom@19.0.0-rc.1)(types-react@19.0.0-rc.1)(typescript@5.3.3)':
+  '@termsurf/leaf@0.5.42(@babel/core@7.23.9)(@babel/runtime@7.24.6)(@codemirror/autocomplete@6.12.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.33.0)(@lezer/common@1.2.1))(@codemirror/lint@6.5.0)(@codemirror/search@6.5.6)(@codemirror/theme-one-dark@6.1.2)(@lezer/common@1.2.1)(@lezer/lr@1.4.0)(@reduxjs/toolkit@2.4.0(react-redux@9.1.2(react@19.0.0-rc-02c0e824-20241028)(redux@5.0.1)(types-react@19.0.0-rc.1))(react@19.0.0-rc-02c0e824-20241028))(@types/node@18.19.45)(codemirror@6.0.1(@lezer/common@1.2.1))(postcss@8.4.35)(react-dom@19.0.0-rc-02c0e824-20241028(react@19.0.0-rc-02c0e824-20241028))(react-redux@9.1.2(react@19.0.0-rc-02c0e824-20241028)(redux@5.0.1)(types-react@19.0.0-rc.1))(react@19.0.0-rc-02c0e824-20241028)(types-react-dom@19.0.0-rc.1)(types-react@19.0.0-rc.1)(typescript@5.3.3)':
     dependencies:
       '@codemirror/basic-setup': 0.20.0
       '@codemirror/commands': 6.7.1

@@ -48,10 +48,9 @@ const nextConfig = withYaml(
     ],
     experimental: {
       mdxRs: true,
-      // ppr: true,
-      // missingSuspenseWithCSRBailout: false,
     },
     images: {
+      unoptimized: true,
       remotePatterns: [
         {
           protocol: 'https',
