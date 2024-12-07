@@ -70,22 +70,30 @@ export default function Section({
 
   useScripts(['code'])
 
-  useKeyboardSectionNav()
-
   return (
     <SectionContext.Provider value={{ layout: cached.layout }}>
       <Layout>
-        <div
-          className={clsx(
-            'flex-1 min-h-full pb-64 flex flex-col',
-            cached.layout === 'document' && 'pt-96',
-            // '[&>section:nth-child(even)]:bg-zinc-50 [&>section:nth-child(odd)]:bg-white [&>section:nth-child(event)]:dark:bg-black [&>section]:dark:text-zinc-300 [&>section:nth-child(odd)]:dark:bg-zinc-950',
-          )}
-        >
-          {children}
-        </div>
+        <Content>{children}</Content>
       </Layout>
     </SectionContext.Provider>
+  )
+}
+
+function Content({ children }: { children: React.ReactNode }) {
+  const { layout } = useContext(SectionContext)
+
+  useKeyboardSectionNav()
+
+  return (
+    <div
+      className={clsx(
+        'flex-1 min-h-full pb-64 flex flex-col',
+        layout === 'document' && 'pt-96',
+        // '[&>section:nth-child(even)]:bg-zinc-50 [&>section:nth-child(odd)]:bg-white [&>section:nth-child(event)]:dark:bg-black [&>section]:dark:text-zinc-300 [&>section:nth-child(odd)]:dark:bg-zinc-950',
+      )}
+    >
+      {children}
+    </div>
   )
 }
 
@@ -365,7 +373,7 @@ const useKeyboardSectionNav = () => {
         observerRef.current.disconnect()
       }
     }
-  }, [])
+  }, [layout])
 
   const handleKeyPress = useCallback(
     event => {
@@ -409,7 +417,7 @@ const useKeyboardSectionNav = () => {
     return () => {
       window.removeEventListener('keydown', handleKeyPress)
     }
-  }, [handleKeyPress])
+  }, [handleKeyPress, layout])
 
   return currentSectionIndex
 }
