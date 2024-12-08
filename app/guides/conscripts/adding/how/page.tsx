@@ -63,6 +63,11 @@ function Content() {
             the fonts section!
           </Section.Item>
         </Section.List>
+        <P>
+          Your script will then be added to our{' '}
+          <A href="/scripts">script homepage</A>, so let us know what 1
+          glyphs best represents your script.
+        </P>
         <Section.H3>
           Glyph Categories{' '}
           <Box display="block">
