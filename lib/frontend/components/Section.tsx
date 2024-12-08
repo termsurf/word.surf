@@ -132,7 +132,7 @@ Section.Block = ({ children }: { children: React.ReactNode }) => {
       className={clsx(
         'flex-1 section',
         layout === 'slideshow' && 'pt-8 min-h-screen justify-center',
-        layout === 'document' && 'pb-64 pt-32',
+        layout === 'document' && 'pb-32 pt-32',
         'border-0 border-b-8 border-zinc-50 dark:border-zinc-900 border-solid last:border-none',
       )}
     >
@@ -210,18 +210,33 @@ Section.H1 = ({ children }: { children: React.ReactNode }) => {
 }
 
 Section.H2 = ({ children }: { children: React.ReactNode }) => {
-  return <H2 align="center">{children}</H2>
+  return (
+    <H2
+      align="center"
+      className="!mb-32"
+    >
+      {children}
+    </H2>
+  )
 }
 
 Section.H3 = ({ children }: { children: React.ReactNode }) => {
   return <H3 align="center">{children}</H3>
 }
 
-Section.P = ({ children }: { children: React.ReactNode }) => {
+Section.P = ({
+  align,
+  color,
+  children,
+}: {
+  align: 'center' | 'left'
+  color: 'primary' | 'secondary'
+  children: React.ReactNode
+}) => {
   return (
     <P
-      align="center"
-      type="secondary"
+      align={align}
+      type={color}
     >
       {children}
     </P>
@@ -538,14 +553,13 @@ export const SectionPage = (
   props: Record<string, any> & {
     scripts: Array<string>
     path: string
-    view: Array<any>
-    components: Array<any>
+    body: Array<any>
   },
 ) => {
   return (
     <Section.Environment path={props.path}>
       <Section scripts={props.scripts}>
-        {props.components.map((x, i) => {
+        {props.body.map((x, i) => {
           const rendered = renderComponent(x, {
             ...props,
             key: String(i),

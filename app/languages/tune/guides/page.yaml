@@ -26,12 +26,14 @@ consonants:
   - l
   - r
   - y
-components:
+body:
   - type: header
     children:
       - type: h1
         children: Tune
       - type: p
+        align: center
+        color: secondary
         children: A simplified spoken language for modeling reality
       - type: box
         layout: vertical
@@ -49,6 +51,8 @@ components:
       - type: h2
         children: Tone
       - type: p
+        align: center
+        color: secondary
         children: A rune-inspired writing system for human languages
       - type: box
         layout: vertical
@@ -71,6 +75,8 @@ components:
       - type: h2
         children: The 3 Base Tones
       - type: p
+        align: center
+        color: secondary
         children: All glyphs are derived from these 3 symbols
       - type: box
         padding: 16
@@ -100,6 +106,8 @@ components:
       - type: h2
         children: Glyph Structure
       - type: p
+        align: center
+        color: secondary
         children: Rotate and add tail to generate all possible glyphs
       - type: box
         paddingX: 16
@@ -114,6 +122,8 @@ components:
       - type: h2
         children: Vowels
       - type: p
+        align: center
+        color: secondary
         children: The 5 vowels used in Tune
       - type: box
         padding: 16
@@ -151,6 +161,8 @@ components:
       - type: h2
         children: Consonants
       - type: p
+        align: center
+        color: secondary
         children: The 22 consonants used in Tune
       - type: box
         padding: 16
@@ -181,6 +193,8 @@ components:
       - type: h2
         children: Alphabet
       - type: p
+        align: center
+        color: secondary
         children: How to remember the 27 sounds in alphabetic order
       - type: box
         layout: vertical
@@ -376,6 +390,8 @@ components:
       - type: h2
         children: Roots
       - type: p
+        align: center
+        color: secondary
         children: Base words used to generate all other word forms
       - type: box
         padding: 16
@@ -415,6 +431,8 @@ components:
       - type: h2
         children: Root Rules
       - type: p
+        align: center
+        color: secondary
         children: All roots start and end with a consonant
       - type: list
         children:
@@ -447,6 +465,8 @@ components:
       - type: h2
         children: Realized Words
       - type: p
+        align: center
+        color: secondary
         children: Add suffixes to the roots
       - type: box
         padding: 16
@@ -479,6 +499,8 @@ components:
       - type: h2
         children: Action Words
       - type: p
+        align: center
+        color: secondary
         children: These are some realized verbs of Tune
       - type: box
         padding: 16
@@ -517,6 +539,8 @@ components:
       - type: h2
         children: Object Words
       - type: p
+        align: center
+        color: secondary
         children: These are some realized nouns of Tune
       - type: box
         padding: 16
