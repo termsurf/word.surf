@@ -117,7 +117,7 @@ Section.Header = ({ children }: { children: React.ReactNode }) => {
         'flex flex-col section',
         layout === 'slideshow' && 'min-h-screen justify-center',
         layout === 'document' && 'pb-64',
-        'border-0 border-b-8 border-zinc-100 border-solid last:border-none',
+        'border-0 border-b-8 border-zinc-50 border-solid last:border-none',
       )}
     >
       {children}
@@ -133,7 +133,7 @@ Section.Block = ({ children }: { children: React.ReactNode }) => {
         'flex flex-col flex-1 section',
         layout === 'slideshow' && 'pt-8 min-h-screen justify-center',
         layout === 'document' && 'pb-64 pt-32',
-        'border-0 border-b-8 border-zinc-100 border-solid last:border-none',
+        'border-0 border-b-8 border-zinc-50 border-solid last:border-none',
       )}
     >
       {children}

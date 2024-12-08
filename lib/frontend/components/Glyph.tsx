@@ -1,6 +1,8 @@
 import Text from '@termsurf/leaf/component/Text'
 import clsx from 'clsx'
 
+// TODO: double click to navigate
+// TODO: pronunciation on click
 export default function Glyph({
   text,
   script,
