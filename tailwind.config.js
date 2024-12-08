@@ -1,3 +1,4 @@
+import COLORS from '@termsurf/leaf/utility/colors'
 import radix from 'tailwindcss-radix'
 
 const config = {
@@ -423,7 +424,14 @@ const config = {
       },
     },
   },
-
+  safelist: [
+    ...COLORS.used,
+    'pb-8',
+    'pb-16',
+    'pb-24',
+    'pb-32',
+    'pb-48',
+  ],
   plugins: [radix()],
 }
 export default config

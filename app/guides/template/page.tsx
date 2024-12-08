@@ -4,7 +4,7 @@ import Section from '~/lib/frontend/components/Section'
 
 export default function Page() {
   return (
-    <Section.Environment path="/guides/earth-climate-cycles">
+    <Section.Environment path="/guides/conscripts/adding/how">
       <Content />
     </Section.Environment>
   )

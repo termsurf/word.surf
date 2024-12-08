@@ -114,9 +114,9 @@ Section.Header = ({ children }: { children: React.ReactNode }) => {
   return (
     <header
       className={clsx(
-        'flex flex-col section',
+        'flex-1 section',
         layout === 'slideshow' && 'min-h-screen justify-center',
-        layout === 'document' && 'pb-64',
+        layout === 'document' && 'pb-32',
         'border-0 border-b-8 border-zinc-50 dark:border-zinc-900 border-solid last:border-none',
       )}
     >
@@ -130,7 +130,7 @@ Section.Block = ({ children }: { children: React.ReactNode }) => {
   return (
     <section
       className={clsx(
-        'flex flex-col flex-1 section',
+        'flex-1 section',
         layout === 'slideshow' && 'pt-8 min-h-screen justify-center',
         layout === 'document' && 'pb-64 pt-32',
         'border-0 border-b-8 border-zinc-50 dark:border-zinc-900 border-solid last:border-none',
@@ -266,7 +266,7 @@ Section.List = ({
 }) => {
   const Tag = ordered ? 'ol' : 'ul'
   return (
-    <Tag className="rounded-sm overflow-hidden mx-16 !mt-16 list-none [&>li:nth-child(odd)]:bg-zinc-200 [&>li:nth-child(even)]:bg-zinc-100 dark:[&>li:nth-child(odd)]:bg-zinc-900 dark:[&>li:nth-child(even)]:bg-zinc-800">
+    <Tag className="rounded-sm overflow-hidden mb-32 mx-16 !mt-16 list-none [&>li:nth-child(odd)]:bg-zinc-200 [&>li:nth-child(even)]:bg-zinc-100 dark:[&>li:nth-child(odd)]:bg-zinc-900 dark:[&>li:nth-child(even)]:bg-zinc-800">
       {children}
     </Tag>
   )
