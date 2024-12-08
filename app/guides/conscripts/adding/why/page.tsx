@@ -1,5 +1,7 @@
 'use client'
 
+import Box from '@termsurf/leaf/component/Box'
+import { LinkButton } from '@termsurf/leaf/component/Button'
 import { A } from '@termsurf/leaf/component/Content'
 import Section from '~/lib/frontend/components/Section'
 
@@ -114,6 +116,58 @@ function Content() {
             categories, and see your showcase update instantly.
           </Section.Item>
         </Section.List>
+      </Section.Block>
+
+      <Section.Block>
+        <Section.H2>How It Works</Section.H2>
+        <Section.P>
+          Creating and showcasing your conscript on WordSurf is as
+          simple as following three steps. We've made the process
+          effortless so you can focus on your creativity while we handle
+          the rest.
+        </Section.P>
+
+        <Section.H3>Add Your Conscript</Section.H3>
+        <Section.P>
+          Start by visiting our{' '}
+          <A href="/guides/conscripts/adding/how">Add Your Conscript</A>{' '}
+          page. Here, you’ll find clear instructions on how to submit
+          your conscript, including the required file types and
+          organization tips. Provide your glyph designs, categories
+          (e.g., consonants, vowels, punctuation), and any optional IPA
+          pronunciations to make your conscript truly shine.
+        </Section.P>
+
+        <Section.H3>Organize and Refine</Section.H3>
+        <Section.P>
+          Once uploaded, WordSurf automatically structures your
+          conscript into a visually appealing and interactive format.
+          Use our tools to organize glyphs into categories, add
+          descriptions, or tweak layouts. Need inspiration? Check out
+          our <A href="/guides/adding/how">Guides</A> for detailed
+          examples and best practices.
+        </Section.P>
+
+        <Section.H3>Publish and Share</Section.H3>
+        <Section.P>
+          When you’re ready, export your conscript as a PDF, an
+          interactive webpage, or a printable guide. Share it with your
+          friends, community, or collaborators—or keep refining it as
+          your ideas evolve. Every update is instantly reflected in your
+          conscript’s showcase.
+        </Section.P>
+
+        <Box
+          layout="horizontal"
+          items="center"
+          justify="center"
+          padding={16}
+          paddingBottom={48}
+        >
+          <LinkButton href="/guides/conscripts/adding/how">
+            Add Your Conscript
+          </LinkButton>
+        </Box>
       </Section.Block>
 
       <Section.Block>

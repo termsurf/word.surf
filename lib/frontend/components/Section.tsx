@@ -210,11 +210,25 @@ Section.H1 = ({ children }: { children: React.ReactNode }) => {
 }
 
 Section.H2 = ({ children }: { children: React.ReactNode }) => {
-  return <H2 align="center">{children}</H2>
+  return (
+    <H2
+      align="center"
+      className="peer heading"
+    >
+      {children}
+    </H2>
+  )
 }
 
 Section.H3 = ({ children }: { children: React.ReactNode }) => {
-  return <H3 align="center">{children}</H3>
+  return (
+    <H3
+      align="center"
+      className="peer heading"
+    >
+      {children}
+    </H3>
+  )
 }
 
 Section.P = ({
@@ -232,7 +246,7 @@ Section.P = ({
       type={color}
       className={
         !(align === 'center' && color === 'secondary')
-          ? '!mt-32'
+          ? '[h1+&]:!mt-32 [h2+&]:!mt-32'
           : undefined
       }
     >
