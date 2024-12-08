@@ -233,7 +233,9 @@ function Content() {
           <A href="https://github.com/termsurf/word.surf/blob/edfbb2bc1e025ac950521255c23eb06adb0e86e6/app/languages/tune/guides/page.yaml">
             Tune guides YAML
           </A>{' '}
-          for inspiration.
+          for inspiration.{' '}
+          <A href="/languages/tune/guides">Here is how that looks</A>{' '}
+          when rendered.
         </P>
         <P>
           This example demonstrates how to structure your guides and use
