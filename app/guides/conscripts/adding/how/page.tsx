@@ -49,8 +49,8 @@ function Content() {
         </P>
         <Section.H3>Font</Section.H3>
         <P>
-          Your font helps us display your conscript beautifully on our
-          glyph pages, like{' '}
+          Your font helps us display your conscript <em>beautifully</em>{' '}
+          on our glyph pages, like{' '}
           <A href="/scripts/hebrew/alphabet">on Hebrew</A>.
         </P>
         <Section.List>
