@@ -50,7 +50,7 @@
     "@supabase/supabase-js": "^2.45.3",
     "@termsurf/form": "^0.9.24",
     "@termsurf/kink": "^0.1.2",
-    "@termsurf/leaf": "^0.5.46",
+    "@termsurf/leaf": "^0.5.48",
     "@termsurf/talk": "^3.4.4",
     "@termsurf/text": "^0.3.36",
     "@termsurf/tone": "^3.0.10",
