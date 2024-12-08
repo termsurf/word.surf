@@ -282,9 +282,11 @@ const config = {
       },
       borderRadius: {
         sm: '4px',
+        base: '4px',
         lg: '16px',
         '2xl': '32px',
         'large-circle': '128px',
+        circle: '50%',
       },
       maxHeight: {
         384: '384px',
