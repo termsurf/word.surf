@@ -229,8 +229,8 @@ Section.P = ({
   color,
   children,
 }: {
-  align: 'center' | 'left'
-  color: 'primary' | 'secondary'
+  align?: 'center' | 'left'
+  color?: 'primary' | 'secondary'
   children: React.ReactNode
 }) => {
   return (

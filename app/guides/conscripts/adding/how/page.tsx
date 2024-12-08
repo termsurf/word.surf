@@ -13,10 +13,10 @@ import {
 import Tag from '@termsurf/leaf/component/Tag'
 import Section from '~/lib/frontend/components/Section'
 
-export const metadata = {
-  title: 'Adding Your Conscript to WordSurf',
-  description: 'The how for adding your conscript to WordSurf',
-}
+// export const metadata = {
+//   title: 'Adding Your Conscript to WordSurf',
+//   description: 'The how for adding your conscript to WordSurf',
+// }
 
 export default function Page() {
   return (

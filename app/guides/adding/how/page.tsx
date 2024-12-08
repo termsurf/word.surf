@@ -5,6 +5,12 @@ import { LinkButton } from '@termsurf/leaf/component/Button'
 import { A, Code, Li, P, Ul } from '@termsurf/leaf/component/Content'
 import Section from '~/lib/frontend/components/Section'
 
+// export const metadata = {
+//   title: 'Adding Guides to WordSurf',
+//   description:
+//     'The how for adding beautiful documentation for your language or script to WordSurf',
+// }
+
 export default function Page() {
   return (
     <Section.Environment path="/guides/adding/how">

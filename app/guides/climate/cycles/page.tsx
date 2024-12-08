@@ -26,7 +26,10 @@ function Content() {
     <Section>
       <Section.Header>
         <Section.H1>Earth Climate Cycles</Section.H1>
-        <Section.P>
+        <Section.P
+          align="center"
+          color="secondary"
+        >
           The solar system reasons behind Earth's climate
         </Section.P>
       </Section.Header>
@@ -48,7 +51,10 @@ function Content() {
       </Section.Header>
       <Section.Header>
         <Section.H2>Tilt</Section.H2>
-        <Section.P>
+        <Section.P
+          align="center"
+          color="secondary"
+        >
           Seasons change more dramatically with higher tilt
         </Section.P>
         <TiltCircle />
@@ -130,7 +136,12 @@ function Content() {
       </Section.Block>
       <Section.Header>
         <Section.H2>Wobble</Section.H2>
-        <Section.P>Earth's axis wobbles like a spinning top</Section.P>
+        <Section.P
+          align="center"
+          color="secondary"
+        >
+          Earth's axis wobbles like a spinning top
+        </Section.P>
         <PrecessionScene />
       </Section.Header>
       <Section.Block>
@@ -146,7 +157,10 @@ function Content() {
       </Section.Block>
       <Section.Header>
         <Section.H2>Pull</Section.H2>
-        <Section.P>
+        <Section.P
+          align="center"
+          color="secondary"
+        >
           Earth's orbit is pulled by large and small planets
         </Section.P>
         <div className="p-16">
@@ -164,7 +178,10 @@ function Content() {
       </Section.Header>
       <Section.Block>
         <Section.H2>Large Planet Pull</Section.H2>
-        <Section.P>
+        <Section.P
+          align="center"
+          color="secondary"
+        >
           Caused by orbits of <strong>Jupiter</strong> and{' '}
           <strong>Saturn</strong>
         </Section.P>
@@ -179,7 +196,10 @@ function Content() {
       </Section.Block>
       <Section.Block>
         <Section.H2>Small Planet Pull</Section.H2>
-        <Section.P>
+        <Section.P
+          align="center"
+          color="secondary"
+        >
           Caused by orbits of <strong>Venus</strong> and{' '}
           <strong>Mars</strong>
         </Section.P>
@@ -206,7 +226,10 @@ function Content() {
       </Section.Block>
       <Section.Header>
         <Section.H2>Gases</Section.H2>
-        <Section.P>
+        <Section.P
+          align="center"
+          color="secondary"
+        >
           Gases naturally cycle and generally warm the earth
         </Section.P>
         <div className="p-16">
