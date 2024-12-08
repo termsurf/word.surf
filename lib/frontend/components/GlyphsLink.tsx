@@ -38,7 +38,7 @@ export default function GlyphsLink({
       href={`/scripts/${slug}`}
       className={clsx(
         className,
-        'overflow-hidden shadow-small1 hover:shadow-small2 bg-zinc-50 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-colors duration-200 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600 min-w-0',
+        'overflow-hidden bg-zinc-100 dark:bg-zinc-800 [&>div]:hover:text-violet-600 [&>div]:transition-colors transition-colors duration-200 h-full leading-content rounded-sm w-full [&_span]:hover:text-violet-600 [&_i]:hover:text-violet-600 min-w-0',
       )}
     >
       <div className="w-full h-full p-16 flex flex-col gap-8">
