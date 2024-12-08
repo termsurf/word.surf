@@ -230,7 +230,10 @@ function Content() {
         <Section.H2>Examples and Resources</Section.H2>
         <P>
           Not sure where to start? Check out our{' '}
-          <A href="https://github.com/termsurf/word.surf/blob/edfbb2bc1e025ac950521255c23eb06adb0e86e6/app/languages/tune/guides/page.yaml">
+          <A
+            target="_blank"
+            href="https://github.com/termsurf/word.surf/blob/edfbb2bc1e025ac950521255c23eb06adb0e86e6/app/languages/tune/guides/page.yaml"
+          >
             Tune guides YAML
           </A>{' '}
           for inspiration.{' '}

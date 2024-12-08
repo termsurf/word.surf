@@ -210,14 +210,7 @@ Section.H1 = ({ children }: { children: React.ReactNode }) => {
 }
 
 Section.H2 = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <H2
-      align="center"
-      className="!mb-32"
-    >
-      {children}
-    </H2>
-  )
+  return <H2 align="center">{children}</H2>
 }
 
 Section.H3 = ({ children }: { children: React.ReactNode }) => {
@@ -237,6 +230,11 @@ Section.P = ({
     <P
       align={align}
       type={color}
+      className={
+        !(align === 'center' && color === 'secondary')
+          ? '!mt-32'
+          : undefined
+      }
     >
       {children}
     </P>
