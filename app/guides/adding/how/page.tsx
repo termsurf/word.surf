@@ -224,7 +224,7 @@ function Content() {
         <Section.H2>Examples and Resources</Section.H2>
         <P>
           Not sure where to start? Check out our{' '}
-          <A href="https://github.com/termsurf/word.surf/blob/c4fe4f6679ae6e20f1d49ae259c6257b46997f9c/app/languages/tune/guides/page.yaml">
+          <A href="https://github.com/termsurf/word.surf/blob/edfbb2bc1e025ac950521255c23eb06adb0e86e6/app/languages/tune/guides/page.yaml">
             Tune guides YAML
           </A>{' '}
           for inspiration.
