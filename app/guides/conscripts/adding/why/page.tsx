@@ -73,9 +73,9 @@ function Content() {
             export the updated version instantly without any hassle.
           </Section.Item>
           <Section.Item label="Because Every Script Tells a Story">
-            Your conscript is more than a set of glyphs—it's a vision of
-            a culture and a world. WordSurf helps you share that story
-            with precision and beauty.
+            Your conscript is more than a set of glyphs. It's a vision
+            of a culture and a world. WordSurf helps you share that
+            story with precision and beauty.
           </Section.Item>
           <Section.Item label="Because Presentation Matters">
             A polished presentation can make your conscript stand out,

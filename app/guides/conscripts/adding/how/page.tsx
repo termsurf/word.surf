@@ -31,7 +31,10 @@ function Content() {
     <Section>
       <Section.Header>
         <Section.H1>Adding Your Conscript</Section.H1>
-        <Section.P>
+        <Section.P
+          align="center"
+          color="secondary"
+        >
           The how for adding your conscript to WordSurf
         </Section.P>
         <P>
