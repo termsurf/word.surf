@@ -248,7 +248,7 @@ function GlyphLink({
       {hint && (
         <T
           script="latin"
-          className="block text-2xl font-semibold transition-colors text-zinc-300 dark:text-zinc-600"
+          className="block text-2xl font-semibold transition-colors text-zinc-400 dark:text-zinc-500"
         >
           {hint}
         </T>
